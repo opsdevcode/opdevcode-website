@@ -1,5 +1,17 @@
 {
   "name": "opdevcode-website",
   "version": "0.0.0",
-  "private": true
+  "private": true,
+  "scripts": {
+    "netlify:login": "netlify login",
+    "netlify:link": "netlify link",
+    "netlify:deploy": "netlify deploy --prod",
+    "netlify:status": "netlify status",
+    "domain:godaddy": "scripts/godaddy-dns.sh",
+    "domain:add": "scripts/setup-domain.sh",
+    "domain:netlify": "scripts/add-netlify-domain.sh"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
 }

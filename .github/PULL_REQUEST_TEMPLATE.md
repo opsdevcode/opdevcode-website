@@ -3,6 +3,11 @@
 - Describe high-level what changed as a result of these commits (i.e. in plain English, what do these changes mean?)
 - Use bullet points to be concise and to the point.
 
+## preview
+
+- [ ] Checked the Netlify deploy preview (link in PR checks or Netlify comment)
+- [ ] Preview looks correct on desktop and mobile (if UI changes)
+
 ## why
 
 - Provide justifications for the changes (e.g. business case).

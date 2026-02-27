@@ -8,6 +8,8 @@ changes safely and how CI enforces conventions in this repo.
 1. Fork or create a branch from `main`.
 2. Make your changes locally.
 3. Open a pull request.
+4. **Check the Netlify deploy preview** — Netlify posts a preview URL in the PR. Verify your changes before merging.
+5. Merge only after the preview looks correct.
 
 ## Pull requests
 
@@ -53,9 +55,11 @@ The site is hosted on [Netlify](https://www.netlify.com). To connect or redeploy
 3. Select `opsdevcode/opdevcode-website`.
 4. Netlify reads `netlify.toml` — no build command or publish path to set.
 5. Deploy.
-6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management** and update DNS.
+6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management**, then set DNS at GoDaddy: A record `@` → `75.2.60.5`, CNAME `www` → `[site].netlify.app`. See [docs/CLI-SETUP.md](docs/CLI-SETUP.md) for details.
 
-Every push to the deploy branch triggers a new deploy. PRs get preview deploys by default.
+Every push to the deploy branch triggers a new deploy. **PRs get preview deploys by default** — each PR gets a unique URL (`deploy-preview-<PR#>--<site>.netlify.app`). Always verify the preview before merging.
+
+For CLI-based deploy and domain setup, see [docs/CLI-SETUP.md](docs/CLI-SETUP.md).
 
 ## Branch protection (GitHub Settings)
 

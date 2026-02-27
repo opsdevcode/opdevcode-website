@@ -69,6 +69,7 @@ If the user provides a PR number or URL, offer to check it out so they can brows
 
 ### Web / Frontend
 
+- **Preview required**: Verify the Netlify deploy preview before merging. Check layout, responsiveness, and links.
 - **HTML changes**: When PRs touch `*.html`, use the `html-pr-review` rule for structure, semantics, accessibility, and security checks.
 - **Accessibility**: Do new UI components meet a11y basics (semantic HTML, ARIA when needed, keyboard nav)?
 - **Performance**: Are images optimized? Any unnecessary large dependencies?
