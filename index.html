@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpsDevCo | Platform Engineering Advisory</title>
+  <meta name="description" content="OpsDevCo helps teams stabilize and optimize AWS + Kubernetes (EKS), reduce cloud waste, and simplify Terraform—without adding full-time headcount." />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:#0f1624;
+      --text:#e7eefc;
+      --muted:#a6b3cc;
+      --line:rgba(231,238,252,.12);
+      --accent:#7aa2ff;
+      --accent2:#6ee7ff;
+      --shadow: 0 10px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(110,231,255,.16), transparent 55%),
+                  var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 0 8px;
+    }
+    .brand{display:flex; gap:10px; align-items:center}
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 20px rgba(122,162,255,.55);
+    }
+    .brand strong{letter-spacing:.2px}
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      color:var(--muted);
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:999px;
+    }
+    nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.02)}
+    .hero{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background: rgba(15,22,36,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+    .hero-main{padding:28px}
+    .kicker{
+      color:var(--muted);
+      display:inline-flex; gap:10px; align-items:center;
+      border:1px solid var(--line);
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.02);
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+    h1{
+      margin:16px 0 10px;
+      font-size: 42px;
+      line-height:1.12;
+      letter-spacing:-.6px;
+    }
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 70ch;
+    }
+    .cta{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing:.2px;
+    }
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .btn.primary{
+      border-color: rgba(122,162,255,.35);
+      background: linear-gradient(90deg, rgba(122,162,255,.25), rgba(110,231,255,.12));
+    }
+    .fine{
+      margin-top:10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .hero-side{padding:22px}
+    .side-title{font-weight:700; margin: 0 0 12px}
+    .bullets{margin:0; padding-left:18px; color:var(--muted)}
+    .bullets li{margin:8px 0}
+    .section{
+      margin-top: 18px;
+      padding: 22px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
+    .tile{
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255,255,255,.02);
+    }
+    .tile h3{margin: 0 0 8px; font-size: 16px}
+    .tile p{margin:0; color:var(--muted); font-size: 14px}
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    @media (max-width: 900px){ .split{grid-template-columns:1fr} }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      color: var(--muted);
+      font-size: 13px;
+      background: rgba(255,255,255,.02);
+    }
+    .pricing{
+      border-top: 1px solid var(--line);
+      margin-top: 14px;
+      padding-top: 14px;
+      display:grid;
+      gap: 10px;
+    }
+    .row{
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      padding: 10px 12px;
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.02);
+    }
+    .row span{color:var(--muted)}
+    .row strong{font-weight:700}
+    footer{
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+      padding: 10px 0 0;
+    }
+    .note{color:var(--muted); font-size:14px}
+    .contact{
+      display:grid; gap:10px;
+    }
+    .contact a{
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: rgba(255,255,255,.02);
+      display:flex; justify-content:space-between; align-items:center; gap:12px;
+    }
+    .contact a:hover{background:rgba(255,255,255,.06)}
+    code.inline{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      padding: 2px 6px;
+      border-radius: 8px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <div>
+          <strong>OpsDevCo</strong><br/>
+          <span style="color:var(--muted); font-size:13px;">Platform Engineering Advisory</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card hero-main">
+        <div class="kicker">
+          <span class="pill">AWS</span>
+          <span class="pill">Kubernetes / EKS</span>
+          <span class="pill">Terraform</span>
+          <span class="pill">Cost + Scaling</span>
+        </div>
+
+        <h1>Stabilize and optimize your AWS &amp; Kubernetes platform before it gets expensive or fragile.</h1>
+        <p class="sub">
+          OpsDevCo helps engineering teams simplify EKS, reduce cloud waste, and refactor Terraform into maintainable systems —
+          without adding full-time headcount.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#contact">Request a quick intro</a>
+          <a class="btn" href="#pricing">See engagement options</a>
+        </div>
+
+        <p class="fine">
+          Quiet, high-leverage engagements. No long contracts. Most work is async-friendly.
+        </p>
+      </div>
+
+      <aside class="card hero-side">
+        <p class="side-title">Common situations OpsDevCo is brought into</p>
+        <ul class="bullets">
+          <li>EKS "works" but scaling is unpredictable or expensive</li>
+          <li>AWS spend keeps climbing and nobody has clear answers</li>
+          <li>Terraform is brittle / slow / risky to change</li>
+          <li>Platform team is underwater and needs senior guidance</li>
+        </ul>
+        <div style="margin-top:14px;">
+          <div class="pill">Typical outcome: clear roadmap + targeted fixes</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="services" class="card section">
+      <h2 style="margin:0 0 12px;">Services</h2>
+      <div class="grid">
+        <div class="tile">
+          <h3>Platform Health Assessment</h3>
+          <p>Deep review of AWS/EKS/Terraform with a written findings report and prioritized action plan.</p>
+        </div>
+        <div class="tile">
+          <h3>Cost + Scaling Optimization</h3>
+          <p>Fix real cost drivers: compute waste, node strategy, autoscaling/Karpenter patterns, and workloads.</p>
+        </div>
+        <div class="tile">
+          <h3>Terraform Structure Overhaul</h3>
+          <p>Refactor for maintainability: environment separation, safer workflows, reduced plan/apply risk.</p>
+        </div>
+        <div class="tile">
+          <h3>Karpenter / Node Lifecycle Strategy</h3>
+          <p>Design and implement predictable, cost-effective node provisioning and consolidation behavior.</p>
+        </div>
+        <div class="tile">
+          <h3>Architecture Review</h3>
+          <p>Validate major platform decisions before you commit: networking, cluster layout, and guardrails.</p>
+        </div>
+        <div class="tile">
+          <h3>Fractional Platform Advisor</h3>
+          <p>Ongoing senior guidance (a few hours/week) for CTOs and platform leads—without hiring.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="card section">
+      <h2 style="margin:0 0 12px;">How it works</h2>
+      <div class="split">
+        <div class="tile">
+          <h3>1) Quick intro (15 minutes)</h3>
+          <p>Confirm the problem, constraints, and what success looks like. If it's not a fit, I'll say so.</p>
+        </div>
+        <div class="tile">
+          <h3>2) Review + access</h3>
+          <p>Usually read-only: billing, EKS, IaC repos, and observability. Minimal disruption to your team.</p>
+        </div>
+        <div class="tile">
+          <h3>3) Findings + roadmap</h3>
+          <p>You get a prioritized plan: quick wins, medium fixes, and deeper structural improvements.</p>
+        </div>
+        <div class="tile">
+          <h3>4) Targeted fixes</h3>
+          <p>I implement or pair with your team. Most engagements are async-friendly and time-boxed.</p>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:14px;">
+        If you're hiring for "Senior DevOps / Platform / SRE" because things are getting messy,
+        this is often a faster and lower-risk way to stabilize before adding headcount.
+      </div>
+    </section>
+
+    <section id="pricing" class="card section">
+      <h2 style="margin:0 0 8px;">Engagement options</h2>
+      <p class="note" style="margin:0 0 10px;">
+        Transparent pricing. No long contracts. If you need something different, it will be scoped clearly.
+      </p>
+
+      <div class="pricing">
+        <div class="row">
+          <div><strong>Architecture Review</strong><br/><span>One-time review call + notes</span></div>
+          <div><strong>$1,200</strong></div>
+        </div>
+        <div class="row">
+          <div><strong>Platform Health Assessment</strong><br/><span>Findings report + prioritized roadmap</span></div>
+          <div><strong>$2,200</strong></div>
+        </div>
+        <div class="row">
+          <div><strong>Focused Optimization Project</strong><br/><span>Time-boxed fixes (cost/scaling/IaC)</span></div>
+          <div><strong>$3,500–$8,000</strong></div>
+        </div>
+        <div class="row">
+          <div><strong>Fractional Platform Advisor</strong><br/><span>4 hrs/week, async-friendly</span></div>
+          <div><strong>$3,250 / month</strong></div>
+        </div>
+      </div>
+
+      <p class="fine">
+        Not a fit for on-call coverage or ongoing firefighting.
+        OpsDevCo focuses on stability, cost, and platform design improvements that stick.
+      </p>
+    </section>
+
+    <section id="about" class="card section">
+      <h2 style="margin:0 0 12px;">About</h2>
+      <div class="split">
+        <div class="tile">
+          <h3>OpsDevCo</h3>
+          <p>
+            OpsDevCo is led by a senior platform engineer with 15+ years of experience operating production infrastructure
+            across startups and enterprise environments.
+          </p>
+          <p style="margin-top:10px;">
+            Specializing in AWS, Kubernetes (EKS), Karpenter, and Terraform, engagements focus on structural improvements
+            that reduce cost, eliminate operational drag, and make infrastructure predictable again.
+          </p>
+        </div>
+        <div class="tile">
+          <h3>What you can expect</h3>
+          <p>
+            Clear communication, practical recommendations, and targeted implementation.
+            Small engagements with measurable outcomes over vague "consulting hours."
+          </p>
+          <p style="margin-top:10px;">
+            Specialties:
+            <code class="inline">EKS</code>
+            <code class="inline">Karpenter</code>
+            <code class="inline">Terraform</code>
+            <code class="inline">AWS cost/sizing</code>
+            <code class="inline">node strategy</code>
+          </p>
+          <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+            Principal: Eric Skaggs
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card section">
+      <h2 style="margin:0 0 8px;">Contact</h2>
+      <p class="note" style="margin:0 0 12px;">
+        Send a short note with your situation (cloud bill range, team size, what's painful). You'll get a clear next step.
+      </p>
+
+      <div class="contact">
+        <a href="mailto:hello@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
+          <span><strong>Email</strong><br/><span style="color:var(--muted);">hello@opsdevco.de</span></span>
+          <span style="color:var(--muted);">→</span>
+        </a>
+
+        <!-- Optional: add a scheduling link later -->
+        <!--
+        <a href="https://cal.com/opsdevco/intro" target="_blank" rel="noopener noreferrer">
+          <span><strong>Book a 15-minute intro</strong><br/><span style="color:var(--muted);">If you prefer scheduling</span></span>
+          <span style="color:var(--muted);">→</span>
+        </a>
+        -->
+      </div>
+
+      <p class="fine">
+        Privacy note: intentionally low-profile. No newsletter, no tracking pixels, no public posting required.
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> OpsDevCo</div>
+      <div>opsdevco.de</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
