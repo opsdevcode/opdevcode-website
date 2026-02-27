@@ -44,6 +44,19 @@ Versioning is driven by Conventional Commits and automated releases on `main`:
 The Release workflow uses Conventional Commits to tag and publish releases on
 every merge to `main`.
 
+## Deployment (Netlify)
+
+The site is hosted on [Netlify](https://www.netlify.com). To connect or redeploy:
+
+1. Sign in at [app.netlify.com](https://app.netlify.com) (free account).
+2. **Add new site** → **Import from Git** → choose **GitHub** → authorize.
+3. Select `opsdevcode/opdevcode-website`.
+4. Netlify reads `netlify.toml` — no build command or publish path to set.
+5. Deploy.
+6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management** and update DNS.
+
+Every push to the deploy branch triggers a new deploy. PRs get preview deploys by default.
+
 ## Branch protection (GitHub Settings)
 
 Configure branch protection for `main` in **Settings → Branches → Add rule**:
