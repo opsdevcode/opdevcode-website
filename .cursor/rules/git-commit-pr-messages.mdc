@@ -49,7 +49,7 @@ References may appear as **ticket IDs** (e.g. `PLAT-684`, `INFOSEC-123`, `ESC-45
 
 ### When Creating PRs (AI Assistants)
 
-When creating a PR (e.g. via `gh pr create`), **always output the PR link** in your response so the user can open it immediately.
+When creating a PR (e.g. via `gh pr create`), **always output a clickable link** to the PR in your response so the user can open it immediately. Use Markdown link format: `[PR #123](https://github.com/owner/repo/pull/123)` or a bare URL.
 
 ## Commit Messages
 
