@@ -4,3 +4,20 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+# Deploy previews: same config as production (static HTML)
+# PRs get unique URLs: deploy-preview-<PR#>--<site>.netlify.app
+[context.deploy-preview]
+  publish = "."
+  command = ""
+
+# Branch deploys: preview non-PR branches
+[context.branch-deploy]
+  publish = "."
+  command = ""
+
+# HSTS: force HTTPS, 2-year max-age, include subdomains
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"

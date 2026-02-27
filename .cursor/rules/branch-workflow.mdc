@@ -11,6 +11,7 @@ alwaysApply: true
 1. **Create a branch from `main`** (or fork and branch)
 2. Make changes locally
 3. Open a pull request
+4. **Check the deploy preview** (Netlify posts a preview URL per PR) — verify before merging
 
 ## No Direct Pushes to main
 
