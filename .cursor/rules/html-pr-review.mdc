@@ -1,0 +1,127 @@
+---
+description: Guidelines for reviewing HTML in pull requests. Auto-activates when reviewing PRs that touch HTML or when the user mentions HTML review.
+globs: "**/*.html"
+alwaysApply: false
+---
+
+# HTML PR Review
+
+Use this checklist when reviewing pull requests that modify HTML files.
+
+## Structure and Semantics
+
+- **Document type**: Does the file start with `<!doctype html>`?
+- **Language**: Is `lang` set on `<html>` (e.g. `lang="en"`)?
+- **Semantic elements**: Use `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>` instead of generic `<div>` where appropriate.
+- **Heading hierarchy**: Are headings in logical order (`h1` → `h2` → `h3`) with no skipped levels?
+- **Single h1**: One `<h1>` per page for the primary topic.
+
+## Head and Meta
+
+- **Charset**: `<meta charset="utf-8" />` present in `<head>`.
+- **Viewport**: `<meta name="viewport" content="width=device-width, initial-scale=1" />` for responsive layouts.
+- **Title**: Descriptive, unique `<title>` per page.
+- **Description**: `<meta name="description" content="...">` for SEO (50–160 chars).
+- **Robots**: `index,follow` or `noindex` as intended for the page.
+
+## Accessibility
+
+- **Images**: All `<img>` have meaningful `alt` attributes (or `alt=""` for decorative images).
+- **Links**: Link text is descriptive; avoid "click here" or raw URLs.
+- **External links**: Use `target="_blank" rel="noopener noreferrer"` when opening in a new tab.
+- **Form labels**: Every form control has an associated `<label>`.
+- **Focus**: Interactive elements are keyboard-focusable; no `tabindex="-1"` on primary actions unless justified.
+- **ARIA**: Use ARIA only when semantic HTML is insufficient; prefer native elements.
+
+## Links and Navigation
+
+- **Anchor targets**: `href="#id"` targets exist and match section `id` attributes.
+- **Mailto links**: `mailto:` links have sensible `subject` and optional `body` prefill.
+- **Broken links**: No dead links or placeholder `#` hrefs.
+
+## Security
+
+- **XSS**: No `innerHTML`, `eval()`, `document.write()`, or `javascript:` URLs with user-controlled or dynamic content. Use `textContent` or safe DOM APIs.
+- **External links**: Use `rel="noopener noreferrer"` on all `target="_blank"` links to prevent `window.opener` access.
+- **javascript: URLs**: No `href="javascript:..."` — use `<button>` or proper event handlers instead.
+- **Form actions**: Forms must submit to `https://` URLs, never `http://` for sensitive data.
+- **No secrets**: No API keys, tokens, passwords, or credentials in HTML, attributes, or inline scripts.
+- **External scripts/styles**: Prefer SRI (`integrity` + `crossorigin`) when loading from CDNs. Use `crossorigin="anonymous"` for CORS.
+- **Data attributes**: No sensitive data in `data-*` attributes that could be exposed to client-side scripts.
+- **Form autocomplete**: Use `autocomplete="off"` on sensitive fields only when necessary; avoid on login/payment forms unless explicitly required.
+
+## Performance
+
+- **Script placement**: Non-critical scripts at end of `<body>` or use `defer`/`async` where appropriate.
+
+## Responsiveness
+
+- **Media queries**: Layout adapts for mobile, tablet, and desktop.
+- **Touch targets**: Buttons and links are at least 44×44px for touch.
+- **Readable text**: No horizontal scrolling; font sizes scale reasonably.
+
+## Style and Consistency
+
+- **Inline vs. external**: Inline styles are acceptable for single-page sites; consider external CSS if reused.
+- **CSS variables**: Use `:root` variables for colors, spacing, and typography where it improves maintainability.
+- **Print**: Consider `@media print` if the page is likely to be printed.
+
+## Examples
+
+### Semantic structure
+
+```html
+<!-- Prefer semantic elements -->
+<header>...</header>
+<main>
+  <section id="services">...</section>
+  <section id="contact">...</section>
+</main>
+<footer>...</footer>
+```
+
+### External links
+
+```html
+<!-- Always use rel="noopener noreferrer" for target="_blank" -->
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Example</a>
+```
+
+### Accessible images
+
+```html
+<!-- Meaningful alt for content images -->
+<img src="diagram.png" alt="Architecture diagram showing EKS cluster layout" />
+
+<!-- Empty alt for decorative images -->
+<img src="decoration.svg" alt="" aria-hidden="true" />
+```
+
+### Security: safe script usage
+
+```html
+<!-- BAD: XSS risk with user content -->
+<script>document.getElementById("x").innerHTML = userInput;</script>
+
+<!-- GOOD: Safe text insertion -->
+<script>document.getElementById("x").textContent = userInput;</script>
+```
+
+### Security: external script with SRI
+
+```html
+<!-- Prefer SRI when loading from CDN -->
+<script src="https://cdn.example.com/lib.js"
+        integrity="sha384-..."
+        crossorigin="anonymous"></script>
+```
+
+### Security: avoid javascript: URLs
+
+```html
+<!-- BAD -->
+<a href="javascript:void(0)" onclick="doThing()">Click</a>
+
+<!-- GOOD -->
+<button type="button" onclick="doThing()">Click</button>
+```
