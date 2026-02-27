@@ -47,6 +47,10 @@ References may appear as **ticket IDs** (e.g. `PLAT-684`, `INFOSEC-123`, `ESC-45
 - Link to related issues or documentation when relevant
 - **AI assistant usage**: If Cursor, Claude Code, or other AI assistants were used extensively in creating the PR, mention this in the stewardship section (e.g., "Created with Cursor (Composer 1)" or "Assisted by Claude Code"). Include the specific model name if known.
 
+### When Creating PRs (AI Assistants)
+
+When creating a PR (e.g. via `gh pr create`), **always output a clickable link** to the PR in your response so the user can open it immediately. Use Markdown link format: `[PR #123](https://github.com/owner/repo/pull/123)` or a bare URL.
+
 ## Commit Messages
 
 **Commit messages should be concise** and focus on what changed. Unlike PR messages which follow a formal template, commit messages use a more natural, bulleted format that combines what is being done and why (if the why isn't obvious).
