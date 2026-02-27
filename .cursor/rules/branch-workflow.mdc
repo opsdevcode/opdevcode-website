@@ -43,7 +43,7 @@ Add `!` or `BREAKING CHANGE` footer for major version bumps.
 
 ## When Creating PRs (AI Assistants)
 
-When creating a PR (e.g. via `gh pr create`), **always output the PR link** in your response so the user can open it immediately. Example: `Opened PR: **https://github.com/owner/repo/pull/123**`
+When creating a PR (e.g. via `gh pr create`), **always output a clickable link** to the PR in your response so the user can open it immediately. Use Markdown link format: `Opened PR: [PR #123](https://github.com/owner/repo/pull/123)` or a bare URL (e.g. `https://github.com/owner/repo/pull/123`).
 
 ## PR Template
 
