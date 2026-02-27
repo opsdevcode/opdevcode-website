@@ -41,6 +41,10 @@ Use [Conventional Commits](https://www.conventionalcommits.org/) for commit mess
 
 Add `!` or `BREAKING CHANGE` footer for major version bumps.
 
+## When Creating PRs (AI Assistants)
+
+When creating a PR (e.g. via `gh pr create`), **always output the PR link** in your response so the user can open it immediately. Example: `Opened PR: **https://github.com/owner/repo/pull/123**`
+
 ## PR Template
 
 PR descriptions must follow the template (typically `.github/PULL_REQUEST_TEMPLATE.md`) with:
