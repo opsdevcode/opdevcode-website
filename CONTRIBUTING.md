@@ -10,6 +10,11 @@ changes safely and how CI enforces conventions in this repo.
 3. Open a pull request.
 4. **Check the Netlify deploy preview** — Netlify posts a preview URL in the PR. Verify your changes before merging.
 5. Merge only after the preview looks correct.
+6. **After merge**: Update local `main` and delete the merged branch:
+   ```bash
+   git checkout main && git pull
+   git branch -d feat/your-branch   # or docs/..., fix/..., etc.
+   ```
 
 ## Pull requests
 

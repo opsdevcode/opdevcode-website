@@ -8,6 +8,11 @@
 - [ ] Checked the Netlify deploy preview (link in PR checks or Netlify comment)
 - [ ] Preview looks correct on desktop and mobile (if UI changes)
 
+## after merge
+
+- [ ] `git checkout main && git pull`
+- [ ] `git branch -d <branch-name>` (delete merged branch locally)
+
 ## why
 
 - Provide justifications for the changes (e.g. business case).

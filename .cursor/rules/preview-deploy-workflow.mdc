@@ -17,6 +17,7 @@ All changes to the site must go through a **branch → PR → preview → merge*
 5. **Check the preview** — Click the Netlify deploy preview link in the PR (or `deploy-preview-XXX--zingy-lamington-a3286a.netlify.app`)
 6. **Verify** the change looks correct in the preview before merging
 7. **Merge** only after preview is approved
+8. **After merge**: `git checkout main && git pull` and `git branch -d feat/your-branch`
 
 ## Finding the Preview URL
 
