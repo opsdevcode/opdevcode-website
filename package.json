@@ -3,6 +3,7 @@
   "version": "1.1.0",
   "private": true,
   "scripts": {
+    "og:generate": "node scripts/screenshot-og.js",
     "netlify:login": "netlify login",
     "netlify:link": "netlify link",
     "netlify:deploy": "netlify deploy --prod",
@@ -12,6 +13,7 @@
     "domain:netlify": "scripts/add-netlify-domain.sh"
   },
   "devDependencies": {
-    "netlify-cli": "^17.0.0"
+    "netlify-cli": "^17.0.0",
+    "playwright": "^1.58.2"
   }
 }
