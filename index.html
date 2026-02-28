@@ -6,6 +6,7 @@
   <title>OpsDevCo | Platform Engineering Advisory</title>
   <meta name="description" content="OpsDevCo — platform engineering advisory. I help teams untangle EKS, trim cloud waste, and make Terraform maintainable. No corporate speak, no long contracts." />
   <meta name="robots" content="index,follow" />
+  <link rel="icon" href="assets/opsdevco-logo-o-terminal.png" type="image/png" />
   <style>
     :root{
       --bg:#0b0f17;
@@ -51,11 +52,11 @@
       display:flex; align-items:center; justify-content:space-between;
       gap:14px; padding:14px 0 12px;
     }
-    .brand{display:flex; gap:10px; align-items:center}
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 20px rgba(122,162,255,.55);
+    .brand{display:flex; gap:12px; align-items:center}
+    .brand img{
+      width:36px;
+      height:36px;
+      object-fit:contain;
     }
     .brand strong{letter-spacing:.2px}
     nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
@@ -245,13 +246,13 @@
   <div class="header-wrap">
     <div class="wrap">
       <header>
-      <div class="brand">
-        <div class="dot" aria-hidden="true"></div>
+      <a href="/" class="brand">
+        <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
         <div>
           <strong>OpsDevCo</strong><br/>
           <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
         </div>
-      </div>
+      </a>
       <nav>
         <a href="#services">Services</a>
         <a href="#tools">Tools</a>
