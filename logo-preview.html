@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpsDevCo logo options — feedback</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      background:#0b0f17;
+      color:#e7eefc;
+      padding:40px 24px;
+      line-height:1.5;
+    }
+    h1{font-size:1.25rem; margin:0 0 8px; font-weight:600}
+    p{color:#a6b3cc; font-size:14px; margin:0 0 32px}
+    .options{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:32px;
+      max-width:600px;
+    }
+    .option{
+      background:rgba(15,22,36,.72);
+      border:1px solid rgba(231,238,252,.12);
+      border-radius:18px;
+      padding:32px;
+      text-align:center;
+    }
+    .option img{
+      width:80px;
+      height:80px;
+      object-fit:contain;
+      margin-bottom:16px;
+    }
+    .option span{font-size:13px; color:#a6b3cc}
+    .in-context{
+      margin-top:48px;
+      padding-top:32px;
+      border-top:1px solid rgba(231,238,252,.12);
+    }
+    .in-context h2{font-size:1rem; margin:0 0 16px}
+    .mock-header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px 16px;
+      background:rgba(15,22,36,.85);
+      border:1px solid rgba(231,238,252,.12);
+      border-radius:12px;
+      margin-bottom:12px;
+    }
+    .mock-header img{width:32px; height:32px; object-fit:contain}
+  </style>
+</head>
+<body>
+  <h1>OpsDevCo logo options</h1>
+  <p>Which direction do you prefer? Feedback welcome.</p>
+
+  <div class="options">
+    <div class="option">
+      <img src="assets/opsdevco-logo-o-mark.png" alt="Option 1: Abstract O" />
+      <span>Option 1 — Abstract O</span>
+    </div>
+    <div class="option">
+      <img src="assets/opsdevco-logo-o-terminal.png" alt="Option 2: O + terminal" />
+      <span>Option 2 — O + terminal</span>
+    </div>
+  </div>
+
+  <div class="in-context">
+    <h2>In header context</h2>
+    <div class="mock-header">
+      <img src="assets/opsdevco-logo-o-mark.png" alt="" />
+      <div><strong>OpsDevCo</strong><br/><span style="color:#a6b3cc;font-size:13px">Platform engineering, without the corporate speak</span></div>
+    </div>
+    <div class="mock-header">
+      <img src="assets/opsdevco-logo-o-terminal.png" alt="" />
+      <div><strong>OpsDevCo</strong><br/><span style="color:#a6b3cc;font-size:13px">Platform engineering, without the corporate speak</span></div>
+    </div>
+  </div>
+</body>
+</html>
