@@ -12,6 +12,7 @@ alwaysApply: true
 2. Make changes locally
 3. Open a pull request
 4. **Check the deploy preview** (Netlify posts a preview URL per PR) — verify before merging
+5. **After merge**: `git checkout main && git pull` — delete the merged branch locally: `git branch -d feat/your-branch`
 
 ## No Direct Pushes to main
 
