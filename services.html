@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | OpsDevCo</title>
+  <meta name="description" content="Platform health checks, cost optimization, Terraform cleanup, Karpenter strategy. How we work together." />
+  <link rel="icon" href="assets/opsdevco-logo-o-terminal.png" type="image/png" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="header-wrap">
+    <div class="wrap">
+      <header>
+        <a href="index.html" class="brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
+          <div>
+            <strong>OpsDevCo</strong><br/>
+            <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
+          </div>
+        </a>
+        <nav>
+          <a href="services.html" class="active">Services</a>
+          <a href="tools.html">Tools</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a class="btn" href="about.html#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="wrap main-wrap services-layout">
+    <div>
+      <section class="section card" id="services">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">What I do</h2>
+        </div>
+        <div class="grid">
+          <div class="tile">
+            <h3>Platform Health Check</h3>
+            <p>I dig into your AWS, EKS, and Terraform setup and give you a straight-up report: what's working, what's not, and what to fix first.</p>
+          </div>
+          <div class="tile">
+            <h3>Cost + Scaling</h3>
+            <p>Track down what's actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
+          </div>
+          <div class="tile">
+            <h3>Terraform Cleanup</h3>
+            <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less "hold your breath" on every apply.</p>
+          </div>
+          <div class="tile">
+            <h3>Karpenter + Node Strategy</h3>
+            <p>Get node provisioning and consolidation that behaves predictably and doesn't blow the budget.</p>
+          </div>
+          <div class="tile">
+            <h3>Architecture Review</h3>
+            <p>Before you lock in big decisions — networking, cluster layout, guardrails — I'll sanity-check the plan.</p>
+          </div>
+          <div class="tile">
+            <h3>Fractional Platform Advisor</h3>
+            <p>A few hours a week of senior guidance for your CTO or platform lead. No hiring required.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="section card" id="how">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">How we'll work together</h2>
+        </div>
+        <div class="steps-row">
+          <div class="tile">
+            <h3>1) Quick intro (15 min)</h3>
+            <p>We talk through what's going on and what you're hoping for. If it's not a good fit, I'll tell you straight up.</p>
+          </div>
+          <div class="tile">
+            <h3>2) I take a look</h3>
+            <p>Usually read-only access — billing, EKS, your IaC repos. I try not to get in your team's way.</p>
+          </div>
+          <div class="tile">
+            <h3>3) You get a plan</h3>
+            <p>Prioritized: quick wins first, then medium fixes, then the bigger structural stuff.</p>
+          </div>
+          <div class="tile">
+            <h3>4) We fix it</h3>
+            <p>I implement or pair with your team. Most of my work is async and time-boxed — no endless retainer.</p>
+          </div>
+        </div>
+        <div class="note" style="margin-top:20px;">
+          If you're about to hire a "Senior DevOps / Platform / SRE" because things are a mess,
+          this is often a faster way to get stable first — before you add headcount.
+        </div>
+      </section>
+
+      <div style="text-align:center; margin-top:32px;">
+        <a class="btn primary" href="about.html#contact">Let's talk</a>
+        <a class="btn" href="pricing.html" style="margin-left:10px;">See pricing</a>
+      </div>
+
+      <footer>
+        <div class="footer-brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <span>© <span id="y"></span> OpsDevCo</span>
+        </div>
+        <div>opsdevco.de</div>
+      </footer>
+    </div>
+    <nav class="on-this-page" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#services">What I do</a>
+      <a href="#how">How we work</a>
+    </nav>
+    </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="about.html#contact">Let's talk</a>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

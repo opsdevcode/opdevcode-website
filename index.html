@@ -10,252 +10,16 @@
   <meta property="og:image" content="https://opsdevco.de/assets/opsdevco-logo-o-terminal.png" />
   <meta property="og:image:alt" content="OpsDevCo — platform engineering advisory" />
   <meta name="twitter:image" content="https://opsdevco.de/assets/opsdevco-logo-o-terminal.png" />
+  <link rel="stylesheet" href="css/site.css" />
   <style>
-    :root{
-      --bg:#0b0f17;
-      --panel:#0f1624;
-      --text:#e7eefc;
-      --muted:#a6b3cc;
-      --line:rgba(231,238,252,.12);
-      --accent:#7aa2ff;
-      --accent2:#6ee7ff;
-      --shadow: 0 10px 40px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1100px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      font-size:16px;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.25), transparent 60%),
-                  radial-gradient(900px 500px at 90% 10%, rgba(110,231,255,.16), transparent 55%),
-                  var(--bg);
-      line-height:1.6;
-    }
-    a{color:inherit; text-decoration:none}
-    a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-    .skip-link{
-      position:absolute; top:-100px; left:18px; z-index:100;
-      padding:12px 16px; background:var(--panel); border:1px solid var(--line);
-      border-radius:12px; color:var(--text); font-weight:600;
-      transition:top .2s;
-    }
-    .skip-link:focus{top:18px;}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
-    .header-wrap{
-      position:sticky; top:0; z-index:50;
-      background:rgba(11,15,23,.85); backdrop-filter:blur(12px);
-      border-bottom:1px solid var(--line); margin:0 -18px; padding:0 18px;
-    }
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 0 12px;
-    }
-    .brand{display:flex; gap:12px; align-items:center}
-    .brand img{
-      width:36px;
-      height:36px;
-      object-fit:contain;
-    }
-    .brand strong{letter-spacing:.2px}
-    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
-    nav a{
-      color:var(--muted);
-      padding:12px 14px; min-height:44px; min-width:44px;
-      display:inline-flex; align-items:center; justify-content:center;
-      border:1px solid transparent;
-      border-radius:999px;
-    }
-    nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.02)}
-    nav a.btn{min-width:auto; padding:14px 18px}
-    .hero{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: 1.35fr .65fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
-    }
-    .card{
-      background: rgba(15,22,36,.72);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-    .hero-main{padding:28px}
-    .kicker{
-      color:var(--muted);
-      display:inline-flex; gap:10px; align-items:center;
-      border:1px solid var(--line);
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.02);
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
-    h1{
-      margin:16px 0 10px;
-      font-size: 42px;
-      line-height:1.12;
-      letter-spacing:-.6px;
-    }
+    .kicker{color:var(--muted); display:inline-flex; gap:10px; align-items:center; border:1px solid var(--line); padding:8px 12px; border-radius:999px; background:rgba(255,255,255,.02); font-size: 14px; flex-wrap: wrap}
+    h1{margin:16px 0 10px; font-size: 42px; line-height:1.12; letter-spacing:-.6px}
     @media (max-width: 520px){ h1{font-size:34px} }
-    .sub{
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: 17px;
-      max-width: 70ch;
-    }
-    .cta{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 18px; min-height:44px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-weight: 600;
-      letter-spacing:.2px;
-    }
-    .btn:hover{background:rgba(255,255,255,.06)}
-    .btn.primary{
-      border-color: rgba(122,162,255,.35);
-      background: linear-gradient(90deg, rgba(122,162,255,.25), rgba(110,231,255,.12));
-    }
-    .fine{
-      margin-top:10px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .hero-side{padding:22px}
-    .side-title{font-weight:700; margin: 0 0 12px}
-    .bullets{margin:0; padding-left:18px; color:var(--muted)}
-    .bullets li{margin:8px 0}
-    section[id]{scroll-margin-top:80px}
-    .section{
-      margin-top: 28px;
-      padding: 28px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
-    .tile{
-      padding:16px;
-      border:1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.02);
-    }
-    h2{font-size:1.5rem; font-weight:700; letter-spacing:-.3px}
-    .tile h3{margin: 0 0 8px; font-size: 1.05rem; font-weight:600}
-    .tile p{margin:0; color:var(--muted); font-size: 15px; max-width:65ch}
-    .split{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      align-items: start;
-    }
-    @media (max-width: 900px){ .split{grid-template-columns:1fr} }
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      border:1px solid var(--line);
-      padding:8px 10px;
-      border-radius:999px;
-      color: var(--muted);
-      font-size: 13px;
-      background: rgba(255,255,255,.02);
-    }
-    .pricing{
-      border-top: 1px solid var(--line);
-      margin-top: 14px;
-      padding-top: 14px;
-      display:grid;
-      gap: 10px;
-    }
-    .row{
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
-      padding: 10px 12px;
-      border:1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255,255,255,.02);
-    }
-    .row span{color:var(--muted)}
-    .row strong{font-weight:700}
-    footer{
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .footer-brand{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    footer img{
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-      opacity: 0.8;
-    }
-    .note{color:var(--muted); font-size:14px}
-    .contact{
-      display:grid; gap:10px;
-    }
-    .contact a{
-      border:1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
-      background: rgba(255,255,255,.02);
-      display:flex; justify-content:space-between; align-items:center; gap:12px;
-    }
-    .contact a:hover{background:rgba(255,255,255,.06)}
-    code.inline{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 12px;
-      color: var(--text);
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-      padding: 2px 6px;
-      border-radius: 8px;
-      white-space: nowrap;
-    }
-    .tldr{
-      margin-top:18px; padding:16px 20px;
-      border:1px solid var(--line); border-radius:14px;
-      background:rgba(255,255,255,.02); color:var(--muted);
-      font-size:15px; max-width:65ch;
-    }
-    .tldr strong{color:var(--text)}
-    .tldr a{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
-    .tldr a:hover{color:var(--accent2)}
-    .price-teaser{font-size:14px; color:var(--muted); margin-top:8px}
-    .price-teaser a{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
-    .price-teaser a:hover{color:var(--accent2)}
-    .sticky-cta{
-      display:none; position:fixed; bottom:0; left:0; right:0; z-index:40;
-      padding:12px 18px; background:rgba(11,15,23,.95); backdrop-filter:blur(12px);
-      border-top:1px solid var(--line); justify-content:center;
-    }
-    @media (max-width: 900px){
-      .sticky-cta{display:flex}
-      .main-wrap{padding-bottom:100px}
-    }
+    .sub{margin: 0 0 18px; color: var(--muted); font-size: 17px; max-width: 70ch}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top: 18px}
+    .services-preview{margin-top:48px}
+    .services-preview .grid{grid-template-columns: repeat(3, 1fr)}
+    @media (max-width: 768px){ .services-preview .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -263,266 +27,117 @@
   <div class="header-wrap">
     <div class="wrap">
       <header>
-      <a href="/" class="brand">
-        <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
-        <div>
-          <strong>OpsDevCo</strong><br/>
-          <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
-        </div>
-      </a>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#tools">Tools</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <a class="btn" href="#contact">Contact</a>
-      </nav>
-    </header>
+        <a href="index.html" class="brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
+          <div>
+            <strong>OpsDevCo</strong><br/>
+            <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
+          </div>
+        </a>
+        <nav>
+          <a href="services.html">Services</a>
+          <a href="tools.html">Tools</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a class="btn" href="about.html#contact">Contact</a>
+        </nav>
+      </header>
     </div>
   </div>
 
   <main id="main">
-  <div class="wrap main-wrap">
-    <section class="hero">
-      <div class="card hero-main">
-        <div class="kicker">
-          <span class="pill">AWS</span>
-          <span class="pill">Kubernetes / EKS</span>
-          <span class="pill">Terraform</span>
-          <span class="pill">Cost + Scaling</span>
-        </div>
+    <div class="wrap main-wrap">
+      <section class="hero">
+        <div class="card hero-main">
+          <div class="kicker">
+            <span class="pill">AWS</span>
+            <span class="pill">Kubernetes / EKS</span>
+            <span class="pill">Terraform</span>
+            <span class="pill">Cost + Scaling</span>
+          </div>
 
-        <h1>Your AWS and Kubernetes setup shouldn't keep you up at night.</h1>
-        <p class="sub">
-          I help teams untangle EKS, trim cloud waste, and make Terraform maintainable — without hiring another full-time person.
-        </p>
-
-        <div class="tldr">
-          <strong>In 30 seconds:</strong> Solo platform engineer. AWS, EKS, Terraform, Karpenter. Health checks, cost fixes, IaC cleanup. Starting at $1,200. <a href="#contact">Let's talk</a>.
-        </div>
-
-        <div class="cta">
-          <a class="btn primary" href="#contact">Let's talk</a>
-          <a class="btn" href="#pricing">See how I work</a>
-        </div>
-
-        <p class="price-teaser">
-          Engagements from <a href="#pricing">$1,200</a>. No long contracts. Async-friendly.
-        </p>
-      </div>
-
-      <aside class="card hero-side">
-        <p class="side-title">Sound familiar?</p>
-        <ul class="bullets">
-          <li>EKS "works" but scaling feels like a gamble</li>
-          <li>AWS spend keeps climbing and nobody knows why</li>
-          <li>Terraform is brittle — every change feels risky</li>
-          <li>Your platform team is drowning and could use a hand</li>
-        </ul>
-        <div style="margin-top:14px;">
-          <div class="pill">What you get: a clear roadmap and fixes that actually stick</div>
-        </div>
-      </aside>
-    </section>
-
-    <section id="services" class="card section">
-      <h2 style="margin:0 0 12px;">What I do</h2>
-      <div class="grid">
-        <div class="tile">
-          <h3>Platform Health Check</h3>
-          <p>I dig into your AWS, EKS, and Terraform setup and give you a straight-up report: what's working, what's not, and what to fix first.</p>
-        </div>
-        <div class="tile">
-          <h3>Cost + Scaling</h3>
-          <p>Track down what's actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
-        </div>
-        <div class="tile">
-          <h3>Terraform Cleanup</h3>
-          <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less "hold your breath" on every apply.</p>
-        </div>
-        <div class="tile">
-          <h3>Karpenter + Node Strategy</h3>
-          <p>Get node provisioning and consolidation that behaves predictably and doesn't blow the budget.</p>
-        </div>
-        <div class="tile">
-          <h3>Architecture Review</h3>
-          <p>Before you lock in big decisions — networking, cluster layout, guardrails — I'll sanity-check the plan.</p>
-        </div>
-        <div class="tile">
-          <h3>Fractional Platform Advisor</h3>
-          <p>A few hours a week of senior guidance for your CTO or platform lead. No hiring required.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="tools" class="card section">
-      <h2 style="margin:0 0 12px;">Tools I've built</h2>
-      <p class="note" style="margin:0 0 14px;">
-        Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
-      </p>
-      <div class="grid">
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" style="color:inherit">term-dx</a></h3>
-          <p>Diagnose Kubernetes resources stuck in Terminating (finalizers, dependents, API services).</p>
-        </div>
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/knode" target="_blank" rel="noopener noreferrer" style="color:inherit">knode</a></h3>
-          <p>List and cordon/drain EKS nodes from the command line.</p>
-        </div>
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/atx" target="_blank" rel="noopener noreferrer" style="color:inherit">atx</a></h3>
-          <p>Atmos Terraform shortcuts (plan, apply, deploy, destroy) with fzf selection.</p>
-        </div>
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/eks-addons" target="_blank" rel="noopener noreferrer" style="color:inherit">eks-addons</a></h3>
-          <p>Manage EKS add-ons from the CLI.</p>
-        </div>
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/shownodes" target="_blank" rel="noopener noreferrer" style="color:inherit">shownodes</a></h3>
-          <p>Improved node display with instance attributes and pricing.</p>
-        </div>
-        <div class="tile">
-          <h3><a href="https://github.com/opsdevcode/kubesnooze" target="_blank" rel="noopener noreferrer" style="color:inherit">kubesnooze</a></h3>
-          <p>Snooze/sleep workloads and show a splash page.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="how" class="card section">
-      <h2 style="margin:0 0 12px;">How we'll work together</h2>
-      <div class="split">
-        <div class="tile">
-          <h3>1) Quick intro (15 min)</h3>
-          <p>We talk through what's going on and what you're hoping for. If it's not a good fit, I'll tell you straight up.</p>
-        </div>
-        <div class="tile">
-          <h3>2) I take a look</h3>
-          <p>Usually read-only access — billing, EKS, your IaC repos. I try not to get in your team's way.</p>
-        </div>
-        <div class="tile">
-          <h3>3) You get a plan</h3>
-          <p>Prioritized: quick wins first, then medium fixes, then the bigger structural stuff.</p>
-        </div>
-        <div class="tile">
-          <h3>4) We fix it</h3>
-          <p>I implement or pair with your team. Most of my work is async and time-boxed — no endless retainer.</p>
-        </div>
-      </div>
-
-      <div class="note" style="margin-top:14px;">
-        If you're about to hire a "Senior DevOps / Platform / SRE" because things are a mess,
-        this is often a faster way to get stable first — before you add headcount.
-      </div>
-    </section>
-
-    <section id="pricing" class="card section">
-      <h2 style="margin:0 0 8px;">Pricing</h2>
-      <p class="note" style="margin:0 0 10px;">
-        Upfront and simple. No long contracts. If you need something different, we'll scope it clearly.
-      </p>
-
-      <div class="pricing">
-        <div class="row">
-          <div><strong>Architecture Review</strong><br/><span>One call + written notes</span></div>
-          <div><strong>$1,200</strong></div>
-        </div>
-        <div class="row">
-          <div><strong>Platform Health Check</strong><br/><span>Findings report + prioritized roadmap</span></div>
-          <div><strong>$2,200</strong></div>
-        </div>
-        <div class="row">
-          <div><strong>Focused Project</strong><br/><span>Time-boxed fixes (cost, scaling, IaC)</span></div>
-          <div><strong>$3,500–$8,000</strong></div>
-        </div>
-        <div class="row">
-          <div><strong>Fractional Advisor</strong><br/><span>4 hrs/week, async when it makes sense</span></div>
-          <div><strong>$3,250 / month</strong></div>
-        </div>
-      </div>
-
-      <p class="fine">
-        I don't do on-call or firefighting. I focus on stability, cost, and platform design — stuff that sticks.
-      </p>
-    </section>
-
-    <section id="about" class="card section">
-      <h2 style="margin:0 0 12px;">About</h2>
-      <div class="split">
-        <div class="tile">
-          <h3>Hi, I'm Eric</h3>
-          <p>
-            I've been running production infrastructure for 15+ years — startups, scale-ups, and enterprises.
-            OpsDevCo is my solo practice: no sales team, no account managers, just me.
+          <h1>Your AWS and Kubernetes setup shouldn't keep you up at night.</h1>
+          <p class="sub">
+            I help teams untangle EKS, trim cloud waste, and make Terraform maintainable — without hiring another full-time person.
           </p>
-          <p style="margin-top:10px;">
-            I focus on AWS, Kubernetes (EKS), Karpenter, and Terraform. The goal: make your platform predictable,
-            cheaper to run, and less of a daily headache.
+
+          <div class="tldr tldr-with-logo">
+            <img src="assets/opsdevco-logo-o-mark.png" alt="" aria-hidden="true" />
+            <div><strong>In 30 seconds:</strong> Solo platform engineer. AWS, EKS, Terraform, Karpenter. Health checks, cost fixes, IaC cleanup. Starting at $1,200. <a href="about.html#contact">Let's talk</a>.</div>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" href="about.html#contact">Let's talk</a>
+            <a class="btn" href="services.html">See how I work</a>
+          </div>
+
+          <p class="price-teaser">
+            Engagements from <a href="pricing.html">$1,200</a>. No long contracts. Async-friendly.
           </p>
         </div>
-        <div class="tile">
-          <h3>What to expect</h3>
-          <p>
-            Straight talk, practical advice, and work that actually ships. Small engagements with clear outcomes —
-            not endless "consulting hours."
+
+        <aside class="card hero-side">
+          <p class="side-title side-with-logo">
+            <img src="assets/opsdevco-logo-o-mark.png" alt="" aria-hidden="true" />
+            <span>Sound familiar?</span>
           </p>
-          <p style="margin-top:10px;">
-            Where I spend most of my time:
-            <code class="inline">EKS</code>
-            <code class="inline">Karpenter</code>
-            <code class="inline">Terraform</code>
-            <code class="inline">AWS cost/sizing</code>
-            <code class="inline">node strategy</code>
-          </p>
-          <p style="margin-top:10px; color:var(--muted); font-size:14px;">
-            — Eric Skaggs
-          </p>
+          <ul class="bullets">
+            <li>EKS "works" but scaling feels like a gamble</li>
+            <li>AWS spend keeps climbing and nobody knows why</li>
+            <li>Terraform is brittle — every change feels risky</li>
+            <li>Your platform team is drowning and could use a hand</li>
+          </ul>
+          <div style="margin-top:14px;">
+            <div class="pill">What you get: a clear roadmap and fixes that actually stick</div>
+          </div>
+        </aside>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="section card services-preview">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">What I do</h2>
         </div>
+        <div class="grid">
+          <div class="tile">
+            <h3>Platform Health Check</h3>
+            <p>I dig into your AWS, EKS, and Terraform setup and give you a straight-up report: what's working, what's not, and what to fix first.</p>
+          </div>
+          <div class="tile">
+            <h3>Cost + Scaling</h3>
+            <p>Track down what's actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
+          </div>
+          <div class="tile">
+            <h3>Terraform Cleanup</h3>
+            <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less "hold your breath" on every apply.</p>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:20px;">
+          <a class="btn" href="services.html">View all services</a>
+        </div>
+      </section>
+
+      <div style="text-align:center; margin-top:32px; margin-bottom:24px;">
+        <a class="btn primary" href="about.html#contact">Let's talk</a>
+        <a class="btn" href="tools.html" style="margin-left:10px;">Browse tools</a>
       </div>
-    </section>
 
-    <section id="contact" class="card section">
-      <h2 style="margin:0 0 8px;">Get in touch</h2>
-      <p class="note" style="margin:0 0 12px;">
-        Drop me a line with a bit about your situation — team size, cloud bill ballpark, what's hurting. I'll reply with a clear next step.
-      </p>
-
-      <div class="contact">
-        <a href="mailto:hello@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
-          <span><strong>Email</strong><br/><span style="color:var(--muted);">hello@opsdevco.de</span></span>
-          <span style="color:var(--muted);">→</span>
-        </a>
-
-        <!-- Optional: add a scheduling link later -->
-        <!--
-        <a href="https://cal.com/opsdevco/intro" target="_blank" rel="noopener noreferrer">
-          <span><strong>Book a 15-minute intro</strong><br/><span style="color:var(--muted);">If you prefer scheduling</span></span>
-          <span style="color:var(--muted);">→</span>
-        </a>
-        -->
-      </div>
-
-      <p class="fine">
-        Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.
-      </p>
-    </section>
-
-    <footer>
-      <div class="footer-brand">
-        <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-        <span>© <span id="y"></span> OpsDevCo</span>
-      </div>
-      <div>opsdevco.de</div>
-    </footer>
-  </div>
+      <footer>
+        <div class="footer-brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <span>© <span id="y"></span> OpsDevCo</span>
+        </div>
+        <div>opsdevco.de</div>
+      </footer>
+    </div>
   </main>
 
   <div class="sticky-cta" aria-hidden="true">
-    <a class="btn primary" href="#contact">Let's talk</a>
+    <a class="btn primary" href="about.html#contact">Let's talk</a>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

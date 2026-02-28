@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools | OpsDevCo</title>
+  <meta name="description" content="Open-source CLI tools for AWS, Kubernetes, and Terraform. term-dx, knode, atx, eks-addons, shownodes, kubesnooze." />
+  <link rel="icon" href="assets/opsdevco-logo-o-terminal.png" type="image/png" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="header-wrap">
+    <div class="wrap">
+      <header>
+        <a href="index.html" class="brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
+          <div>
+            <strong>OpsDevCo</strong><br/>
+            <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
+          </div>
+        </a>
+        <nav>
+          <a href="services.html">Services</a>
+          <a href="tools.html" class="active">Tools</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a class="btn" href="about.html#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="section card">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">Tools I've built</h2>
+        </div>
+        <p class="note" style="margin:0 0 14px;">
+          Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
+        </p>
+        <div class="grid">
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" style="color:inherit">term-dx</a></h3>
+            <p>Diagnose Kubernetes resources stuck in Terminating (finalizers, dependents, API services).</p>
+          </div>
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/knode" target="_blank" rel="noopener noreferrer" style="color:inherit">knode</a></h3>
+            <p>List and cordon/drain EKS nodes from the command line.</p>
+          </div>
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/atx" target="_blank" rel="noopener noreferrer" style="color:inherit">atx</a></h3>
+            <p>Atmos Terraform shortcuts (plan, apply, deploy, destroy) with fzf selection.</p>
+          </div>
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/eks-addons" target="_blank" rel="noopener noreferrer" style="color:inherit">eks-addons</a></h3>
+            <p>Manage EKS add-ons from the CLI.</p>
+          </div>
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/shownodes" target="_blank" rel="noopener noreferrer" style="color:inherit">shownodes</a></h3>
+            <p>Improved node display with instance attributes and pricing.</p>
+          </div>
+          <div class="tile">
+            <h3><a href="https://github.com/opsdevcode/kubesnooze" target="_blank" rel="noopener noreferrer" style="color:inherit">kubesnooze</a></h3>
+            <p>Snooze/sleep workloads and show a splash page.</p>
+          </div>
+        </div>
+      </section>
+
+      <div style="text-align:center; margin-top:32px;">
+        <a class="btn primary" href="about.html#contact">Let's talk</a>
+      </div>
+
+      <footer>
+        <div class="footer-brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <span>© <span id="y"></span> OpsDevCo</span>
+        </div>
+        <div>opsdevco.de</div>
+      </footer>
+    </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="about.html#contact">Let's talk</a>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

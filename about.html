@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | OpsDevCo</title>
+  <meta name="description" content="Eric Skaggs — 15+ years running production infrastructure. Solo platform engineering practice. AWS, EKS, Terraform, Karpenter." />
+  <link rel="icon" href="assets/opsdevco-logo-o-terminal.png" type="image/png" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="header-wrap">
+    <div class="wrap">
+      <header>
+        <a href="index.html" class="brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
+          <div>
+            <strong>OpsDevCo</strong><br/>
+            <span style="color:var(--muted); font-size:13px;">Platform engineering, without the corporate speak</span>
+          </div>
+        </a>
+        <nav>
+          <a href="services.html">Services</a>
+          <a href="tools.html">Tools</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html" class="active">About</a>
+          <a class="btn" href="#contact">Contact</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="wrap main-wrap services-layout">
+    <div>
+      <section class="section card" id="about">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">About</h2>
+        </div>
+        <div class="split">
+          <div class="tile">
+            <h3 class="tile-header">
+              <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+              <span>Hi, I'm Eric</span>
+            </h3>
+            <p>
+              I've been running production infrastructure for 15+ years — startups, scale-ups, and enterprises.
+              OpsDevCo is my solo practice: no sales team, no account managers, just me.
+            </p>
+            <p style="margin-top:10px;">
+              I focus on AWS, Kubernetes (EKS), Karpenter, and Terraform. The goal: make your platform predictable,
+              cheaper to run, and less of a daily headache.
+            </p>
+          </div>
+          <div class="tile">
+            <h3>What to expect</h3>
+            <p>
+              Straight talk, practical advice, and work that actually ships. Small engagements with clear outcomes —
+              not endless "consulting hours."
+            </p>
+            <p style="margin-top:10px;">
+              Where I spend most of my time:
+              <code class="inline">EKS</code>
+              <code class="inline">Karpenter</code>
+              <code class="inline">Terraform</code>
+              <code class="inline">AWS cost/sizing</code>
+              <code class="inline">node strategy</code>
+            </p>
+            <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+              — Eric Skaggs
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="section card" id="contact">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">Get in touch</h2>
+        </div>
+        <p class="note" style="margin:0 0 12px;">
+          Drop me a line with a bit about your situation — team size, cloud bill ballpark, what's hurting. I'll reply with a clear next step.
+        </p>
+
+        <div class="contact">
+          <a href="mailto:hello@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
+            <span><strong>Email</strong><br/><span style="color:var(--muted);">hello@opsdevco.de</span></span>
+            <span style="color:var(--muted);">→</span>
+          </a>
+        </div>
+
+        <p class="fine">
+          Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.
+        </p>
+      </section>
+
+      <footer>
+        <div class="footer-brand">
+          <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <span>© <span id="y"></span> OpsDevCo</span>
+        </div>
+        <div>opsdevco.de</div>
+      </footer>
+    </div>
+    <nav class="on-this-page" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#about">About</a>
+      <a href="#contact">Get in touch</a>
+    </nav>
+    </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="#contact">Let's talk</a>
+  </div>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
