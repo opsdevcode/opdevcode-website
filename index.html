@@ -7,6 +7,9 @@
   <meta name="description" content="OpsDevCo — platform engineering advisory. I help teams untangle EKS, trim cloud waste, and make Terraform maintainable. No corporate speak, no long contracts." />
   <meta name="robots" content="index,follow" />
   <link rel="icon" href="assets/opsdevco-logo-o-terminal.png" type="image/png" />
+  <meta property="og:image" content="https://opsdevco.de/assets/opsdevco-logo-o-terminal.png" />
+  <meta property="og:image:alt" content="OpsDevCo — platform engineering advisory" />
+  <meta name="twitter:image" content="https://opsdevco.de/assets/opsdevco-logo-o-terminal.png" />
   <style>
     :root{
       --bg:#0b0f17;
@@ -193,8 +196,22 @@
       margin-top: 18px;
       color: var(--muted);
       font-size: 13px;
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
-      padding: 10px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-brand{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    footer img{
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      opacity: 0.8;
     }
     .note{color:var(--muted); font-size:14px}
     .contact{
@@ -491,7 +508,10 @@
     </section>
 
     <footer>
-      <div>© <span id="y"></span> OpsDevCo</div>
+      <div class="footer-brand">
+        <img src="assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+        <span>© <span id="y"></span> OpsDevCo</span>
+      </div>
       <div>opsdevco.de</div>
     </footer>
   </div>
