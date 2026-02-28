@@ -20,21 +20,36 @@
       --max: 1100px;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     html,body{height:100%}
     body{
       margin:0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      font-size:16px;
       color:var(--text);
       background: radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.25), transparent 60%),
                   radial-gradient(900px 500px at 90% 10%, rgba(110,231,255,.16), transparent 55%),
                   var(--bg);
-      line-height:1.5;
+      line-height:1.6;
     }
     a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px}
+    a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+    .skip-link{
+      position:absolute; top:-100px; left:18px; z-index:100;
+      padding:12px 16px; background:var(--panel); border:1px solid var(--line);
+      border-radius:12px; color:var(--text); font-weight:600;
+      transition:top .2s;
+    }
+    .skip-link:focus{top:18px;}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    .header-wrap{
+      position:sticky; top:0; z-index:50;
+      background:rgba(11,15,23,.85); backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line); margin:0 -18px; padding:0 18px;
+    }
     header{
       display:flex; align-items:center; justify-content:space-between;
-      gap:14px; padding:14px 0 8px;
+      gap:14px; padding:14px 0 12px;
     }
     .brand{display:flex; gap:10px; align-items:center}
     .dot{
@@ -43,14 +58,16 @@
       box-shadow: 0 0 20px rgba(122,162,255,.55);
     }
     .brand strong{letter-spacing:.2px}
-    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
     nav a{
       color:var(--muted);
-      padding:8px 10px;
+      padding:12px 14px; min-height:44px; min-width:44px;
+      display:inline-flex; align-items:center; justify-content:center;
       border:1px solid transparent;
       border-radius:999px;
     }
     nav a:hover{border-color:var(--line); color:var(--text); background:rgba(255,255,255,.02)}
+    nav a.btn{min-width:auto; padding:14px 18px}
     .hero{
       margin-top:18px;
       display:grid;
@@ -97,7 +114,7 @@
     }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding: 12px 14px;
+      padding: 14px 18px; min-height:44px;
       border-radius: 12px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,.03);
@@ -119,9 +136,10 @@
     .side-title{font-weight:700; margin: 0 0 12px}
     .bullets{margin:0; padding-left:18px; color:var(--muted)}
     .bullets li{margin:8px 0}
+    section[id]{scroll-margin-top:80px}
     .section{
-      margin-top: 18px;
-      padding: 22px;
+      margin-top: 28px;
+      padding: 28px;
     }
     .grid{
       display:grid;
@@ -135,8 +153,9 @@
       border-radius: 16px;
       background: rgba(255,255,255,.02);
     }
-    .tile h3{margin: 0 0 8px; font-size: 16px}
-    .tile p{margin:0; color:var(--muted); font-size: 14px}
+    h2{font-size:1.5rem; font-weight:700; letter-spacing:-.3px}
+    .tile h3{margin: 0 0 8px; font-size: 1.05rem; font-weight:600}
+    .tile p{margin:0; color:var(--muted); font-size: 15px; max-width:65ch}
     .split{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -198,11 +217,34 @@
       border-radius: 8px;
       white-space: nowrap;
     }
+    .tldr{
+      margin-top:18px; padding:16px 20px;
+      border:1px solid var(--line); border-radius:14px;
+      background:rgba(255,255,255,.02); color:var(--muted);
+      font-size:15px; max-width:65ch;
+    }
+    .tldr strong{color:var(--text)}
+    .tldr a{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
+    .tldr a:hover{color:var(--accent2)}
+    .price-teaser{font-size:14px; color:var(--muted); margin-top:8px}
+    .price-teaser a{color:var(--accent); text-decoration:underline; text-underline-offset:2px}
+    .price-teaser a:hover{color:var(--accent2)}
+    .sticky-cta{
+      display:none; position:fixed; bottom:0; left:0; right:0; z-index:40;
+      padding:12px 18px; background:rgba(11,15,23,.95); backdrop-filter:blur(12px);
+      border-top:1px solid var(--line); justify-content:center;
+    }
+    @media (max-width: 900px){
+      .sticky-cta{display:flex}
+      .main-wrap{padding-bottom:100px}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="header-wrap">
+    <div class="wrap">
+      <header>
       <div class="brand">
         <div class="dot" aria-hidden="true"></div>
         <div>
@@ -219,7 +261,11 @@
         <a class="btn" href="#contact">Contact</a>
       </nav>
     </header>
+    </div>
+  </div>
 
+  <main id="main">
+  <div class="wrap main-wrap">
     <section class="hero">
       <div class="card hero-main">
         <div class="kicker">
@@ -231,17 +277,20 @@
 
         <h1>Your AWS and Kubernetes setup shouldn't keep you up at night.</h1>
         <p class="sub">
-          I help teams untangle EKS, trim cloud waste, and turn Terraform from a liability into something you can actually maintain —
-          without hiring another full-time person.
+          I help teams untangle EKS, trim cloud waste, and make Terraform maintainable — without hiring another full-time person.
         </p>
+
+        <div class="tldr">
+          <strong>In 30 seconds:</strong> Solo platform engineer. AWS, EKS, Terraform, Karpenter. Health checks, cost fixes, IaC cleanup. Starting at $1,200. <a href="#contact">Let's talk</a>.
+        </div>
 
         <div class="cta">
           <a class="btn primary" href="#contact">Let's talk</a>
           <a class="btn" href="#pricing">See how I work</a>
         </div>
 
-        <p class="fine">
-          Small engagements. No long contracts. I'm happy to work async if that fits your team better.
+        <p class="price-teaser">
+          Engagements from <a href="#pricing">$1,200</a>. No long contracts. Async-friendly.
         </p>
       </div>
 
@@ -444,6 +493,11 @@
       <div>© <span id="y"></span> OpsDevCo</div>
       <div>opsdevco.de</div>
     </footer>
+  </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="#contact">Let's talk</a>
   </div>
 
   <script>
