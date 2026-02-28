@@ -38,7 +38,7 @@ Always verify the preview before merging.
 
 1. Go to [developer.godaddy.com/keys](https://developer.godaddy.com/keys)
 2. Create Production API key and secret
-3. Set env vars (or add to `.env` and `source` it):
+3. Copy `.env.example` to `.env` and add your keys, or set env vars:
 
 ```bash
 export GODADDY_API_KEY="your_key"
