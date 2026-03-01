@@ -1,1 +1,3 @@
+# Code owners — requested for review when PRs touch these paths.
+# Require "Code Owners" review in branch protection to enforce.
 * @opsdevcode

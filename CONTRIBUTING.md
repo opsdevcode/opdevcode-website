@@ -73,9 +73,10 @@ Configure branch protection for `main` in **Settings → Branches → Add rule**
 1. **Branch name pattern**: `main`
 2. **Require a pull request before merging**: Yes
    - Require approvals: 1 (or your team's preference)
+   - **Require review from Code Owners**: Yes (uses `.github/CODEOWNERS`)
    - Dismiss stale reviews when new commits are pushed: optional
 3. **Require status checks to pass before merging**: Yes
    - Require branches to be up to date: Yes
-   - Status checks: `Version Check`, `Direct Push Guard`
+   - Status checks: `version` (from Version Check workflow)
 4. **Do not allow bypassing the above settings**: recommended
 5. **Restrict who can push to matching branches**: optional (e.g. limit to opsdevcode org members)
