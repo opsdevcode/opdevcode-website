@@ -84,6 +84,33 @@
 
       <div class="section-divider" aria-hidden="true"></div>
 
+      <section class="section card" id="faq">
+        <div class="section-header">
+          <img src="assets/opsdevco-logo-o-terminal.png?v=3" alt="" aria-hidden="true" />
+          <h2 style="margin:0;">FAQ</h2>
+        </div>
+        <dl class="faq-list">
+          <div class="faq-item">
+            <dt>How long does a typical engagement last?</dt>
+            <dd>Most work is time-boxed: a health check in a few days, cost fixes in 1–2 weeks, Terraform cleanup as needed. No open-ended retainer unless you want one.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Do you work async or do we need to be on calls?</dt>
+            <dd>I prefer async — Slack, email, PRs. I'll schedule calls when they're useful, but I won't fill your calendar.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>What if we're not on AWS or EKS?</dt>
+            <dd>My depth is AWS/EKS. For GCP, Azure, or other clouds I can still advise on architecture and process, but hands-on work is AWS-focused.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Can you help with agentic development / AI tooling?</dt>
+            <dd>Yes. I use Cursor and agentic workflows daily. I can help you adopt them — rules, prompts, workflows — without the hype.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
       <section class="section card" id="contact">
         <div class="section-header">
           <img src="assets/opsdevco-logo-o-terminal.png?v=3" alt="" aria-hidden="true" />
@@ -94,6 +121,10 @@
         </p>
 
         <div class="contact">
+          <a href="https://cal.com/opsdevco/intro" target="_blank" rel="noopener noreferrer">
+            <span><strong>Book a call</strong><br/><span style="color:var(--muted);">cal.com/opsdevco/intro</span></span>
+            <span style="color:var(--muted);">→</span>
+          </a>
           <a href="mailto:hello@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
             <span><strong>Email</strong><br/><span style="color:var(--muted);">hello@opsdevco.de</span></span>
             <span style="color:var(--muted);">→</span>
@@ -110,19 +141,20 @@
           <img src="assets/opsdevco-logo-o-terminal.png?v=3" alt="" aria-hidden="true" />
           <span>© <span id="y"></span> OpsDevCo</span>
         </div>
-        <div>opsdevco.de</div>
+        <div><a href="privacy.html" style="color:var(--muted)">Privacy</a> · opsdevco.de</div>
       </footer>
     </div>
     <nav class="on-this-page" aria-label="On this page">
       <strong>On this page</strong>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Get in touch</a>
     </nav>
     </div>
   </main>
 
   <div class="sticky-cta" aria-hidden="true">
-    <a class="btn primary" href="#contact">Let's talk</a>
+    <a class="btn primary" href="https://cal.com/opsdevco/intro" target="_blank" rel="noopener noreferrer">Book a call</a>
   </div>
 
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
