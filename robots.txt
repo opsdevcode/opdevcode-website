@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://opsdevco.de/sitemap.xml
