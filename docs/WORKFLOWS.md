@@ -4,18 +4,16 @@
 
 **Cause:** The default `GITHUB_TOKEN` cannot create or approve PRs. This is common in org repos.
 
-**Fix (choose one):**
+**Fix (do this first):**
 
-1. **Enable the setting** (recommended):  
-   **Settings → Actions → General** → under "Workflow permissions" → enable **"Allow GitHub Actions to create and approve pull requests"**.
+1. Go to **Settings → Actions → General**: https://github.com/opsdevcode/opdevcode-website/settings/actions
+2. Under **Workflow permissions**, select **Read and write permissions**
+3. Check **Allow GitHub Actions to create and approve pull requests**
+4. Click **Save**
 
-2. **Use a Personal Access Token (PAT):**
+**The workflow is configured to use a PAT.** Add the secret:
    - Create a PAT with `repo` scope at https://github.com/settings/tokens
    - Add it as a repo secret: **Settings → Secrets and variables → Actions** → New repository secret → name: `RELEASE_PLEASE_TOKEN`
-   - In `.github/workflows/release-please.yml`, add:
-     ```yaml
-     token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
-     ```
 
 ## Version Check fails
 
