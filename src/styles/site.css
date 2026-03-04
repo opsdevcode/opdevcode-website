@@ -1,6 +1,4 @@
 /* OpsDevCo — Editorial, minimal */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
-@import './design-tokens.css';
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -223,3 +221,6 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 .side-title, .side-with-logo, .bullets { margin: 0; }
 .bullets { padding-left: var(--space-20); color: var(--color-text-secondary); }
 .pill { display: inline-block; padding: 4px 10px; font-size: var(--text-xs); background: var(--color-bg-muted); border-radius: var(--radius-full); color: var(--color-text-secondary); }
+.err-main { text-align: center; padding: 60px 24px; }
+.err-main h1 { font-size: 4rem; margin: 0 0 8px; color: var(--color-text-muted); }
+.err-main p { font-size: 1.1rem; color: var(--color-text-muted); max-width: 40ch; margin: 0 auto 24px; }

@@ -3,14 +3,13 @@
   "version": "1.3.0",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "astro check",
+    "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run format:check && npm run typecheck",
     "og:generate": "node scripts/screenshot-og.js",
     "netlify:login": "netlify login",
@@ -21,23 +20,23 @@
     "domain:add": "scripts/setup-domain.sh",
     "domain:netlify": "scripts/add-netlify-domain.sh"
   },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.4",
+    "next": "^15.5.12",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
   "devDependencies": {
-    "@astrojs/check": "^0.9.6",
     "@eslint/js": "^9.39.3",
-    "@typescript-eslint/parser": "^8.56.1",
-    "astro-eslint-parser": "^1.3.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "eslint": "^9.39.3",
+    "eslint-config-next": "^15.5.12",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-astro": "^1.6.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
     "netlify-cli": "^17.0.0",
     "playwright": "^1.58.2",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
-    "@vite-pwa/astro": "^1.2.0",
-    "astro": "^5.18.0"
   }
 }
