@@ -5,7 +5,7 @@ const fs = require('fs');
 
 (async () => {
   const htmlPath = path.join(__dirname, 'og-image.html');
-  const outPath = path.join(__dirname, '..', 'assets', 'og-image.png');
+  const outPath = path.join(__dirname, '..', 'public', 'assets', 'og-image.png');
   const fileUrl = 'file://' + htmlPath;
 
   const browser = await chromium.launch();

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout
+  title="Privacy | OpsDevCo"
+  description="Privacy policy. Low-profile by design. Minimal data collection."
+  noindex
+>
+  <Header />
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="section card">
+        <h2 style="margin: 0 0 16px;">Privacy</h2>
+        <p class="note" style="margin: 0 0 20px;">Low-profile by design. This site collects minimal data.</p>
+        <h3 style="font-size: 1.1rem; margin: 16px 0 8px;">What we collect</h3>
+        <p>If you email us, we have your email and whatever you send. We use it to respond and do the work. We don't sell or share it.</p>
+        <h3 style="font-size: 1.1rem; margin: 16px 0 8px;">This website</h3>
+        <p>No analytics, no tracking pixels, no cookies. Hosted on Netlify; they may log requests per their policy. We don't use that data.</p>
+        <h3 style="font-size: 1.1rem; margin: 16px 0 8px;">Questions</h3>
+        <p><a href="mailto:eric@opsdevco.de">eric@opsdevco.de</a></p>
+        <p style="margin-top: 24px;"><a href="/">← Back</a></p>
+      </section>
+    </div>
+  </main>
+</BaseLayout>

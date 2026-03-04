@@ -58,7 +58,7 @@ The site is hosted on [Netlify](https://www.netlify.com). To connect or redeploy
 1. Sign in at [app.netlify.com](https://app.netlify.com) (free account).
 2. **Add new site** → **Import from Git** → choose **GitHub** → authorize.
 3. Select `opsdevcode/opdevcode-website`.
-4. Netlify reads `netlify.toml` — no build command or publish path to set.
+4. Netlify reads `netlify.toml` — build: `npm run build`, publish: `dist`.
 5. Deploy.
 6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management**, then set DNS at GoDaddy: A record `@` → `75.2.60.5`, CNAME `www` → `[site].netlify.app`. See [docs/CLI-SETUP.md](docs/CLI-SETUP.md) for details.
 

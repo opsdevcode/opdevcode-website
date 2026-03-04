@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Pricing | OpsDevCo"
+  description="Transparent pricing. Architecture Review $1,200. Platform Health Check $2,200. Focused projects $3,500–$8,000. Fractional Advisor $3,250/month."
+>
+  <Header active="Pricing" />
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="section card">
+        <div class="section-header">
+          <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin: 0;">Pricing</h2>
+        </div>
+        <p class="note" style="margin: 0 0 10px;">
+          Upfront and simple. No long contracts. If you need something different, we'll scope it clearly.
+        </p>
+        <div class="pricing-card">
+          <div class="pricing">
+            <div class="row">
+              <div><strong>Architecture Review</strong><br /><span>One call + written notes</span></div>
+              <div><strong>$1,200</strong></div>
+            </div>
+            <div class="row">
+              <div><strong>Platform Health Check</strong><br /><span>Findings report + prioritized roadmap</span></div>
+              <div><strong>$2,200</strong></div>
+            </div>
+            <div class="row">
+              <div><strong>Focused Project</strong><br /><span>Time-boxed fixes (cost, scaling, IaC)</span></div>
+              <div><strong>$3,500–$8,000</strong></div>
+            </div>
+            <div class="row">
+              <div><strong>Fractional Advisor</strong><br /><span>4 hrs/week, async when it makes sense</span></div>
+              <div><strong>$3,250 / month</strong></div>
+            </div>
+          </div>
+        </div>
+        <p class="fine">
+          I don't do on-call or firefighting. I focus on stability, cost, and platform design — stuff that sticks.
+        </p>
+      </section>
+      <div style="text-align: center; margin-top: 32px;">
+        <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+      </div>
+      <Footer />
+    </div>
+  </main>
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+  </div>
+</BaseLayout>

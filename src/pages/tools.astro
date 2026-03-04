@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const tools = [
+  { name: 'term-dx', url: 'https://github.com/opsdevcode/term-dx', desc: 'Diagnose Kubernetes resources stuck in Terminating (finalizers, dependents, API services).' },
+  { name: 'knode', url: 'https://github.com/opsdevcode/knode', desc: 'List and cordon/drain EKS nodes from the command line.' },
+  { name: 'atx', url: 'https://github.com/opsdevcode/atx', desc: 'Atmos Terraform shortcuts (plan, apply, deploy, destroy) with fzf selection.' },
+  { name: 'eks-addons', url: 'https://github.com/opsdevcode/eks-addons', desc: 'Manage EKS add-ons from the CLI.' },
+  { name: 'shownodes', url: 'https://github.com/opsdevcode/shownodes', desc: 'Improved node display with instance attributes and pricing.' },
+  { name: 'kubesnooze', url: 'https://github.com/opsdevcode/kubesnooze', desc: 'Snooze/sleep workloads and show a splash page.' },
+];
+---
+
+<BaseLayout
+  title="Tools | OpsDevCo"
+  description="Open-source CLI tools for AWS, Kubernetes, and Terraform. term-dx, knode, atx, eks-addons, shownodes, kubesnooze."
+>
+  <Header active="Tools" />
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="section card">
+        <div class="section-header">
+          <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin: 0;">Tools I've built</h2>
+        </div>
+        <p class="note" style="margin: 0 0 14px;">
+          Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
+        </p>
+        <div class="grid grid-2col">
+          {tools.map((t) => (
+            <div class="tile">
+              <h3><a href={t.url} target="_blank" rel="noopener noreferrer" style="color: inherit">{t.name}</a></h3>
+              <p>{t.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <div style="text-align: center; margin-top: 32px;">
+        <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+      </div>
+      <Footer />
+    </div>
+  </main>
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+  </div>
+</BaseLayout>

@@ -1,27 +1,54 @@
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
 
 [build.environment]
   NODE_VERSION = "22"
 
-# Deploy previews: same config as production (static HTML)
-# PRs get unique URLs: deploy-preview-<PR#>--<site>.netlify.app
 [context.deploy-preview]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
 
-# Branch deploys: preview non-PR branches
 [context.branch-deploy]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
+
+# Redirect old .html URLs to clean URLs
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+[[redirects]]
+  from = "/services.html"
+  to = "/services"
+  status = 301
+[[redirects]]
+  from = "/pricing.html"
+  to = "/pricing"
+  status = 301
+[[redirects]]
+  from = "/tools.html"
+  to = "/tools"
+  status = 301
+[[redirects]]
+  from = "/agentic.html"
+  to = "/agentic"
+  status = 301
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
 
 # Security & transport
 [[headers]]
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; base-uri 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; base-uri 'self'"
 
 # No cache for HTML - force fresh content
 [[headers]]

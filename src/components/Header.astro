@@ -1,0 +1,36 @@
+---
+interface Props {
+  active?: string;
+}
+
+const { active = '' } = Astro.props;
+const navItems = [
+  { href: '/services', label: 'Services' },
+  { href: '/tools', label: 'Tools' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/about', label: 'About' },
+];
+---
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="header-wrap">
+  <div class="wrap">
+    <header>
+      <a href="/" class="brand">
+        <img src="/assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width="36" height="36" />
+        <div>
+          <strong>OpsDevCo</strong><br />
+          <span class="brand-tagline">Platform engineering, without the corporate speak</span>
+        </div>
+      </a>
+      <nav>
+        {navItems.map((item) => (
+          <a href={item.href} class:list={active === item.label ? ['active'] : []}>
+            {item.label}
+          </a>
+        ))}
+        <a class="btn" href="/about#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
+</div>
