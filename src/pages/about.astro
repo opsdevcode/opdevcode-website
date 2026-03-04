@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <BaseLayout
@@ -10,19 +10,12 @@ import Footer from '../components/Footer.astro';
 >
   <Header active="About" />
   <main id="main">
-    <div class="wrap main-wrap services-layout">
-      <div>
-        <section class="section card" id="about">
-          <div class="section-header">
-            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-            <h2 style="margin: 0;">About</h2>
-          </div>
-          <div class="split">
-            <div class="tile">
-              <h3 class="tile-header">
-                <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-                <span>Hi, I'm Eric</span>
-              </h3>
+    <div class="wrap">
+      <section class="section" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="split">
+          <div class="tile">
+            <h3>Hi, I'm Eric</h3>
               <p>
                 I've been running production infrastructure for 15+ years — startups, scale-ups, and enterprises.
                 OpsDevCo is my solo practice: no sales team, no account managers, just me.
@@ -50,21 +43,16 @@ import Footer from '../components/Footer.astro';
               </p>
               <p style="margin-top: 10px; color: var(--color-text-muted); font-size: 14px;">— Eric Skaggs</p>
               <p style="margin-top: 14px;">
-                <a href="https://github.com/opsdevcode" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary);">GitHub</a>
+                <a href="https://github.com/opsdevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <span style="color: var(--color-text-muted); margin: 0 8px;">·</span>
-                <a href="https://www.linkedin.com/in/ericskaggs" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary);">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/ericskaggs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               </p>
             </div>
           </div>
-        </section>
+      </section>
 
-        <div class="section-divider" aria-hidden="true"></div>
-
-        <section class="section card" id="faq">
-          <div class="section-header">
-            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-            <h2 style="margin: 0;">FAQ</h2>
-          </div>
+      <section class="section" id="faq">
+        <h2 class="section-title">FAQ</h2>
           <dl class="faq-list">
             <div class="faq-item">
               <dt>How long does a typical engagement last?</dt>
@@ -83,15 +71,10 @@ import Footer from '../components/Footer.astro';
               <dd>Yes. I use Cursor and agentic workflows daily. I can help you adopt them — rules, prompts, workflows — without the hype.</dd>
             </div>
           </dl>
-        </section>
+      </section>
 
-        <div class="section-divider" aria-hidden="true"></div>
-
-        <section class="section card" id="contact">
-          <div class="section-header">
-            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-            <h2 style="margin: 0;">Get in touch</h2>
-          </div>
+      <section class="section" id="contact">
+        <h2 class="section-title">Get in touch</h2>
           <p class="note" style="margin: 0 0 12px;">
             Drop me a line with a bit about your situation — team size, cloud bill ballpark, what's hurting. I'll reply with a clear next step.
           </p>
@@ -106,20 +89,9 @@ import Footer from '../components/Footer.astro';
             </a>
           </div>
           <p class="fine">Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.</p>
-        </section>
+      </section>
 
-        <Footer />
-      </div>
-      <nav class="on-this-page" aria-label="On this page">
-        <strong>On this page</strong>
-        <a href="#about">About</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Get in touch</a>
-      </nav>
+      <Footer />
     </div>
   </main>
-
-  <div class="sticky-cta" aria-hidden="true">
-    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-  </div>
 </BaseLayout>

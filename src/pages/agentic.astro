@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <BaseLayout
@@ -10,12 +10,9 @@ import Footer from '../components/Footer.astro';
 >
   <Header />
   <main id="main">
-    <div class="wrap main-wrap">
-      <section class="section card">
-        <div class="section-header">
-          <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-          <h2 style="margin: 0;">Agentic Development</h2>
-        </div>
+    <div class="wrap">
+      <section class="section">
+        <h2 class="section-title">Agentic Development</h2>
         <p class="note" style="margin: 0 0 16px;">
           AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.
         </p>
@@ -34,10 +31,10 @@ import Footer from '../components/Footer.astro';
             <p>Short, focused sessions: audit your current setup, recommend changes, help implement. No long retainer — get unblocked and move on.</p>
           </div>
         </div>
-        <div style="text-align: center; margin-top: 24px;">
+        <p style="margin-top: var(--space-24);">
           <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-          <a class="btn" href="/services" style="margin-left: 10px;">All services</a>
-        </div>
+          <a class="btn" href="/services" style="margin-left: var(--space-8);">All services</a>
+        </p>
       </section>
       <Footer />
     </div>
