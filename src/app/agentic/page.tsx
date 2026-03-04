@@ -15,7 +15,7 @@ export default function AgenticPage() {
         <div className="wrap">
           <section className="section">
             <h2 className="section-title">Agentic Development</h2>
-            <p className="note" style={{ margin: '0 0 16px' }}>
+            <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
               AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.
             </p>
             <div className="split">
@@ -33,9 +33,9 @@ export default function AgenticPage() {
                 <p>Short, focused sessions: audit your current setup, recommend changes, help implement. No long retainer — get unblocked and move on.</p>
               </div>
             </div>
-            <p style={{ marginTop: 'var(--space-24)' }}>
+            <p style={{ marginTop: 'var(--space-32)' }}>
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-              <a className="btn" href="/services" style={{ marginLeft: 'var(--space-8)' }}>All services</a>
+              <a className="btn" href="/services" style={{ marginLeft: 'var(--space-12)' }}>All services</a>
             </p>
           </section>
           <Footer />

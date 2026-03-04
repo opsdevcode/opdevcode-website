@@ -23,16 +23,16 @@ export default function ToolsPage() {
       <main id="main">
         <div className="wrap">
           <section className="section">
-            <h2 className="section-title">Tools I&apos;ve built</h2>
-            <p className="note" style={{ margin: '0 0 14px' }}>
+            <h2 className="section-title">Tools</h2>
+            <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
               Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
             </p>
             <div className="grid grid-2col">
               {tools.map((t) => (
-                <div key={t.name} className="tile">
-                  <h3><a href={t.url} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>{t.name}</a></h3>
+                <a key={t.name} href={t.url} target="_blank" rel="noopener noreferrer" className="tile">
+                  <h3 style={{ color: 'var(--color-primary)' }}>{t.name}</h3>
                   <p>{t.desc}</p>
-                </div>
+                </a>
               ))}
             </div>
           </section>

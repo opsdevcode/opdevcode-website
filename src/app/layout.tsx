@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Instrument_Sans, Source_Sans_3 } from 'next/font/google'
+import { JetBrains_Mono, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 
-const instrumentSans = Instrument_Sans({ subsets: ['latin'], variable: '--font-instrument' })
-const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-source' })
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
+const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-body' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://opsdevco.de'),
-  themeColor: '#0f0f0f',
+  themeColor: '#0a0a0a',
   title: { default: 'OpsDevCo | Platform Engineering Advisory', template: '%s | OpsDevCo' },
   description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
   openGraph: {
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${instrumentSans.variable} ${sourceSans.variable}`} style={{ colorScheme: 'dark' }}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${sourceSans.variable}`} style={{ colorScheme: 'dark' }}>
       <body>{children}</body>
     </html>
   )
