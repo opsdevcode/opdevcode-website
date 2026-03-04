@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About | OpsDevCo"
+  description="Eric Skaggs — 15+ years running production infrastructure. Solo platform engineering practice. AWS, GCP, EKS, Terraform, Karpenter, agentic development."
+>
+  <Header active="About" />
+  <main id="main">
+    <div class="wrap main-wrap services-layout">
+      <div>
+        <section class="section card" id="about">
+          <div class="section-header">
+            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+            <h2 style="margin: 0;">About</h2>
+          </div>
+          <div class="split">
+            <div class="tile">
+              <h3 class="tile-header">
+                <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+                <span>Hi, I'm Eric</span>
+              </h3>
+              <p>
+                I've been running production infrastructure for 15+ years — startups, scale-ups, and enterprises.
+                OpsDevCo is my solo practice: no sales team, no account managers, just me.
+              </p>
+              <p style="margin-top: 10px;">
+                I focus on AWS, GCP (6+ years), Kubernetes (EKS), Karpenter, Terraform, and agentic development. The goal: make your platform predictable,
+                cheaper to run, and less of a daily headache.
+              </p>
+            </div>
+            <div class="tile">
+              <h3>What to expect</h3>
+              <p>
+                Straight talk, practical advice, and work that actually ships. Small engagements with clear outcomes —
+                not endless "consulting hours."
+              </p>
+              <p style="margin-top: 10px;">
+                Where I spend most of my time:
+                <code class="inline">EKS</code>
+                <code class="inline">Karpenter</code>
+                <code class="inline">Terraform</code>
+                <code class="inline">agentic dev</code>
+                <code class="inline">AWS cost/sizing</code>
+                <code class="inline">GCP cost/sizing</code>
+                <code class="inline">node strategy</code>
+              </p>
+              <p style="margin-top: 10px; color: var(--color-text-muted); font-size: 14px;">— Eric Skaggs</p>
+              <p style="margin-top: 14px;">
+                <a href="https://github.com/opsdevcode" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary);">GitHub</a>
+                <span style="color: var(--color-text-muted); margin: 0 8px;">·</span>
+                <a href="https://www.linkedin.com/in/ericskaggs" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary);">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <section class="section card" id="faq">
+          <div class="section-header">
+            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+            <h2 style="margin: 0;">FAQ</h2>
+          </div>
+          <dl class="faq-list">
+            <div class="faq-item">
+              <dt>How long does a typical engagement last?</dt>
+              <dd>Most work is time-boxed: a health check in a few days, cost fixes in 1–2 weeks, Terraform cleanup as needed. No open-ended retainer unless you want one.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>Do you work async or do we need to be on calls?</dt>
+              <dd>I prefer async — Slack, email, PRs. I'll schedule calls when they're useful, but I won't fill your calendar.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>What if we're not on AWS or EKS?</dt>
+              <dd>My depth is AWS, GCP (6+ years), and EKS. For Azure or other clouds I can advise on architecture and process, but hands-on work is AWS/GCP-focused.</dd>
+            </div>
+            <div class="faq-item">
+              <dt>Can you help with agentic development / AI tooling?</dt>
+              <dd>Yes. I use Cursor and agentic workflows daily. I can help you adopt them — rules, prompts, workflows — without the hype.</dd>
+            </div>
+          </dl>
+        </section>
+
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <section class="section card" id="contact">
+          <div class="section-header">
+            <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+            <h2 style="margin: 0;">Get in touch</h2>
+          </div>
+          <p class="note" style="margin: 0 0 12px;">
+            Drop me a line with a bit about your situation — team size, cloud bill ballpark, what's hurting. I'll reply with a clear next step.
+          </p>
+          <div class="contact">
+            <a href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">
+              <span><strong>Book a call</strong><br /><span style="color: var(--color-text-muted);">calendly.com/eric-opsdevco/30min</span></span>
+              <span style="color: var(--color-text-muted);">→</span>
+            </a>
+            <a href="mailto:eric@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FGCP%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
+              <span><strong>Email</strong><br /><span style="color: var(--color-text-muted);">eric@opsdevco.de</span></span>
+              <span style="color: var(--color-text-muted);">→</span>
+            </a>
+          </div>
+          <p class="fine">Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.</p>
+        </section>
+
+        <Footer />
+      </div>
+      <nav class="on-this-page" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+  </div>
+</BaseLayout>

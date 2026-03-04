@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+---
+
+<BaseLayout
+  title="Page not found | OpsDevCo"
+  description="Page not found."
+>
+  <Header />
+  <main class="card section err-main">
+    <h1>404</h1>
+    <p>That page doesn't exist. Head back to the homepage or browse services.</p>
+    <a class="btn primary" href="/">Go home</a>
+    <a class="btn" href="/services" style="margin-left: 10px;">Services</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .err-main { text-align: center; padding: 60px 24px; }
+  .err-main h1 { font-size: 4rem; margin: 0 0 8px; color: var(--color-text-muted); }
+  .err-main p { font-size: 1.1rem; color: var(--color-text-muted); max-width: 40ch; margin: 0 auto 24px; }
+</style>

@@ -1,3 +1,4 @@
 # Code owners — requested for review when PRs touch these paths.
 # Require "Code Owners" review in branch protection to enforce.
-* @opsdevcode
+# @erskaggs can self-merge (bypass); others need code owner approval.
+* @opsdevcode @erskaggs

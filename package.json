@@ -3,6 +3,9 @@
   "version": "1.2.0",
   "private": true,
   "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "og:generate": "node scripts/screenshot-og.js",
     "netlify:login": "netlify login",
     "netlify:link": "netlify link",
@@ -15,5 +18,10 @@
   "devDependencies": {
     "netlify-cli": "^17.0.0",
     "playwright": "^1.58.2"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "@vite-pwa/astro": "^1.2.0",
+    "astro": "^5.18.0"
   }
 }

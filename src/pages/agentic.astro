@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Agentic Development | OpsDevCo"
+  description="Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling. Ship faster without the chaos."
+>
+  <Header />
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="section card">
+        <div class="section-header">
+          <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
+          <h2 style="margin: 0;">Agentic Development</h2>
+        </div>
+        <p class="note" style="margin: 0 0 16px;">
+          AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.
+        </p>
+        <div class="split">
+          <div class="tile">
+            <h3>What I help with</h3>
+            <ul class="bullets">
+              <li>Adopting Cursor, GitHub Copilot, or similar tools effectively</li>
+              <li>Setting up rules, prompts, and workflows that actually work</li>
+              <li>Integrating AI into your platform/infra workflows</li>
+              <li>Evaluating and choosing agentic tooling</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <h3>Typical engagement</h3>
+            <p>Short, focused sessions: audit your current setup, recommend changes, help implement. No long retainer — get unblocked and move on.</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 24px;">
+          <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+          <a class="btn" href="/services" style="margin-left: 10px;">All services</a>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  </main>
+</BaseLayout>

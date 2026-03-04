@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'OpsDevCo',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development. Health checks, cost optimization, IaC cleanup.',
+  url: 'https://opsdevco.de',
+  email: 'eric@opsdevco.de',
+  areaServed: 'Worldwide',
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
+};
+---
+
+<BaseLayout
+  title="OpsDevCo | Platform Engineering Advisory"
+  description="OpsDevCo — platform engineering advisory. I help teams untangle AWS, GCP, EKS, trim cloud waste, make Terraform maintainable, and adopt agentic development. No corporate speak, no long contracts."
+  structuredData={structuredData}
+>
+  <Header />
+  <main id="main">
+    <div class="wrap main-wrap">
+      <section class="hero animate-in">
+        <div class="hero-inner hero-simple">
+          <h1>Platform engineering that actually works.</h1>
+          <p class="sub">
+            I help teams fix AWS, GCP, and Kubernetes — health checks, cost cuts, Terraform cleanup, agentic dev. No corporate speak. From $1,200.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+            <a class="btn" href="/services">See services</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="section card services-preview animate-in delay-1">
+        <h2 class="section-title">What I do</h2>
+        <div class="bento-grid">
+          <div class="tile bento-featured">
+            <h3><a href="/services#platform-health" style="color: inherit">Platform Health Check</a></h3>
+            <p>I dig into your AWS, GCP, EKS, and Terraform setup and give you a straight-up report: what's working, what's not, and what to fix first.</p>
+          </div>
+          <div class="tile">
+            <h3>Cost + Scaling</h3>
+            <p>Track down what's actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
+          </div>
+          <div class="tile">
+            <h3>Terraform Cleanup</h3>
+            <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less "hold your breath" on every apply.</p>
+          </div>
+          <div class="tile">
+            <h3><a href="/agentic" style="color: inherit">Agentic Development</a></h3>
+            <p>Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+          <a class="btn" href="/services">View all services</a>
+        </div>
+      </section>
+
+      <section class="section card testimonials animate-in delay-2">
+        <h2 class="section-title">What clients say</h2>
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr)">
+          <blockquote class="tile testimonial">
+            <p>"Clear, actionable report. We fixed the top three items in a week and cut our EKS bill by 40%."</p>
+            <cite>— Platform lead, Series B startup</cite>
+          </blockquote>
+          <blockquote class="tile testimonial">
+            <p>"Finally someone who gets Terraform and doesn't over-engineer. Our IaC is maintainable now."</p>
+            <cite>— CTO, fintech</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 32px; margin-bottom: 24px;">
+        <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+        <a class="btn" href="/about#contact" style="margin-left: 10px;">Email me</a>
+        <a class="btn" href="/tools" style="margin-left: 10px;">Browse tools</a>
+      </div>
+
+      <Footer />
+    </div>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .sub { margin: 0 0 var(--space-24); color: var(--color-text-secondary); font-size: clamp(var(--text-lg), 2.5vw, 1.35rem); max-width: 65ch; line-height: var(--leading-relaxed); }
+  .cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: var(--space-24); }
+  .services-preview { margin-top: var(--space-48); }
+</style>
