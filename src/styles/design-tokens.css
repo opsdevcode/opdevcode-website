@@ -87,7 +87,8 @@
   --radius-full: 9999px;
 
   /* === LAYOUT === */
-  --max-width: 860px;
-  --wrap-padding: clamp(20px, 5vw, 40px);
+  --max-width: 1120px;
+  --max-width-narrow: 760px;
+  --wrap-padding: clamp(24px, 5vw, 64px);
   --header-height: 56px;
 }
