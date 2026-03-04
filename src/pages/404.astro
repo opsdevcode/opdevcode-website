@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.astro'
 ---
 
 <BaseLayout
@@ -8,11 +8,15 @@ import Header from '../components/Header.astro';
   description="Page not found."
 >
   <Header />
-  <main class="card section err-main">
+  <main id="main">
+    <div class="wrap">
+      <div class="section err-main">
     <h1>404</h1>
     <p>That page doesn't exist. Head back to the homepage or browse services.</p>
     <a class="btn primary" href="/">Go home</a>
-    <a class="btn" href="/services" style="margin-left: 10px;">Services</a>
+    <a class="btn" href="/services" style="margin-left: var(--space-8);">Services</a>
+      </div>
+    </div>
   </main>
 </BaseLayout>
 

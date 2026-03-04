@@ -1,48 +1,44 @@
 /**
  * OpsDevCo Design System
- * "Confidence" — Premium consulting aesthetic
- * Teal + Amber on deep charcoal
+ * "Editorial" — Light, minimal, consulting
  */
 
 :root {
   /* === CORE PALETTE === */
-  --color-bg: #080b10;
-  --color-bg-elevated: #0f1319;
-  --color-bg-card: #12171f;
-  --color-bg-hover: #1a2029;
+  --color-bg: #fafaf9;
+  --color-bg-elevated: #ffffff;
+  --color-bg-muted: #f5f5f4;
 
-  --color-text: #f4f6fa;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #64748b;
+  --color-text: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #78716c;
 
-  --color-primary: #0d9488;      /* Teal-600 — trust, tech */
-  --color-primary-hover: #14b8a6;
-  --color-primary-muted: rgba(13, 148, 136, 0.15);
+  --color-primary: #0d9488;
+  --color-primary-hover: #0f766e;
+  --color-primary-muted: rgba(13, 148, 136, 0.08);
 
-  --color-accent: #f59e0b;     /* Amber-500 — premium, CTA */
-  --color-accent-hover: #fbbf24;
-  --color-accent-muted: rgba(245, 158, 11, 0.15);
+  --color-accent: #1c1917;
+  --color-accent-hover: #44403c;
+  --color-accent-muted: rgba(28, 25, 23, 0.06);
 
-  --color-border: rgba(148, 163, 184, 0.12);
-  --color-border-strong: rgba(148, 163, 184, 0.2);
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
 
   /* === SEMANTIC === */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-info: #0ea5e9;
+  --color-success: #059669;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #0284c7;
 
   /* === EFFECTS === */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
-  --shadow-glow-primary: 0 0 40px rgba(13, 148, 136, 0.25);
-  --shadow-glow-accent: 0 0 40px rgba(245, 158, 11, 0.2);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
 
   /* === TYPOGRAPHY === */
-  --font-display: 'Outfit', system-ui, sans-serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Instrument Sans', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -53,12 +49,12 @@
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-  --text-6xl: clamp(2.75rem, 6vw, 4.5rem);
+  --text-6xl: clamp(2.5rem, 5vw, 3.5rem);
 
-  --leading-tight: 1.1;
-  --leading-snug: 1.25;
-  --leading-normal: 1.5;
-  --leading-relaxed: 1.65;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
 
   /* === SPACING === */
   --space-4: 4px;
@@ -67,23 +63,22 @@
   --space-16: 16px;
   --space-20: 20px;
   --space-24: 24px;
-  --space-28: 28px;
   --space-32: 32px;
   --space-40: 40px;
   --space-48: 48px;
   --space-64: 64px;
   --space-80: 80px;
   --space-96: 96px;
+  --space-128: 128px;
 
   /* === RADIUS === */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
   --radius-full: 9999px;
 
   /* === LAYOUT === */
-  --max-width: min(1600px, 98vw);
-  --wrap-padding: clamp(24px, 6vw, 56px);
-  --header-height: 64px;
+  --max-width: 720px;
+  --wrap-padding: clamp(20px, 5vw, 40px);
+  --header-height: 56px;
 }

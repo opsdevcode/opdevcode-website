@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 
 const tools = [
   { name: 'term-dx', url: 'https://github.com/opsdevcode/term-dx', desc: 'Diagnose Kubernetes resources stuck in Terminating (finalizers, dependents, API services).' },
@@ -10,7 +10,7 @@ const tools = [
   { name: 'eks-addons', url: 'https://github.com/opsdevcode/eks-addons', desc: 'Manage EKS add-ons from the CLI.' },
   { name: 'shownodes', url: 'https://github.com/opsdevcode/shownodes', desc: 'Improved node display with instance attributes and pricing.' },
   { name: 'kubesnooze', url: 'https://github.com/opsdevcode/kubesnooze', desc: 'Snooze/sleep workloads and show a splash page.' },
-];
+]
 ---
 
 <BaseLayout
@@ -19,12 +19,9 @@ const tools = [
 >
   <Header active="Tools" />
   <main id="main">
-    <div class="wrap main-wrap">
-      <section class="section card">
-        <div class="section-header">
-          <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
-          <h2 style="margin: 0;">Tools I've built</h2>
-        </div>
+    <div class="wrap">
+      <section class="section">
+        <h2 class="section-title">Tools I've built</h2>
         <p class="note" style="margin: 0 0 14px;">
           Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
         </p>
@@ -37,13 +34,10 @@ const tools = [
           ))}
         </div>
       </section>
-      <div style="text-align: center; margin-top: 32px;">
+      <p style="margin-top: var(--space-32);">
         <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-      </div>
+      </p>
       <Footer />
     </div>
   </main>
-  <div class="sticky-cta" aria-hidden="true">
-    <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-  </div>
 </BaseLayout>

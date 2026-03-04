@@ -14,8 +14,8 @@ export default defineConfig({
         name: 'OpsDevCo',
         short_name: 'OpsDevCo',
         description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
-        theme_color: '#0b0f17',
-        background_color: '#0b0f17',
+        theme_color: '#fafaf9',
+        background_color: '#fafaf9',
         display: 'standalone',
         icons: [
           {
