@@ -23,7 +23,7 @@ const structuredData = {
   <Header />
   <main id="main">
     <div class="wrap main-wrap">
-      <section class="hero">
+      <section class="hero animate-in">
         <div class="card hero-main">
           <div class="kicker">
             <span class="pill">AWS</span>
@@ -78,7 +78,7 @@ const structuredData = {
 
       <div class="section-divider" aria-hidden="true"></div>
 
-      <section class="section card services-preview">
+      <section class="section card services-preview animate-in delay-1">
         <div class="section-header">
           <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
           <h2 style="margin: 0;">What I do</h2>
@@ -106,7 +106,7 @@ const structuredData = {
         </div>
       </section>
 
-      <section class="section card testimonials">
+      <section class="section card testimonials animate-in delay-2">
         <div class="section-header">
           <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
           <h2 style="margin: 0;">What clients say</h2>
@@ -139,10 +139,10 @@ const structuredData = {
 </BaseLayout>
 
 <style>
-  .kicker { color: var(--muted); display: inline-flex; gap: 10px; align-items: center; border: 1px solid var(--line); padding: 8px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.02); font-size: 14px; flex-wrap: wrap; }
-  h1 { margin: 16px 0 10px; font-size: 42px; line-height: 1.12; letter-spacing: -0.6px; }
-  @media (max-width: 520px) { h1 { font-size: 34px; } }
-  .sub { margin: 0 0 18px; color: var(--muted); font-size: 17px; max-width: 70ch; }
-  .cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
-  .services-preview { margin-top: 48px; }
+  .kicker { display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
+  h1 { margin: 20px 0 16px; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; }
+  @media (max-width: 520px) { h1 { font-size: 2rem; } }
+  .sub { margin: 0 0 24px; color: var(--muted); font-size: 18px; max-width: 65ch; line-height: 1.65; }
+  .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+  .services-preview { margin-top: 56px; }
 </style>
