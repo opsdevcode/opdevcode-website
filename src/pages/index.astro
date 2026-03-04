@@ -24,7 +24,8 @@ const structuredData = {
   <main id="main">
     <div class="wrap main-wrap">
       <section class="hero animate-in">
-        <div class="card hero-main">
+        <div class="hero-inner">
+          <div class="hero-main">
           <div class="kicker">
             <span class="pill">AWS</span>
             <span class="pill">GCP</span>
@@ -56,9 +57,9 @@ const structuredData = {
           <p class="lead-magnet">
             <strong>Free:</strong> <a href="mailto:eric@opsdevco.de?subject=EKS%20health%20checklist">EKS health checklist</a> — 10 things to check before your next incident. Email with "checklist" in the subject.
           </p>
-        </div>
+          </div>
 
-        <aside class="card hero-side">
+        <aside class="hero-side">
           <p class="side-title side-with-logo">
             <img src="/assets/opsdevco-logo-o-mark.png" alt="" aria-hidden="true" />
             <span>Sound familiar?</span>
@@ -70,10 +71,11 @@ const structuredData = {
             <li>You're adopting Cursor/Copilot but want to do it right</li>
             <li>Your platform team is drowning and could use a hand</li>
           </ul>
-          <div style="margin-top: 14px;">
+          <div style="margin-top: 18px;">
             <div class="pill">What you get: a clear roadmap and fixes that actually stick</div>
           </div>
         </aside>
+        </div>
       </section>
 
       <div class="section-divider" aria-hidden="true"></div>
@@ -83,8 +85,8 @@ const structuredData = {
           <img src="/assets/opsdevco-logo-o-terminal.png" alt="" aria-hidden="true" />
           <h2 style="margin: 0;">What I do</h2>
         </div>
-        <div class="grid grid-2col">
-          <div class="tile">
+        <div class="bento-grid">
+          <div class="tile bento-featured">
             <h3><a href="/services#platform-health" style="color: inherit">Platform Health Check</a></h3>
             <p>I dig into your AWS, GCP, EKS, and Terraform setup and give you a straight-up report: what's working, what's not, and what to fix first.</p>
           </div>
@@ -139,10 +141,8 @@ const structuredData = {
 </BaseLayout>
 
 <style>
-  .kicker { display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; }
-  h1 { margin: 20px 0 16px; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.1; }
-  @media (max-width: 520px) { h1 { font-size: 2rem; } }
-  .sub { margin: 0 0 24px; color: var(--muted); font-size: 18px; max-width: 65ch; line-height: 1.65; }
-  .cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
-  .services-preview { margin-top: 56px; }
+  .kicker { display: inline-flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .sub { margin: 0 0 28px; color: var(--color-text-secondary); font-size: var(--text-xl); max-width: 60ch; line-height: var(--leading-relaxed); }
+  .cta { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
+  .services-preview { margin-top: 64px; }
 </style>

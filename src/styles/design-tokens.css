@@ -1,0 +1,87 @@
+/**
+ * OpsDevCo Design System
+ * "Confidence" — Premium consulting aesthetic
+ * Teal + Amber on deep charcoal
+ */
+
+:root {
+  /* === CORE PALETTE === */
+  --color-bg: #080b10;
+  --color-bg-elevated: #0f1319;
+  --color-bg-card: #12171f;
+  --color-bg-hover: #1a2029;
+
+  --color-text: #f4f6fa;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  --color-primary: #0d9488;      /* Teal-600 — trust, tech */
+  --color-primary-hover: #14b8a6;
+  --color-primary-muted: rgba(13, 148, 136, 0.15);
+
+  --color-accent: #f59e0b;     /* Amber-500 — premium, CTA */
+  --color-accent-hover: #fbbf24;
+  --color-accent-muted: rgba(245, 158, 11, 0.15);
+
+  --color-border: rgba(148, 163, 184, 0.12);
+  --color-border-strong: rgba(148, 163, 184, 0.2);
+
+  /* === SEMANTIC === */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #0ea5e9;
+
+  /* === EFFECTS === */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.5);
+  --shadow-glow-primary: 0 0 40px rgba(13, 148, 136, 0.25);
+  --shadow-glow-accent: 0 0 40px rgba(245, 158, 11, 0.2);
+
+  /* === TYPOGRAPHY === */
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: clamp(2.5rem, 5vw, 4rem);
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* === SPACING === */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+
+  /* === RADIUS === */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* === LAYOUT === */
+  --max-width: 1200px;
+  --header-height: 64px;
+}
