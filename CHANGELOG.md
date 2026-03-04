@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.3.0...opdevcode-website-v1.4.0) (2026-03-04)
+
+
+### Features
+
+* dark theme with tighter spacing ([4629866](https://github.com/opsdevcode/opdevcode-website/commit/4629866340230561e1124cf7e2ae98edadc8b837))
+* dark theme with tighter spacing ([97e4305](https://github.com/opsdevcode/opdevcode-website/commit/97e4305017bffab91c5b74b88495b2b1dd872c59))
+* migrate site from Astro to Next.js ([cda1ad7](https://github.com/opsdevcode/opdevcode-website/commit/cda1ad7d091c34f791c6677466bd50bc9836accf))
+* migrate site from Astro to Next.js ([b053605](https://github.com/opsdevcode/opdevcode-website/commit/b05360592912eb4eacc10d29a3372ed15ce85b67))
+* Next.js migration + visual overhaul + desktop layout ([8a09b40](https://github.com/opsdevcode/opdevcode-website/commit/8a09b40e2dce16d7fc381272be6bb68e17735599))
+* Next.js migration + visual overhaul + desktop layout ([079625e](https://github.com/opsdevcode/opdevcode-website/commit/079625ee8767695b3a62b02a0cbc0dbfbc60c859))
+
 ## [1.3.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.2.0...opdevcode-website-v1.3.0) (2026-03-04)
 
 
