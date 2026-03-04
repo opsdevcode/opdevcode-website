@@ -1,28 +1,31 @@
 /**
  * OpsDevCo Design System
- * Dark, dense, modern — platform engineering
+ * Terminal-inspired — electric green on black, platform engineering
  */
 
 :root {
   /* === CORE PALETTE === */
-  --color-bg: #0f0f0f;
-  --color-bg-elevated: #1a1a1a;
-  --color-bg-muted: #262626;
+  --color-bg: #0a0a0a;
+  --color-bg-elevated: #111113;
+  --color-bg-muted: #1a1a1e;
 
-  --color-text: #fafafa;
-  --color-text-secondary: #a3a3a3;
-  --color-text-muted: #737373;
+  --color-text: #e4e4e7;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #63636e;
 
-  --color-primary: #2dd4bf;
-  --color-primary-hover: #5eead4;
-  --color-primary-muted: rgba(45, 212, 191, 0.12);
+  --color-primary: #00ff88;
+  --color-primary-hover: #33ffaa;
+  --color-primary-dim: #00cc6a;
+  --color-primary-glow: rgba(0, 255, 136, 0.35);
+  --color-primary-muted: rgba(0, 255, 136, 0.1);
 
-  --color-accent: #fafafa;
-  --color-accent-hover: #e5e5e5;
-  --color-accent-muted: rgba(250, 250, 250, 0.08);
+  --color-accent: #e4e4e7;
+  --color-accent-hover: #fafafa;
+  --color-accent-muted: rgba(228, 228, 231, 0.08);
 
-  --color-border: #2a2a2a;
-  --color-border-strong: #404040;
+  --color-border: #1e1e22;
+  --color-border-strong: #2e2e34;
+  --color-border-glow: rgba(0, 255, 136, 0.2);
 
   /* === SEMANTIC === */
   --color-success: #059669;
@@ -30,15 +33,21 @@
   --color-error: #dc2626;
   --color-info: #0284c7;
 
+  /* === GRADIENTS === */
+  --gradient-hero: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 255, 136, 0.12) 0%, transparent 60%);
+  --gradient-card: linear-gradient(135deg, rgba(0, 255, 136, 0.04) 0%, transparent 50%);
+  --gradient-cta: linear-gradient(135deg, #00ff88, #00cc6a);
+
   /* === EFFECTS === */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(0, 255, 136, 0.15);
+  --shadow-glow-strong: 0 0 60px rgba(0, 255, 136, 0.25);
 
   /* === TYPOGRAPHY === */
-  --font-display: var(--font-instrument, 'Instrument Sans', system-ui, sans-serif);
-  --font-body: var(--font-source, 'Source Sans 3', system-ui, sans-serif);
-  --font-mono: ui-monospace, monospace;
+  --font-display: var(--font-mono), 'JetBrains Mono', ui-monospace, monospace;
+  --font-body: var(--font-body), 'Source Sans 3', system-ui, sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -73,12 +82,12 @@
 
   /* === RADIUS === */
   --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-full: 9999px;
 
   /* === LAYOUT === */
-  --max-width: 680px;
-  --wrap-padding: clamp(16px, 4vw, 32px);
-  --header-height: 52px;
+  --max-width: 860px;
+  --wrap-padding: clamp(20px, 5vw, 40px);
+  --header-height: 56px;
 }

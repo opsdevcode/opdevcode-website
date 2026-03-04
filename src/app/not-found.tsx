@@ -11,7 +11,7 @@ export default function NotFound() {
             <h1>404</h1>
             <p>That page doesn&apos;t exist. Head back to the homepage or browse services.</p>
             <Link className="btn primary" href="/">Go home</Link>
-            <Link className="btn" href="/services" style={{ marginLeft: 'var(--space-8)' }}>Services</Link>
+            <Link className="btn" href="/services" style={{ marginLeft: 'var(--space-12)' }}>Services</Link>
           </div>
         </div>
       </main>

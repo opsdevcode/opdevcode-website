@@ -33,17 +33,15 @@ export default function AboutPage() {
                   Straight talk, practical advice, and work that actually ships. Small engagements with clear outcomes —
                   not endless &quot;consulting hours.&quot;
                 </p>
-                <p style={{ marginTop: 10 }}>
-                  Where I spend most of my time:
-                  <code className="inline">EKS</code>
-                  <code className="inline">Karpenter</code>
-                  <code className="inline">Terraform</code>
-                  <code className="inline">agentic dev</code>
-                  <code className="inline">AWS cost/sizing</code>
-                  <code className="inline">GCP cost/sizing</code>
-                  <code className="inline">node strategy</code>
+                <p style={{ marginTop: 12 }}>
+                  <span className="pill">EKS</span>{' '}
+                  <span className="pill">Karpenter</span>{' '}
+                  <span className="pill">Terraform</span>{' '}
+                  <span className="pill">agentic dev</span>{' '}
+                  <span className="pill">AWS</span>{' '}
+                  <span className="pill">GCP</span>
                 </p>
-                <p style={{ marginTop: 10, color: 'var(--color-text-muted)', fontSize: 14 }}>— Eric Skaggs</p>
+                <p style={{ marginTop: 12, color: 'var(--color-text-muted)', fontSize: 14 }}>— Eric Skaggs</p>
                 <p style={{ marginTop: 14 }}>
                   <a href="https://github.com/opsdevcode" target="_blank" rel="noopener noreferrer">GitHub</a>
                   <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
@@ -77,17 +75,17 @@ export default function AboutPage() {
 
           <section className="section" id="contact">
             <h2 className="section-title">Get in touch</h2>
-            <p className="note" style={{ margin: '0 0 12px' }}>
+            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
               Drop me a line with a bit about your situation — team size, cloud bill ballpark, what&apos;s hurting. I&apos;ll reply with a clear next step.
             </p>
             <div className="contact">
               <a href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">
                 <span><strong>Book a call</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>calendly.com/eric-opsdevco/30min</span></span>
-                <span style={{ color: 'var(--color-text-muted)' }}>→</span>
+                <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
               <a href="mailto:eric@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FGCP%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
                 <span><strong>Email</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>eric@opsdevco.de</span></span>
-                <span style={{ color: 'var(--color-text-muted)' }}>→</span>
+                <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
             </div>
             <p className="fine">Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.</p>

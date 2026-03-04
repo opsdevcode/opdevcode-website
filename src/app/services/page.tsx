@@ -41,41 +41,40 @@ export default function ServicesPage() {
                 <p>A few hours a week of senior guidance for your CTO or platform lead. No hiring required.</p>
               </div>
               <div className="tile">
-                <h3><a href="/agentic" style={{ color: 'inherit' }}>Agentic Development</a></h3>
+                <h3><a href="/agentic" style={{ color: 'var(--color-primary)' }}>Agentic Development</a></h3>
                 <p>Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.</p>
               </div>
             </div>
           </section>
 
           <section className="section" id="how">
-            <h2 className="section-title">How we&apos;ll work together</h2>
+            <h2 className="section-title">How it works</h2>
             <div className="steps-row">
               <div className="tile">
-                <h3>1) Quick intro (15 min)</h3>
-                <p>We talk through what&apos;s going on and what you&apos;re hoping for. If it&apos;s not a good fit, I&apos;ll tell you straight up.</p>
+                <h3>1. Quick intro</h3>
+                <p>15 min. What&apos;s going on, what you&apos;re hoping for. If it&apos;s not a fit, I&apos;ll say so.</p>
               </div>
               <div className="tile">
-                <h3>2) I take a look</h3>
-                <p>Usually read-only access — billing, EKS, your IaC repos. I try not to get in your team&apos;s way.</p>
+                <h3>2. I take a look</h3>
+                <p>Usually read-only access — billing, EKS, your IaC repos. Low friction.</p>
               </div>
               <div className="tile">
-                <h3>3) You get a plan</h3>
-                <p>Prioritized: quick wins first, then medium fixes, then the bigger structural stuff.</p>
+                <h3>3. You get a plan</h3>
+                <p>Quick wins first, then medium fixes, then structural work. Prioritized.</p>
               </div>
               <div className="tile">
-                <h3>4) We fix it</h3>
-                <p>I implement or pair with your team. Most of my work is async and time-boxed — no endless retainer.</p>
+                <h3>4. We fix it</h3>
+                <p>I implement or pair with your team. Async, time-boxed. No endless retainer.</p>
               </div>
             </div>
-            <div className="note" style={{ marginTop: 20 }}>
-              If you&apos;re about to hire a &quot;Senior DevOps / Platform / SRE&quot; because things are a mess,
-              this is often a faster way to get stable first — before you add headcount.
-            </div>
+            <p className="note" style={{ marginTop: 'var(--space-20)' }}>
+              If you&apos;re about to hire a DevOps/Platform/SRE because things are a mess — this is often a faster way to get stable first.
+            </p>
           </section>
 
           <p style={{ marginTop: 'var(--space-32)' }}>
             <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-            <a className="btn" href="/pricing" style={{ marginLeft: 'var(--space-8)' }}>See pricing</a>
+            <a className="btn" href="/pricing" style={{ marginLeft: 'var(--space-12)' }}>See pricing</a>
           </p>
 
           <Footer />
