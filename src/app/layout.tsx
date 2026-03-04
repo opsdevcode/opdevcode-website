@@ -7,6 +7,7 @@ const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-source'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://opsdevco.de'),
+  themeColor: '#0f0f0f',
   title: { default: 'OpsDevCo | Platform Engineering Advisory', template: '%s | OpsDevCo' },
   description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
   openGraph: {
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${instrumentSans.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={`${instrumentSans.variable} ${sourceSans.variable}`} style={{ colorScheme: 'dark' }}>
       <body>{children}</body>
     </html>
   )
