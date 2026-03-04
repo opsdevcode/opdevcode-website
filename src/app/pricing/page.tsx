@@ -15,7 +15,7 @@ export default function PricingPage() {
         <div className="wrap">
           <section className="section">
             <h2 className="section-title">Pricing</h2>
-            <p className="note" style={{ margin: '0 0 10px' }}>
+            <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
               Upfront and simple. No long contracts. If you need something different, we&apos;ll scope it clearly.
             </p>
             <div className="pricing-card">
@@ -34,7 +34,7 @@ export default function PricingPage() {
                 </div>
                 <div className="row">
                   <div><strong>Fractional Advisor</strong><br /><span>4 hrs/week, async when it makes sense</span></div>
-                  <div><strong>$3,250 / month</strong></div>
+                  <div><strong>$3,250/mo</strong></div>
                 </div>
               </div>
             </div>
