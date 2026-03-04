@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.3.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.2.0...opdevcode-website-v1.3.0) (2026-03-04)
+
+
+### Features
+
+* apply design system and add CODEOWNERS ([3af3746](https://github.com/opsdevcode/opdevcode-website/commit/3af374642d52c46e0e3b2669c23b0f766cb905b7))
+* Astro migration, design system, and CODEOWNERS ([e6aedb0](https://github.com/opsdevcode/opdevcode-website/commit/e6aedb0a45d001a1025b03a8219bc7b3fb16af5a))
+* editorial redesign + dev tooling ([0d1650c](https://github.com/opsdevcode/opdevcode-website/commit/0d1650cd3880a0b5cd2972ef7fc991bdbdb09e21))
+* editorial redesign + dev tooling ([f04cd84](https://github.com/opsdevcode/opdevcode-website/commit/f04cd84aec98bd4173a2c147d10356aeb0037a40))
+
+
+### Bug Fixes
+
+* compress header, simplify hero, uniform layout ([bce41b3](https://github.com/opsdevcode/opdevcode-website/commit/bce41b3d3c0c7c72483958695e3d1ca2d0c992d7))
+* use [@erskaggs](https://github.com/erskaggs) in CODEOWNERS (correct GitHub username) ([cc5853a](https://github.com/opsdevcode/opdevcode-website/commit/cc5853aa80bfbd8524d39f522b6cba7b8601ccd2))
+
 ## [1.2.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.1.0...opdevcode-website-v1.2.0) (2026-03-03)
 
 
