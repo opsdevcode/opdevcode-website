@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${instrumentSans.variable} ${sourceSans.variable}`} style={{ colorScheme: 'dark' }}>
-      <body>{children}</body>
+      <body style={{ backgroundColor: '#0f0f0f', color: '#fafafa' }}>{children}</body>
     </html>
   )
 }

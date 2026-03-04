@@ -1,7 +1,11 @@
 /* OpsDevCo — Editorial, minimal */
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; color-scheme: dark; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background: #0f0f0f;
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 html, body { height: 100%; }
 img, svg, video { max-width: 100%; height: auto; }
@@ -11,7 +15,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   color: var(--color-text);
-  background: var(--color-bg);
+  background: #0f0f0f;
   line-height: var(--leading-normal);
 }
 
