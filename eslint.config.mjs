@@ -1,35 +1,19 @@
-import js from '@eslint/js';
-import tsParser from '@typescript-eslint/parser';
-import astroParser from 'astro-eslint-parser';
-import eslintPluginAstro from 'eslint-plugin-astro';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { FlatCompat } from '@eslint/eslintrc'
 
-export default [
-  js.configs.recommended,
-  ...eslintPluginAstro.configs.recommended,
-  eslintConfigPrettier,
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+})
+
+const eslintConfig = [
+  ...compat.extends('next/core-web-vitals', 'prettier'),
   {
-    ignores: [
-      'dist/**',
-      'node_modules/**',
-      '.astro/**',
-      '*.config.mjs',
-      '*.config.cjs',
-      'scripts/**',
-    ],
+    ignores: ['node_modules/**', '.next/**', 'out/**', 'scripts/**'],
   },
-  {
-    files: ['**/*.astro'],
-    languageOptions: {
-      parser: astroParser,
-      parserOptions: {
-        parser: tsParser,
-        extraFileExtensions: ['.astro'],
-      },
-    },
-    rules: {
-      'astro/no-unused-css-selector': 'warn',
-      'astro/semi': ['error', 'never'],
-    },
-  },
-];
+]
+
+export default eslintConfig
