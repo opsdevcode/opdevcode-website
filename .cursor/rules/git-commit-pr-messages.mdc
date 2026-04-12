@@ -90,12 +90,24 @@ Following the [Conventional Commits specification](https://www.conventionalcommi
 - Additional context if needed
 ```
 
+### Commitlint (this repository)
+
+CI runs **commitlint** with `@commitlint/config-conventional` (see `.commitlintrc.cjs` and `.github/workflows/version-check.yml`). Messages must pass these rules:
+
+- **`subject-case`**: The **subject** (text after `feat:`, `fix:`, etc.) must be **lowercase**, not sentence case, Title Case, or ALL CAPS.
+  - Good: `feat: stripe-inspired light redesign`
+  - Bad: `feat: Stripe-inspired light redesign` (capital `S` fails)
+- **`footer-leading-blank`**: If you use a [conventional footer](https://www.conventionalcommits.org/) (`BREAKING CHANGE:`, `Reviewed-by:`, `Co-authored-by:`, etc.), put a **blank line** between the body and the footer.
+  - Avoid non-standard footer lines such as `Made-with: Cursor` in commits; they can trigger footer parsing warnings. Put AI assistant attribution in the **PR stewardship** section instead.
+
+When drafting commits for this repo, prefer **lowercase subjects** and skip custom footer lines unless they follow conventional footer format with a proper blank line before them.
+
 ### Commit Message Guidelines
 
 - **Subject line**:
   - Use imperative mood ("Add feature" not "Added feature" or "Adds feature")
   - Keep to 50-72 characters
-  - Capitalize first letter
+  - **This repo (commitlint)**: use a **lowercase** subject after the type — do not capitalize the first word (e.g. `feat: add dark mode` not `feat: Add dark mode`). Outside commitlint contexts, capitalizing the first letter is a common style.
   - No period at the end
   - Be specific and descriptive
 
@@ -210,3 +222,4 @@ ci: add pre-commit hook for terraform formatting
 - **PRs use formal template**: PR descriptions must follow the template with explicit `what:`, `why:`, etc. sections
 - **Link issues when relevant**: Use `closes #123` or `closes PLAT-684` in commit messages; use `[PLAT-684](https://your-domain.atlassian.net/browse/PLAT-684)` in PR reference sections. Ticket IDs and Atlassian URLs are interchangeable.
 - **Consider Conventional Commits format**: Using `<type>(<scope>): <description>` is often desirable, especially for `fix:`, `feat:`, `chore:`, and `docs:` types, but not strictly required
+- **Commitlint on this repo**: Keep the subject line lowercase after the colon; avoid non-standard footers — see **Commitlint (this repository)** above
