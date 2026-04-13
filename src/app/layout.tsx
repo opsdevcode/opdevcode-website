@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { JetBrains_Mono, Source_Sans_3 } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
-const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-body' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://opsdevco.de'),
-  themeColor: '#0a0a0a',
+  themeColor: '#ffffff',
   title: { default: 'OpsDevCo | Platform Engineering Advisory', template: '%s | OpsDevCo' },
   description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
   openGraph: {
@@ -26,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${jetbrainsMono.variable} ${sourceSans.variable}`} style={{ colorScheme: 'dark' }}>
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   )

@@ -30,7 +30,6 @@ export default function HomePage() {
         <div className="wrap">
           <section className="hero">
             <div className="hero-inner">
-              <p className="prompt">$ opsdevco --help</p>
               <h1>Platform engineering<br /><span className="highlight">that actually works.</span></h1>
               <p className="sub">
                 Health checks, cost cuts, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. From $1,200.
