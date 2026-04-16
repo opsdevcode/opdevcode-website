@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -16,34 +17,34 @@ export default function ServicesPage() {
           <section className="section" id="services">
             <h2 className="section-title">What I do</h2>
             <div className="grid grid-2col">
-              <div className="tile" id="platform-health">
+              <Link href="/services/platform-health" className="tile" id="platform-health">
                 <h3>Platform Health Check</h3>
                 <p>I dig into your AWS, GCP, EKS, and Terraform setup and give you a straight-up report: what&apos;s working, what&apos;s not, and what to fix first.</p>
-              </div>
-              <div className="tile">
+              </Link>
+              <Link href="/services/cost-scaling" className="tile">
                 <h3>Cost + Scaling</h3>
                 <p>Track down what&apos;s actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
-              </div>
-              <div className="tile">
+              </Link>
+              <Link href="/services/terraform" className="tile">
                 <h3>Terraform Cleanup</h3>
                 <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less &quot;hold your breath&quot; on every apply.</p>
-              </div>
-              <div className="tile">
+              </Link>
+              <Link href="/services/karpenter" className="tile">
                 <h3>Karpenter + Node Strategy</h3>
                 <p>Get node provisioning and consolidation that behaves predictably and doesn&apos;t blow the budget.</p>
-              </div>
-              <div className="tile">
+              </Link>
+              <Link href="/services/architecture-review" className="tile">
                 <h3>Architecture Review</h3>
                 <p>Before you lock in big decisions — networking, cluster layout, guardrails — I&apos;ll sanity-check the plan.</p>
-              </div>
-              <div className="tile">
+              </Link>
+              <Link href="/services/fractional-advisor" className="tile">
                 <h3>Fractional Platform Advisor</h3>
                 <p>A few hours a week of senior guidance for your CTO or platform lead. No hiring required.</p>
-              </div>
-              <div className="tile">
-                <h3><a href="/agentic" style={{ color: 'var(--color-primary)' }}>Agentic Development</a></h3>
+              </Link>
+              <Link href="/agentic" className="tile">
+                <h3>Agentic Development</h3>
                 <p>Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.</p>
-              </div>
+              </Link>
             </div>
           </section>
 

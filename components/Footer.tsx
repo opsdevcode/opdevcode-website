@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-brand">
-        <Image src="/assets/opsdevco-logo-o-terminal.png" alt="" width={24} height={24} aria-hidden />
+        <Image className="footer-logo" src="/assets/opsdevco-logo-o-terminal.png" alt="" width={32} height={32} aria-hidden />
         <span>© {year} OpsDevCo</span>
       </div>
       <div>

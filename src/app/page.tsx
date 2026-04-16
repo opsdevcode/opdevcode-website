@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -44,26 +45,26 @@ export default function HomePage() {
           <section className="section">
             <h2 className="section-title">Services</h2>
             <div className="grid grid-2col">
-              <a href="/services#platform-health" className="tile">
+              <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
                 <p>Your AWS, GCP, EKS, Terraform — what&apos;s working, what&apos;s not, what to fix first.</p>
-              </a>
-              <a href="/services" className="tile">
+              </Link>
+              <Link href="/services/cost-scaling" className="tile">
                 <h3>Cost + Scaling</h3>
                 <p>Track down what&apos;s driving your bill. Compute waste, node strategy, autoscaling.</p>
-              </a>
-              <a href="/services" className="tile">
+              </Link>
+              <Link href="/services/terraform" className="tile">
                 <h3>Terraform Cleanup</h3>
                 <p>Refactor IaC for maintainability — clearer structure, safer workflows.</p>
-              </a>
-              <a href="/agentic" className="tile">
+              </Link>
+              <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
                 <p>Adopt Cursor, Copilot, custom tooling — ship faster without the chaos.</p>
-              </a>
+              </Link>
             </div>
             <p style={{ marginTop: 'var(--space-32)' }}>
-              <a className="btn" href="/services">All services</a>
-              <a className="btn" href="/pricing" style={{ marginLeft: 'var(--space-12)' }}>Pricing</a>
+              <Link className="btn" href="/services">All services</Link>
+              <Link className="btn" href="/pricing" style={{ marginLeft: 'var(--space-12)' }}>Pricing</Link>
             </p>
           </section>
 
