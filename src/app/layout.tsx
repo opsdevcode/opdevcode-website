@@ -8,10 +8,11 @@ const inter = Inter({
   display: 'swap',
 })
 
+// Variable font: axes (SOFT, opsz) require weight: 'variable' per next/font rules.
 const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
-  weight: ['400', '500', '600', '700'],
+  weight: 'variable',
   style: ['normal', 'italic'],
   axes: ['SOFT', 'opsz'],
   display: 'swap',
