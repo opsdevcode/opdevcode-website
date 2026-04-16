@@ -33,7 +33,7 @@ export default function HomePage() {
             <div className="hero-inner">
               <h1>Platform engineering<br /><span className="highlight">that actually works.</span></h1>
               <p className="sub">
-                Health checks, cost cuts, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. From $1,200.
+                Health checks, cost cuts, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. Time-boxed engagements.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -64,7 +64,6 @@ export default function HomePage() {
             </div>
             <p style={{ marginTop: 'var(--space-32)' }}>
               <Link className="btn" href="/services">All services</Link>
-              <Link className="btn" href="/pricing" style={{ marginLeft: 'var(--space-12)' }}>Pricing</Link>
             </p>
           </section>
 

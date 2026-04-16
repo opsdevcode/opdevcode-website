@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services/kubernetes`, lastModified: new Date() },
     { url: `${base}/services/architecture-review`, lastModified: new Date() },
     { url: `${base}/services/fractional-advisor`, lastModified: new Date() },
-    { url: `${base}/pricing`, lastModified: new Date() },
     { url: `${base}/tools`, lastModified: new Date() },
     { url: `${base}/agentic`, lastModified: new Date() },
   ]
