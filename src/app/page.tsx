@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Reveal from '@/components/Reveal'
 import { IconActivity, IconLayers, IconServer, IconTool, IconUsers } from '@/components/home/HomeIcons'
 
 /** ~60 chars max for link previews; HTML <title> stays short in the tab. */
@@ -473,6 +474,7 @@ export default function HomePage() {
           <Footer />
         </div>
       </main>
+      <Reveal />
     </>
   )
 }
