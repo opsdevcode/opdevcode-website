@@ -24,6 +24,10 @@
   --color-border: #e6ebf1;
   --color-border-strong: #cfd7df;
 
+  /* Section rhythm — very subtle bands & hairlines (long pages / homepage) */
+  --color-bg-band: color-mix(in srgb, var(--color-bg-muted) 72%, var(--color-bg));
+  --color-divider-hairline: color-mix(in srgb, var(--color-border) 38%, transparent);
+
   /* === SEMANTIC === */
   --color-success: #0cad55;
   --color-warning: #d97706;
@@ -57,6 +61,7 @@
   --leading-snug: 1.35;
   --leading-normal: 1.6;
   --leading-relaxed: 1.75;
+  --leading-loose: 1.82;
 
   /* === SPACING === */
   --space-4: 4px;
