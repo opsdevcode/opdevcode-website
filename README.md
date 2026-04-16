@@ -1,6 +1,6 @@
-# OpsDevCo Website
+# OpsDevCode Website
 
-Marketing site for [OpsDevCo](https://opsdevco.de) — platform engineering advisory. Built with [Astro](https://astro.build), deployed on Netlify.
+Marketing site for [OpsDevCode](https://opsdevco.de) — platform engineering advisory. Built with [Astro](https://astro.build), deployed on Netlify.
 
 ## Tech stack
 

@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`, lastModified: new Date() },
     { url: `${base}/services`, lastModified: new Date() },
     { url: `${base}/services/platform-health`, lastModified: new Date() },
-    { url: `${base}/services/cost-scaling`, lastModified: new Date() },
+    { url: `${base}/services/finops`, lastModified: new Date() },
     { url: `${base}/services/terraform`, lastModified: new Date() },
     { url: `${base}/services/kubernetes`, lastModified: new Date() },
     { url: `${base}/services/architecture-review`, lastModified: new Date() },

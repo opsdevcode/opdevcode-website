@@ -4,19 +4,19 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'OpsDevCo | Platform Engineering Advisory',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, cost optimization, IaC cleanup.',
+  title: 'OpsDevCode | Platform Engineering Advisory',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, FinOps, IaC cleanup.',
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'OpsDevCo',
+  name: 'OpsDevCode',
   description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
-  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
 }
 
 export default function HomePage() {
@@ -33,7 +33,7 @@ export default function HomePage() {
             <div className="hero-inner">
               <h1>Platform engineering<br /><span className="highlight">that actually works.</span></h1>
               <p className="sub">
-                Health checks, cost cuts, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. Time-boxed engagements.
+                Health checks, FinOps, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. Time-boxed engagements.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -49,9 +49,9 @@ export default function HomePage() {
                 <h3>Platform Health Check</h3>
                 <p>Your AWS, GCP, EKS, Terraform — what&apos;s working, what&apos;s not, what to fix first.</p>
               </Link>
-              <Link href="/services/cost-scaling" className="tile">
-                <h3>Cost + Scaling</h3>
-                <p>Track down what&apos;s driving your bill. Compute waste, node strategy, autoscaling.</p>
+              <Link href="/services/finops" className="tile">
+                <h3>FinOps</h3>
+                <p>Cloud spend visibility, allocation, and engineering changes that actually move the number.</p>
               </Link>
               <Link href="/services/terraform" className="tile">
                 <h3>Terraform Cleanup</h3>

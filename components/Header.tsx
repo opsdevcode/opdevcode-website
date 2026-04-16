@@ -17,12 +17,12 @@ export default function Header({ active }: { active?: string }) {
             <Image
               className="brand-logo"
               src="/assets/opsdevco-logo-o-terminal.png"
-              alt="OpsDevCo"
+              alt="OpsDevCode"
               width={48}
               height={48}
               priority
             />
-            <strong>OpsDevCo</strong>
+            <strong>OpsDevCode</strong>
           </Link>
           <nav>
             {navItems.map((item) => (
