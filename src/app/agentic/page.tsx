@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -35,7 +36,7 @@ export default function AgenticPage() {
             </div>
             <p style={{ marginTop: 'var(--space-32)' }}>
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-              <a className="btn" href="/services" style={{ marginLeft: 'var(--space-12)' }}>All services</a>
+              <Link className="btn" href="/services" style={{ marginLeft: 'var(--space-12)' }}>All services</Link>
             </p>
           </section>
           <Footer />
