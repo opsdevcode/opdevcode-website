@@ -926,6 +926,27 @@ a.tile:hover h3 { color: var(--color-primary); }
 .section.closing-cta .cta {
   margin-bottom: var(--space-8);
 }
+.closing-cta-lead {
+  margin: 0 0 var(--space-20);
+  max-width: 46ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 2vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+}
+.section.closing-cta .closing-cta-signals {
+  margin: 0 0 var(--space-28);
+  max-width: 48ch;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+.section.closing-cta .closing-cta-signals li {
+  color: color-mix(in srgb, var(--color-text-secondary) 94%, var(--color-text));
+}
 .closing-cta-support {
   margin: 0;
   max-width: 44ch;
@@ -1196,7 +1217,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   line-height: var(--home-body-line-height);
 }
 .wrap.home section.closing-cta .closing-cta-title {
-  margin-bottom: calc(var(--space-32) + var(--space-8));
+  margin-bottom: var(--space-16);
   font-size: clamp(1.45rem, 2.75vw, 1.95rem);
   font-weight: 800;
   letter-spacing: -0.034em;
@@ -1206,8 +1227,17 @@ a.tile:hover h3 { color: var(--color-primary); }
   margin-bottom: var(--space-12);
   letter-spacing: 0.11em;
 }
+.wrap.home section.closing-cta .closing-cta-lead {
+  margin-bottom: var(--space-24);
+  max-width: 44ch;
+  line-height: 1.35;
+}
+.wrap.home section.closing-cta .closing-cta-signals {
+  margin-bottom: calc(var(--space-32) + var(--space-4));
+  line-height: var(--home-body-line-height);
+}
 .wrap.home section.closing-cta .closing-cta-support {
-  max-width: 42ch;
+  max-width: 46ch;
   color: color-mix(in srgb, var(--color-text-muted) 96%, var(--color-text-secondary));
 }
 .wrap.home .fine {
@@ -1296,7 +1326,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   padding: 14px 26px;
 }
 .wrap.home footer {
-  margin-top: calc(var(--space-128) + var(--space-48));
+  margin-top: calc(var(--space-128) + var(--space-80));
 }
 
 /* Homepage: narrative momentum (clarity → trust → outcomes → action → finale) */
@@ -1325,9 +1355,14 @@ a.tile:hover h3 { color: var(--color-primary); }
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 18%, transparent);
 }
 
+/* Extra runway before finale — lets “How it works” settle before the decision block */
+.wrap.home .section.engagement-flow.home-flow--action {
+  padding-bottom: calc(var(--space-96) + var(--space-48));
+}
+
 .wrap.home .engagement-flow + .section.closing-cta {
   border-top-color: transparent;
-  margin-top: calc(var(--space-64) + var(--space-8));
+  margin-top: calc(var(--space-96) + var(--space-48));
 }
 
 .closing-cta-kicker {
@@ -1361,20 +1396,22 @@ a.tile:hover h3 { color: var(--color-primary); }
 }
 
 .wrap.home > section.closing-cta.home-flow--finale {
-  padding: calc(var(--space-64) + var(--space-16)) clamp(var(--space-32), 4.5vw, var(--space-48))
-    calc(var(--space-64) + var(--space-24));
+  scroll-margin-top: calc(var(--header-height) + var(--space-16));
+  padding: calc(var(--space-80) + var(--space-32)) clamp(var(--space-32), 4.5vw, var(--space-48))
+    calc(var(--space-80) + var(--space-40));
   border-radius: var(--radius-xl);
-  border: 1px solid color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+  /* Hairline + whisper tint — readable separation without a heavy frame */
+  border: 1px solid color-mix(in srgb, var(--color-border) 92%, var(--color-primary-muted) 8%);
   background: linear-gradient(
     168deg,
-    color-mix(in srgb, var(--color-primary-muted) 118%, var(--color-bg)) 0%,
-    color-mix(in srgb, var(--color-bg) 94%, var(--color-bg-muted)) 58%,
+    color-mix(in srgb, var(--color-bg-muted) 55%, var(--color-bg)) 0%,
+    color-mix(in srgb, var(--color-primary-muted) 42%, var(--color-bg)) 38%,
     var(--color-bg) 100%
   );
   box-shadow:
-    0 1px 0 color-mix(in srgb, var(--color-border) 72%, transparent),
-    0 36px 72px -36px color-mix(in srgb, var(--color-primary) 26%, transparent),
-    inset 0 1px 0 color-mix(in srgb, #fff 55%, transparent);
+    0 1px 0 color-mix(in srgb, var(--color-border) 62%, transparent),
+    0 28px 64px -40px color-mix(in srgb, var(--color-primary) 14%, transparent),
+    inset 0 1px 0 color-mix(in srgb, #fff 48%, transparent);
 }
 
 /* === FOOTER === */

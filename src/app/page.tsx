@@ -41,8 +41,8 @@ export default function HomePage() {
                 <span className="anchor-soft">AWS, GCP, Kubernetes, and IaC</span>—in your environment.
               </p>
               <p className="hero-fit">
-                If <span className="anchor-soft">operating the platform</span> competes with shipping product, this is
-                for you.
+                If your platform has gotten <span className="anchor-soft">harder to manage</span> than it should be,
+                this is for you.
               </p>
               <ul className="hero-sub-points scan-list">
                 <li>Less waste, clearer operations</li>
@@ -63,7 +63,7 @@ export default function HomePage() {
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
               </div>
-              <p className="hero-reassure">One call to align scope and fit.</p>
+              <p className="hero-reassure">One discovery call to align scope and fit.</p>
               <p className="hero-cred">Solo practice.</p>
               <p className="hero-cred">Senior platform work: AWS, GCP, Kubernetes, IaC, delivery.</p>
             </div>
@@ -371,7 +371,7 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Discovery call</strong>
+                    <strong>Book a discovery call</strong>
                     <span className="engagement-step-line">Current state, constraints, and priority order.</span>
                   </p>
                 </div>
@@ -414,15 +414,22 @@ export default function HomePage() {
             aria-labelledby="closing-cta-heading"
           >
             <p className="closing-cta-kicker">When you&apos;re ready</p>
+            <p className="closing-cta-lead">
+              If this sounds like where you are right now, we should talk.
+            </p>
             <h2 id="closing-cta-heading" className="closing-cta-title">
-              Book a 30-minute discovery call
+              Book a discovery call
             </h2>
+            <ul className="closing-cta-signals scan-list" aria-label="What to expect">
+              <li>Most engagements deliver meaningful improvements in weeks, not months.</li>
+              <li>Short, focused engagements with clear outcomes.</li>
+            </ul>
             <div className="cta">
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
               <a className="btn" href="/about#contact">Email me directly</a>
             </div>
             <p className="closing-cta-support">
-              Low stakes: confirm fit, scope, and whether working together is worth a follow-up.
+              No pressure — just a quick conversation to see if it makes sense.
             </p>
           </section>
 
