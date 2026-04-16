@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 const homeDescription =
-  'Platform engineering that works in production. Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own. No corporate speak.'
+  'Platform engineering for production: AWS, GCP, Kubernetes, IaC. Cut waste, clarify operations, ship platforms your team owns. One senior lead—not a consulting roster.'
 
 export const metadata: Metadata = {
   title: 'OpsDevCode | Platform Engineering Advisory',
@@ -34,19 +34,19 @@ export default function HomePage() {
         <div className="wrap">
           <section className="hero">
             <div className="hero-inner">
-              <h1>Platform engineering<br /><span className="highlight">that actually works in production.</span></h1>
+              <h1>Platform engineering<br /><span className="highlight">built for production.</span></h1>
               <p className="sub">
-                Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own.
+                Hands-on work across AWS, GCP, Kubernetes, and IaC. Less waste, clearer operations, platforms your team can run.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
               </div>
               <p className="hero-reassure">
-                No pressure — just a quick conversation to see if it makes sense.
+                Intro call to align on fit and scope—no obligation.
               </p>
               <p className="hero-cred">
-                Built by a platform engineer with hands-on experience across multiple clouds, Kubernetes, IaC, and delivery systems.
+                Solo practice: senior platform work across AWS, GCP, Kubernetes, IaC, and delivery.
               </p>
             </div>
           </section>
@@ -56,7 +56,7 @@ export default function HomePage() {
               Most teams don’t have a DevOps problem — they have a complexity problem.
             </h2>
             <p className="primary-problem-body">
-              Too many tools, unclear infrastructure, rising cloud costs, and slow delivery. Platform engineering should simplify this — but most teams end up with more layers instead of less.
+              Tool sprawl, vague ownership, rising cloud spend, slow delivery. Platform work should subtract complexity—most teams stack another layer on top.
             </p>
           </section>
 
@@ -66,10 +66,10 @@ export default function HomePage() {
             </h2>
             <div className="point-of-view-body">
               <p>
-                Most DevOps setups struggle because they optimize for tools instead of outcomes.
+                Too much DevOps work optimizes for tools instead of outcomes.
               </p>
               <p>
-                I focus on reducing complexity, improving clarity, and building systems your team can actually operate — not just something that looks good on a diagram.
+                I reduce complexity, sharpen clarity, and ship systems teams can run—nothing that only reads well on a diagram.
               </p>
             </div>
           </section>
@@ -82,17 +82,17 @@ export default function HomePage() {
               <div className="before-after-panel is-before">
                 <h3 className="before-after-label">Before</h3>
                 <ul className="before-after-list">
-                  <li>Messy infrastructure and unclear ownership</li>
-                  <li>Slow, fragile CI/CD pipelines</li>
-                  <li>Rising cloud costs with little visibility</li>
+                  <li>Fragmented infrastructure and unclear ownership</li>
+                  <li>Slow, brittle CI/CD</li>
+                  <li>Rising cloud spend, limited visibility</li>
                 </ul>
               </div>
               <div className="before-after-panel is-after">
                 <h3 className="before-after-label">After</h3>
                 <ul className="before-after-list">
-                  <li>Clean, understandable platform your team owns</li>
-                  <li>Faster, more reliable delivery</li>
-                  <li>Clear visibility into cloud usage and cost</li>
+                  <li>A platform your team understands and owns</li>
+                  <li>Faster, more reliable shipping</li>
+                  <li>Usage and cost you can see and explain</li>
                 </ul>
               </div>
             </div>
@@ -103,10 +103,10 @@ export default function HomePage() {
               What this looks like in practice
             </h2>
             <ul className="example-outcomes-list">
-              <li>Reduced cloud spend by identifying unused resources and misconfigured services</li>
-              <li>Simplified CI/CD pipelines to reduce deployment failures</li>
-              <li>Standardized IaC to improve team velocity and reduce onboarding time</li>
-              <li>Clearer runbooks and ownership so incidents are easier to diagnose and fix</li>
+              <li>Lower cloud spend by retiring unused resources and fixing misconfigurations</li>
+              <li>CI/CD simplified; fewer failed deployments</li>
+              <li>IaC standardized—shorter ramp-up, faster change</li>
+              <li>Runbooks and ownership tightened for faster incident response</li>
             </ul>
           </section>
 
@@ -117,17 +117,17 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <div className="tile">
                 <p>
-                  Teams with <strong>AWS, GCP, or Kubernetes</strong> setups that have become harder to manage than they should be.
+                  Teams on <strong>AWS, GCP, or Kubernetes</strong> where the platform costs more to run than it should.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  <strong>Engineering leaders</strong> who need hands-on platform help without hiring a large consulting firm.
+                  <strong>Engineering leaders</strong> who want senior platform depth without a big-firm engagement.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  Teams dealing with <strong>slow delivery</strong>, unclear infrastructure, or rising cloud costs.
+                  Teams blocked by <strong>slow delivery</strong>, opaque infrastructure, or rising cloud spend.
                 </p>
               </div>
             </div>
@@ -140,22 +140,22 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <div className="tile">
                 <p>
-                  <strong>Time-boxed engagements</strong> with clear outcomes.
+                  <strong>Fixed scope, clear outcomes</strong>—time-boxed engagements.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  <strong>Practical platform engineering</strong>, not slide decks. Real depth on AWS, GCP, Kubernetes, and IaC — no corporate speak, no bloated consulting.
+                  <strong>Engineering, not decks.</strong> Depth on AWS, GCP, Kubernetes, and IaC—direct work, no firm overhead.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  I can advise, pair with your team, or build.
+                  <strong>Advise, pair, or build</strong>—whatever fits.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  Focused on <strong>systems your team can own</strong> after I leave.
+                  <strong>Systems your team still runs</strong> when the engagement ends.
                 </p>
               </div>
             </div>
@@ -167,37 +167,37 @@ export default function HomePage() {
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
                 <p>
-                  Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.
+                  Surface bottlenecks, risk, and waste; leave with a prioritized plan.
                 </p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
                 <p>
-                  Reduce cloud spend and improve visibility into where your infrastructure budget is going.
+                  Cut spend and see where the money goes.
                 </p>
               </Link>
               <Link href="/services/iac" className="tile">
                 <h3>IaC</h3>
                 <p>
-                  Clean up and standardize your infrastructure as code so your team can move faster with less risk.
+                  Standardize infrastructure as code so teams ship faster with less risk.
                 </p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>
                 <p>
-                  Speed up delivery with simpler, more reliable pipelines that your team can actually maintain.
+                  Simpler pipelines, fewer failures, maintenance your team can sustain.
                 </p>
               </Link>
               <Link href="/services/custom-tooling" className="tile">
                 <h3>Custom tooling</h3>
                 <p>
-                  Build lightweight internal tools to remove friction and automate repetitive work.
+                  Small internal tools that remove toil—built to fit your stack.
                 </p>
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
                 <p>
-                  Explore and implement agent-based workflows to improve development and operational efficiency.
+                  Agent-assisted workflows for dev and ops—where automation earns its place.
                 </p>
               </Link>
             </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
           <section className="section">
             <h2 className="section-title">Tools</h2>
             <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              A few small tools I&apos;ve built to solve real problems in AWS, Kubernetes, and Terraform workflows.
+              Utilities I ship for AWS, Kubernetes, and Terraform workflows.
             </p>
             <div className="grid grid-2col">
               <a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" className="tile">
@@ -229,13 +229,13 @@ export default function HomePage() {
           <section className="section trust" aria-label="About the practice">
             <div className="testimonial">
               <p className="note" style={{ margin: 0 }}>
-                OpsDevCode is built for teams that need practical platform help from someone who has actually operated these systems. I work hands-on across AWS, GCP, Kubernetes, IaC, delivery pipelines, and lightweight internal tooling — clarity, ownership, and real outcomes, not slide-deck consulting.
+                For teams that want an operator, not a deck. Hands-on across AWS, GCP, Kubernetes, IaC, delivery, and light tooling—clarity, ownership, outcomes that last.
               </p>
             </div>
             <p className="fine" style={{ marginTop: 'var(--space-16)', marginBottom: 0 }}>
               <Link href="/about">About</Link>
               {' '}
-              — who runs this practice and how to reach me.
+              — background and contact.
             </p>
           </section>
 
@@ -251,7 +251,7 @@ export default function HomePage() {
                 <p className="engagement-step-text">
                   <strong>Discovery call</strong>
                   <span aria-hidden="true"> → </span>
-                  understand your current setup and problems.
+                  map environment, constraints, priorities.
                 </p>
               </li>
               <li className="engagement-step">
@@ -261,7 +261,7 @@ export default function HomePage() {
                 <p className="engagement-step-text">
                   <strong>Time-boxed engagement</strong>
                   <span aria-hidden="true"> → </span>
-                  focused work on highest-impact areas.
+                  work the highest-impact problems first.
                 </p>
               </li>
               <li className="engagement-step">
@@ -269,9 +269,9 @@ export default function HomePage() {
                   3
                 </span>
                 <p className="engagement-step-text">
-                  <strong>Practical outcomes</strong>
+                  <strong>Concrete outcomes</strong>
                   <span aria-hidden="true"> → </span>
-                  clear improvements your team can own.
+                  improvements your team owns.
                 </p>
               </li>
             </ol>
@@ -283,7 +283,7 @@ export default function HomePage() {
               <a className="btn" href="/about#contact">Email me directly</a>
             </div>
             <p className="hero-reassure closing-cta-reassure">
-              No pressure — just a quick conversation to see if it makes sense.
+              Intro call to align on fit and scope—no obligation.
             </p>
           </section>
 
