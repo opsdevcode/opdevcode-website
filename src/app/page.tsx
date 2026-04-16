@@ -207,24 +207,6 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section
-            className="section example-outcomes home-flow home-flow--outcomes"
-            aria-labelledby="example-outcomes-heading"
-          >
-            <h2 id="example-outcomes-heading" className="section-title">
-              What this looks like in practice
-            </h2>
-            <ul className="example-outcomes-list scan-list">
-              <li>
-                <strong className="key-em">Lower cloud spend</strong>—retire unused resources, fix
-                misconfigurations
-              </li>
-              <li>CI/CD simplified; fewer failed deployments</li>
-              <li>IaC standardized—shorter ramp-up, faster change</li>
-              <li>Tighter runbooks and ownership—faster incident response</li>
-            </ul>
-          </section>
-
           <section className="section services-section home-flow home-flow--outcomes">
             <h2 className="section-title">Services</h2>
             <p className="note services-intro">I don’t just advise.</p>
@@ -235,45 +217,32 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Surface bottlenecks, risk, and waste</li>
-                  <li>Leave with a prioritized plan</li>
-                </ul>
+                <p>
+                  Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to
+                  improve it.
+                </p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Cut spend</li>
-                  <li>See where the money goes</li>
-                </ul>
+                <p>Reduce cloud spend and improve visibility into where your infrastructure budget is going.</p>
               </Link>
               <Link href="/services/iac" className="tile">
                 <h3>IaC</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Standardize infrastructure as code</li>
-                  <li>Ship faster with less risk</li>
-                </ul>
+                <p>Clean up and standardize infrastructure as code so your team can move faster with less risk.</p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Simpler pipelines, fewer failures</li>
-                  <li>Maintenance your team can sustain</li>
-                </ul>
+                <p>Improve delivery speed and reliability with simpler pipelines your team can actually maintain.</p>
               </Link>
               <Link href="/services/custom-tooling" className="tile">
                 <h3>Custom tooling</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Small internal tools that remove toil</li>
-                  <li>Built to fit your stack</li>
-                </ul>
+                <p>Build lightweight internal tools that remove friction and automate repetitive work.</p>
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Agent-assisted workflows for dev and ops</li>
-                  <li>Where automation earns its place</li>
-                </ul>
+                <p>
+                  Explore practical agent-based workflows that improve developer and operational efficiency.
+                </p>
               </Link>
             </div>
             <p style={{ marginTop: 'var(--space-48)' }}>
@@ -281,10 +250,25 @@ export default function HomePage() {
             </p>
           </section>
 
+          <section
+            className="section example-outcomes home-flow home-flow--outcomes"
+            aria-labelledby="example-outcomes-heading"
+          >
+            <h2 id="example-outcomes-heading" className="section-title">
+              What this looks like in practice
+            </h2>
+            <ul className="example-outcomes-list scan-list">
+              <li>Reduced cloud spend by identifying waste and misconfigured resources</li>
+              <li>Simplified delivery pipelines to reduce deployment friction and failures</li>
+              <li>Standardized IaC to improve clarity, ownership, and team velocity</li>
+              <li>Built small internal tools to eliminate repetitive operational work</li>
+            </ul>
+          </section>
+
           <section className="section tools-section home-flow home-flow--outcomes">
             <h2 className="section-title">Tools</h2>
             <p className="note tools-intro">
-              Utilities I ship for AWS, Kubernetes, and Terraform workflows.
+              A few small tools I’ve built to solve real problems in AWS, Kubernetes, and Terraform workflows.
             </p>
             <div className="grid grid-2col">
               <a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" className="tile">

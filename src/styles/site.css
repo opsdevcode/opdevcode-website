@@ -813,11 +813,14 @@ a.tile:hover h3 { color: var(--color-primary); }
 
 /* === HOMEPAGE: vertical rhythm (spacing only; .wrap.home) === */
 .wrap.home {
-  padding-bottom: var(--space-128);
+  padding-bottom: calc(var(--space-128) + var(--space-32));
+  /* Subtle separation — scoped so global tokens stay unchanged */
+  --home-section-band: color-mix(in srgb, var(--color-bg-muted) 50%, var(--color-bg));
+  --home-section-edge: color-mix(in srgb, var(--color-border) 22%, transparent);
 }
 .wrap.home .hero {
-  padding-top: calc(var(--space-128) + var(--space-16));
-  padding-bottom: calc(var(--space-96) + var(--space-48));
+  padding-top: calc(var(--space-128) + var(--space-24));
+  padding-bottom: calc(var(--space-96) + var(--space-80));
 }
 .wrap.home .hero h1 {
   margin-bottom: var(--space-40);
@@ -832,7 +835,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   margin-bottom: var(--space-20);
 }
 .wrap.home .hero .hero-anti-consulting {
-  margin-bottom: var(--space-28);
+  margin-bottom: var(--space-32);
 }
 .wrap.home .hero .hero-reassure {
   margin-top: var(--space-16);
@@ -845,7 +848,7 @@ a.tile:hover h3 { color: var(--color-primary); }
 }
 
 .wrap.home .section {
-  padding: var(--space-96) 0;
+  padding: calc(var(--space-96) + var(--space-24)) 0;
 }
 .wrap.home .section.audience,
 .wrap.home .section.how-work,
@@ -854,43 +857,43 @@ a.tile:hover h3 { color: var(--color-primary); }
 .wrap.home .section.before-after,
 .wrap.home .section.example-outcomes,
 .wrap.home .section.engagement-flow {
-  padding: var(--space-80) 0;
+  padding: var(--space-96) 0;
 }
 .wrap.home .section.sounds-familiar {
-  padding: var(--space-64) 0 var(--space-48) 0;
+  padding: var(--space-80) 0 var(--space-64) 0;
 }
 .wrap.home .section.trust {
-  padding: var(--space-80) 0;
+  padding: var(--space-96) 0;
 }
 
 .wrap.home .section-title {
-  margin-bottom: var(--space-48);
+  margin-bottom: calc(var(--space-48) + var(--space-8));
 }
 .wrap.home .section.audience .section-title,
 .wrap.home .section.how-work .section-title {
-  margin-bottom: var(--space-40);
+  margin-bottom: var(--space-48);
 }
 .wrap.home .section.primary-problem .section-title,
 .wrap.home .section.point-of-view .section-title,
 .wrap.home .section.sounds-familiar .section-title {
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--space-40);
 }
 .wrap.home .section.before-after .section-title,
 .wrap.home .section.example-outcomes .section-title,
 .wrap.home .section.engagement-flow .section-title {
-  margin-bottom: var(--space-40);
+  margin-bottom: calc(var(--space-40) + var(--space-8));
 }
 .wrap.home .section.trust .section-title {
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-32);
 }
 .wrap.home .section .services-intro:last-of-type {
-  margin-bottom: var(--space-40);
+  margin-bottom: calc(var(--space-40) + var(--space-8));
 }
 .wrap.home .point-of-view-body p {
   margin: 0 0 var(--space-16);
 }
 .wrap.home .sounds-familiar-list {
-  margin: 0 0 var(--space-28);
+  margin: 0 0 var(--space-32);
 }
 
 .wrap.home .section.how-work .tile p,
@@ -899,21 +902,21 @@ a.tile:hover h3 { color: var(--color-primary); }
 }
 
 .wrap.home .grid {
-  gap: var(--space-32);
+  gap: var(--space-40);
 }
 .wrap.home .tile h3 {
   margin-bottom: var(--space-16);
 }
 .wrap.home .service-list li {
-  padding: var(--space-28) 0;
-  gap: var(--space-8);
+  padding: var(--space-32) 0;
+  gap: var(--space-12);
 }
 .wrap.home .before-after-split {
-  gap: var(--space-32);
+  gap: var(--space-40);
 }
 @media (min-width: 641px) {
   .wrap.home .before-after-split {
-    gap: var(--space-40);
+    gap: var(--space-48);
   }
 }
 .wrap.home .before-after-label {
@@ -923,27 +926,27 @@ a.tile:hover h3 { color: var(--color-primary); }
   margin-bottom: var(--space-16);
 }
 .wrap.home .example-outcomes-list li {
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-24);
 }
 .wrap.home .sounds-familiar-list li {
   margin-bottom: var(--space-16);
 }
 .wrap.home .engagement-steps {
-  gap: var(--space-28);
+  gap: var(--space-32);
 }
 @media (min-width: 768px) {
   .wrap.home .engagement-steps {
-    gap: var(--space-32);
+    gap: var(--space-40);
   }
 }
 .wrap.home .engagement-step {
-  padding: var(--space-40) var(--space-32);
+  padding: var(--space-48) var(--space-40);
 }
 .wrap.home .section.closing-cta .cta {
   margin-bottom: var(--space-16);
 }
 .wrap.home footer {
-  margin-top: var(--space-128);
+  margin-top: calc(var(--space-128) + var(--space-32));
 }
 
 /* Homepage: narrative momentum (clarity → trust → outcomes → action → finale) */
@@ -1001,14 +1004,14 @@ a.tile:hover h3 { color: var(--color-primary); }
 /* Homepage: subtle section separation (bands + hairlines; minimal) */
 .wrap.home .hero + .section,
 .wrap.home .section + .section {
-  border-top: 1px solid var(--color-divider-hairline);
+  border-top: 1px solid var(--home-section-edge);
 }
-.wrap.home > section.section:nth-of-type(even) {
-  background-color: var(--color-bg-band);
+.wrap.home > section.section:nth-of-type(even):not(.closing-cta) {
+  background-color: var(--home-section-band);
 }
 
 .wrap.home > section.closing-cta.home-flow--finale {
-  padding: var(--space-48) var(--space-24) var(--space-52);
+  padding: calc(var(--space-48) + var(--space-8)) var(--space-32) calc(var(--space-48) + var(--space-8));
   border-radius: var(--radius-xl);
   border: 1px solid color-mix(in srgb, var(--color-primary) 18%, var(--color-border));
   background: linear-gradient(

@@ -36,8 +36,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'platform-health',
     title: 'Platform Health Check',
     description:
-      'Straight-up report on your AWS, GCP, EKS, and IaC — what is working, what is not, and what to fix first.',
-    lead: 'I dig into your stack with read-first access and deliver a prioritized report you can act on.',
+      'Find bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.',
+    lead:
+      'Read-first pass across AWS, GCP, EKS, and IaC — prioritized findings you can hand to leadership or your team and execute.',
     bulletsLeft: [
       'AWS and GCP account structure, billing signals, and obvious waste',
       'EKS clusters, node groups, add-ons, and upgrade posture',
@@ -52,8 +53,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'finops',
     title: 'FinOps',
     description:
-      'Cloud financial operations: visibility into what drives spend, disciplined allocation, and engineering changes that actually lower the bill.',
-    lead: 'We align cost with how workloads really run — tagging, chargeback/showback signals, and infra changes — without spreadsheet theater.',
+      'Reduce cloud spend and improve visibility into where your infrastructure budget is going.',
+    lead:
+      'Align billing and usage with how workloads actually run — tagging, allocation, and infra changes engineering and finance can agree on.',
     bulletsLeft: [
       'Billing and usage signals: accounts, SKUs, savings plans, and idle capacity',
       'EKS and compute: node strategy, consolidation, and autoscaling behavior',
@@ -68,8 +70,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'iac',
     title: 'IaC',
     description:
-      'Infrastructure as code that your team trusts — whether you standardize on Terraform, Pulumi, Crossplane, or a mix.',
-    lead: 'I help you tighten layout, state, and delivery so plans and applies are predictable — not a ritual nobody wants to own.',
+      'Clean up and standardize infrastructure as code so your team can move faster with less risk.',
+    lead:
+      'Terraform, Pulumi, or Crossplane — tighten layout, state, and how changes land in CI so applies are predictable and owned.',
     bulletsLeft: [
       'Terraform: modules, naming, dependency direction, state and workspaces, plan/apply hygiene, and policy gates where they earn their keep',
       'Pulumi: stacks and components, testing, and language-native patterns your team can sustain day to day',
@@ -84,8 +87,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'cicd',
     title: 'CI/CD',
     description:
-      'Pipeline automation from zero to mature: whether your organization is new to CI/CD or your delivery tracks need a revamp.',
-    lead: 'I meet you where you are — first pipelines, flaky legacy jobs, or a redesign so build, test, and deploy are predictable and owned by the team.',
+      'Improve delivery speed and reliability with simpler pipelines your team can actually maintain.',
+    lead:
+      'Greenfield pipelines or rescue of flaky jobs — stages, secrets, promotion paths, and failure signals your team will actually use.',
     bulletsLeft: [
       'Introducing or maturing CI/CD (GitHub Actions, GitLab CI, Jenkins — your stack, not a forced rewrite)',
       'Stages, environments, promotion rules, and secrets/OIDC patterns that survive audits',
@@ -100,8 +104,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'kubernetes',
     title: 'Kubernetes',
     description:
-      'End-to-end Kubernetes help — from cluster setup and day-two operations through autoscaling that matches how you run workloads.',
-    lead: 'Whether you are standing up EKS (or tightening an existing one), I focus on a cluster your team can operate and that scales without surprises.',
+      'Operate EKS and surrounding platform pieces with defaults and scaling behavior your team can predict — not fight.',
+    lead:
+      'Bootstrap or harden clusters: networking, upgrades, autoscaling, and runbooks so on-call is not guessing why capacity moved.',
     bulletsLeft: [
       'Cluster setup, add-ons, upgrades, and platform defaults that fit your org',
       'Networking, ingress, workloads, namespaces, and guardrails',
@@ -116,8 +121,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'custom-tooling',
     title: 'Custom tooling',
     description:
-      'Bespoke automation when off-the-shelf is not enough — internal CLIs, glue scripts, and small tools that fit how your team actually works.',
-    lead: 'If you need custom automation and tooling, I can help you shape the idea, pair while you build it, or write it for you — without gold-plating.',
+      'Build lightweight internal tools that remove friction and automate repetitive work.',
+    lead:
+      'Internal CLIs, glue, and small apps shaped to your stack — ship something maintainable, not a science project.',
     bulletsLeft: [
       'Internal CLIs and developer UX: flags, config, docs, and sensible defaults',
       'Glue around AWS, GCP, Kubernetes, and your IaC APIs — the boring stuff that saves hours',
@@ -132,8 +138,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'architecture-review',
     title: 'Architecture Review',
     description:
-      'Before you lock in big decisions — networking, cluster layout, guardrails — I will sanity-check the plan.',
-    lead: 'A second pair of eyes from someone who has shipped the same patterns in production.',
+      'Stress-test big bets before you commit — networking, clusters, and how changes reach production.',
+    lead:
+      'A second opinion from someone who has run the same patterns: tradeoffs, risks, and what I would do in your shoes.',
     bulletsLeft: [
       'Multi-account, networking, and ingress patterns',
       'EKS layout, security groups, and platform boundaries',
@@ -148,8 +155,9 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'fractional-advisor',
     title: 'Fractional Platform Advisor',
     description:
-      'A few hours a week of senior guidance for your CTO or platform lead. No hiring required.',
-    lead: 'Stay unblocked on strategy, vendor choices, and team direction without a full-time hire.',
+      'Senior platform judgment on a fixed cadence — strategy, vendors, and team direction without a full-time hire.',
+    lead:
+      'Bounded hours: async or Slack on what is burning, RFC review, and hiring signal — useful, not ceremonial.',
     bulletsLeft: [
       'Slack or async check-ins on what is burning',
       'Review of RFCs, designs, and incident follow-ups',
