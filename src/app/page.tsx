@@ -60,6 +60,30 @@ export default function HomePage() {
             </p>
           </section>
 
+          <section className="section before-after" aria-labelledby="before-after-heading">
+            <h2 id="before-after-heading" className="section-title">
+              Before / After
+            </h2>
+            <div className="split before-after-split">
+              <div className="before-after-panel is-before">
+                <h3 className="before-after-label">Before</h3>
+                <ul className="before-after-list">
+                  <li>Messy infrastructure and unclear ownership</li>
+                  <li>Slow, fragile CI/CD pipelines</li>
+                  <li>Rising cloud costs with little visibility</li>
+                </ul>
+              </div>
+              <div className="before-after-panel is-after">
+                <h3 className="before-after-label">After</h3>
+                <ul className="before-after-list">
+                  <li>Clean, understandable platform your team owns</li>
+                  <li>Faster, more reliable delivery</li>
+                  <li>Clear visibility into cloud usage and cost</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <section className="section audience" aria-labelledby="who-for-heading">
             <h2 id="who-for-heading" className="section-title">
               Who this is for
@@ -186,6 +210,54 @@ export default function HomePage() {
               <Link href="/about">About</Link>
               {' '}
               — who runs this practice and how to reach me.
+            </p>
+          </section>
+
+          <section className="section engagement-flow" aria-labelledby="engagement-flow-heading">
+            <h2 id="engagement-flow-heading" className="section-title">
+              How engagement works
+            </h2>
+            <ol className="engagement-steps">
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  1
+                </span>
+                <p className="engagement-step-text">
+                  <strong>Discovery call</strong>
+                  <span aria-hidden="true"> → </span>
+                  understand your current setup and problems.
+                </p>
+              </li>
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  2
+                </span>
+                <p className="engagement-step-text">
+                  <strong>Time-boxed engagement</strong>
+                  <span aria-hidden="true"> → </span>
+                  focused work on highest-impact areas.
+                </p>
+              </li>
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  3
+                </span>
+                <p className="engagement-step-text">
+                  <strong>Practical outcomes</strong>
+                  <span aria-hidden="true"> → </span>
+                  clear improvements your team can own.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section className="section closing-cta" aria-label="Book a discovery call">
+            <div className="cta">
+              <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
+              <a className="btn" href="/about#contact">Email me directly</a>
+            </div>
+            <p className="hero-reassure closing-cta-reassure">
+              No pressure — just a quick conversation to see if it makes sense.
             </p>
           </section>
 
