@@ -70,7 +70,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section primary-problem home-flow home-flow--clarity"
+            className="section primary-problem home-flow home-flow--clarity home-flow--problem"
             aria-labelledby="primary-problem-heading"
           >
             <h2 id="primary-problem-heading" className="section-title">
@@ -90,7 +90,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section sounds-familiar home-flow home-flow--clarity"
+            className="section sounds-familiar home-flow home-flow--clarity home-flow--recognition"
             aria-labelledby="sounds-familiar-heading"
           >
             <h2 id="sounds-familiar-heading" className="section-title">
@@ -112,7 +112,10 @@ export default function HomePage() {
             </ul>
           </section>
 
-          <section className="section audience home-flow home-flow--clarity" aria-labelledby="who-for-heading">
+          <section
+            className="section audience home-flow home-flow--clarity home-flow--interlude"
+            aria-labelledby="who-for-heading"
+          >
             <h2 id="who-for-heading" className="section-title">
               Who this is for
             </h2>
@@ -146,7 +149,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section point-of-view home-flow home-flow--clarity"
+            className="section point-of-view home-flow home-flow--clarity home-flow--interlude"
             aria-labelledby="point-of-view-heading"
           >
             <h2 id="point-of-view-heading" className="section-title">
@@ -166,7 +169,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section before-after home-flow home-flow--clarity"
+            className="section before-after home-flow home-flow--clarity home-flow--interlude"
             aria-labelledby="before-after-heading"
           >
             <h2 id="before-after-heading" className="section-title">
@@ -231,7 +234,10 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section className="section how-work home-flow home-flow--clarity" aria-labelledby="how-work-heading">
+          <section
+            className="section how-work home-flow home-flow--clarity home-flow--interlude"
+            aria-labelledby="how-work-heading"
+          >
             <h2 id="how-work-heading" className="section-title">
               How I work
             </h2>
@@ -364,6 +370,9 @@ export default function HomePage() {
             <h2 id="how-it-works-heading" className="section-title">
               How it works
             </h2>
+            <p className="positioning-line">
+              Built by someone who has operated these systems — not just advised on them.
+            </p>
             <ol className="engagement-steps">
               <li className="engagement-step">
                 <span className="engagement-step-index" aria-hidden="true">
@@ -413,9 +422,9 @@ export default function HomePage() {
             className="section closing-cta home-flow home-flow--finale"
             aria-labelledby="closing-cta-heading"
           >
-            <p className="closing-cta-kicker">When you&apos;re ready</p>
+            <p className="closing-cta-kicker">Next step</p>
             <p className="closing-cta-lead">
-              If this sounds like where you are right now, we should talk.
+              If those are the outcomes you&apos;re looking for, we should talk.
             </p>
             <h2 id="closing-cta-heading" className="closing-cta-title">
               Book a discovery call
@@ -424,6 +433,9 @@ export default function HomePage() {
               <li>Most engagements deliver meaningful improvements in weeks, not months.</li>
               <li>Short, focused engagements with clear outcomes.</li>
             </ul>
+            <p className="positioning-line positioning-line--finale">
+              The goal isn&apos;t dependency — it&apos;s leaving your team with systems they fully understand.
+            </p>
             <div className="cta">
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
               <a className="btn" href="/about#contact">Email me directly</a>
