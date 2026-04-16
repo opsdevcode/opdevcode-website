@@ -51,6 +51,15 @@ export default function HomePage() {
             </div>
           </section>
 
+          <section className="section primary-problem" aria-labelledby="primary-problem-heading">
+            <h2 id="primary-problem-heading" className="section-title">
+              Most teams don’t have a DevOps problem — they have a complexity problem.
+            </h2>
+            <p className="primary-problem-body">
+              Too many tools, unclear infrastructure, rising cloud costs, and slow delivery. Platform engineering should simplify this — but most teams end up with more layers instead of less.
+            </p>
+          </section>
+
           <section className="section audience" aria-labelledby="who-for-heading">
             <h2 id="who-for-heading" className="section-title">
               Who this is for

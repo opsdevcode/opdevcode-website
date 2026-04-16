@@ -274,6 +274,22 @@ a.tile:hover h3 { color: var(--color-primary); }
   font-weight: 600;
 }
 
+/* Homepage: primary problem (below hero) */
+.section.primary-problem {
+  padding: var(--space-48) 0 var(--space-56);
+}
+.section.primary-problem .section-title {
+  margin-bottom: var(--space-20);
+  max-width: 50ch;
+}
+.section.primary-problem .primary-problem-body {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--color-text-secondary);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
 /* Homepage: trust strip above footer */
 .section.trust {
   padding: var(--space-40) 0 var(--space-32);
