@@ -50,6 +50,10 @@
   from = "/services/karpenter"
   to = "/services/kubernetes"
   status = 301
+[[redirects]]
+  from = "/services/cost-scaling"
+  to = "/services/finops"
+  status = 301
 
 # Security & transport
 [[headers]]

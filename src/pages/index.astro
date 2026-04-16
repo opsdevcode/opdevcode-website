@@ -6,18 +6,18 @@ import Footer from '../components/Footer.astro'
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'OpsDevCo',
+  name: 'OpsDevCode',
   description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
-  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
 }
 ---
 
 <BaseLayout
-  title="OpsDevCo | Platform Engineering Advisory"
-  description="Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, cost optimization, IaC cleanup."
+  title="OpsDevCode | Platform Engineering Advisory"
+  description="Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, FinOps, IaC cleanup."
   structuredData={structuredData}
 >
   <Header />
@@ -27,7 +27,7 @@ const structuredData = {
         <div class="hero-inner">
           <h1>Platform engineering that actually works.</h1>
           <p class="sub">
-            I help teams fix AWS, GCP, and Kubernetes — health checks, cost cuts, Terraform cleanup, agentic dev. No corporate speak. Time-boxed engagements.
+            I help teams fix AWS, GCP, and Kubernetes — health checks, FinOps, Terraform cleanup, agentic dev. No corporate speak. Time-boxed engagements.
           </p>
           <div class="cta">
             <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -44,8 +44,8 @@ const structuredData = {
             <p>Straight-up report on your AWS, GCP, EKS, Terraform — what's working, what's not, what to fix first.</p>
           </li>
           <li>
-            <a href="/services">Cost + Scaling</a>
-            <p>Track down what's driving your bill. Compute waste, node strategy, autoscaling.</p>
+            <a href="/services/finops">FinOps</a>
+            <p>Cloud spend visibility, allocation, and engineering changes that actually move the number.</p>
           </li>
           <li>
             <a href="/services">Terraform Cleanup</a>

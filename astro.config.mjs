@@ -11,8 +11,8 @@ export default defineConfig({
     AstroPWA({
       registerType: 'autoUpdate',
       manifest: {
-        name: 'OpsDevCo',
-        short_name: 'OpsDevCo',
+        name: 'OpsDevCode',
+        short_name: 'OpsDevCode',
         description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
         theme_color: '#fafaf9',
         background_color: '#fafaf9',

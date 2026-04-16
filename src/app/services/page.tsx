@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Platform health checks, cost optimization, Terraform cleanup, Kubernetes, agentic development. How we work together.',
+  description: 'Platform health checks, FinOps, Terraform cleanup, Kubernetes, agentic development. How we work together.',
 }
 
 export default function ServicesPage() {
@@ -21,9 +21,9 @@ export default function ServicesPage() {
                 <h3>Platform Health Check</h3>
                 <p>I dig into your AWS, GCP, EKS, and Terraform setup and give you a straight-up report: what&apos;s working, what&apos;s not, and what to fix first.</p>
               </Link>
-              <Link href="/services/cost-scaling" className="tile">
-                <h3>Cost + Scaling</h3>
-                <p>Track down what&apos;s actually driving your bill — compute waste, node strategy, autoscaling — and fix it.</p>
+              <Link href="/services/finops" className="tile">
+                <h3>FinOps</h3>
+                <p>Visibility into cloud spend, disciplined allocation, and engineering fixes — so your bill matches how you actually run.</p>
               </Link>
               <Link href="/services/terraform" className="tile">
                 <h3>Terraform Cleanup</h3>

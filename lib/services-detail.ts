@@ -2,7 +2,7 @@
 
 export type ServiceSlug =
   | 'platform-health'
-  | 'cost-scaling'
+  | 'finops'
   | 'terraform'
   | 'kubernetes'
   | 'architecture-review'
@@ -10,7 +10,7 @@ export type ServiceSlug =
 
 export const serviceSlugs: ServiceSlug[] = [
   'platform-health',
-  'cost-scaling',
+  'finops',
   'terraform',
   'kubernetes',
   'architecture-review',
@@ -44,17 +44,17 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     rightBody:
       'Usually a few days of discovery, then a deliverable you can hand to leadership or your team. Time-boxed — no open-ended audit.',
   },
-  'cost-scaling': {
-    slug: 'cost-scaling',
-    title: 'Cost + Scaling',
+  finops: {
+    slug: 'finops',
+    title: 'FinOps',
     description:
-      'Track down what is driving your bill — compute waste, node strategy, autoscaling — and fix it.',
-    lead: 'We align spend with how you actually run workloads, without guessing from dashboards alone.',
+      'Cloud financial operations: visibility into what drives spend, disciplined allocation, and engineering changes that actually lower the bill.',
+    lead: 'We align cost with how workloads really run — tagging, chargeback/showback signals, and infra changes — without spreadsheet theater.',
     bulletsLeft: [
-      'Right-sizing instances, savings plans, and idle capacity',
-      'EKS node strategy, consolidation, and autoscaling behavior',
+      'Billing and usage signals: accounts, SKUs, savings plans, and idle capacity',
+      'EKS and compute: node strategy, consolidation, and autoscaling behavior',
       'Kubernetes autoscaling and node behavior where it matters',
-      'Clear before/after targets so you know the win',
+      'Clear before/after targets so finance and engineering share the same picture',
     ],
     rightTitle: 'Typical engagement',
     rightBody:

@@ -20,7 +20,7 @@ export default function AboutPage() {
                 <h3>Hi, I&apos;m Eric</h3>
                 <p>
                   I&apos;ve been running production infrastructure for 15+ years — startups, scale-ups, and enterprises.
-                  OpsDevCo is my solo practice: no sales team, no account managers, just me.
+                  OpsDevCode is my solo practice: no sales team, no account managers, just me.
                 </p>
                 <p style={{ marginTop: 10 }}>
                   I focus on AWS, GCP (6+ years), Kubernetes on EKS (setup through autoscaling), Terraform, and agentic development. The goal: make your platform predictable,
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 <span><strong>Book a call</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>calendly.com/eric-opsdevco/30min</span></span>
                 <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
-              <a href="mailto:eric@opsdevco.de?subject=OpsDevCo%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FGCP%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
+              <a href="mailto:eric@opsdevco.de?subject=OpsDevCode%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FGCP%2FEKS%2FTerraform%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">
                 <span><strong>Email</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>eric@opsdevco.de</span></span>
                 <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
