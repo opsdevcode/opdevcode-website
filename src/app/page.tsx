@@ -4,19 +4,45 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { IconActivity, IconLayers, IconServer, IconTool, IconUsers } from '@/components/home/HomeIcons'
 
-const homeDescription =
-  'Platform engineering for production: AWS, GCP, Kubernetes, IaC. Tighten operations, cut waste, ship platforms your team owns. One senior lead—not a consulting roster.'
+/** ~60 chars max for link previews; HTML <title> stays short in the tab. */
+const shareTitle = 'OpsDevCode — Platform engineering that actually works'
+/** ~150 chars max */
+const shareDescription =
+  'Simplify cloud infrastructure, reduce complexity, and build systems your team can actually own.'
+
+/** New filename + ?v= when replacing the asset so Facebook/Twitter refetch instead of serving a stale cache. */
+const socialPreviewImage = '/assets/preview-v3.png?v=3'
 
 export const metadata: Metadata = {
-  title: 'OpsDevCode | Platform Engineering Advisory',
-  description: homeDescription,
+  title: { absolute: 'OpsDevCode' },
+  description: shareDescription,
+  openGraph: {
+    title: shareTitle,
+    description: shareDescription,
+    url: 'https://opsdevco.de/',
+    type: 'website',
+    images: [
+      {
+        url: socialPreviewImage,
+        width: 1200,
+        height: 630,
+        alt: 'OpsDevCode — platform engineering that actually works',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: shareTitle,
+    description: shareDescription,
+    images: [socialPreviewImage],
+  },
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCode',
-  description: homeDescription,
+  description: shareDescription,
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',

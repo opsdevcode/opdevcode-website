@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Social preview v3 — 1200×630</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #e8edf5;
+      background-color: #0a0d12;
+      background-image:
+        radial-gradient(ellipse 90% 65% at 12% 18%, rgba(56, 189, 248, 0.07), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 88% 78%, rgba(99, 102, 241, 0.06), transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+      background-size: auto, auto, 40px 40px, 40px 40px;
+      display: flex;
+      align-items: center;
+      padding: 0 96px;
+    }
+    .accent {
+      width: 4px;
+      align-self: stretch;
+      min-height: 220px;
+      margin-right: 40px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, #38bdf8 0%, #6366f1 100%);
+      opacity: 0.85;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+    .title {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .sub {
+      font-size: 26px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 0.01em;
+      max-width: 880px;
+      line-height: 1.35;
+    }
+  </style>
+</head>
+<body>
+  <div class="accent" aria-hidden="true"></div>
+  <div class="content">
+    <h1 class="title">OpsDevCode</h1>
+    <p class="sub">Platform engineering that actually works</p>
+  </div>
+</body>
+</html>

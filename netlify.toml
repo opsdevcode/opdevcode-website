@@ -13,6 +13,20 @@
   publish = "out"
   command = "npm run build"
 
+# Social preview: short URLs → static asset (avoid long /assets/ paths in shares)
+[[redirects]]
+  from = "/preview-v3.png"
+  to = "/assets/preview-v3.png"
+  status = 200
+  force = true
+
+# Previous short URL → current asset (cache-bust old links)
+[[redirects]]
+  from = "/preview-v2.png"
+  to = "/assets/preview-v3.png"
+  status = 200
+  force = true
+
 # Redirect old .html URLs to clean URLs
 [[redirects]]
   from = "/index.html"
