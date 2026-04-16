@@ -25,13 +25,17 @@ const structuredData = {
 >
   <Header />
   <main id="main">
-    <div class="wrap">
+    <div class="wrap home">
       <section class="hero">
         <div class="hero-inner">
           <h1>Platform engineering<br /><span class="highlight">that actually works in production.</span></h1>
           <p class="sub">
-            Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own.
+            Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC.
           </p>
+          <ul class="hero-sub-points scan-list">
+            <li>Simplify cloud operations and reduce waste</li>
+            <li>Build systems your team can actually own</li>
+          </ul>
           <div class="cta">
             <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
             <a class="btn" href="/about#contact">Email me directly</a>
@@ -39,8 +43,9 @@ const structuredData = {
           <p class="hero-reassure">
             No pressure — just a quick conversation to see if it makes sense.
           </p>
+          <p class="hero-cred">Built by a platform engineer.</p>
           <p class="hero-cred">
-            Built by a platform engineer with hands-on experience across multiple clouds, Kubernetes, IaC, and delivery systems.
+            Hands-on experience across multiple clouds, Kubernetes, IaC, and delivery systems.
           </p>
         </div>
       </section>
@@ -76,8 +81,12 @@ const structuredData = {
           </div>
           <div class="tile">
             <p>
-              <strong>Practical platform engineering</strong>, not slide decks. Real depth on AWS, GCP, Kubernetes, and IaC — no corporate speak, no bloated consulting.
+              <strong>Practical platform engineering</strong>, not slide decks.
             </p>
+            <ul class="tile-inline-points scan-list">
+              <li>Real depth on AWS, GCP, Kubernetes, and IaC</li>
+              <li>No corporate speak, no bloated consulting</li>
+            </ul>
           </div>
           <div class="tile">
             <p>
@@ -92,46 +101,66 @@ const structuredData = {
         </div>
       </section>
 
-      <section class="section">
+      <section class="section services-section">
         <h2 class="section-title">Services</h2>
         <ul class="service-list">
           <li>
             <a href="/services#platform-health">Platform Health Check</a>
-            <p>Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Identify bottlenecks, risks, and unnecessary complexity in your platform</li>
+              <li>Clear next steps to improve it</li>
+            </ul>
           </li>
           <li>
             <a href="/services/finops">FinOps</a>
-            <p>Reduce cloud spend and improve visibility into where your infrastructure budget is going.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Reduce cloud spend</li>
+              <li>Better visibility into where your infrastructure budget is going</li>
+            </ul>
           </li>
           <li>
             <a href="/services/iac">IaC</a>
-            <p>Clean up and standardize your infrastructure as code so your team can move faster with less risk.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Clean up and standardize your infrastructure as code</li>
+              <li>Move faster with less risk</li>
+            </ul>
           </li>
           <li>
             <a href="/services/cicd">CI/CD</a>
-            <p>Speed up delivery with simpler, more reliable pipelines that your team can actually maintain.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Simpler, more reliable pipelines</li>
+              <li>Maintenance your team can actually sustain</li>
+            </ul>
           </li>
           <li>
             <a href="/services/custom-tooling">Custom tooling</a>
-            <p>Build lightweight internal tools to remove friction and automate repetitive work.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Lightweight internal tools to remove friction</li>
+              <li>Automate repetitive work</li>
+            </ul>
           </li>
           <li>
             <a href="/agentic">Agentic Development</a>
-            <p>Explore and implement agent-based workflows to improve development and operational efficiency.</p>
+            <ul class="service-desc-points scan-list">
+              <li>Explore and implement agent-based workflows</li>
+              <li>Improve development and operational efficiency</li>
+            </ul>
           </li>
         </ul>
-        <p style="margin-top: var(--space-24);">
+        <p style="margin-top: var(--space-32);">
           <a class="btn" href="/services">All services</a>
         </p>
       </section>
 
       <section class="section trust" aria-label="About the practice">
         <div class="testimonial">
-          <p class="note" style="margin: 0">
-            OpsDevCode is built for teams that need practical platform help from someone who has actually operated these systems. I work hands-on across AWS, GCP, Kubernetes, IaC, delivery pipelines, and lightweight internal tooling — clarity, ownership, and real outcomes, not slide-deck consulting.
-          </p>
+          <ul class="trust-points scan-list">
+            <li>Built for teams that need practical platform help from someone who has actually operated these systems.</li>
+            <li>Hands-on across AWS, GCP, Kubernetes, IaC, delivery pipelines, and lightweight internal tooling.</li>
+            <li>Clarity, ownership, and real outcomes—not slide-deck consulting.</li>
+          </ul>
         </div>
-        <p class="fine" style="margin-top: var(--space-16); margin-bottom: 0">
+        <p class="fine" style="margin-top: var(--space-24); margin-bottom: 0">
           <a href="/about">About</a> — who runs this practice and how to reach me.
         </p>
       </section>
