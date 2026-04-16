@@ -98,6 +98,18 @@ export default function HomePage() {
             </div>
           </section>
 
+          <section className="section example-outcomes" aria-labelledby="example-outcomes-heading">
+            <h2 id="example-outcomes-heading" className="section-title">
+              What this looks like in practice
+            </h2>
+            <ul className="example-outcomes-list">
+              <li>Reduced cloud spend by identifying unused resources and misconfigured services</li>
+              <li>Simplified CI/CD pipelines to reduce deployment failures</li>
+              <li>Standardized IaC to improve team velocity and reduce onboarding time</li>
+              <li>Clearer runbooks and ownership so incidents are easier to diagnose and fix</li>
+            </ul>
+          </section>
+
           <section className="section audience" aria-labelledby="who-for-heading">
             <h2 id="who-for-heading" className="section-title">
               Who this is for
