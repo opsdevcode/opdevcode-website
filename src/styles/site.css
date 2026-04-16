@@ -234,6 +234,40 @@ a.tile:hover h3 { color: var(--color-primary); }
 .section-header { margin-bottom: var(--space-24); }
 .section-header h2 { margin: 0; }
 
+/* Homepage: compact intro rows (who / how) */
+.section.audience,
+.section.how-work {
+  padding: var(--space-48) 0 var(--space-56);
+}
+.section.audience .section-title,
+.section.how-work .section-title {
+  margin-bottom: var(--space-24);
+}
+.section.audience .tile,
+.section.how-work .tile {
+  padding: var(--space-24) var(--space-28);
+}
+.section.audience .tile p,
+.section.how-work .tile p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+.section.audience .tile p strong,
+.section.how-work .tile p strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Homepage: trust strip above footer */
+.section.trust {
+  padding: var(--space-40) 0 var(--space-32);
+}
+.section.trust .testimonial p {
+  max-width: 65ch;
+}
+
 /* === FOOTER === */
 footer {
   margin-top: var(--space-80);
