@@ -19,13 +19,13 @@ export default defineConfig({
         display: 'standalone',
         icons: [
           {
-            src: '/assets/opsdevco-logo-o-terminal.png',
+            src: '/assets/opsdevco-logo-o-mark.png',
             sizes: '36x36',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/assets/opsdevco-logo-o-terminal.png',
+            src: '/assets/opsdevco-logo-o-mark.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable',

@@ -13,16 +13,17 @@ export default function Header({ active }: { active?: string }) {
       <a href="#main" className="skip-link">Skip to main content</a>
       <div className="header-wrap">
         <header>
-          <Link href="/" className="brand">
+          <Link href="/" className="brand" aria-label="OpsDevCode home">
             <Image
               className="brand-logo"
-              src="/assets/opsdevco-logo-o-terminal.png"
-              alt="OpsDevCode"
+              src="/assets/opsdevco-logo-o-mark.png"
+              alt=""
               width={72}
               height={72}
               priority
+              aria-hidden
             />
-            <strong>OpsDevCode</strong>
+            <strong className="brand-wordmark">OpsDevCode</strong>
           </Link>
           <nav>
             {navItems.map((item) => (
