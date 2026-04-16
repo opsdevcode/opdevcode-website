@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services/platform-health`, lastModified: new Date() },
     { url: `${base}/services/cost-scaling`, lastModified: new Date() },
     { url: `${base}/services/terraform`, lastModified: new Date() },
-    { url: `${base}/services/karpenter`, lastModified: new Date() },
+    { url: `${base}/services/kubernetes`, lastModified: new Date() },
     { url: `${base}/services/architecture-review`, lastModified: new Date() },
     { url: `${base}/services/fractional-advisor`, lastModified: new Date() },
     { url: `${base}/pricing`, lastModified: new Date() },

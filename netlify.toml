@@ -42,6 +42,10 @@
   from = "/privacy.html"
   to = "/privacy"
   status = 301
+[[redirects]]
+  from = "/services/karpenter"
+  to = "/services/kubernetes"
+  status = 301
 
 # Security & transport
 [[headers]]
