@@ -35,7 +35,7 @@ export default function AgenticPage() {
               </div>
             </div>
             <p style={{ marginTop: 'var(--space-32)' }}>
-              <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+              <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
               <Link className="btn" href="/services" style={{ marginLeft: 'var(--space-12)' }}>All services</Link>
             </p>
           </section>

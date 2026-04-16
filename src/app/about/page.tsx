@@ -83,7 +83,7 @@ export default function AboutPage() {
             </p>
             <div className="contact">
               <a href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">
-                <span><strong>Book a call</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>calendly.com/eric-opsdevco/30min</span></span>
+                <span><strong>Book a discovery call</strong><br /><span style={{ color: 'var(--color-text-muted)' }}>calendly.com/eric-opsdevco/30min</span></span>
                 <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
               <a href="mailto:eric@opsdevco.de?subject=OpsDevCode%20Intro&body=Team%20size%3A%0ACloud%20bill%20range%3A%0APlatform%20stack%20(AWS%2FGCP%2FEKS%2FIaC%2Fother)%3A%0AWhat%E2%80%99s%20painful%3A%0AWhat%20would%20success%20look%20like%20in%2030%20days%3A">

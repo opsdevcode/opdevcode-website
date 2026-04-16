@@ -3,11 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
+const homeDescription =
+  'Platform engineering that works in production. Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own. No corporate speak.'
+
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCode',
-  description: 'Platform engineering advisory for DevOps and cloud teams on AWS, GCP, Kubernetes, and IaC. No corporate speak.',
+  description: homeDescription,
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
@@ -17,7 +20,7 @@ const structuredData = {
 
 <BaseLayout
   title="OpsDevCode | Platform Engineering Advisory"
-  description="Platform engineering advisory for DevOps and cloud teams — AWS, GCP, Kubernetes, IaC, CI/CD, FinOps, health checks, custom tooling. No corporate speak."
+  description={homeDescription}
   structuredData={structuredData}
 >
   <Header />
@@ -25,14 +28,20 @@ const structuredData = {
     <div class="wrap">
       <section class="hero">
         <div class="hero-inner">
-          <h1>DevOps and platform engineering<br /><span class="highlight">that actually works.</span></h1>
+          <h1>Platform engineering<br /><span class="highlight">that actually works in production.</span></h1>
           <p class="sub">
-            Advisory, health checks, FinOps, IaC, CI/CD, and custom tooling for cloud teams that want simpler systems and cleaner execution. No corporate speak.
+            Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own.
           </p>
           <div class="cta">
             <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
             <a class="btn" href="/about#contact">Email me directly</a>
           </div>
+          <p class="hero-reassure">
+            No pressure — just a quick conversation to see if it makes sense.
+          </p>
+          <p class="hero-cred">
+            Built by a platform engineer with hands-on experience across multiple clouds, Kubernetes, IaC, and delivery systems.
+          </p>
         </div>
       </section>
 
@@ -41,17 +50,17 @@ const structuredData = {
         <div class="grid grid-2col">
           <div class="tile">
             <p>
-              Teams on <strong>AWS, GCP, Kubernetes, or IaC</strong> that have gotten harder to manage than they should be.
+              Teams with <strong>AWS, GCP, or Kubernetes</strong> setups that have become harder to manage than they should be.
             </p>
           </div>
           <div class="tile">
             <p>
-              <strong>Engineering leaders and startup CTOs</strong> who need practical platform help without hiring a full consulting army.
+              <strong>Engineering leaders</strong> who need hands-on platform help without hiring a large consulting firm.
             </p>
           </div>
           <div class="tile">
             <p>
-              <strong>Companies</strong> that want clearer cloud operations, better tooling, and less friction in delivery.
+              Teams dealing with <strong>slow delivery</strong>, unclear infrastructure, or rising cloud costs.
             </p>
           </div>
         </div>
@@ -88,19 +97,27 @@ const structuredData = {
         <ul class="service-list">
           <li>
             <a href="/services#platform-health">Platform Health Check</a>
-            <p>Straight-up report on your AWS, GCP, EKS, IaC — what's working, what's not, what to fix first.</p>
+            <p>Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.</p>
           </li>
           <li>
             <a href="/services/finops">FinOps</a>
-            <p>Cloud spend visibility, allocation, and engineering changes that actually move the number.</p>
+            <p>Reduce cloud spend and improve visibility into where your infrastructure budget is going.</p>
           </li>
           <li>
             <a href="/services/iac">IaC</a>
-            <p>Terraform, Pulumi, Crossplane — maintainable infra code and delivery your team can own.</p>
+            <p>Clean up and standardize your infrastructure as code so your team can move faster with less risk.</p>
+          </li>
+          <li>
+            <a href="/services/cicd">CI/CD</a>
+            <p>Speed up delivery with simpler, more reliable pipelines that your team can actually maintain.</p>
+          </li>
+          <li>
+            <a href="/services/custom-tooling">Custom tooling</a>
+            <p>Build lightweight internal tools to remove friction and automate repetitive work.</p>
           </li>
           <li>
             <a href="/agentic">Agentic Development</a>
-            <p>Adopt Cursor, Copilot, custom tooling — ship faster without the chaos.</p>
+            <p>Explore and implement agent-based workflows to improve development and operational efficiency.</p>
           </li>
         </ul>
         <p style="margin-top: var(--space-24);">

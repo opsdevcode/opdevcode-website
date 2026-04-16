@@ -3,16 +3,19 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
+const homeDescription =
+  'Platform engineering that works in production. Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own. No corporate speak.'
+
 export const metadata: Metadata = {
   title: 'OpsDevCode | Platform Engineering Advisory',
-  description: 'Platform engineering advisory for DevOps and cloud teams — AWS, GCP, Kubernetes, IaC, CI/CD, FinOps, health checks, custom tooling. No corporate speak.',
+  description: homeDescription,
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCode',
-  description: 'Platform engineering advisory for DevOps and cloud teams on AWS, GCP, Kubernetes, and IaC. No corporate speak.',
+  description: homeDescription,
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
@@ -31,14 +34,20 @@ export default function HomePage() {
         <div className="wrap">
           <section className="hero">
             <div className="hero-inner">
-              <h1>DevOps and platform engineering<br /><span className="highlight">that actually works.</span></h1>
+              <h1>Platform engineering<br /><span className="highlight">that actually works in production.</span></h1>
               <p className="sub">
-                Advisory, health checks, FinOps, IaC, CI/CD, and custom tooling for cloud teams that want simpler systems and cleaner execution. No corporate speak.
+                Practical DevOps and platform engineering for AWS, GCP, Kubernetes, and IaC. Simplify cloud operations, reduce waste, and build systems your team can actually own.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
               </div>
+              <p className="hero-reassure">
+                No pressure — just a quick conversation to see if it makes sense.
+              </p>
+              <p className="hero-cred">
+                Built by a platform engineer with hands-on experience across multiple clouds, Kubernetes, IaC, and delivery systems.
+              </p>
             </div>
           </section>
 
@@ -49,17 +58,17 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <div className="tile">
                 <p>
-                  Teams on <strong>AWS, GCP, Kubernetes, or IaC</strong> that have gotten harder to manage than they should be.
+                  Teams with <strong>AWS, GCP, or Kubernetes</strong> setups that have become harder to manage than they should be.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  <strong>Engineering leaders and startup CTOs</strong> who need practical platform help without hiring a full consulting army.
+                  <strong>Engineering leaders</strong> who need hands-on platform help without hiring a large consulting firm.
                 </p>
               </div>
               <div className="tile">
                 <p>
-                  <strong>Companies</strong> that want clearer cloud operations, better tooling, and less friction in delivery.
+                  Teams dealing with <strong>slow delivery</strong>, unclear infrastructure, or rising cloud costs.
                 </p>
               </div>
             </div>
@@ -99,37 +108,37 @@ export default function HomePage() {
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
                 <p>
-                  When AWS, GCP, EKS, and IaC feel noisy or nobody agrees what to fix first, you get a ranked backlog and a straight read of what is actually broken.
+                  Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.
                 </p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
                 <p>
-                  When the bill does not line up with services and teams cannot defend spend, you tie usage to owners and ship changes that move the number — not dashboard theater.
+                  Reduce cloud spend and improve visibility into where your infrastructure budget is going.
                 </p>
               </Link>
               <Link href="/services/iac" className="tile">
                 <h3>IaC</h3>
                 <p>
-                  When plans and applies are scary — or live in one person&apos;s head — you tighten Terraform, Pulumi, or Crossplane so promotion is predictable and the team owns it.
+                  Clean up and standardize your infrastructure as code so your team can move faster with less risk.
                 </p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>
                 <p>
-                  When builds flake, releases drag, or prod feels like a leap of faith, you get pipelines and gates that match how code ships: fast feedback, safer promotion.
+                  Speed up delivery with simpler, more reliable pipelines that your team can actually maintain.
                 </p>
               </Link>
               <Link href="/services/custom-tooling" className="tile">
                 <h3>Custom tooling</h3>
                 <p>
-                  When the same edge cases get scripted by hand every week, you ship focused CLIs or glue that fit real workflows and survive handoff without a babysitter.
+                  Build lightweight internal tools to remove friction and automate repetitive work.
                 </p>
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
                 <p>
-                  When Cursor, Copilot, or agents add noise instead of leverage, you get rules, prompts, and review habits that keep AI useful and under control.
+                  Explore and implement agent-based workflows to improve development and operational efficiency.
                 </p>
               </Link>
             </div>
@@ -141,7 +150,7 @@ export default function HomePage() {
           <section className="section">
             <h2 className="section-title">Tools</h2>
             <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              Proof of work: lightweight CLI tools for common AWS, Kubernetes, and Terraform pain points.
+              A few small tools I&apos;ve built to solve real problems in AWS, Kubernetes, and Terraform workflows.
             </p>
             <div className="grid grid-2col">
               <a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" className="tile">

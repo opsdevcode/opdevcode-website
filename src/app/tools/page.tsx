@@ -13,7 +13,8 @@ const tools = [
 
 export const metadata: Metadata = {
   title: 'Tools',
-  description: 'Handful of open-source CLI tools I developed for AWS, Kubernetes, and Terraform. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
+  description:
+    'A few small open-source tools for real problems in AWS, Kubernetes, and Terraform workflows. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
 }
 
 export default function ToolsPage() {
@@ -25,7 +26,7 @@ export default function ToolsPage() {
           <section className="section">
             <h2 className="section-title">Tools</h2>
             <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
-              Handful of open-source CLI tools that I developed for AWS, Kubernetes, and Terraform. Free to use.
+              A few small tools I&apos;ve built to solve real problems in AWS, Kubernetes, and Terraform workflows.
             </p>
             <div className="grid grid-2col">
               {tools.map((t) => (
@@ -37,7 +38,7 @@ export default function ToolsPage() {
             </div>
           </section>
           <p style={{ marginTop: 'var(--space-32)' }}>
-            <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
+            <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
           </p>
           <Footer />
         </div>
