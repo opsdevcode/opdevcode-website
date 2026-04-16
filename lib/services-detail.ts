@@ -104,7 +104,7 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'kubernetes',
     title: 'Kubernetes',
     description:
-      'Operate EKS and surrounding platform pieces with defaults and scaling behavior your team can predict — not fight.',
+      'Operate K8s and surrounding platform pieces with defaults and scaling behavior your team can predict — not fight.',
     lead:
       'Bootstrap or harden clusters: networking, upgrades, autoscaling, and runbooks so on-call is not guessing why capacity moved.',
     bulletsLeft: [

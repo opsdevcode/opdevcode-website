@@ -1,10 +1,11 @@
 /**
  * OpsDevCode Design System
- * Stripe-inspired — light, refined, premium
+ * Stripe-inspired light + editorial-leaning dark
+ * — Fraunces (serif display) · Inter (body) · JetBrains Mono (eyebrow / label)
  */
 
 :root {
-  /* === CORE PALETTE === */
+  /* === CORE PALETTE (light) === */
   --color-bg: #ffffff;
   --color-bg-elevated: #ffffff;
   --color-bg-muted: #f6f9fc;
@@ -17,6 +18,10 @@
   --color-primary-hover: #7a73ff;
   --color-primary-muted: rgba(99, 91, 255, 0.08);
 
+  /* Editorial warm accent — used sparingly for italic display + ornament */
+  --color-warm: #b07d3a;
+  --color-warm-soft: #d4a574;
+
   --color-accent: #0a2540;
   --color-accent-hover: #1a3a5c;
   --color-accent-muted: rgba(10, 37, 64, 0.06);
@@ -28,6 +33,10 @@
   --color-bg-band: color-mix(in srgb, var(--color-bg-muted) 72%, var(--color-bg));
   --color-divider-hairline: color-mix(in srgb, var(--color-border) 38%, transparent);
 
+  /* Surface tints used by tiles / cards on hover */
+  --surface-glass: rgba(255, 255, 255, 0.78);
+  --surface-glass-strong: rgba(255, 255, 255, 0.92);
+
   /* === SEMANTIC === */
   --color-success: #0cad55;
   --color-warning: #d97706;
@@ -35,16 +44,39 @@
   --color-info: #0073e6;
 
   /* === EFFECTS === */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.1);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px rgba(10, 23, 50, 0.06);
+  --shadow-md: 0 4px 14px rgba(10, 23, 50, 0.08);
+  --shadow-lg: 0 18px 48px rgba(10, 23, 50, 0.12);
+  --shadow-card: 0 2px 8px rgba(10, 23, 50, 0.04);
+  --shadow-card-hover: 0 10px 28px rgba(10, 23, 50, 0.10);
+  --shadow-rest: 0 1px 2px rgba(15, 23, 42, 0.045);
+
+  /* Editorial highlight gradient (text fill on hero accent) */
+  --gradient-highlight: linear-gradient(
+    122deg,
+    var(--color-primary) 0%,
+    color-mix(in srgb, var(--color-primary) 65%, var(--color-info)) 55%,
+    color-mix(in srgb, var(--color-info) 70%, var(--color-primary)) 100%
+  );
+
+  /* Subtle ornamental hairline (used for section rules) */
+  --rule-ornament: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--color-border-strong) 90%, transparent) 28%,
+    color-mix(in srgb, var(--color-primary) 38%, var(--color-border)) 50%,
+    color-mix(in srgb, var(--color-border-strong) 90%, transparent) 72%,
+    transparent 100%
+  );
 
   /* === TYPOGRAPHY === */
-  --font-display: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, 'SF Mono', monospace;
+  --font-display: var(--font-fraunces), 'Fraunces', 'Iowan Old Style',
+    'Apple Garamond', 'Baskerville', 'Georgia', serif;
+  --font-sans: var(--font-inter), 'Inter', system-ui, -apple-system, 'Segoe UI',
+    Roboto, sans-serif;
+  --font-body: var(--font-sans);
+  --font-mono: var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace,
+    'SF Mono', monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -90,6 +122,72 @@
   --max-width-narrow: 720px;
   --wrap-padding: clamp(24px, 5vw, 64px);
   --header-height: 64px;
-  /* Comfortable reading width (~60–75 chars); use with max-width on prose blocks */
   --prose-measure: 68ch;
+}
+
+/* === DARK THEME === */
+[data-theme='dark'] {
+  --color-bg: #08090f;
+  --color-bg-elevated: #0d0f17;
+  --color-bg-muted: #0c0e16;
+
+  --color-text: #e9ecf3;
+  --color-text-secondary: #aab2c2;
+  --color-text-muted: #6f7991;
+
+  --color-primary: #8e87ff;
+  --color-primary-hover: #a59fff;
+  --color-primary-muted: rgba(142, 135, 255, 0.14);
+
+  --color-warm: #e8b984;
+  --color-warm-soft: #f0c897;
+
+  --color-accent: #e9ecf3;
+  --color-accent-hover: #ffffff;
+  --color-accent-muted: rgba(233, 236, 243, 0.06);
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  --color-bg-band: color-mix(in srgb, var(--color-bg-elevated) 70%, var(--color-bg));
+  --color-divider-hairline: color-mix(in srgb, var(--color-border) 90%, transparent);
+
+  --surface-glass: rgba(13, 15, 23, 0.72);
+  --surface-glass-strong: rgba(13, 15, 23, 0.92);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-card-hover: 0 14px 36px rgba(0, 0, 0, 0.55);
+  --shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  --gradient-highlight: linear-gradient(
+    122deg,
+    color-mix(in srgb, var(--color-primary) 92%, white) 0%,
+    color-mix(in srgb, var(--color-primary) 50%, var(--color-info)) 55%,
+    color-mix(in srgb, var(--color-warm-soft) 70%, var(--color-primary)) 100%
+  );
+
+  --rule-ornament: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in srgb, var(--color-border-strong) 95%, transparent) 28%,
+    color-mix(in srgb, var(--color-primary) 60%, var(--color-border-strong)) 50%,
+    color-mix(in srgb, var(--color-border-strong) 95%, transparent) 72%,
+    transparent 100%
+  );
+}
+
+/* Honor system preference when no explicit choice is set yet */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+  }
+}
+[data-theme='dark'] {
+  color-scheme: dark;
+}
+[data-theme='light'] {
+  color-scheme: light;
 }

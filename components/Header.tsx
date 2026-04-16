@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ThemeToggle from './ThemeToggle'
 
 const navItems = [
   { href: '/services', label: 'Services' },
@@ -36,6 +37,7 @@ export default function Header({ active }: { active?: string }) {
               </Link>
             ))}
             <Link href="/about#contact">Contact</Link>
+            <ThemeToggle />
           </nav>
         </header>
       </div>

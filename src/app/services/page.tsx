@@ -40,7 +40,7 @@ export default function ServicesPage() {
               <Link href="/services/kubernetes" className="tile">
                 <h3>Kubernetes</h3>
                 <p>
-                  Operate EKS and the surrounding platform with predictable upgrades, scaling, and day-two behavior — not
+                  Operate K8s and the surrounding platform with predictable upgrades, scaling, and day-two behavior — not
                   surprises.
                 </p>
               </Link>
