@@ -163,11 +163,21 @@ h3 {
 .hero-inner { max-width: 64ch; }
 .hero h1 { margin-bottom: var(--space-20); }
 .hero .sub {
-  margin: 0 0 var(--space-40);
+  margin: 0 0 var(--space-20);
   color: var(--color-text-secondary);
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   line-height: var(--leading-relaxed);
   max-width: 52ch;
+}
+.hero .hero-diff {
+  margin: 0 0 var(--space-32);
+  max-width: 52ch;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: var(--leading-snug);
+  color: var(--color-text);
 }
 .hero .cta { display: flex; gap: var(--space-12); flex-wrap: wrap; }
 .hero .hero-reassure {

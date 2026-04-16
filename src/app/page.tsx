@@ -38,6 +38,9 @@ export default function HomePage() {
               <p className="sub">
                 Hands-on work across AWS, GCP, Kubernetes, and IaC. Less waste, clearer operations, platforms your team can run.
               </p>
+              <p className="hero-diff">
+                No slides. No fluff. Just working systems.
+              </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
