@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Eric Skaggs — 15+ years running production infrastructure. Solo platform engineering practice. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
+  description: 'Eric Skaggs — 15+ years running production infrastructure. Solo platform engineering practice. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
 }
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
                   OpsDevCo is my solo practice: no sales team, no account managers, just me.
                 </p>
                 <p style={{ marginTop: 10 }}>
-                  I focus on AWS, GCP (6+ years), Kubernetes (EKS), Karpenter, Terraform, and agentic development. The goal: make your platform predictable,
+                  I focus on AWS, GCP (6+ years), Kubernetes on EKS (setup through autoscaling), Terraform, and agentic development. The goal: make your platform predictable,
                   cheaper to run, and less of a daily headache.
                 </p>
               </div>
@@ -35,7 +35,7 @@ export default function AboutPage() {
                 </p>
                 <p style={{ marginTop: 12 }}>
                   <span className="pill">EKS</span>{' '}
-                  <span className="pill">Karpenter</span>{' '}
+                  <span className="pill">Kubernetes</span>{' '}
                   <span className="pill">Terraform</span>{' '}
                   <span className="pill">agentic dev</span>{' '}
                   <span className="pill">AWS</span>{' '}

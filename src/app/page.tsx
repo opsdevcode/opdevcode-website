@@ -5,14 +5,14 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'OpsDevCo | Platform Engineering Advisory',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development. Health checks, cost optimization, IaC cleanup.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, cost optimization, IaC cleanup.',
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCo',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Terraform, Karpenter, agentic development.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',

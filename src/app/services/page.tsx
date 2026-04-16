@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Platform health checks, cost optimization, Terraform cleanup, Karpenter strategy, agentic development. How we work together.',
+  description: 'Platform health checks, cost optimization, Terraform cleanup, Kubernetes, agentic development. How we work together.',
 }
 
 export default function ServicesPage() {
@@ -29,9 +29,9 @@ export default function ServicesPage() {
                 <h3>Terraform Cleanup</h3>
                 <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less &quot;hold your breath&quot; on every apply.</p>
               </Link>
-              <Link href="/services/karpenter" className="tile">
-                <h3>Karpenter + Node Strategy</h3>
-                <p>Get node provisioning and consolidation that behaves predictably and doesn&apos;t blow the budget.</p>
+              <Link href="/services/kubernetes" className="tile">
+                <h3>Kubernetes</h3>
+                <p>From cluster setup and day-two operations to automated scaling — EKS and the surrounding platform, done intentionally.</p>
               </Link>
               <Link href="/services/architecture-review" className="tile">
                 <h3>Architecture Review</h3>
@@ -57,7 +57,7 @@ export default function ServicesPage() {
               </div>
               <div className="tile">
                 <h3>2. I take a look</h3>
-                <p>Usually read-only access — billing, EKS, your IaC repos. Low friction.</p>
+                <p>Usually read-only access — billing, K8s, your IaC repos. Low friction.</p>
               </div>
               <div className="tile">
                 <h3>3. You get a plan</h3>

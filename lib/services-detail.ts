@@ -4,7 +4,7 @@ export type ServiceSlug =
   | 'platform-health'
   | 'cost-scaling'
   | 'terraform'
-  | 'karpenter'
+  | 'kubernetes'
   | 'architecture-review'
   | 'fractional-advisor'
 
@@ -12,7 +12,7 @@ export const serviceSlugs: ServiceSlug[] = [
   'platform-health',
   'cost-scaling',
   'terraform',
-  'karpenter',
+  'kubernetes',
   'architecture-review',
   'fractional-advisor',
 ]
@@ -53,7 +53,7 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     bulletsLeft: [
       'Right-sizing instances, savings plans, and idle capacity',
       'EKS node strategy, consolidation, and autoscaling behavior',
-      'Karpenter or cluster autoscaler tuning where it matters',
+      'Kubernetes autoscaling and node behavior where it matters',
       'Clear before/after targets so you know the win',
     ],
     rightTitle: 'Typical engagement',
@@ -76,21 +76,21 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     rightBody:
       'Scoped refactors with PR-sized steps. I can lead the refactor or pair — whichever gets you stable faster.',
   },
-  karpenter: {
-    slug: 'karpenter',
-    title: 'Karpenter + Node Strategy',
+  kubernetes: {
+    slug: 'kubernetes',
+    title: 'Kubernetes',
     description:
-      'Node provisioning and consolidation that behaves predictably and does not blow the budget.',
-    lead: 'Karpenter is powerful when configured intentionally — otherwise it is surprise bills and thrashy nodes.',
+      'End-to-end Kubernetes help — from cluster setup and day-two operations through autoscaling that matches how you run workloads.',
+    lead: 'Whether you are standing up EKS (or tightening an existing one), I focus on a cluster your team can operate and that scales without surprises.',
     bulletsLeft: [
-      'NodePool / provisioner design for your workload mix',
-      'Consolidation, disruption, and interruption budgets',
-      'Spot vs on-demand strategy and blast radius',
-      'Observability so you can explain behavior to finance',
+      'Cluster setup, add-ons, upgrades, and platform defaults that fit your org',
+      'Networking, ingress, workloads, namespaces, and guardrails',
+      'Automated scaling: HPA/VPA, cluster autoscaler, Karpenter, and capacity planning',
+      'Observability and runbooks so on-call is not guessing why nodes or pods moved',
     ],
     rightTitle: 'Typical engagement',
     rightBody:
-      'Hands-on in your repos and cluster config. Outcome: predictable scale-down, fewer orphaned nodes, and cost you can reason about.',
+      'Hands-on in your repos, Terraform, and cluster config — from bootstrap to tuning autoscaling. Outcome: a clear path from “it works” to “it scales predictably.”',
   },
   'architecture-review': {
     slug: 'architecture-review',
