@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Platform health checks, FinOps, Terraform cleanup, Kubernetes, agentic development. How we work together.',
+  description: 'Platform health checks, FinOps, Terraform cleanup, CI/CD, Kubernetes, custom tooling, agentic development. How we work together.',
 }
 
 export default function ServicesPage() {
@@ -29,9 +29,23 @@ export default function ServicesPage() {
                 <h3>Terraform Cleanup</h3>
                 <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less &quot;hold your breath&quot; on every apply.</p>
               </Link>
+              <Link href="/services/cicd" className="tile">
+                <h3>CI/CD</h3>
+                <p>
+                  Whether your organization is new to CI/CD automation or your pipelines need a revamp — I help you get delivery running smoothly and
+                  safely.
+                </p>
+              </Link>
               <Link href="/services/kubernetes" className="tile">
                 <h3>Kubernetes</h3>
                 <p>From cluster setup and day-two operations to automated scaling — EKS and the surrounding platform, done intentionally.</p>
+              </Link>
+              <Link href="/services/custom-tooling" className="tile">
+                <h3>Custom tooling</h3>
+                <p>
+                  If you need custom automation and tooling, I can help you design and build them — or write them for you — so your team stops repeating
+                  the same manual work.
+                </p>
               </Link>
               <Link href="/services/architecture-review" className="tile">
                 <h3>Architecture Review</h3>

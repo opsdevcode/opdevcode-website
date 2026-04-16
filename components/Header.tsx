@@ -18,8 +18,8 @@ export default function Header({ active }: { active?: string }) {
               className="brand-logo"
               src="/assets/opsdevco-logo-o-terminal.png"
               alt="OpsDevCode"
-              width={48}
-              height={48}
+              width={72}
+              height={72}
               priority
             />
             <strong>OpsDevCode</strong>

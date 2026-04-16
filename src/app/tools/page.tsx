@@ -13,7 +13,7 @@ const tools = [
 
 export const metadata: Metadata = {
   title: 'Tools',
-  description: 'Open-source CLI tools for AWS, Kubernetes, and Terraform. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
+  description: 'Handful of open-source CLI tools I developed for AWS, Kubernetes, and Terraform. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
 }
 
 export default function ToolsPage() {
@@ -25,7 +25,7 @@ export default function ToolsPage() {
           <section className="section">
             <h2 className="section-title">Tools</h2>
             <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
-              Open-source CLI tools for AWS, Kubernetes, and Terraform. Free to use.
+              Handful of open-source CLI tools that I developed for AWS, Kubernetes, and Terraform. Free to use.
             </p>
             <div className="grid grid-2col">
               {tools.map((t) => (

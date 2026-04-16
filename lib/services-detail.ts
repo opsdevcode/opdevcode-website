@@ -4,7 +4,9 @@ export type ServiceSlug =
   | 'platform-health'
   | 'finops'
   | 'terraform'
+  | 'cicd'
   | 'kubernetes'
+  | 'custom-tooling'
   | 'architecture-review'
   | 'fractional-advisor'
 
@@ -12,7 +14,9 @@ export const serviceSlugs: ServiceSlug[] = [
   'platform-health',
   'finops',
   'terraform',
+  'cicd',
   'kubernetes',
+  'custom-tooling',
   'architecture-review',
   'fractional-advisor',
 ]
@@ -76,6 +80,22 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     rightBody:
       'Scoped refactors with PR-sized steps. I can lead the refactor or pair — whichever gets you stable faster.',
   },
+  cicd: {
+    slug: 'cicd',
+    title: 'CI/CD',
+    description:
+      'Pipeline automation from zero to mature: whether your organization is new to CI/CD or your delivery tracks need a revamp.',
+    lead: 'I meet you where you are — first pipelines, flaky legacy jobs, or a redesign so build, test, and deploy are predictable and owned by the team.',
+    bulletsLeft: [
+      'Introducing or maturing CI/CD (GitHub Actions, GitLab CI, Jenkins — your stack, not a forced rewrite)',
+      'Stages, environments, promotion rules, and secrets/OIDC patterns that survive audits',
+      'Speed and reliability: caching, parallelism, flaky tests, and failure signals people actually use',
+      'Tying pipelines to Terraform and Kubernetes without one-off snowflakes',
+    ],
+    rightTitle: 'Typical engagement',
+    rightBody:
+      'Short discovery, then concrete pipeline design or refactor with docs your team can run. Often pairs well with Terraform cleanup or a health check.',
+  },
   kubernetes: {
     slug: 'kubernetes',
     title: 'Kubernetes',
@@ -91,6 +111,22 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     rightTitle: 'Typical engagement',
     rightBody:
       'Hands-on in your repos, Terraform, and cluster config — from bootstrap to tuning autoscaling. Outcome: a clear path from “it works” to “it scales predictably.”',
+  },
+  'custom-tooling': {
+    slug: 'custom-tooling',
+    title: 'Custom tooling',
+    description:
+      'Bespoke automation when off-the-shelf is not enough — internal CLIs, glue scripts, and small tools that fit how your team actually works.',
+    lead: 'If you need custom automation and tooling, I can help you shape the idea, pair while you build it, or write it for you — without gold-plating.',
+    bulletsLeft: [
+      'Internal CLIs and developer UX: flags, config, docs, and sensible defaults',
+      'Glue around AWS, GCP, Kubernetes, and Terraform APIs — the boring stuff that saves hours',
+      'CI/CD hooks, release helpers, and “make the right thing easy” wrappers',
+      'Handoff-friendly repos: tests where they matter, README your team will read',
+    ],
+    rightTitle: 'Typical engagement',
+    rightBody:
+      'Time-boxed build or a short spike plus roadmap. You choose: I ship a first version, we pair, or I review what you have and harden it.',
   },
   'architecture-review': {
     slug: 'architecture-review',

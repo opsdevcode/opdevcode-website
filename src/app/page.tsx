@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'OpsDevCode | Platform Engineering Advisory',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, FinOps, IaC cleanup.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, CI/CD, custom tooling, agentic development. Health checks, FinOps, IaC cleanup.',
 }
 
 const structuredData = {
@@ -16,7 +16,7 @@ const structuredData = {
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
-  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform', 'CI/CD', 'Custom tooling'],
 }
 
 export default function HomePage() {
@@ -56,6 +56,14 @@ export default function HomePage() {
               <Link href="/services/terraform" className="tile">
                 <h3>Terraform Cleanup</h3>
                 <p>Refactor IaC for maintainability — clearer structure, safer workflows.</p>
+              </Link>
+              <Link href="/services/cicd" className="tile">
+                <h3>CI/CD</h3>
+                <p>New to pipeline automation or need a revamp — delivery that runs smoothly and safely.</p>
+              </Link>
+              <Link href="/services/custom-tooling" className="tile">
+                <h3>Custom tooling</h3>
+                <p>Need custom automation or small tools — I can assist, pair with your team, or build them for you.</p>
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
