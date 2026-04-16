@@ -37,7 +37,8 @@ export default function HomePage() {
             <div className="hero-inner">
               <h1>Platform engineering<br /><span className="highlight">built for production.</span></h1>
               <p className="sub">
-                Hands-on <span className="anchor-soft">AWS, GCP, Kubernetes</span>, and IaC—in your environment.
+                Hands-on{' '}
+                <span className="anchor-soft">AWS, GCP, Kubernetes, and IaC</span>—in your environment.
               </p>
               <p className="hero-fit">
                 If <span className="anchor-soft">operating the platform</span> competes with shipping product, this is
