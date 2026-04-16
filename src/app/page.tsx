@@ -60,6 +60,20 @@ export default function HomePage() {
             </p>
           </section>
 
+          <section className="section point-of-view" aria-labelledby="point-of-view-heading">
+            <h2 id="point-of-view-heading" className="section-title">
+              Point of view
+            </h2>
+            <div className="point-of-view-body">
+              <p>
+                Most DevOps setups struggle because they optimize for tools instead of outcomes.
+              </p>
+              <p>
+                I focus on reducing complexity, improving clarity, and building systems your team can actually operate — not just something that looks good on a diagram.
+              </p>
+            </div>
+          </section>
+
           <section className="section before-after" aria-labelledby="before-after-heading">
             <h2 id="before-after-heading" className="section-title">
               Before / After
