@@ -64,7 +64,10 @@ export default function AboutPage() {
               </div>
               <div className="faq-item">
                 <dt>What if we&apos;re not on AWS or EKS?</dt>
-                <dd>My depth is AWS, GCP (6+ years), and EKS. For Azure or other clouds I can advise on architecture and process, but hands-on work is AWS/GCP-focused.</dd>
+                <dd>
+                  My depth of knowledge for the cloud is AWS, GCP (12+ years), and Kubernetes as a whole — whether managed Kubernetes or roll-your-own.
+                  For Azure or other clouds I can advise on architecture and process, but hands-on work is AWS/GCP-focused.
+                </dd>
               </div>
               <div className="faq-item">
                 <dt>Can you help with agentic development / AI tooling?</dt>
