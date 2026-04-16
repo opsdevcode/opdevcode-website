@@ -7,17 +7,17 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCode',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development.',
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
-  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform'],
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'IaC'],
 }
 ---
 
 <BaseLayout
   title="OpsDevCode | Platform Engineering Advisory"
-  description="Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development. Health checks, FinOps, IaC cleanup."
+  description="Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development. Health checks, FinOps, platform delivery."
   structuredData={structuredData}
 >
   <Header />
@@ -27,7 +27,7 @@ const structuredData = {
         <div class="hero-inner">
           <h1>Platform engineering that actually works.</h1>
           <p class="sub">
-            I help teams fix AWS, GCP, and Kubernetes — health checks, FinOps, Terraform cleanup, agentic dev. No corporate speak. Time-boxed engagements.
+            I help teams fix AWS, GCP, and Kubernetes — health checks, FinOps, IaC, agentic dev. No corporate speak. Time-boxed engagements.
           </p>
           <div class="cta">
             <a class="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -41,15 +41,15 @@ const structuredData = {
         <ul class="service-list">
           <li>
             <a href="/services#platform-health">Platform Health Check</a>
-            <p>Straight-up report on your AWS, GCP, EKS, Terraform — what's working, what's not, what to fix first.</p>
+            <p>Straight-up report on your AWS, GCP, EKS, IaC — what's working, what's not, what to fix first.</p>
           </li>
           <li>
             <a href="/services/finops">FinOps</a>
             <p>Cloud spend visibility, allocation, and engineering changes that actually move the number.</p>
           </li>
           <li>
-            <a href="/services">Terraform Cleanup</a>
-            <p>Refactor IaC for maintainability — clearer structure, safer workflows.</p>
+            <a href="/services/iac">IaC</a>
+            <p>Terraform, Pulumi, Crossplane — maintainable infra code and delivery your team can own.</p>
           </li>
           <li>
             <a href="/agentic">Agentic Development</a>

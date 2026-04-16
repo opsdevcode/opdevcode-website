@@ -54,6 +54,10 @@
   from = "/services/cost-scaling"
   to = "/services/finops"
   status = 301
+[[redirects]]
+  from = "/services/terraform"
+  to = "/services/iac"
+  status = 301
 
 # Security & transport
 [[headers]]

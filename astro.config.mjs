@@ -13,7 +13,7 @@ export default defineConfig({
       manifest: {
         name: 'OpsDevCode',
         short_name: 'OpsDevCode',
-        description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
+        description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development.',
         theme_color: '#fafaf9',
         background_color: '#fafaf9',
         display: 'standalone',
