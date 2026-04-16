@@ -51,6 +51,8 @@ export default function HomePage() {
               </p>
               <p className="hero-anti-consulting">
                 This isn’t traditional consulting — no large teams, no bloated engagements, no unnecessary layers.
+              </p>
+              <p className="hero-anti-consulting-follow">
                 Just focused, hands-on work that improves your systems.
               </p>
               <div className="cta">
@@ -74,12 +76,10 @@ export default function HomePage() {
             <h2 id="primary-problem-heading" className="section-title">
               Most teams don’t have a DevOps problem — they have a complexity problem.
             </h2>
-            <div className="primary-problem-body">
-              <p>
-                Too many tools, unclear infrastructure, rising cloud costs, and delivery friction. Platform
-                engineering should reduce that complexity, not add more layers.
-              </p>
-            </div>
+            <ul className="primary-problem-points scan-list">
+              <li>Too many tools, unclear infrastructure, rising cloud costs, and delivery friction.</li>
+              <li>Platform engineering should reduce that complexity, not add more layers.</li>
+            </ul>
           </section>
 
           <section
@@ -89,19 +89,17 @@ export default function HomePage() {
             <h2 id="point-of-view-heading" className="section-title">
               Point of view
             </h2>
-            <div className="point-of-view-body">
-              <p>
+            <ul className="point-of-view-points scan-list">
+              <li>
                 Too much DevOps work optimizes for <span className="kw">tools</span> instead of{' '}
                 <span className="kw">outcomes</span>.
-              </p>
-              <p>
+              </li>
+              <li>
                 I <strong className="key-em">reduce complexity</strong>, sharpen clarity, and ship systems teams
                 can run.
-              </p>
-              <p>
-                Nothing that only reads well on a <span className="kw">diagram</span>.
-              </p>
-            </div>
+              </li>
+              <li>Nothing that only reads well on a <span className="kw">diagram</span>.</li>
+            </ul>
           </section>
 
           <section
@@ -200,7 +198,7 @@ export default function HomePage() {
                 <li>Clarity, ownership, outcomes that last.</li>
               </ul>
             </div>
-            <p className="fine" style={{ marginTop: 'var(--space-28)', marginBottom: 0 }}>
+            <p className="fine trust-about-link">
               <Link href="/about">About</Link>
               {' '}
               — background and contact.
@@ -209,18 +207,20 @@ export default function HomePage() {
 
           <section className="section services-section home-flow home-flow--outcomes">
             <h2 className="section-title">Services</h2>
-            <p className="note services-intro">I don’t just advise.</p>
-            <p className="note services-intro">
-              I work <span className="kw">directly</span> in your systems, with your team, to make{' '}
-              <strong className="key-em">real improvements</strong>.
-            </p>
+            <ul className="services-lede scan-list">
+              <li>I don’t just advise.</li>
+              <li>
+                I work <span className="kw">directly</span> in your systems, with your team.
+              </li>
+              <li>
+                To make <strong className="key-em">real improvements</strong>.
+              </li>
+            </ul>
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
-                <p>
-                  Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to
-                  improve it.
-                </p>
+                <p>Identify bottlenecks, risks, and unnecessary complexity in your platform.</p>
+                <p className="tile-desc-follow">Clear next steps to improve it.</p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
@@ -240,9 +240,8 @@ export default function HomePage() {
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
-                <p>
-                  Explore practical agent-based workflows that improve developer and operational efficiency.
-                </p>
+                <p>Explore practical agent-based workflows.</p>
+                <p className="tile-desc-follow">Improve developer and operational efficiency.</p>
               </Link>
             </div>
             <p style={{ marginTop: 'var(--space-48)' }}>
@@ -315,7 +314,8 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Discovery call</strong> — understand the current setup, problems, and priorities.
+                    <strong>Discovery call</strong>
+                    <span className="engagement-step-line">Understand the current setup, problems, and priorities.</span>
                   </p>
                 </div>
               </li>
@@ -325,7 +325,8 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Focused engagement</strong> — time-boxed work on the highest-impact areas.
+                    <strong>Focused engagement</strong>
+                    <span className="engagement-step-line">Time-boxed work on the highest-impact areas.</span>
                   </p>
                 </div>
               </li>
@@ -335,21 +336,20 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Practical outcomes</strong> — clear improvements your team can own after the engagement.
+                    <strong>Practical outcomes</strong>
+                    <span className="engagement-step-line">
+                      Clear improvements your team can own after the engagement.
+                    </span>
                   </p>
                 </div>
               </li>
             </ol>
-            <p className="engagement-scope">
-              Engagements are typically time-boxed and scoped around clear outcomes — from short assessments to
-              focused implementation work.
-            </p>
-            <p className="engagement-speed">
-              Most engagements focus on delivering meaningful improvements in weeks, not months.
-            </p>
-            <p className="engagement-ownership">
-              The goal isn’t dependency — it’s leaving your team with systems they fully understand and can own.
-            </p>
+            <ul className="engagement-follow scan-list" aria-label="How engagements are structured">
+              <li>Time-boxed scopes with clear outcomes.</li>
+              <li>From short assessments to focused implementation work.</li>
+              <li>Meaningful improvements in weeks, not months.</li>
+              <li>Not long-term dependency — systems your team understands and owns.</li>
+            </ul>
           </section>
 
           <section
