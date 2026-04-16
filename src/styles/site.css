@@ -546,6 +546,11 @@ a.tile:hover h3 { color: var(--color-primary); }
   align-items: flex-start;
   gap: calc(var(--space-12) * var(--home-v-rhythm));
 }
+/* One flex item for title text so line breaks and inline spans (e.g. .anchor-soft) don’t become separate flex items. */
+.wrap.home h2.section-title .section-title-text {
+  flex: 1;
+  min-width: 0;
+}
 .wrap.home h2.section-title::before {
   content: '';
   flex-shrink: 0;

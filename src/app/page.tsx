@@ -100,8 +100,10 @@ export default function HomePage() {
             aria-labelledby="primary-problem-heading"
           >
             <h2 id="primary-problem-heading" className="section-title">
-              Most teams don’t have a DevOps problem — they have a{' '}
-              <span className="anchor-soft">complexity problem</span>.
+              <span className="section-title-text">
+                Most teams don’t have a DevOps problem — they have a{' '}
+                <span className="anchor-soft">complexity problem</span>.
+              </span>
             </h2>
             <ul className="primary-problem-points scan-list">
               <li>
@@ -120,7 +122,7 @@ export default function HomePage() {
             aria-labelledby="sounds-familiar-heading"
           >
             <h2 id="sounds-familiar-heading" className="section-title">
-              If this sounds familiar
+              <span className="section-title-text">If this sounds familiar</span>
             </h2>
             <ul className="sounds-familiar-list scan-list">
               <li>
@@ -143,7 +145,7 @@ export default function HomePage() {
             aria-labelledby="who-for-heading"
           >
             <h2 id="who-for-heading" className="section-title">
-              Who this is for
+              <span className="section-title-text">Who this is for</span>
             </h2>
             <div className="grid grid-2col">
               <div className="tile tile--with-icon">
@@ -179,7 +181,7 @@ export default function HomePage() {
             aria-labelledby="point-of-view-heading"
           >
             <h2 id="point-of-view-heading" className="section-title">
-              Point of view
+              <span className="section-title-text">Point of view</span>
             </h2>
             <ul className="point-of-view-points scan-list">
               <li>
@@ -199,7 +201,7 @@ export default function HomePage() {
             aria-labelledby="before-after-heading"
           >
             <h2 id="before-after-heading" className="section-title">
-              Before / After
+              <span className="section-title-text">Before / After</span>
             </h2>
             <div className="split before-after-split">
               <div className="before-after-panel is-before">
@@ -235,7 +237,7 @@ export default function HomePage() {
 
           <section className="section trust home-flow home-flow--trust" aria-labelledby="trust-heading">
             <h2 id="trust-heading" className="section-title">
-              Hands-on practice
+              <span className="section-title-text">Hands-on practice</span>
             </h2>
             <p className="trust-operator">
               <span className="home-icon" aria-hidden="true">
@@ -265,7 +267,7 @@ export default function HomePage() {
             aria-labelledby="how-work-heading"
           >
             <h2 id="how-work-heading" className="section-title">
-              How I work
+              <span className="section-title-text">How I work</span>
             </h2>
             <div className="grid grid-2col">
               <div className="tile">
@@ -296,7 +298,9 @@ export default function HomePage() {
           </section>
 
           <section className="section services-section home-flow home-flow--outcomes">
-            <h2 className="section-title">Services</h2>
+            <h2 className="section-title">
+              <span className="section-title-text">Services</span>
+            </h2>
             <ul className="services-lede scan-list">
               <li>Not advisory-only.</li>
               <li>
@@ -344,7 +348,7 @@ export default function HomePage() {
             aria-labelledby="example-outcomes-heading"
           >
             <h2 id="example-outcomes-heading" className="section-title">
-              Outcomes in practice
+              <span className="section-title-text">Outcomes in practice</span>
             </h2>
             <ul className="example-outcomes-list scan-list">
               <li>
@@ -364,7 +368,9 @@ export default function HomePage() {
           </section>
 
           <section className="section tools-section home-flow home-flow--outcomes">
-            <h2 className="section-title">Tools</h2>
+            <h2 className="section-title">
+              <span className="section-title-text">Tools</span>
+            </h2>
             <p className="note tools-intro">
               <span className="home-icon" aria-hidden="true">
                 <IconTool />
@@ -394,7 +400,7 @@ export default function HomePage() {
             aria-labelledby="how-it-works-heading"
           >
             <h2 id="how-it-works-heading" className="section-title">
-              How it works
+              <span className="section-title-text">How it works</span>
             </h2>
             <p className="positioning-line">
               Built by someone who has operated these systems — not just advised on them.
