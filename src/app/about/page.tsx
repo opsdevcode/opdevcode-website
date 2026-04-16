@@ -23,8 +23,8 @@ export default function AboutPage() {
                   OpsDevCode is my solo practice: no sales team, no account managers, just me.
                 </p>
                 <p style={{ marginTop: 10 }}>
-                  I focus on AWS, GCP (6+ years), Kubernetes on EKS (setup through autoscaling), IaC — Terraform, Pulumi, Crossplane — and agentic development. The goal: make your platform predictable,
-                  cheaper to run, and less of a daily headache.
+                  I focus on AWS, GCP (12+ years), Kubernetes (setup through autoscaling), various CI/CD platforms, IaC — Terraform, Pulumi, Crossplane —
+                  and agentic development. The goal: make your platform predictable, cheaper to run, and less of a daily headache.
                 </p>
               </div>
               <div className="tile">
