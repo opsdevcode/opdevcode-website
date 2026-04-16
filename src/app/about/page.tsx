@@ -71,7 +71,7 @@ export default function AboutPage() {
               </div>
               <div className="faq-item">
                 <dt>Can you help with agentic development / AI tooling?</dt>
-                <dd>Yes. I use Cursor and agentic workflows daily. I can help you adopt them — rules, prompts, workflows — without the hype.</dd>
+                <dd>Yes. I use Cursor and Claude for agentic workflows daily. I can help you adopt them — rules, prompts, workflows — without the hype.</dd>
               </div>
             </dl>
           </section>
