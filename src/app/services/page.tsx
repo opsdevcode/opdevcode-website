@@ -75,7 +75,6 @@ export default function ServicesPage() {
 
           <p style={{ marginTop: 'var(--space-32)' }}>
             <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
-            <a className="btn" href="/pricing" style={{ marginLeft: 'var(--space-12)' }}>See pricing</a>
           </p>
 
           <Footer />
