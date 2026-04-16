@@ -41,6 +41,9 @@ export default function HomePage() {
               <p className="hero-diff">
                 No slides. No fluff. Just working systems.
               </p>
+              <p className="hero-positioning">
+                This isn’t traditional consulting. No large teams, no long engagements, no unnecessary layers — just focused, hands-on work that improves your systems.
+              </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
@@ -162,10 +165,16 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+            <p className="note how-work-ownership">
+              The goal is not to create dependency — it’s to leave your team with systems they fully understand and can own.
+            </p>
           </section>
 
           <section className="section">
             <h2 className="section-title">Services</h2>
+            <p className="note services-intro">
+              I don’t just advise — I work directly in your systems, with your team, to make real improvements.
+            </p>
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
@@ -204,14 +213,14 @@ export default function HomePage() {
                 </p>
               </Link>
             </div>
-            <p style={{ marginTop: 'var(--space-32)' }}>
+            <p style={{ marginTop: 'var(--space-40)' }}>
               <Link className="btn" href="/services">All services</Link>
             </p>
           </section>
 
           <section className="section">
             <h2 className="section-title">Tools</h2>
-            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
+            <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
               Utilities I ship for AWS, Kubernetes, and Terraform workflows.
             </p>
             <div className="grid grid-2col">
@@ -224,7 +233,7 @@ export default function HomePage() {
                 <p>List and cordon/drain EKS nodes from CLI.</p>
               </a>
             </div>
-            <p style={{ marginTop: 'var(--space-20)' }}>
+            <p style={{ marginTop: 'var(--space-24)' }}>
               <a className="btn" href="/tools">All tools</a>
             </p>
           </section>
@@ -235,7 +244,7 @@ export default function HomePage() {
                 For teams that want an operator, not a deck. Hands-on across AWS, GCP, Kubernetes, IaC, delivery, and light tooling—clarity, ownership, outcomes that last.
               </p>
             </div>
-            <p className="fine" style={{ marginTop: 'var(--space-16)', marginBottom: 0 }}>
+            <p className="fine" style={{ marginTop: 'var(--space-20)', marginBottom: 0 }}>
               <Link href="/about">About</Link>
               {' '}
               — background and contact.
@@ -278,6 +287,27 @@ export default function HomePage() {
                 </p>
               </li>
             </ol>
+            <p className="note engagement-framing">
+              Engagements are typically time-boxed and scoped to deliver clear outcomes — from short assessments to focused implementation work.
+            </p>
+            <p className="note engagement-speed">
+              <strong>Speed to value:</strong> Most engagements focus on delivering meaningful improvements within weeks, not months.
+            </p>
+          </section>
+
+          <section className="section sounds-familiar" aria-labelledby="sounds-familiar-heading">
+            <h2 id="sounds-familiar-heading" className="section-title">
+              If this sounds familiar
+            </h2>
+            <ul className="sounds-familiar-list">
+              <li>Your infrastructure has grown messy over time</li>
+              <li>Your CI/CD pipelines are fragile or slow</li>
+              <li>Cloud costs keep increasing without clear visibility</li>
+            </ul>
+            <p className="sounds-familiar-then">
+              <span className="sounds-familiar-then-label">Then:</span>{' '}
+              You’re exactly who this is for.
+            </p>
           </section>
 
           <section className="section closing-cta" aria-label="Book a discovery call">
