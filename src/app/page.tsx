@@ -38,6 +38,9 @@ export default function HomePage() {
               <p className="sub">
                 Hands-on work across AWS, GCP, Kubernetes, and IaC.
               </p>
+              <p className="hero-fit">
+                If your platform is harder to manage than it should be, this is for you.
+              </p>
               <ul className="hero-sub-points scan-list">
                 <li>Less waste and clearer operations</li>
                 <li>Platforms your team can run</li>
@@ -76,14 +79,12 @@ export default function HomePage() {
             <h2 id="primary-problem-heading" className="section-title">
               Most teams don’t have a DevOps problem — they have a complexity problem.
             </h2>
-            <ul className="primary-problem-list scan-list">
-              <li>Tool sprawl and vague ownership</li>
-              <li>Rising cloud spend and slow delivery</li>
-              <li>
-                Platform work should <strong className="key-em">subtract complexity</strong>—most teams stack
-                another layer on top.
-              </li>
-            </ul>
+            <div className="primary-problem-body">
+              <p>
+                Too many tools, unclear infrastructure, rising cloud costs, and delivery friction. Platform
+                engineering should reduce that complexity, not add more layers.
+              </p>
+            </div>
           </section>
 
           <section
@@ -119,17 +120,17 @@ export default function HomePage() {
               <div className="before-after-panel is-before">
                 <h3 className="before-after-label">Before</h3>
                 <ul className="before-after-list scan-list">
-                  <li>Fragmented infrastructure and unclear ownership</li>
-                  <li>Slow, brittle CI/CD</li>
-                  <li>Rising cloud spend, limited visibility</li>
+                  <li>Messy infrastructure and unclear ownership</li>
+                  <li>Slow or fragile CI/CD pipelines</li>
+                  <li>Rising cloud costs with poor visibility</li>
                 </ul>
               </div>
               <div className="before-after-panel is-after">
                 <h3 className="before-after-label">After</h3>
                 <ul className="before-after-list scan-list">
-                  <li>A platform your team understands and owns</li>
-                  <li>Faster, more reliable shipping</li>
-                  <li>Usage and cost you can see and explain</li>
+                  <li>Clear, understandable systems your team can own</li>
+                  <li>Faster, more reliable delivery</li>
+                  <li>Better cost visibility and less operational friction</li>
                 </ul>
               </div>
             </div>
@@ -310,60 +311,6 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section engagement-flow home-flow home-flow--action"
-            aria-labelledby="engagement-flow-heading"
-          >
-            <h2 id="engagement-flow-heading" className="section-title">
-              How engagement works
-            </h2>
-            <ol className="engagement-steps">
-              <li className="engagement-step">
-                <span className="engagement-step-index" aria-hidden="true">
-                  1
-                </span>
-                <div className="engagement-step-body">
-                  <p className="engagement-step-text">
-                    <strong>Discovery call</strong>
-                  </p>
-                  <p className="engagement-step-detail">Map environment, constraints, priorities.</p>
-                </div>
-              </li>
-              <li className="engagement-step">
-                <span className="engagement-step-index" aria-hidden="true">
-                  2
-                </span>
-                <div className="engagement-step-body">
-                  <p className="engagement-step-text">
-                    <strong>Time-boxed engagement</strong>
-                  </p>
-                  <p className="engagement-step-detail">Work the highest-impact problems first.</p>
-                </div>
-              </li>
-              <li className="engagement-step">
-                <span className="engagement-step-index" aria-hidden="true">
-                  3
-                </span>
-                <div className="engagement-step-body">
-                  <p className="engagement-step-text">
-                    <strong>Concrete outcomes</strong>
-                  </p>
-                  <p className="engagement-step-detail">Improvements your team owns.</p>
-                </div>
-              </li>
-            </ol>
-            <p className="note engagement-framing">
-              Engagements are typically <span className="kw">time-boxed</span> and scoped to deliver{' '}
-              <span className="kw">clear outcomes</span>.
-            </p>
-            <p className="note engagement-framing">
-              From short assessments to focused implementation work.
-            </p>
-            <p className="note engagement-speed">
-              <strong>Speed to value:</strong> Most engagements focus on delivering meaningful improvements within weeks, not months.
-            </p>
-          </section>
-
-          <section
             className="section sounds-familiar home-flow home-flow--action"
             aria-labelledby="sounds-familiar-heading"
           >
@@ -372,13 +319,52 @@ export default function HomePage() {
             </h2>
             <ul className="sounds-familiar-list scan-list">
               <li>Your infrastructure has grown messy over time</li>
-              <li>Your CI/CD pipelines are fragile or slow</li>
-              <li>Cloud costs keep increasing without clear visibility</li>
+              <li>Your pipelines feel slower or more fragile than they should</li>
+              <li>Cloud costs keep rising without clear visibility</li>
+              <li>Your team spends too much time managing systems instead of shipping</li>
             </ul>
-            <p className="sounds-familiar-then">
-              <span className="sounds-familiar-then-label">Then:</span>{' '}
-              You’re exactly who this is for.
-            </p>
+            <p className="sounds-familiar-close">You’re exactly who this is for.</p>
+          </section>
+
+          <section
+            className="section engagement-flow home-flow home-flow--action"
+            aria-labelledby="how-it-works-heading"
+          >
+            <h2 id="how-it-works-heading" className="section-title">
+              How it works
+            </h2>
+            <ol className="engagement-steps">
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  1
+                </span>
+                <div className="engagement-step-body">
+                  <p className="engagement-step-text">
+                    <strong>Discovery call</strong> — understand the current setup, problems, and priorities.
+                  </p>
+                </div>
+              </li>
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  2
+                </span>
+                <div className="engagement-step-body">
+                  <p className="engagement-step-text">
+                    <strong>Focused engagement</strong> — time-boxed work on the highest-impact areas.
+                  </p>
+                </div>
+              </li>
+              <li className="engagement-step">
+                <span className="engagement-step-index" aria-hidden="true">
+                  3
+                </span>
+                <div className="engagement-step-body">
+                  <p className="engagement-step-text">
+                    <strong>Practical outcomes</strong> — clear improvements your team can own after the engagement.
+                  </p>
+                </div>
+              </li>
+            </ol>
           </section>
 
           <section

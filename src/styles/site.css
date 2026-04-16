@@ -202,6 +202,15 @@ h3 {
   max-width: 46ch;
   letter-spacing: 0.01em;
 }
+.hero .hero-fit {
+  margin: 0 0 var(--space-16);
+  max-width: 46ch;
+  font-weight: 500;
+  font-size: clamp(0.9375rem, 1.55vw, 1.0625rem);
+  line-height: var(--leading-loose);
+  letter-spacing: 0.01em;
+  color: var(--color-text-secondary);
+}
 .hero-sub-points {
   margin: 0 0 var(--space-20);
   max-width: 46ch;
@@ -551,9 +560,11 @@ a.tile:hover h3 { color: var(--color-primary); }
   margin-bottom: var(--space-24);
   max-width: 50ch;
 }
-.section.primary-problem .primary-problem-list {
-  margin: 0;
+.section.primary-problem .primary-problem-body {
   max-width: 52ch;
+}
+.section.primary-problem .primary-problem-body p {
+  margin: 0;
   font-weight: 400;
   color: var(--color-text-secondary);
   font-size: 0.9375rem;
@@ -724,7 +735,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   font-size: var(--text-sm);
   font-weight: 400;
   line-height: var(--leading-loose);
-  color: var(--color-text);
+  color: var(--color-text-secondary);
 }
 .engagement-step-text strong {
   color: var(--color-text);
@@ -733,30 +744,6 @@ a.tile:hover h3 { color: var(--color-primary); }
 .engagement-step-body {
   flex: 1;
   min-width: 0;
-}
-.engagement-step-detail {
-  margin: var(--space-8) 0 0;
-  font-size: var(--text-sm);
-  font-weight: 400;
-  line-height: var(--leading-loose);
-  color: var(--color-text-secondary);
-}
-.section.engagement-flow .engagement-framing {
-  margin-top: var(--space-32);
-  max-width: 65ch;
-  line-height: var(--leading-loose);
-}
-.section.engagement-flow .engagement-framing + .engagement-framing {
-  margin-top: var(--space-12);
-}
-.section.engagement-flow .engagement-speed {
-  margin-top: var(--space-20);
-  max-width: 65ch;
-  line-height: var(--leading-loose);
-}
-.section.engagement-flow .engagement-speed strong {
-  color: var(--color-text);
-  font-weight: 600;
 }
 
 /* Homepage: closing CTA */
@@ -773,13 +760,13 @@ a.tile:hover h3 { color: var(--color-primary); }
 
 /* Homepage: if this sounds familiar (before closing CTA) */
 .section.sounds-familiar {
-  padding: var(--space-64) 0 var(--space-48);
+  padding: var(--space-56) 0 var(--space-40);
 }
 .section.sounds-familiar .section-title {
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--space-20);
 }
 .sounds-familiar-list {
-  margin: 0 0 var(--space-32);
+  margin: 0 0 var(--space-24);
   max-width: 52ch;
   font-weight: 400;
   color: var(--color-text-secondary);
@@ -796,19 +783,15 @@ a.tile:hover h3 { color: var(--color-primary); }
 .sounds-familiar-list:not(.scan-list) li:last-child {
   margin-bottom: 0;
 }
-.sounds-familiar-then {
+.sounds-familiar-close {
   margin: 0;
-  max-width: 58ch;
+  max-width: 52ch;
   font-family: var(--font-display);
   font-size: var(--text-base);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: var(--leading-snug);
   color: var(--color-text);
-}
-.sounds-familiar-then-label {
-  color: var(--color-text-muted);
-  font-weight: 600;
 }
 
 /* Homepage: trust strip */
@@ -840,6 +823,9 @@ a.tile:hover h3 { color: var(--color-primary); }
 }
 .wrap.home .hero .sub {
   margin-bottom: var(--space-24);
+}
+.wrap.home .hero .hero-fit {
+  margin-bottom: var(--space-20);
 }
 .wrap.home .hero .hero-diff {
   margin-bottom: var(--space-20);
@@ -873,7 +859,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   padding: var(--space-80) 0;
 }
 .wrap.home .section.sounds-familiar {
-  padding: var(--space-80) 0 var(--space-64) 0;
+  padding: var(--space-64) 0 var(--space-48) 0;
 }
 .wrap.home .section.trust {
   padding: var(--space-80) 0;
@@ -906,16 +892,8 @@ a.tile:hover h3 { color: var(--color-primary); }
   margin-top: var(--space-40);
   max-width: 52ch;
 }
-.wrap.home .section.engagement-flow .engagement-framing {
-  margin-top: var(--space-40);
-  max-width: 52ch;
-}
-.wrap.home .section.engagement-flow .engagement-speed {
-  margin-top: var(--space-24);
-  max-width: 52ch;
-}
 .wrap.home .sounds-familiar-list {
-  margin: 0 0 var(--space-40);
+  margin: 0 0 var(--space-28);
 }
 
 .wrap.home .section.how-work .tile p,
@@ -997,7 +975,7 @@ a.tile:hover h3 { color: var(--color-primary); }
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-primary) 18%, transparent);
 }
 
-.wrap.home .sounds-familiar + .section.closing-cta {
+.wrap.home .engagement-flow + .section.closing-cta {
   border-top-color: transparent;
   margin-top: var(--space-16);
 }
