@@ -15,7 +15,14 @@ export default function Header({ active }: { active?: string }) {
       <div className="header-wrap">
         <header>
           <Link href="/" className="brand">
-            <Image src="/assets/opsdevco-logo-o-terminal.png" alt="OpsDevCo" width={32} height={32} />
+            <Image
+              className="brand-logo"
+              src="/assets/opsdevco-logo-o-terminal.png"
+              alt="OpsDevCo"
+              width={48}
+              height={48}
+              priority
+            />
             <strong>OpsDevCo</strong>
           </Link>
           <nav>
