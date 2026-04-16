@@ -5,18 +5,18 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'OpsDevCode | Platform Engineering Advisory',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, CI/CD, custom tooling, agentic development. Health checks, FinOps, IaC cleanup.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, CI/CD, custom tooling, agentic development. Health checks, FinOps, platform delivery.',
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'OpsDevCode',
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development.',
   url: 'https://opsdevco.de',
   email: 'eric@opsdevco.de',
   areaServed: 'Worldwide',
-  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'Terraform', 'CI/CD', 'Custom tooling'],
+  serviceType: ['Platform Engineering', 'Cloud Infrastructure', 'FinOps', 'AWS', 'GCP', 'DevOps', 'Kubernetes', 'IaC', 'CI/CD', 'Custom tooling'],
 }
 
 export default function HomePage() {
@@ -33,7 +33,7 @@ export default function HomePage() {
             <div className="hero-inner">
               <h1>Platform engineering<br /><span className="highlight">that actually works.</span></h1>
               <p className="sub">
-                Health checks, FinOps, Terraform cleanup, agentic dev. AWS, GCP, Kubernetes. No corporate speak. Time-boxed engagements.
+                Health checks, FinOps, IaC, agentic dev. AWS, GCP, Kubernetes. No corporate speak. Time-boxed engagements.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
@@ -47,15 +47,15 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile">
                 <h3>Platform Health Check</h3>
-                <p>Your AWS, GCP, EKS, Terraform — what&apos;s working, what&apos;s not, what to fix first.</p>
+                <p>Your AWS, GCP, EKS, IaC — what&apos;s working, what&apos;s not, what to fix first.</p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
                 <p>Cloud spend visibility, allocation, and engineering changes that actually move the number.</p>
               </Link>
-              <Link href="/services/terraform" className="tile">
-                <h3>Terraform Cleanup</h3>
-                <p>Refactor IaC for maintainability — clearer structure, safer workflows.</p>
+              <Link href="/services/iac" className="tile">
+                <h3>IaC</h3>
+                <p>Terraform, Pulumi, Crossplane — maintainable infra code and delivery your team can own.</p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>

@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Platform health checks, FinOps, Terraform cleanup, CI/CD, Kubernetes, custom tooling, agentic development. How we work together.',
+  description: 'Platform health checks, FinOps, IaC, CI/CD, Kubernetes, custom tooling, agentic development. How we work together.',
 }
 
 export default function ServicesPage() {
@@ -19,15 +19,15 @@ export default function ServicesPage() {
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile" id="platform-health">
                 <h3>Platform Health Check</h3>
-                <p>I dig into your AWS, GCP, EKS, and Terraform setup and give you a straight-up report: what&apos;s working, what&apos;s not, and what to fix first.</p>
+                <p>I dig into your AWS, GCP, EKS, and IaC setup and give you a straight-up report: what&apos;s working, what&apos;s not, and what to fix first.</p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
                 <p>Visibility into cloud spend, disciplined allocation, and engineering fixes — so your bill matches how you actually run.</p>
               </Link>
-              <Link href="/services/terraform" className="tile">
-                <h3>Terraform Cleanup</h3>
-                <p>Refactor so your IaC is maintainable: clearer structure, safer workflows, less &quot;hold your breath&quot; on every apply.</p>
+              <Link href="/services/iac" className="tile">
+                <h3>IaC</h3>
+                <p>Terraform, Pulumi, Crossplane — structure, state, and delivery so infra changes are predictable and owned by your team.</p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>

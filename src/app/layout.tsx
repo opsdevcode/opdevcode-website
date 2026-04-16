@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://opsdevco.de'),
   themeColor: '#ffffff',
   title: { default: 'OpsDevCode | Platform Engineering Advisory', template: '%s | OpsDevCode' },
-  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
+  description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development.',
   openGraph: {
     title: 'OpsDevCode — platform engineering advisory',
-    description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, Terraform, agentic development.',
+    description: 'Platform engineering advisory. AWS, GCP, EKS, Kubernetes, IaC, agentic development.',
     images: ['/assets/og-image.png'],
     url: 'https://opsdevco.de',
   },

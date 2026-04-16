@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/services`, lastModified: new Date() },
     { url: `${base}/services/platform-health`, lastModified: new Date() },
     { url: `${base}/services/finops`, lastModified: new Date() },
-    { url: `${base}/services/terraform`, lastModified: new Date() },
+    { url: `${base}/services/iac`, lastModified: new Date() },
     { url: `${base}/services/cicd`, lastModified: new Date() },
     { url: `${base}/services/kubernetes`, lastModified: new Date() },
     { url: `${base}/services/custom-tooling`, lastModified: new Date() },
