@@ -5,7 +5,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Agentic Development',
-  description: 'Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling. Ship faster without the chaos.',
+  description:
+    'Explore practical agent-based workflows that improve developer and operational efficiency — tools, prompts, and integration that stick.',
 }
 
 export default function AgenticPage() {
@@ -17,7 +18,8 @@ export default function AgenticPage() {
           <section className="section">
             <h2 className="section-title">Agentic Development</h2>
             <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
-              AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.
+              Practical agent-based workflows that improve developer and operational efficiency — adoption, prompts, and
+              integration without churn.
             </p>
             <div className="split">
               <div className="tile">

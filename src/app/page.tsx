@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { IconActivity, IconLayers, IconServer, IconTool, IconUsers } from '@/components/home/HomeIcons'
 
 const homeDescription =
-  'Platform engineering for production: AWS, GCP, Kubernetes, IaC. Cut waste, clarify operations, ship platforms your team owns. One senior lead—not a consulting roster.'
+  'Platform engineering for production: AWS, GCP, Kubernetes, IaC. Tighten operations, cut waste, ship platforms your team owns. One senior lead—not a consulting roster.'
 
 export const metadata: Metadata = {
   title: 'OpsDevCode | Platform Engineering Advisory',
@@ -36,36 +37,34 @@ export default function HomePage() {
             <div className="hero-inner">
               <h1>Platform engineering<br /><span className="highlight">built for production.</span></h1>
               <p className="sub">
-                Hands-on work across AWS, GCP, Kubernetes, and IaC.
+                Hands-on <span className="anchor-soft">AWS, GCP, Kubernetes</span>, and IaC—in your environment.
+              </p>
+              <p className="hero-fit">
+                If <span className="anchor-soft">operating the platform</span> competes with shipping product, this is
+                for you.
               </p>
               <ul className="hero-sub-points scan-list">
-                <li>Less waste and clearer operations</li>
-                <li>Platforms your team can run</li>
+                <li>Less waste, clearer operations</li>
+                <li>Systems your team can run without a long-term dependency</li>
               </ul>
               <p className="hero-diff">
                 <span className="key-em">No slides.</span> No fluff.{' '}
                 <span className="key-em">Just working systems.</span>
               </p>
-              <p className="hero-positioning">This isn’t traditional consulting.</p>
-              <ul className="hero-positioning-bullets scan-list">
-                <li>No large teams</li>
-                <li>No long engagements</li>
-                <li>No unnecessary layers</li>
-              </ul>
-              <p className="hero-positioning">
-                Just focused, hands-on work that improves your systems.
+              <p className="hero-anti-consulting">
+                This isn’t <span className="anchor-soft">traditional consulting</span> — no large teams, no bloated
+                engagements, no unnecessary layers.
+              </p>
+              <p className="hero-anti-consulting-follow">
+                <span className="anchor-soft">Hands-on work in your stack</span>—no bench, no extra layers.
               </p>
               <div className="cta">
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
               </div>
-              <p className="hero-reassure">
-                Intro call to align on fit and scope—no obligation.
-              </p>
+              <p className="hero-reassure">One call to align scope and fit.</p>
               <p className="hero-cred">Solo practice.</p>
-              <p className="hero-cred">
-                Senior platform work across AWS, GCP, Kubernetes, IaC, and delivery.
-              </p>
+              <p className="hero-cred">Senior platform work: AWS, GCP, Kubernetes, IaC, delivery.</p>
             </div>
           </section>
 
@@ -74,16 +73,75 @@ export default function HomePage() {
             aria-labelledby="primary-problem-heading"
           >
             <h2 id="primary-problem-heading" className="section-title">
-              Most teams don’t have a DevOps problem — they have a complexity problem.
+              Most teams don’t have a DevOps problem — they have a{' '}
+              <span className="anchor-soft">complexity problem</span>.
             </h2>
-            <ul className="primary-problem-list scan-list">
-              <li>Tool sprawl and vague ownership</li>
-              <li>Rising cloud spend and slow delivery</li>
+            <ul className="primary-problem-points scan-list">
               <li>
-                Platform work should <strong className="key-em">subtract complexity</strong>—most teams stack
-                another layer on top.
+                Tool sprawl, unclear ownership, <span className="anchor-soft">rising cloud spend</span>, and delivery
+                drag.
+              </li>
+              <li>
+                Platform work should <span className="anchor-soft">cut complexity</span>—not add headcount or
+                tooling theater.
               </li>
             </ul>
+          </section>
+
+          <section
+            className="section sounds-familiar home-flow home-flow--clarity"
+            aria-labelledby="sounds-familiar-heading"
+          >
+            <h2 id="sounds-familiar-heading" className="section-title">
+              If this sounds familiar
+            </h2>
+            <ul className="sounds-familiar-list scan-list">
+              <li>
+                Infrastructure <span className="anchor-soft">drifted into sprawl</span>—ownership is fuzzy
+              </li>
+              <li>
+                CI/CD is <span className="anchor-soft">slow or brittle</span> when you need it predictable
+              </li>
+              <li>
+                Cloud spend <span className="anchor-soft">climbs</span> without attributable line items
+              </li>
+              <li>
+                Engineering time goes to <span className="anchor-soft">keeping the lights on</span>, not shipping
+              </li>
+            </ul>
+          </section>
+
+          <section className="section audience home-flow home-flow--clarity" aria-labelledby="who-for-heading">
+            <h2 id="who-for-heading" className="section-title">
+              Who this is for
+            </h2>
+            <div className="grid grid-2col">
+              <div className="tile tile--with-icon">
+                <span className="home-icon" aria-hidden="true">
+                  <IconLayers />
+                </span>
+                <p>
+                  <strong>AWS, GCP, or Kubernetes</strong> estates where run cost outweighs the leverage you get from
+                  the platform.
+                </p>
+              </div>
+              <div className="tile tile--with-icon">
+                <span className="home-icon" aria-hidden="true">
+                  <IconUsers />
+                </span>
+                <p>
+                  <strong>Engineering leaders</strong> who need depth without a consulting bench or account team.
+                </p>
+              </div>
+              <div className="tile tile--with-icon">
+                <span className="home-icon" aria-hidden="true">
+                  <IconActivity />
+                </span>
+                <p>
+                  Teams <strong>constrained by delivery</strong>, opaque infrastructure, or runaway cloud spend.
+                </p>
+              </div>
+            </div>
           </section>
 
           <section
@@ -93,19 +151,17 @@ export default function HomePage() {
             <h2 id="point-of-view-heading" className="section-title">
               Point of view
             </h2>
-            <div className="point-of-view-body">
-              <p>
+            <ul className="point-of-view-points scan-list">
+              <li>
                 Too much DevOps work optimizes for <span className="kw">tools</span> instead of{' '}
                 <span className="kw">outcomes</span>.
-              </p>
-              <p>
-                I <strong className="key-em">reduce complexity</strong>, sharpen clarity, and ship systems teams
-                can run.
-              </p>
-              <p>
-                Nothing that only reads well on a <span className="kw">diagram</span>.
-              </p>
-            </div>
+              </li>
+              <li>
+                I <strong className="key-em">cut complexity</strong>, make tradeoffs explicit, and ship systems your
+                team can run.
+              </li>
+              <li>Nothing that only reads well on a <span className="kw">diagram</span>.</li>
+            </ul>
           </section>
 
           <section
@@ -119,43 +175,59 @@ export default function HomePage() {
               <div className="before-after-panel is-before">
                 <h3 className="before-after-label">Before</h3>
                 <ul className="before-after-list scan-list">
-                  <li>Fragmented infrastructure and unclear ownership</li>
-                  <li>Slow, brittle CI/CD</li>
-                  <li>Rising cloud spend, limited visibility</li>
+                  <li>
+                    <span className="anchor-soft">Messy</span> infrastructure and unclear ownership
+                  </li>
+                  <li>
+                    <span className="anchor-soft">Slow</span> or fragile CI/CD pipelines
+                  </li>
+                  <li>
+                    <span className="anchor-soft">Rising</span> cloud costs with poor visibility
+                  </li>
                 </ul>
               </div>
               <div className="before-after-panel is-after">
                 <h3 className="before-after-label">After</h3>
                 <ul className="before-after-list scan-list">
-                  <li>A platform your team understands and owns</li>
-                  <li>Faster, more reliable shipping</li>
-                  <li>Usage and cost you can see and explain</li>
+                  <li>
+                    <span className="anchor-soft">Clear</span> systems your team can own and change
+                  </li>
+                  <li>
+                    <span className="anchor-soft">Faster</span>, more reliable delivery
+                  </li>
+                  <li>
+                    <span className="anchor-soft">Better</span> cost visibility and less operational friction
+                  </li>
                 </ul>
               </div>
             </div>
           </section>
 
-          <section className="section audience home-flow home-flow--clarity" aria-labelledby="who-for-heading">
-            <h2 id="who-for-heading" className="section-title">
-              Who this is for
+          <section className="section trust home-flow home-flow--trust" aria-labelledby="trust-heading">
+            <h2 id="trust-heading" className="section-title">
+              Hands-on practice
             </h2>
-            <div className="grid grid-2col">
-              <div className="tile">
-                <p>
-                  Teams on <strong>AWS, GCP, or Kubernetes</strong> where the platform costs more to run than it should.
-                </p>
-              </div>
-              <div className="tile">
-                <p>
-                  <strong>Engineering leaders</strong> who want senior platform depth without a big-firm engagement.
-                </p>
-              </div>
-              <div className="tile">
-                <p>
-                  Teams blocked by <strong>slow delivery</strong>, opaque infrastructure, or rising cloud spend.
-                </p>
-              </div>
+            <p className="trust-operator">
+              <span className="home-icon" aria-hidden="true">
+                <IconServer />
+              </span>
+              <span>
+                Built by someone who has <span className="anchor-soft">run this in production</span>—not briefed it
+                in slides.
+              </span>
+            </p>
+            <div className="testimonial">
+              <ul className="trust-points scan-list">
+                <li>Operator-first: ship changes, not slide reviews.</li>
+                <li>AWS, GCP, Kubernetes, IaC, delivery, light tooling—hands-on.</li>
+                <li>Clear ownership; outcomes that survive after the engagement.</li>
+              </ul>
             </div>
+            <p className="fine trust-about-link">
+              <Link href="/about">About</Link>
+              {' '}
+              — background and how to reach me.
+            </p>
           </section>
 
           <section className="section how-work home-flow home-flow--clarity" aria-labelledby="how-work-heading">
@@ -179,7 +251,7 @@ export default function HomePage() {
               </div>
               <div className="tile">
                 <p>
-                  <strong>Advise, pair, or build</strong>—whatever fits.
+                  <strong>Advise, pair, or ship code</strong>—scope follows the problem.
                 </p>
               </div>
               <div className="tile">
@@ -188,30 +260,49 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <p className="note how-work-ownership">
-              The goal is not to create <span className="kw">dependency</span> —
-            </p>
-            <p className="note how-work-ownership">
-              it’s to leave your team with systems they <strong className="key-em">fully understand</strong> and
-              can own.
-            </p>
           </section>
 
-          <section className="section trust home-flow home-flow--trust" aria-labelledby="trust-heading">
-            <h2 id="trust-heading" className="section-title">
-              Hands-on practice
-            </h2>
-            <div className="testimonial">
-              <ul className="trust-points scan-list">
-                <li>For teams that want an operator, not a deck.</li>
-                <li>Hands-on across AWS, GCP, Kubernetes, IaC, delivery, and light tooling.</li>
-                <li>Clarity, ownership, outcomes that last.</li>
-              </ul>
+          <section className="section services-section home-flow home-flow--outcomes">
+            <h2 className="section-title">Services</h2>
+            <ul className="services-lede scan-list">
+              <li>Not advisory-only.</li>
+              <li>
+                Work happens <span className="kw">in your repos and clusters</span>, beside your engineers.
+              </li>
+              <li>
+                Outcomes you can <strong className="key-em">measure and own</strong>.
+              </li>
+            </ul>
+            <div className="grid grid-2col">
+              <Link href="/services/platform-health" className="tile">
+                <h3>Platform Health Check</h3>
+                <p>Find bottlenecks, risk, and avoidable complexity—then prioritize what to fix first.</p>
+                <p className="tile-desc-follow">A concrete remediation path, not a generic report.</p>
+              </Link>
+              <Link href="/services/finops" className="tile">
+                <h3>FinOps</h3>
+                <p>Cut waste and get spend attributable to teams, services, and resources.</p>
+              </Link>
+              <Link href="/services/iac" className="tile">
+                <h3>IaC</h3>
+                <p>Standardize IaC so changes are reviewable, repeatable, and safer to ship.</p>
+              </Link>
+              <Link href="/services/cicd" className="tile">
+                <h3>CI/CD</h3>
+                <p>Faster, more reliable delivery through pipelines your team can maintain.</p>
+              </Link>
+              <Link href="/services/custom-tooling" className="tile">
+                <h3>Custom tooling</h3>
+                <p>Small internal tools that remove toil—automation where it earns its keep.</p>
+              </Link>
+              <Link href="/agentic" className="tile">
+                <h3>Agentic Development</h3>
+                <p>Agent-assisted workflows where they reduce error and cycle time.</p>
+                <p className="tile-desc-follow">Measured adoption—not novelty for its own sake.</p>
+              </Link>
             </div>
-            <p className="fine" style={{ marginTop: 'var(--space-28)', marginBottom: 0 }}>
-              <Link href="/about">About</Link>
-              {' '}
-              — background and contact.
+            <p className="services-cta-link">
+              <Link className="btn" href="/services">All services</Link>
             </p>
           </section>
 
@@ -220,79 +311,35 @@ export default function HomePage() {
             aria-labelledby="example-outcomes-heading"
           >
             <h2 id="example-outcomes-heading" className="section-title">
-              What this looks like in practice
+              Outcomes in practice
             </h2>
             <ul className="example-outcomes-list scan-list">
               <li>
-                <strong className="key-em">Lower cloud spend</strong>—retire unused resources, fix
-                misconfigurations
+                <span className="anchor-soft">Cut</span> cloud spend by removing waste and misconfiguration—not blanket
+                downsizing
               </li>
-              <li>CI/CD simplified; fewer failed deployments</li>
-              <li>IaC standardized—shorter ramp-up, faster change</li>
-              <li>Tighter runbooks and ownership—faster incident response</li>
+              <li>
+                <span className="anchor-soft">Hardened</span> delivery pipelines; fewer failed deploys and rollbacks
+              </li>
+              <li>
+                <span className="anchor-soft">Aligned</span> IaC with how teams own and change infrastructure
+              </li>
+              <li>
+                <span className="anchor-soft">Shipped</span> small tools that removed recurring operational toil
+              </li>
             </ul>
-          </section>
-
-          <section className="section services-section home-flow home-flow--outcomes">
-            <h2 className="section-title">Services</h2>
-            <p className="note services-intro">I don’t just advise.</p>
-            <p className="note services-intro">
-              I work <span className="kw">directly</span> in your systems, with your team, to make{' '}
-              <strong className="key-em">real improvements</strong>.
-            </p>
-            <div className="grid grid-2col">
-              <Link href="/services/platform-health" className="tile">
-                <h3>Platform Health Check</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Surface bottlenecks, risk, and waste</li>
-                  <li>Leave with a prioritized plan</li>
-                </ul>
-              </Link>
-              <Link href="/services/finops" className="tile">
-                <h3>FinOps</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Cut spend</li>
-                  <li>See where the money goes</li>
-                </ul>
-              </Link>
-              <Link href="/services/iac" className="tile">
-                <h3>IaC</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Standardize infrastructure as code</li>
-                  <li>Ship faster with less risk</li>
-                </ul>
-              </Link>
-              <Link href="/services/cicd" className="tile">
-                <h3>CI/CD</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Simpler pipelines, fewer failures</li>
-                  <li>Maintenance your team can sustain</li>
-                </ul>
-              </Link>
-              <Link href="/services/custom-tooling" className="tile">
-                <h3>Custom tooling</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Small internal tools that remove toil</li>
-                  <li>Built to fit your stack</li>
-                </ul>
-              </Link>
-              <Link href="/agentic" className="tile">
-                <h3>Agentic Development</h3>
-                <ul className="tile-inline-points scan-list">
-                  <li>Agent-assisted workflows for dev and ops</li>
-                  <li>Where automation earns its place</li>
-                </ul>
-              </Link>
-            </div>
-            <p style={{ marginTop: 'var(--space-48)' }}>
-              <Link className="btn" href="/services">All services</Link>
-            </p>
           </section>
 
           <section className="section tools-section home-flow home-flow--outcomes">
             <h2 className="section-title">Tools</h2>
             <p className="note tools-intro">
-              Utilities I ship for AWS, Kubernetes, and Terraform workflows.
+              <span className="home-icon" aria-hidden="true">
+                <IconTool />
+              </span>
+              <span>
+                Open-source utilities for sharp edges in{' '}
+                <span className="anchor-soft">AWS, Kubernetes, and Terraform</span>—nothing ceremonial.
+              </span>
             </p>
             <div className="grid grid-2col">
               <a href="https://github.com/opsdevcode/term-dx" target="_blank" rel="noopener noreferrer" className="tile">
@@ -304,17 +351,17 @@ export default function HomePage() {
                 <p>List and cordon/drain EKS nodes from CLI.</p>
               </a>
             </div>
-            <p style={{ marginTop: 'var(--space-32)' }}>
+            <p className="tools-cta-link">
               <a className="btn" href="/tools">All tools</a>
             </p>
           </section>
 
           <section
             className="section engagement-flow home-flow home-flow--action"
-            aria-labelledby="engagement-flow-heading"
+            aria-labelledby="how-it-works-heading"
           >
-            <h2 id="engagement-flow-heading" className="section-title">
-              How engagement works
+            <h2 id="how-it-works-heading" className="section-title">
+              How it works
             </h2>
             <ol className="engagement-steps">
               <li className="engagement-step">
@@ -324,8 +371,8 @@ export default function HomePage() {
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
                     <strong>Discovery call</strong>
+                    <span className="engagement-step-line">Current state, constraints, and priority order.</span>
                   </p>
-                  <p className="engagement-step-detail">Map environment, constraints, priorities.</p>
                 </div>
               </li>
               <li className="engagement-step">
@@ -334,9 +381,11 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Time-boxed engagement</strong>
+                    <strong>Focused engagement</strong>
+                    <span className="engagement-step-line">
+                      Time-boxed work on the highest-leverage gap—not a roadmap science project.
+                    </span>
                   </p>
-                  <p className="engagement-step-detail">Work the highest-impact problems first.</p>
                 </div>
               </li>
               <li className="engagement-step">
@@ -345,56 +394,34 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Concrete outcomes</strong>
+                    <strong>Practical outcomes</strong>
+                    <span className="engagement-step-line">Changes your team can run—without a standing retainer.</span>
                   </p>
-                  <p className="engagement-step-detail">Improvements your team owns.</p>
                 </div>
               </li>
             </ol>
-            <p className="note engagement-framing">
-              Engagements are typically <span className="kw">time-boxed</span> and scoped to deliver{' '}
-              <span className="kw">clear outcomes</span>.
-            </p>
-            <p className="note engagement-framing">
-              From short assessments to focused implementation work.
-            </p>
-            <p className="note engagement-speed">
-              <strong>Speed to value:</strong> Most engagements focus on delivering meaningful improvements within weeks, not months.
-            </p>
-          </section>
-
-          <section
-            className="section sounds-familiar home-flow home-flow--action"
-            aria-labelledby="sounds-familiar-heading"
-          >
-            <h2 id="sounds-familiar-heading" className="section-title">
-              If this sounds familiar
-            </h2>
-            <ul className="sounds-familiar-list scan-list">
-              <li>Your infrastructure has grown messy over time</li>
-              <li>Your CI/CD pipelines are fragile or slow</li>
-              <li>Cloud costs keep increasing without clear visibility</li>
+            <ul className="engagement-follow scan-list" aria-label="How engagements are structured">
+              <li>Fixed scope; outcomes defined up front.</li>
+              <li>From a short assessment to focused implementation—your call.</li>
+              <li>Meaningful movement in weeks, not quarters.</li>
+              <li>No dependency model: systems your team can operate and explain.</li>
             </ul>
-            <p className="sounds-familiar-then">
-              <span className="sounds-familiar-then-label">Then:</span>{' '}
-              You’re exactly who this is for.
-            </p>
           </section>
 
           <section
             className="section closing-cta home-flow home-flow--finale"
             aria-labelledby="closing-cta-heading"
           >
-            <p className="closing-cta-kicker">Next step</p>
+            <p className="closing-cta-kicker">When you&apos;re ready</p>
             <h2 id="closing-cta-heading" className="closing-cta-title">
-              Start with a short discovery call
+              Book a 30-minute discovery call
             </h2>
             <div className="cta">
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
               <a className="btn" href="/about#contact">Email me directly</a>
             </div>
-            <p className="hero-reassure closing-cta-reassure">
-              Intro call to align on fit and scope—no obligation.
+            <p className="closing-cta-support">
+              Low stakes: confirm fit, scope, and whether working together is worth a follow-up.
             </p>
           </section>
 

@@ -5,7 +5,8 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Platform health checks, FinOps, IaC, CI/CD, Kubernetes, custom tooling, agentic development. How we work together.',
+  description:
+    'Outcome-driven platform work: health checks, FinOps, IaC, CI/CD, Kubernetes, custom tooling, architecture review, fractional advice, agentic workflows.',
 }
 
 export default function ServicesPage() {
@@ -19,45 +20,50 @@ export default function ServicesPage() {
             <div className="grid grid-2col">
               <Link href="/services/platform-health" className="tile" id="platform-health">
                 <h3>Platform Health Check</h3>
-                <p>I dig into your AWS, GCP, EKS, and IaC setup and give you a straight-up report: what&apos;s working, what&apos;s not, and what to fix first.</p>
+                <p>
+                  Identify bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve
+                  it.
+                </p>
               </Link>
               <Link href="/services/finops" className="tile">
                 <h3>FinOps</h3>
-                <p>Visibility into cloud spend, disciplined allocation, and engineering fixes — so your bill matches how you actually run.</p>
+                <p>Reduce cloud spend and improve visibility into where your infrastructure budget is going.</p>
               </Link>
               <Link href="/services/iac" className="tile">
                 <h3>IaC</h3>
-                <p>Terraform, Pulumi, Crossplane — structure, state, and delivery so infra changes are predictable and owned by your team.</p>
+                <p>Clean up and standardize infrastructure as code so your team can move faster with less risk.</p>
               </Link>
               <Link href="/services/cicd" className="tile">
                 <h3>CI/CD</h3>
-                <p>
-                  Whether your organization is new to CI/CD automation or your pipelines need a revamp — I help you get delivery running smoothly and
-                  safely.
-                </p>
+                <p>Improve delivery speed and reliability with simpler pipelines your team can actually maintain.</p>
               </Link>
               <Link href="/services/kubernetes" className="tile">
                 <h3>Kubernetes</h3>
-                <p>From cluster setup and day-two operations to automated scaling — EKS and the surrounding platform, done intentionally.</p>
+                <p>
+                  Operate EKS and the surrounding platform with predictable upgrades, scaling, and day-two behavior — not
+                  surprises.
+                </p>
               </Link>
               <Link href="/services/custom-tooling" className="tile">
                 <h3>Custom tooling</h3>
-                <p>
-                  If you need custom automation and tooling, I can help you design and build them — or write them for you — so your team stops repeating
-                  the same manual work.
-                </p>
+                <p>Build lightweight internal tools that remove friction and automate repetitive work.</p>
               </Link>
               <Link href="/services/architecture-review" className="tile">
                 <h3>Architecture Review</h3>
-                <p>Before you lock in big decisions — networking, cluster layout, guardrails — I&apos;ll sanity-check the plan.</p>
+                <p>Stress-test big bets before you commit — networking, clusters, and how changes reach production.</p>
               </Link>
               <Link href="/services/fractional-advisor" className="tile">
                 <h3>Fractional Platform Advisor</h3>
-                <p>A few hours a week of senior guidance for your CTO or platform lead. No hiring required.</p>
+                <p>
+                  Senior platform judgment on a fixed cadence — strategy, vendors, and team direction without a full-time
+                  hire.
+                </p>
               </Link>
               <Link href="/agentic" className="tile">
                 <h3>Agentic Development</h3>
-                <p>Adopt AI-assisted and agentic workflows — Cursor, Copilot, custom tooling — so your team ships faster without the chaos.</p>
+                <p>
+                  Explore practical agent-based workflows that improve developer and operational efficiency.
+                </p>
               </Link>
             </div>
           </section>
