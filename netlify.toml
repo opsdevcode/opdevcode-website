@@ -15,15 +15,21 @@
 
 # Social preview: short URLs → static asset (avoid long /assets/ paths in shares)
 [[redirects]]
-  from = "/preview-v3.png"
-  to = "/assets/preview-v3.png"
+  from = "/preview-v4.png"
+  to = "/assets/preview-v4.png"
   status = 200
   force = true
 
-# Previous short URL → current asset (cache-bust old links)
+# Previous short URLs → current asset (cache-bust old links)
+[[redirects]]
+  from = "/preview-v3.png"
+  to = "/assets/preview-v4.png"
+  status = 200
+  force = true
+
 [[redirects]]
   from = "/preview-v2.png"
-  to = "/assets/preview-v3.png"
+  to = "/assets/preview-v4.png"
   status = 200
   force = true
 

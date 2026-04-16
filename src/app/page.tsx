@@ -5,13 +5,12 @@ import Footer from '@/components/Footer'
 import { IconActivity, IconLayers, IconServer, IconTool, IconUsers } from '@/components/home/HomeIcons'
 
 /** ~60 chars max for link previews; HTML <title> stays short in the tab. */
-const shareTitle = 'OpsDevCode — Platform engineering that actually works'
+const shareTitle = 'OpsDevCode — Simplify cloud infrastructure. Reduce complexity.'
 /** ~150 chars max */
-const shareDescription =
-  'Simplify cloud infrastructure, reduce complexity, and build systems your team can actually own.'
+const shareDescription = 'Simplify cloud infrastructure. Reduce complexity.'
 
 /** New filename + ?v= when replacing the asset so Facebook/Twitter refetch instead of serving a stale cache. */
-const socialPreviewImage = '/assets/preview-v3.png?v=3'
+const socialPreviewImage = '/assets/preview-v4.png?v=4'
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
         url: socialPreviewImage,
         width: 1200,
         height: 630,
-        alt: 'OpsDevCode — platform engineering that actually works',
+        alt: 'OpsDevCode — Simplify cloud infrastructure. Reduce complexity.',
       },
     ],
   },
