@@ -41,8 +41,8 @@ export default function HomePage() {
                 <span className="anchor-soft">AWS, GCP, Kubernetes, and IaC</span>—in your environment.
               </p>
               <p className="hero-fit">
-                If <span className="anchor-soft">operating the platform</span> competes with shipping product, this is
-                for you.
+                If your platform has gotten <span className="anchor-soft">harder to manage</span> than it should be,
+                this is for you.
               </p>
               <ul className="hero-sub-points scan-list">
                 <li>Less waste, clearer operations</li>
@@ -63,14 +63,14 @@ export default function HomePage() {
                 <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
                 <a className="btn" href="/about#contact">Email me directly</a>
               </div>
-              <p className="hero-reassure">One call to align scope and fit.</p>
+              <p className="hero-reassure">One discovery call to align scope and fit.</p>
               <p className="hero-cred">Solo practice.</p>
               <p className="hero-cred">Senior platform work: AWS, GCP, Kubernetes, IaC, delivery.</p>
             </div>
           </section>
 
           <section
-            className="section primary-problem home-flow home-flow--clarity"
+            className="section primary-problem home-flow home-flow--clarity home-flow--problem"
             aria-labelledby="primary-problem-heading"
           >
             <h2 id="primary-problem-heading" className="section-title">
@@ -90,7 +90,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section sounds-familiar home-flow home-flow--clarity"
+            className="section sounds-familiar home-flow home-flow--clarity home-flow--recognition"
             aria-labelledby="sounds-familiar-heading"
           >
             <h2 id="sounds-familiar-heading" className="section-title">
@@ -112,7 +112,10 @@ export default function HomePage() {
             </ul>
           </section>
 
-          <section className="section audience home-flow home-flow--clarity" aria-labelledby="who-for-heading">
+          <section
+            className="section audience home-flow home-flow--clarity home-flow--interlude"
+            aria-labelledby="who-for-heading"
+          >
             <h2 id="who-for-heading" className="section-title">
               Who this is for
             </h2>
@@ -146,7 +149,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section point-of-view home-flow home-flow--clarity"
+            className="section point-of-view home-flow home-flow--clarity home-flow--interlude"
             aria-labelledby="point-of-view-heading"
           >
             <h2 id="point-of-view-heading" className="section-title">
@@ -166,7 +169,7 @@ export default function HomePage() {
           </section>
 
           <section
-            className="section before-after home-flow home-flow--clarity"
+            className="section before-after home-flow home-flow--clarity home-flow--interlude"
             aria-labelledby="before-after-heading"
           >
             <h2 id="before-after-heading" className="section-title">
@@ -231,7 +234,10 @@ export default function HomePage() {
             </p>
           </section>
 
-          <section className="section how-work home-flow home-flow--clarity" aria-labelledby="how-work-heading">
+          <section
+            className="section how-work home-flow home-flow--clarity home-flow--interlude"
+            aria-labelledby="how-work-heading"
+          >
             <h2 id="how-work-heading" className="section-title">
               How I work
             </h2>
@@ -364,6 +370,9 @@ export default function HomePage() {
             <h2 id="how-it-works-heading" className="section-title">
               How it works
             </h2>
+            <p className="positioning-line">
+              Built by someone who has operated these systems — not just advised on them.
+            </p>
             <ol className="engagement-steps">
               <li className="engagement-step">
                 <span className="engagement-step-index" aria-hidden="true">
@@ -371,7 +380,7 @@ export default function HomePage() {
                 </span>
                 <div className="engagement-step-body">
                   <p className="engagement-step-text">
-                    <strong>Discovery call</strong>
+                    <strong>Book a discovery call</strong>
                     <span className="engagement-step-line">Current state, constraints, and priority order.</span>
                   </p>
                 </div>
@@ -413,16 +422,26 @@ export default function HomePage() {
             className="section closing-cta home-flow home-flow--finale"
             aria-labelledby="closing-cta-heading"
           >
-            <p className="closing-cta-kicker">When you&apos;re ready</p>
+            <p className="closing-cta-kicker">Next step</p>
+            <p className="closing-cta-lead">
+              If those are the outcomes you&apos;re looking for, we should talk.
+            </p>
             <h2 id="closing-cta-heading" className="closing-cta-title">
-              Book a 30-minute discovery call
+              Book a discovery call
             </h2>
+            <ul className="closing-cta-signals scan-list" aria-label="What to expect">
+              <li>Most engagements deliver meaningful improvements in weeks, not months.</li>
+              <li>Short, focused engagements with clear outcomes.</li>
+            </ul>
+            <p className="positioning-line positioning-line--finale">
+              The goal isn&apos;t dependency — it&apos;s leaving your team with systems they fully understand.
+            </p>
             <div className="cta">
               <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
               <a className="btn" href="/about#contact">Email me directly</a>
             </div>
             <p className="closing-cta-support">
-              Low stakes: confirm fit, scope, and whether working together is worth a follow-up.
+              No pressure — just a quick conversation to see if it makes sense.
             </p>
           </section>
 

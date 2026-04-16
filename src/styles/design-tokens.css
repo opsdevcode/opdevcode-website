@@ -59,9 +59,9 @@
 
   --leading-tight: 1.15;
   --leading-snug: 1.35;
-  --leading-normal: 1.6;
-  --leading-relaxed: 1.75;
-  --leading-loose: 1.82;
+  --leading-normal: 1.65;
+  --leading-relaxed: 1.78;
+  --leading-loose: 1.86;
 
   /* === SPACING === */
   --space-4: 4px;
@@ -90,4 +90,6 @@
   --max-width-narrow: 720px;
   --wrap-padding: clamp(24px, 5vw, 64px);
   --header-height: 64px;
+  /* Comfortable reading width (~60–75 chars); use with max-width on prose blocks */
+  --prose-measure: 68ch;
 }
