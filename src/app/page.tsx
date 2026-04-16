@@ -49,13 +49,8 @@ export default function HomePage() {
                 <span className="key-em">No slides.</span> No fluff.{' '}
                 <span className="key-em">Just working systems.</span>
               </p>
-              <p className="hero-positioning">This isn’t traditional consulting.</p>
-              <ul className="hero-positioning-bullets scan-list">
-                <li>No large teams</li>
-                <li>No long engagements</li>
-                <li>No unnecessary layers</li>
-              </ul>
-              <p className="hero-positioning">
+              <p className="hero-anti-consulting">
+                This isn’t traditional consulting — no large teams, no bloated engagements, no unnecessary layers.
                 Just focused, hands-on work that improves your systems.
               </p>
               <div className="cta">
@@ -189,19 +184,15 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-            <p className="note how-work-ownership">
-              The goal is not to create <span className="kw">dependency</span> —
-            </p>
-            <p className="note how-work-ownership">
-              it’s to leave your team with systems they <strong className="key-em">fully understand</strong> and
-              can own.
-            </p>
           </section>
 
           <section className="section trust home-flow home-flow--trust" aria-labelledby="trust-heading">
             <h2 id="trust-heading" className="section-title">
               Hands-on practice
             </h2>
+            <p className="trust-operator">
+              Built by someone who has operated these systems — not just advised on them.
+            </p>
             <div className="testimonial">
               <ul className="trust-points scan-list">
                 <li>For teams that want an operator, not a deck.</li>
@@ -365,6 +356,16 @@ export default function HomePage() {
                 </div>
               </li>
             </ol>
+            <p className="engagement-scope">
+              Engagements are typically time-boxed and scoped around clear outcomes — from short assessments to
+              focused implementation work.
+            </p>
+            <p className="engagement-speed">
+              Most engagements focus on delivering meaningful improvements in weeks, not months.
+            </p>
+            <p className="engagement-ownership">
+              The goal isn’t dependency — it’s leaving your team with systems they fully understand and can own.
+            </p>
           </section>
 
           <section

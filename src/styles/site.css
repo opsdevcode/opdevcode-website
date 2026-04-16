@@ -239,37 +239,13 @@ h3 {
   line-height: var(--leading-snug);
   color: var(--color-text);
 }
-.hero .hero-positioning {
-  margin: 0 0 var(--space-12);
-  max-width: 52ch;
+.hero .hero-anti-consulting {
+  margin: 0 0 var(--space-28);
+  max-width: 54ch;
   font-size: var(--text-sm);
   font-weight: 400;
   line-height: var(--leading-loose);
   color: var(--color-text-secondary);
-}
-.hero .hero-diff + .hero-positioning {
-  margin-bottom: var(--space-8);
-}
-.hero-positioning-bullets {
-  margin: 0 0 var(--space-12);
-  max-width: 52ch;
-  font-size: var(--text-sm);
-  font-weight: 400;
-  color: var(--color-text-secondary);
-  line-height: var(--leading-loose);
-}
-.wrap.home .hero-positioning-bullets:not(.scan-list) {
-  list-style: disc;
-  padding-left: var(--space-24);
-}
-.wrap.home .hero-positioning-bullets:not(.scan-list) li {
-  margin: 0 0 var(--space-4);
-}
-.wrap.home .hero-positioning-bullets:not(.scan-list) li:last-child {
-  margin-bottom: 0;
-}
-.hero .hero-positioning-bullets + .hero-positioning {
-  margin-bottom: var(--space-28);
 }
 .hero .cta { display: flex; gap: var(--space-12); flex-wrap: wrap; }
 .hero .hero-reassure {
@@ -544,13 +520,6 @@ a.tile:hover h3 { color: var(--color-primary); }
   color: var(--color-text);
   font-weight: 600;
 }
-.section.how-work .how-work-ownership {
-  margin-top: var(--space-32);
-  max-width: 58ch;
-}
-.section.how-work .how-work-ownership + .how-work-ownership {
-  margin-top: var(--space-8);
-}
 
 /* Homepage: primary problem (below hero) */
 .section.primary-problem {
@@ -745,6 +714,30 @@ a.tile:hover h3 { color: var(--color-primary); }
   flex: 1;
   min-width: 0;
 }
+.section.engagement-flow .engagement-scope {
+  margin: var(--space-28) 0 0;
+  max-width: 58ch;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+.section.engagement-flow .engagement-speed {
+  margin: var(--space-12) 0 0;
+  max-width: 58ch;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+.section.engagement-flow .engagement-ownership {
+  margin: var(--space-16) 0 0;
+  max-width: 58ch;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
 
 /* Homepage: closing CTA */
 .section.closing-cta {
@@ -798,6 +791,14 @@ a.tile:hover h3 { color: var(--color-primary); }
 .section.trust {
   padding: var(--space-48) 0 var(--space-40);
 }
+.section.trust .trust-operator {
+  margin: 0 0 var(--space-28);
+  max-width: 56ch;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
 .section.trust .testimonial p {
   max-width: 65ch;
 }
@@ -830,10 +831,7 @@ a.tile:hover h3 { color: var(--color-primary); }
 .wrap.home .hero .hero-diff {
   margin-bottom: var(--space-20);
 }
-.wrap.home .hero .hero-positioning {
-  margin-bottom: var(--space-12);
-}
-.wrap.home .hero .hero-positioning-bullets + .hero-positioning {
+.wrap.home .hero .hero-anti-consulting {
   margin-bottom: var(--space-28);
 }
 .wrap.home .hero .hero-reassure {
@@ -882,15 +880,14 @@ a.tile:hover h3 { color: var(--color-primary); }
 .wrap.home .section.engagement-flow .section-title {
   margin-bottom: var(--space-40);
 }
+.wrap.home .section.trust .section-title {
+  margin-bottom: var(--space-20);
+}
 .wrap.home .section .services-intro:last-of-type {
   margin-bottom: var(--space-40);
 }
 .wrap.home .point-of-view-body p {
   margin: 0 0 var(--space-16);
-}
-.wrap.home .section.how-work .how-work-ownership {
-  margin-top: var(--space-40);
-  max-width: 52ch;
 }
 .wrap.home .sounds-familiar-list {
   margin: 0 0 var(--space-28);
