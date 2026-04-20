@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: 'https://opsdevco.de',
   },
   twitter: { card: 'summary_large_image', images: ['/assets/og-image.png'] },
-  icons: { icon: '/assets/opsdevco-logo-o-mark.png' },
+  icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
 }
 
 export default function RootLayout({

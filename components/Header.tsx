@@ -16,7 +16,7 @@ export default function Header({ active }: { active?: string }) {
           <Link href="/" className="brand" aria-label="OpsDevCode home">
             <Image
               className="brand-logo"
-              src="/assets/opsdevco-logo-o-mark.png"
+              src="/assets/opsdevco-logo-o-terminal.png"
               alt=""
               width={72}
               height={72}
