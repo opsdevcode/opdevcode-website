@@ -229,7 +229,8 @@ export default function HomePage() {
             </h2>
             <p className="closing-cta-lead">
               If something in your platform feels off — scaling, cost, or reliability —
-              this is the fastest way to get clarity on what to fix.
+              it usually gets worse as you grow. This is the fastest way to get clarity
+              on what to fix.
             </p>
             <p className="closing-cta-support">
               Not sure if this is a fit? We can figure that out quickly on a short call.
