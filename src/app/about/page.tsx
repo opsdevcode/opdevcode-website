@@ -42,7 +42,7 @@ export default function AboutPage() {
                   <li>CI/CD pipeline design and optimization</li>
                   <li>GitOps and deployment workflows</li>
                   <li>Scaling and cost optimization</li>
-                  <li>AI-assisted engineering workflows and agentic tooling</li>
+                  <li>AI-assisted engineering workflows and agentic tooling to improve developer velocity</li>
                 </ul>
                 <p style={{ marginTop: 12 }}>
                   <span className="pill">AWS</span>{' '}

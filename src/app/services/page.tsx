@@ -30,6 +30,7 @@ export default function ServicesPage() {
                   <li>Clear breakdown of what&apos;s broken or fragile</li>
                   <li>Identification of scaling and reliability risks</li>
                   <li>Cost inefficiencies and optimization opportunities</li>
+                  <li>Gaps in infrastructure as code, CI/CD, and automation</li>
                   <li>Prioritized next steps for fixing the platform</li>
                 </ul>
               </div>

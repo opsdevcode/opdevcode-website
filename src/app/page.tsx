@@ -135,7 +135,7 @@ export default function HomePage() {
               <li>CI/CD pipeline design and optimization</li>
               <li>GitOps and deployment workflows</li>
               <li>Scaling and cost optimization</li>
-              <li>AI-assisted engineering workflows and agentic tooling</li>
+              <li>AI-assisted engineering workflows and agentic tooling to improve developer velocity</li>
             </ul>
           </section>
 
