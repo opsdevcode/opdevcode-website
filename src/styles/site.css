@@ -1934,11 +1934,28 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
   border-top: 1px solid color-mix(in srgb, var(--color-border) 55%, transparent);
 }
 
-/* --- CTA buttons: a touch more presence, steadier weight --- */
+/* --- CTA buttons: primary leads; secondary recedes to a calm outline --- */
 .btn.primary {
   padding: 14px 30px;
   font-size: 0.9375rem;
   letter-spacing: -0.012em;
+}
+.btn:not(.primary) {
+  border: 1px solid color-mix(in srgb, var(--color-border) 75%, transparent);
+  background: transparent;
+  color: var(--color-text-muted);
+  box-shadow: none;
+}
+.btn:not(.primary):hover {
+  border-color: var(--color-border);
+  background: color-mix(in srgb, var(--color-bg-muted) 50%, transparent);
+  color: var(--color-text-secondary);
+  box-shadow: none;
+  transform: none;
+  filter: none;
+}
+.btn:not(.primary):active {
+  box-shadow: none;
 }
 
 /* --- Navigation: quieter so the primary CTA reads as the action --- */
