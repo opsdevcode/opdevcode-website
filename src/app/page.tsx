@@ -144,6 +144,7 @@ export default function HomePage() {
             <div className="grid grid-2col">
               <Link href="/services#audit" className="tile">
                 <h3>Platform Audit</h3>
+                <p className="tile-tagline">Find what&apos;s broken, fragile, or overpriced.</p>
                 <p>
                   A fast, focused review of your cloud and Kubernetes setup to identify
                   what&apos;s broken, fragile, or costing too much.
@@ -151,6 +152,7 @@ export default function HomePage() {
               </Link>
               <Link href="/services#build-fix" className="tile">
                 <h3>Platform Build / Fix</h3>
+                <p className="tile-tagline">Stabilize and simplify your platform so it scales reliably.</p>
                 <p>
                   I design, rebuild, or stabilize your platform so it behaves predictably
                   under real-world load and doesn&apos;t break when you scale.
@@ -158,6 +160,7 @@ export default function HomePage() {
               </Link>
               <Link href="/services#advisory" className="tile">
                 <h3>Advisory</h3>
+                <p className="tile-tagline">Get senior platform guidance without adding headcount.</p>
                 <p>
                   Ongoing support to help you make the right platform decisions as you
                   scale.
