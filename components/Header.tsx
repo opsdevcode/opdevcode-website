@@ -1,10 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import ThemeToggle from './ThemeToggle'
 
 const navItems = [
   { href: '/services', label: 'Services' },
-  { href: '/tools', label: 'Tools' },
   { href: '/about', label: 'About' },
 ]
 
@@ -17,7 +15,7 @@ export default function Header({ active }: { active?: string }) {
           <Link href="/" className="brand" aria-label="OpsDevCode home">
             <Image
               className="brand-logo"
-              src="/assets/opsdevco-logo-o-mark.png"
+              src="/assets/opsdevco-logo-o-terminal.png"
               alt=""
               width={72}
               height={72}
@@ -37,7 +35,6 @@ export default function Header({ active }: { active?: string }) {
               </Link>
             ))}
             <Link href="/about#contact">Contact</Link>
-            <ThemeToggle />
           </nav>
         </header>
       </div>

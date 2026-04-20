@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-brand">
-        <Image className="footer-logo" src="/assets/opsdevco-logo-o-mark.png" alt="" width={48} height={48} aria-hidden />
+        <Image className="footer-logo" src="/assets/opsdevco-logo-o-terminal.png" alt="" width={48} height={48} aria-hidden />
         <span>© {year} OpsDevCode</span>
       </div>
       <div>
         <Link href="/privacy">Privacy</Link>
         <span style={{ margin: '0 8px' }}>·</span>
-        <Link href="/tools">Tools</Link>
+        <Link href="/tools">Open source</Link>
         <span style={{ margin: '0 8px' }}>·</span>
         opsdevco.de
       </div>
