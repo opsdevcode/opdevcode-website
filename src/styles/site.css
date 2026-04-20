@@ -1691,7 +1691,7 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 .err-main p { font-size: var(--text-lg); color: var(--color-text-muted); max-width: min(100%, var(--prose-measure)); margin: 0 auto var(--space-32); }
 
 /* ============================================================
-   ELEGANCE PASS — dark mode, ornament, micro-FX (Inter stack)
+   ELEGANCE PASS — ornament, micro-FX (Inter stack)
    Layered on top of the base stylesheet so it overrides safely.
    ============================================================ */
 
@@ -1779,13 +1779,10 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
     0 14px 30px -8px rgba(55, 48, 163, 0.6);
 }
 
-/* --- Glass header on dark + subtle gradient hover for tiles --- */
+/* --- Glass header + subtle gradient hover for tiles --- */
 .header-wrap {
   background: var(--surface-glass);
   border-bottom: 1px solid var(--color-border);
-}
-[data-theme='dark'] .header-wrap {
-  background: rgba(8, 9, 15, 0.72);
 }
 
 /* Tiles get a soft gradient ring on hover (no layout shift). */
@@ -1816,85 +1813,6 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 }
 .tile:hover::before { opacity: 1; }
 
-/* --- Theme toggle (header) ----------------------------------- */
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: var(--space-8);
-  padding: 0;
-  width: 52px;
-  height: 28px;
-  border: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-bg-muted) 70%, var(--color-bg));
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition:
-    background-color var(--duration-ui) var(--ease-ui),
-    border-color var(--duration-ui) var(--ease-ui);
-}
-.theme-toggle:hover {
-  border-color: var(--color-border-strong);
-  background: color-mix(in srgb, var(--color-bg-muted) 90%, var(--color-bg));
-}
-.theme-toggle:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--color-primary) 45%, transparent);
-  outline-offset: 3px;
-}
-.theme-toggle-track {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.theme-toggle-thumb {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  border-radius: var(--radius-full);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: color-mix(in srgb, var(--color-text-secondary) 70%, var(--color-primary));
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.18);
-  transition:
-    transform var(--duration-ui) var(--ease-ui),
-    background-color var(--duration-ui) var(--ease-ui),
-    color var(--duration-ui) var(--ease-ui);
-}
-.theme-toggle[data-theme-state='dark'] .theme-toggle-thumb {
-  transform: translateX(22px);
-  background: color-mix(in srgb, var(--color-bg-elevated) 70%, var(--color-primary-muted));
-  color: color-mix(in srgb, var(--color-warm-soft) 80%, var(--color-text));
-}
-.theme-toggle-icon {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  transition:
-    opacity var(--duration-ui) var(--ease-ui),
-    transform var(--duration-ui) var(--ease-ui);
-}
-.theme-toggle-icon.is-sun { opacity: 1; transform: rotate(0deg) scale(1); }
-.theme-toggle-icon.is-moon { opacity: 0; transform: rotate(-30deg) scale(0.6); }
-.theme-toggle[data-theme-state='dark'] .theme-toggle-icon.is-sun {
-  opacity: 0;
-  transform: rotate(30deg) scale(0.6);
-}
-.theme-toggle[data-theme-state='dark'] .theme-toggle-icon.is-moon {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-}
-@media (max-width: 640px) {
-  .theme-toggle { width: 46px; height: 26px; }
-  .theme-toggle-thumb { width: 20px; height: 20px; }
-  .theme-toggle[data-theme-state='dark'] .theme-toggle-thumb { transform: translateX(20px); }
-}
-
 /* --- Reveal-on-scroll -------------------------------------- */
 .reveal {
   opacity: 0;
@@ -1910,96 +1828,6 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
-}
-
-/* --- Dark-mode polish (maps existing rules to dark surfaces) - */
-[data-theme='dark'] body {
-  background:
-    radial-gradient(900px 600px at 12% -8%, color-mix(in srgb, var(--color-primary) 18%, transparent), transparent 65%),
-    radial-gradient(720px 540px at 96% 6%, color-mix(in srgb, var(--color-warm) 10%, transparent), transparent 70%),
-    var(--color-bg);
-  background-attachment: fixed;
-}
-[data-theme='dark'] .tile,
-[data-theme='dark'] .card,
-[data-theme='dark'] .engagement-step,
-[data-theme='dark'] .before-after-panel,
-[data-theme='dark'] .contact a {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-bg-elevated) 92%, var(--color-bg)) 0%,
-    var(--color-bg-elevated) 100%
-  );
-  border-color: var(--color-border);
-  box-shadow: var(--shadow-card);
-}
-[data-theme='dark'] .tile:hover,
-[data-theme='dark'] .card:hover,
-[data-theme='dark'] .engagement-step:hover,
-[data-theme='dark'] .before-after-panel:hover,
-[data-theme='dark'] .contact a:hover {
-  border-color: var(--color-border-strong);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-bg-elevated) 84%, var(--color-primary-muted)) 0%,
-    color-mix(in srgb, var(--color-bg-elevated) 96%, var(--color-bg)) 100%
-  );
-  box-shadow: var(--shadow-card-hover);
-}
-[data-theme='dark'] .before-after-panel.is-after {
-  background: color-mix(in srgb, var(--color-primary-muted) 70%, var(--color-bg-elevated));
-}
-[data-theme='dark'] .wrap.home > section.section:nth-of-type(odd):not(.closing-cta) {
-  background-color: transparent;
-}
-[data-theme='dark'] .wrap.home > section.section:nth-of-type(even):not(.closing-cta) {
-  background-color: color-mix(in srgb, var(--color-bg-elevated) 65%, var(--color-bg));
-}
-[data-theme='dark'] .wrap > section.section:nth-of-type(even) {
-  background-color: color-mix(in srgb, var(--color-bg-elevated) 65%, var(--color-bg));
-}
-[data-theme='dark'] .wrap.home > section.closing-cta.home-flow--finale {
-  border-color: color-mix(in srgb, var(--color-border-strong) 70%, var(--color-primary-muted));
-  background: linear-gradient(
-    168deg,
-    color-mix(in srgb, var(--color-bg-elevated) 80%, var(--color-bg)) 0%,
-    color-mix(in srgb, var(--color-primary-muted) 95%, var(--color-bg-elevated)) 45%,
-    var(--color-bg-elevated) 100%
-  );
-  box-shadow:
-    0 1px 0 color-mix(in srgb, var(--color-border-strong) 70%, transparent),
-    0 28px 64px -40px color-mix(in srgb, var(--color-primary) 40%, transparent),
-    inset 0 1px 0 color-mix(in srgb, white 8%, transparent);
-}
-[data-theme='dark'] .pill {
-  background: color-mix(in srgb, var(--color-bg-elevated) 70%, var(--color-primary-muted));
-  color: var(--color-text);
-}
-[data-theme='dark'] code.inline {
-  background: color-mix(in srgb, var(--color-bg-elevated) 70%, var(--color-primary-muted));
-  color: var(--color-text);
-}
-[data-theme='dark'] .testimonial { border-left-color: var(--color-primary); }
-[data-theme='dark'] .skip-link {
-  background: var(--color-bg-elevated);
-  border-color: var(--color-border-strong);
-}
-
-/* Code/mono content tidy in dark mode */
-[data-theme='dark'] a {
-  color: color-mix(in srgb, var(--color-primary) 92%, white);
-}
-[data-theme='dark'] a:hover { color: var(--color-primary-hover); }
-
-/* Anchor-soft + key-em gain a touch more presence in dark */
-[data-theme='dark'] .wrap.home .anchor-soft {
-  color: color-mix(in srgb, var(--color-text) 96%, var(--color-primary));
-}
-[data-theme='dark'] .wrap.home .key-em {
-  color: color-mix(in srgb, var(--color-text) 98%, var(--color-warm-soft));
-}
-[data-theme='dark'] h1 .highlight {
-  -webkit-text-fill-color: transparent;
 }
 
 /* Ornament dot under each section title’s leading rule (replaces bullet) */
