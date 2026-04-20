@@ -12,19 +12,19 @@ const tools = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Tools',
+  title: 'Open source',
   description:
-    'A few small open-source tools for real problems in AWS, Kubernetes, and Terraform workflows. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
+    'Open-source tools for real problems in AWS, Kubernetes, and Terraform workflows. term-dx, knode, atx, eks-addons, shownodes, kubesnooze.',
 }
 
 export default function ToolsPage() {
   return (
     <>
-      <Header active="Tools" />
+      <Header active="Open source" />
       <main id="main">
         <div className="wrap">
           <section className="section">
-            <h2 className="section-title">Tools</h2>
+            <h2 className="section-title">Open source</h2>
             <p className="note" style={{ marginBottom: 'var(--space-20)' }}>
               A few small tools I&apos;ve built to solve real problems in AWS, Kubernetes, and Terraform workflows.
             </p>
@@ -38,7 +38,7 @@ export default function ToolsPage() {
             </div>
           </section>
           <p style={{ marginTop: 'var(--space-32)' }}>
-            <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
+            <a className="btn primary" href="https://calendly.com/eric-opsdevco/30min" target="_blank" rel="noopener noreferrer">Book a Platform Audit</a>
           </p>
           <Footer />
         </div>

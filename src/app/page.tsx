@@ -101,7 +101,7 @@ export default function HomePage() {
             aria-labelledby="sounds-familiar-heading"
           >
             <h2 id="sounds-familiar-heading" className="section-title">
-              <span className="section-title-text">If this sounds familiar</span>
+              <span className="section-title-text">Where platforms start to fail</span>
             </h2>
             <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
               If you&apos;re running cloud or Kubernetes in production, you&apos;ve

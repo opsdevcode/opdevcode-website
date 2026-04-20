@@ -12,7 +12,7 @@ export default function Footer() {
       <div>
         <Link href="/privacy">Privacy</Link>
         <span style={{ margin: '0 8px' }}>·</span>
-        <Link href="/tools">Tools</Link>
+        <Link href="/tools">Open source</Link>
         <span style={{ margin: '0 8px' }}>·</span>
         opsdevco.de
       </div>
