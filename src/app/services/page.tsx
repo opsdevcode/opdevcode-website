@@ -25,12 +25,12 @@ export default function ServicesPage() {
                   A fast, focused review of your cloud and Kubernetes setup to identify
                   what&apos;s broken, fragile, or costing too much.
                 </p>
-                <ul className="bullets" style={{ marginTop: 'var(--space-12)' }}>
-                  <li>Architecture review across AWS and/or GCP</li>
-                  <li>Kubernetes review — managed or self-hosted</li>
-                  <li>CI/CD and infrastructure workflow review</li>
-                  <li>Cost, scaling, and reliability findings</li>
-                  <li>Prioritized recommendations you can act on</li>
+                <p className="tile-list-label">What you get:</p>
+                <ul className="bullets">
+                  <li>Clear breakdown of what&apos;s broken or fragile</li>
+                  <li>Identification of scaling and reliability risks</li>
+                  <li>Cost inefficiencies and optimization opportunities</li>
+                  <li>Prioritized next steps for fixing the platform</li>
                 </ul>
               </div>
 
