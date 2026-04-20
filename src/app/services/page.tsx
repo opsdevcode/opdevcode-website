@@ -38,7 +38,7 @@ export default function ServicesPage() {
                 <h3>Platform Build / Fix</h3>
                 <p>
                   I design, rebuild, or stabilize your platform so it behaves predictably
-                  under real-world load.
+                  under real-world load and doesn&apos;t break when you scale.
                 </p>
                 <ul className="bullets" style={{ marginTop: 'var(--space-12)' }}>
                   <li>Cloud platform work across AWS and GCP</li>

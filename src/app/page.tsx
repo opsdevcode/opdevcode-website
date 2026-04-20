@@ -7,7 +7,7 @@ import Reveal from '@/components/Reveal'
 const shareTitle =
   'OpsDevCode — Fix your cloud & Kubernetes platform before it breaks at scale'
 const shareDescription =
-  'I help teams stabilize infrastructure, improve scaling, and reduce cloud waste across AWS, GCP, and Kubernetes — managed or self-hosted.'
+  'I help teams stabilize infrastructure, fix scaling issues, and reduce cloud waste across AWS, GCP, and Kubernetes — managed or self-hosted.'
 
 const socialPreviewImage = '/assets/preview-v4.png?v=4'
 
@@ -76,9 +76,12 @@ export default function HomePage() {
                 <span className="highlight">before it breaks at scale.</span>
               </h1>
               <p className="sub">
-                I help teams stabilize infrastructure, improve scaling, and reduce cloud
+                I help teams stabilize infrastructure, fix scaling issues, and reduce cloud
                 waste across <span className="anchor-soft">AWS, GCP, and Kubernetes</span>{' '}
                 — managed or self-hosted.
+              </p>
+              <p className="hero-fit">
+                Experience across production environments in AWS and GCP.
               </p>
               <div className="cta">
                 <a
@@ -90,10 +93,6 @@ export default function HomePage() {
                   Book a Platform Audit
                 </a>
               </div>
-              <p className="hero-cred">
-                Experience across production environments in AWS and GCP, supporting teams
-                from early-stage startups to scaling platforms.
-              </p>
             </div>
           </section>
 
@@ -154,7 +153,7 @@ export default function HomePage() {
                 <h3>Platform Build / Fix</h3>
                 <p>
                   I design, rebuild, or stabilize your platform so it behaves predictably
-                  under real-world load.
+                  under real-world load and doesn&apos;t break when you scale.
                 </p>
               </Link>
               <Link href="/services#advisory" className="tile">
@@ -229,6 +228,9 @@ export default function HomePage() {
               If something in your platform feels off — scaling, cost, or reliability —
               this is the fastest way to get clarity on what to fix.
             </p>
+            <p className="closing-cta-support">
+              Not sure if this is a fit? We can figure that out quickly on a short call.
+            </p>
             <div className="cta">
               <a
                 className="btn primary"
@@ -236,12 +238,9 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Schedule a Call
+                Book a Platform Audit
               </a>
             </div>
-            <p className="closing-cta-support">
-              Not sure if this is a fit? We can figure that out quickly on a short call.
-            </p>
           </section>
 
           <Footer />

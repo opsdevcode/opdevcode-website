@@ -68,6 +68,10 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
+            <p className="note" style={{ marginTop: 'var(--space-24)' }}>
+              I&apos;ve worked on systems where scaling, cost, and reliability issues show
+              up fast—and need to be fixed without slowing the team down.
+            </p>
           </section>
 
           <section className="section" id="faq">
@@ -127,7 +131,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
               >
                 <span>
-                  <strong>Schedule a Call</strong>
+                  <strong>Book a Platform Audit</strong>
                   <br />
                   <span style={{ color: 'var(--color-text-muted)' }}>
                     calendly.com/eric-opsdevco/30min
