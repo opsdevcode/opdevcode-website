@@ -1691,56 +1691,9 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 .err-main p { font-size: var(--text-lg); color: var(--color-text-muted); max-width: min(100%, var(--prose-measure)); margin: 0 auto var(--space-32); }
 
 /* ============================================================
-   ELEGANCE PASS — typography, dark mode, ornament, micro-FX
+   ELEGANCE PASS — dark mode, ornament, micro-FX (Inter stack)
    Layered on top of the base stylesheet so it overrides safely.
    ============================================================ */
-
-/* --- Editorial display type (serif headings, mono labels) ----- */
-h1, h2, h3, .closing-cta-title {
-  font-family: var(--font-display);
-  font-feature-settings: 'ss01' on, 'ss02' on, 'cv11' on, 'liga' on;
-  font-optical-sizing: auto;
-}
-
-h1 { font-weight: 500; letter-spacing: -0.025em; }
-h1 .highlight {
-  background: var(--gradient-highlight);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: italic;
-  font-weight: 500;
-  letter-spacing: -0.018em;
-}
-
-h2 { font-weight: 500; letter-spacing: -0.022em; }
-h3 { font-weight: 600; letter-spacing: -0.014em; }
-
-/* Hero gets a slightly heavier optical size; refined italic on the highlight. */
-.wrap.home .hero h1 {
-  font-weight: 500;
-  letter-spacing: -0.028em;
-  font-variation-settings: 'opsz' 144, 'SOFT' 30;
-}
-.wrap.home .hero h1 .highlight {
-  font-style: italic;
-  font-weight: 500;
-  font-variation-settings: 'opsz' 144, 'SOFT' 60;
-}
-.wrap.home .section-title,
-.wrap.home .closing-cta-title {
-  font-weight: 500;
-  font-variation-settings: 'opsz' 60, 'SOFT' 40;
-}
-
-/* Mono / uppercase eyebrows — used for kickers + labels */
-.before-after-label,
-.closing-cta-kicker {
-  font-family: var(--font-mono);
-  font-feature-settings: 'ss01' on;
-  text-transform: uppercase;
-  font-weight: 500;
-}
 
 /* --- Ornamental section rule replacing the dot mark ----------- */
 .wrap.home h2.section-title::before {
@@ -2031,23 +1984,6 @@ h3 { font-weight: 600; letter-spacing: -0.014em; }
   background: var(--color-bg-elevated);
   border-color: var(--color-border-strong);
 }
-/* Brand wordmark sits in serif with soft optical weight */
-.brand strong {
-  font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  font-variation-settings: 'opsz' 60, 'SOFT' 50;
-}
-
-/* Subtle, refined nav hover */
-nav a {
-  font-family: var(--font-sans);
-  letter-spacing: 0;
-}
-
-/* Footer: a quieter, more elegant signature */
-footer { font-family: var(--font-sans); }
-.footer-brand span { letter-spacing: 0.02em; }
 
 /* Code/mono content tidy in dark mode */
 [data-theme='dark'] a {
