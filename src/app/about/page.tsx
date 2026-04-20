@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Eric Skaggs — 15+ years running production infrastructure. Solo platform engineering practice. Cloud and Kubernetes platform engineering across AWS and GCP, managed or self-hosted.',
+    'Eric Skaggs — a platform engineer focused on fixing scaling issues, stabilizing platforms, and improving how teams ship and operate software in production.',
 }
 
 export default function AboutPage() {
@@ -20,36 +20,32 @@ export default function AboutPage() {
               <div className="tile">
                 <h3>Hi, I&apos;m Eric</h3>
                 <p>
-                  I&apos;ve been running production infrastructure for 15+ years — across
-                  startups, scale-ups, and enterprises. OpsDevCode is my solo practice: no
-                  sales team, no account managers, just me.
+                  I&apos;m a platform engineer with 8+ years working on real-world
+                  infrastructure.
                 </p>
                 <p style={{ marginTop: 10 }}>
-                  I focus on <strong>cloud and Kubernetes platform engineering</strong>{' '}
-                  across <strong>AWS and GCP</strong>, and on Kubernetes itself — managed
-                  (EKS, GKE) or self-hosted. Day to day that means architecture, CI/CD and
-                  GitOps, infrastructure as code (Terraform, Pulumi, Crossplane), and the
-                  reliability, scaling, and cost work that comes with operating these
-                  systems in production.
+                  I focus on systems that are already running — fixing scaling issues,
+                  stabilizing platforms, and improving how teams ship and operate
+                  software.
                 </p>
                 <p style={{ marginTop: 10 }}>
-                  The goal: a platform that&apos;s predictable, cheaper to run, and less of
-                  a daily headache — one your team can own after I leave.
+                  No theory, no over-engineering — just practical solutions that work in
+                  production.
                 </p>
               </div>
               <div className="tile">
-                <h3>What to expect</h3>
-                <p>
-                  Straight talk, practical advice, and work that actually ships. Scoped,
-                  time-boxed engagements with clear outcomes — not open-ended consulting
-                  hours.
-                </p>
+                <h3>What I work on</h3>
+                <ul className="bullets">
+                  <li>Cloud architecture (AWS &amp; GCP)</li>
+                  <li>Kubernetes (managed and self-hosted)</li>
+                  <li>CI/CD and GitOps workflows</li>
+                  <li>Infrastructure automation</li>
+                  <li>Scaling and cost optimization</li>
+                </ul>
                 <p style={{ marginTop: 12 }}>
                   <span className="pill">AWS</span>{' '}
                   <span className="pill">GCP</span>{' '}
                   <span className="pill">Kubernetes</span>{' '}
-                  <span className="pill">EKS</span>{' '}
-                  <span className="pill">GKE</span>{' '}
                   <span className="pill">IaC</span>{' '}
                   <span className="pill">CI/CD</span>{' '}
                   <span className="pill">GitOps</span>
@@ -81,38 +77,37 @@ export default function AboutPage() {
                 <dt>How long does a typical engagement last?</dt>
                 <dd>
                   Most work is time-boxed. A Platform Audit runs a few days to two weeks.
-                  Build / Fix work usually lands in weeks, not quarters. Advisory is bounded
-                  hours on a cadence you choose. No open-ended retainer unless you want one.
+                  Build / Fix work usually lands in weeks, not quarters. Advisory is
+                  bounded hours on a cadence you choose.
                 </dd>
               </div>
               <div className="faq-item">
                 <dt>Do you work on AWS, GCP, or both?</dt>
                 <dd>
-                  Both, hands-on. AWS and GCP are the two clouds I go deep on. If your
-                  platform spans both, that&apos;s fine — a lot of the work is making the
-                  seams predictable.
+                  Both, hands-on. If your platform spans both, that&apos;s fine — a lot of
+                  the work is making the seams predictable.
                 </dd>
               </div>
               <div className="faq-item">
                 <dt>Managed Kubernetes or self-hosted?</dt>
                 <dd>
-                  Either. EKS and GKE for managed, and self-hosted / bare-metal-ish
-                  Kubernetes for teams that need to run their own control plane. The
-                  tradeoffs matter — I&apos;ll tell you honestly when one is the wrong fit.
+                  Either. EKS and GKE for managed, and self-hosted for teams that need to
+                  run their own control plane. The tradeoffs matter — I&apos;ll tell you
+                  when one is the wrong fit.
                 </dd>
               </div>
               <div className="faq-item">
                 <dt>Do you work async or do we need to be on calls?</dt>
                 <dd>
                   Async-first — Slack, email, PRs. I&apos;ll schedule calls when they move
-                  the work forward, but I won&apos;t fill your calendar.
+                  the work forward.
                 </dd>
               </div>
               <div className="faq-item">
                 <dt>What if we&apos;re on Azure or another cloud?</dt>
                 <dd>
-                  My hands-on depth is AWS and GCP. For Azure or other clouds I can advise
-                  on architecture and process, but I&apos;ll be upfront if a hands-on
+                  My hands-on depth is AWS and GCP. For other clouds I can advise on
+                  architecture and process, but I&apos;ll be upfront if a hands-on
                   engagement isn&apos;t the right fit.
                 </dd>
               </div>
@@ -120,12 +115,10 @@ export default function AboutPage() {
           </section>
 
           <section className="section" id="contact">
-            <h2 className="section-title">Get in touch</h2>
+            <h2 className="section-title">Book a Platform Audit</h2>
             <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              A few lines on what you&apos;re running and what&apos;s hurting is plenty —
-              team size, cloud (AWS/GCP), whether Kubernetes is in the picture, and what
-              you&apos;d want to be different in 30 days. I&apos;ll reply with a clear next
-              step.
+              If something in your platform feels off — scaling, cost, or reliability —
+              this is the fastest way to get clarity on what to fix.
             </p>
             <div className="contact">
               <a
@@ -134,7 +127,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
               >
                 <span>
-                  <strong>Book a discovery call</strong>
+                  <strong>Schedule a Call</strong>
                   <br />
                   <span style={{ color: 'var(--color-text-muted)' }}>
                     calendly.com/eric-opsdevco/30min
@@ -142,7 +135,7 @@ export default function AboutPage() {
                 </span>
                 <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
-              <a href="mailto:eric@opsdevco.de?subject=OpsDevCode%20Intro&body=Team%20size%3A%0ACloud%20(AWS%2FGCP%2Fboth)%3A%0AKubernetes%20(managed%2Fself-hosted%2Fnone)%3A%0AWhat%E2%80%99s%20hurting%3A%0AWhat%20would%20good%20look%20like%20in%2030%20days%3A">
+              <a href="mailto:eric@opsdevco.de?subject=Platform%20Audit%20-%20OpsDevCode&body=What%20you%E2%80%99re%20running%3A%0AWhat%E2%80%99s%20hurting%3A%0AWhat%20would%20good%20look%20like%20in%2030%20days%3A">
                 <span>
                   <strong>Email</strong>
                   <br />
@@ -151,8 +144,8 @@ export default function AboutPage() {
                 <span style={{ color: 'var(--color-primary)' }}>→</span>
               </a>
             </div>
-            <p className="fine">
-              Low-profile by design. No newsletter, no tracking, no LinkedIn posts required.
+            <p className="note" style={{ marginTop: 'var(--space-16)' }}>
+              Not sure if this is a fit? We can figure that out quickly on a short call.
             </p>
           </section>
 
