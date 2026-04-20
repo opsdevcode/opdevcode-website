@@ -131,9 +131,11 @@ export default function HomePage() {
             <ul className="scan-list">
               <li>Cloud architecture (AWS &amp; GCP)</li>
               <li>Kubernetes (managed and self-hosted)</li>
-              <li>CI/CD and GitOps workflows</li>
-              <li>Infrastructure automation</li>
+              <li>Infrastructure as Code (Terraform, Pulumi, Crossplane)</li>
+              <li>CI/CD pipeline design and optimization</li>
+              <li>GitOps and deployment workflows</li>
               <li>Scaling and cost optimization</li>
+              <li>AI-assisted engineering workflows and agentic tooling</li>
             </ul>
           </section>
 
