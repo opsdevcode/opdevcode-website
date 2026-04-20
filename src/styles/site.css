@@ -1833,3 +1833,114 @@ code.inline { font-family: var(--font-mono); font-size: 0.85em; background: var(
 /* Ornament dot under each section title’s leading rule (replaces bullet) */
 .wrap.home h2.section-title { gap: var(--space-12); }
 
+/* ============================================================
+   LIGHT PASS — hierarchy, services emphasis, CTA, section rhythm
+   Additive overrides — preserves copy, structure, and aesthetic.
+   ============================================================ */
+
+/* --- Hero: tighter measure, sharper type hierarchy, calmer stack --- */
+.wrap.home .hero-inner {
+  max-width: min(100%, 56ch);
+}
+.wrap.home .hero h1 {
+  font-size: clamp(2.875rem, 5.6vw, 4.625rem);
+  line-height: 1.015;
+  letter-spacing: -0.056em;
+  margin-bottom: calc(var(--space-32) * var(--home-v-rhythm));
+  max-width: 22ch;
+}
+.wrap.home .hero .sub {
+  max-width: 54ch;
+  font-size: clamp(1rem, 1.4vw, 1.0625rem);
+  line-height: 1.62;
+  letter-spacing: 0;
+  color: var(--color-text-secondary);
+}
+.wrap.home .hero .hero-fit {
+  max-width: 54ch;
+  margin-bottom: calc(var(--space-28) * var(--home-v-rhythm));
+  font-size: clamp(0.875rem, 1.2vw, 0.9375rem);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+.wrap.home .hero .cta {
+  margin-top: calc(var(--space-24) * var(--home-v-rhythm));
+}
+
+/* --- Section rhythm: whitespace-led, single hairline separator --- */
+.wrap.home > section.section:nth-of-type(even):not(.closing-cta),
+.wrap.home > section.section:nth-of-type(odd):not(.closing-cta) {
+  background-color: var(--color-bg);
+}
+.wrap.home .hero + .section,
+.wrap.home .section + .section {
+  border-top: 1px solid color-mix(in srgb, var(--color-border) 55%, transparent);
+}
+.wrap.home .section {
+  padding: calc((var(--space-96) + var(--space-32)) * var(--home-v-rhythm)) 0;
+}
+
+/* --- Services: promote the three offers without over-designing --- */
+.wrap.home .section.services-section {
+  padding-top: calc((var(--space-96) + var(--space-48)) * var(--home-v-rhythm));
+  padding-bottom: calc((var(--space-96) + var(--space-48)) * var(--home-v-rhythm));
+}
+.wrap.home .section.services-section .section-title .section-title-text {
+  font-size: clamp(1.75rem, 3.35vw, 2.375rem);
+  font-weight: 700;
+  letter-spacing: -0.036em;
+}
+.wrap.home .section.services-section .grid.grid-2col {
+  gap: var(--space-28);
+}
+.wrap.home .section.services-section a.tile {
+  padding: calc(var(--space-40) + var(--space-8)) calc(var(--space-40) + var(--space-4));
+  border: 1px solid color-mix(in srgb, var(--color-border) 70%, var(--color-border-strong) 30%);
+  background: var(--color-bg);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.035);
+  border-radius: var(--radius-lg);
+}
+.wrap.home .section.services-section a.tile:hover {
+  border-color: color-mix(in srgb, var(--color-border-strong) 70%, var(--color-primary) 30%);
+  background: var(--color-bg);
+  box-shadow:
+    0 3px 10px rgba(15, 23, 42, 0.05),
+    0 1px 3px rgba(15, 23, 42, 0.04);
+  transform: translateY(-1px);
+}
+.wrap.home .section.services-section a.tile h3 {
+  margin-bottom: var(--space-12);
+  font-size: clamp(1.125rem, 1.55vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  color: var(--color-text);
+}
+.wrap.home .section.services-section a.tile p {
+  font-size: 0.9375rem;
+  line-height: 1.62;
+  color: var(--color-text-secondary);
+}
+
+/* --- CTA buttons: a touch more presence, steadier weight --- */
+.btn.primary {
+  padding: 14px 30px;
+  font-size: 0.9375rem;
+  letter-spacing: -0.012em;
+}
+
+/* --- Navigation: quieter so the primary CTA reads as the action --- */
+nav a {
+  color: color-mix(in srgb, var(--color-text-secondary) 78%, var(--color-text-muted));
+  font-weight: 500;
+}
+nav a:hover {
+  color: var(--color-text);
+  background-color: transparent;
+}
+nav a.active {
+  color: var(--color-text);
+  background-color: transparent;
+  box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--color-primary) 60%, transparent);
+  border-radius: 0;
+}
+
