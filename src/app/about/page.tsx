@@ -74,6 +74,19 @@ export default function AboutPage() {
             </p>
           </section>
 
+          <section className="section" id="experience">
+            <h2 className="section-title">Experience</h2>
+            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
+              Experience includes:
+            </p>
+            <ul className="bullets">
+              <li>Fixing Kubernetes clusters that fail under load</li>
+              <li>Debugging node scaling and scheduling issues</li>
+              <li>Reducing cloud cost inefficiencies in AWS and GCP environments</li>
+              <li>Stabilizing CI/CD pipelines slowing down delivery</li>
+            </ul>
+          </section>
+
           <section className="section" id="faq">
             <h2 className="section-title">FAQ</h2>
             <dl className="faq-list">
