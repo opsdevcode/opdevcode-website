@@ -157,7 +157,9 @@ export default function HomePage() {
                 <p className="tile-tagline">Stabilize and simplify your platform so it scales reliably.</p>
                 <p>
                   I design, rebuild, or stabilize your platform so it behaves predictably
-                  under real-world load and doesn&apos;t break when you scale.
+                  under real-world load and doesn&apos;t break when you scale. This includes
+                  infrastructure as code, CI/CD pipelines, and deployment workflows that
+                  remove manual steps and improve reliability.
                 </p>
               </Link>
               <Link href="/services#advisory" className="tile">
