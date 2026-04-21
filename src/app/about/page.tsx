@@ -61,7 +61,7 @@ export default function AboutPage() {
                   </a>
                   <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
                   <a
-                    href="https://www.linkedin.com/in/ericskaggs"
+                    href="https://www.linkedin.com/in/erskaggs/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
