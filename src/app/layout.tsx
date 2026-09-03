@@ -1,31 +1,32 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://opsdevco.de'),
+export const viewport: Viewport = {
   themeColor: '#ffffff',
-  title: { default: 'OpsDevCode | Cloud & Kubernetes Platform Engineering', template: '%s | OpsDevCode' },
-  description:
-    'Cloud and Kubernetes platform engineering for AWS and GCP — managed or self-hosted. Build, stabilize, and improve production platforms so teams can scale without fragile infrastructure, slow delivery, or runaway cloud costs.',
+}
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: 'OpsDevCode | Infrastructure for modern engineering organizations',
+    template: '%s | OpsDevCode',
+  },
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: 'OpsDevCode — Cloud & Kubernetes platform engineering',
-    description:
-      'Cloud and Kubernetes platform engineering for AWS and GCP — managed or self-hosted. Build, stabilize, and improve production platforms so teams can scale without fragile infrastructure, slow delivery, or runaway cloud costs.',
+    title: 'OpsDevCode — Infrastructure for modern engineering organizations',
+    description: SITE_DESCRIPTION,
     images: ['/assets/og-image.png'],
-    url: 'https://opsdevco.de',
+    url: SITE_URL,
   },
   twitter: { card: 'summary_large_image', images: ['/assets/og-image.png'] },
   icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>{children}</body>

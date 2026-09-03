@@ -1,22 +1,24 @@
 import type { MetadataRoute } from 'next'
+import { serviceSlugs } from '@/lib/services-detail'
+import { productSlugs } from '@/lib/products'
+import { SITE_URL } from '@/lib/site'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://opsdevco.de'
-  return [
-    { url: base, lastModified: new Date() },
-    { url: `${base}/about`, lastModified: new Date() },
-    { url: `${base}/services`, lastModified: new Date() },
-    { url: `${base}/services/platform-health`, lastModified: new Date() },
-    { url: `${base}/services/finops`, lastModified: new Date() },
-    { url: `${base}/services/iac`, lastModified: new Date() },
-    { url: `${base}/services/cicd`, lastModified: new Date() },
-    { url: `${base}/services/kubernetes`, lastModified: new Date() },
-    { url: `${base}/services/custom-tooling`, lastModified: new Date() },
-    { url: `${base}/services/architecture-review`, lastModified: new Date() },
-    { url: `${base}/services/fractional-advisor`, lastModified: new Date() },
-    { url: `${base}/tools`, lastModified: new Date() },
-    { url: `${base}/agentic`, lastModified: new Date() },
+  const lastModified = new Date()
+  const pages = [
+    '',
+    '/about',
+    '/approach',
+    '/products',
+    '/services',
+    '/privacy',
+    ...productSlugs.map((slug) => `/products/${slug}`),
+    ...serviceSlugs.map((slug) => `/services/${slug}`),
   ]
+  return pages.map((path) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified,
+  }))
 }

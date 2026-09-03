@@ -56,11 +56,19 @@
   status = 301
 [[redirects]]
   from = "/tools.html"
-  to = "/tools"
+  to = "/products"
+  status = 301
+[[redirects]]
+  from = "/tools"
+  to = "/products"
   status = 301
 [[redirects]]
   from = "/agentic.html"
-  to = "/agentic"
+  to = "/products/dispatch"
+  status = 301
+[[redirects]]
+  from = "/agentic"
+  to = "/products/dispatch"
   status = 301
 [[redirects]]
   from = "/privacy.html"
