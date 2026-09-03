@@ -26,9 +26,10 @@ export type ServiceDetail = {
   title: string
   description: string
   lead: string
-  bulletsLeft: string[]
-  rightTitle: string
-  rightBody: string
+  addresses: string
+  includes: string[]
+  engagement: string
+  distinction?: string
 }
 
 export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
@@ -36,129 +37,137 @@ export const servicesBySlug: Record<ServiceSlug, ServiceDetail> = {
     slug: 'platform-health',
     title: 'Platform Health Check',
     description:
-      'Find bottlenecks, risks, and unnecessary complexity in your platform, with clear next steps to improve it.',
-    lead: 'Read-first pass across AWS, GCP, EKS, and IaC — prioritized findings you can hand to leadership or your team and execute.',
-    bulletsLeft: [
+      'Find bottlenecks, risks, and unnecessary complexity in a production platform, with prioritized next steps.',
+    lead: 'A read-first pass across cloud accounts, Kubernetes, and IaC — findings leadership and the team can execute.',
+    addresses:
+      'Unclear ownership, upgrade risk, billing noise, and change paths that only a few people understand.',
+    includes: [
       'AWS and GCP account structure, billing signals, and obvious waste',
       'EKS clusters, node groups, add-ons, and upgrade posture',
       'IaC touchpoints: Terraform, Pulumi, or Crossplane — layout, state, and how changes land in CI',
       'Written findings plus a short call to walk through priorities',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Usually a few days of discovery, then a deliverable you can hand to leadership or your team. Time-boxed — no open-ended audit.',
+    engagement:
+      'Usually a few days of discovery, then a time-boxed deliverable. Not an open-ended audit.',
   },
   finops: {
     slug: 'finops',
     title: 'FinOps',
     description:
-      'Reduce cloud spend and improve visibility into where your infrastructure budget is going.',
-    lead: 'Align billing and usage with how workloads actually run — tagging, allocation, and infra changes engineering and finance can agree on.',
-    bulletsLeft: [
+      'Consulting work to reduce cloud waste and make spend visible to engineering and finance. Distinct from Toll, the engineering economics product.',
+    lead: 'Align billing and usage with how workloads actually run — tagging, allocation, and infrastructure changes both sides can agree on.',
+    addresses:
+      'Spend that cannot be attributed, idle capacity, and finance/engineering pictures that do not match.',
+    includes: [
       'Billing and usage signals: accounts, SKUs, savings plans, and idle capacity',
       'EKS and compute: node strategy, consolidation, and autoscaling behavior',
       'Kubernetes autoscaling and node behavior where it matters',
       'Clear before/after targets so finance and engineering share the same picture',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Often pairs well with a health check. I focus on changes that stick — not one-off console tweaks you forget next quarter.',
+    engagement:
+      'Often pairs with a health check. The work targets changes that remain operable — not one-off console tweaks.',
+    distinction:
+      'This is adoption and optimization work. Toll is the engineering economics product. A FinOps engagement does not imply Toll is deployed.',
   },
   iac: {
     slug: 'iac',
     title: 'IaC',
     description:
-      'Clean up and standardize infrastructure as code so your team can move faster with less risk.',
-    lead: 'Terraform, Pulumi, or Crossplane — tighten layout, state, and how changes land in CI so applies are predictable and owned.',
-    bulletsLeft: [
+      'Standardize infrastructure as code so applies are predictable, owned, and reviewable.',
+    lead: 'Terraform, Pulumi, or Crossplane — tighten layout, state, and how changes land in CI.',
+    addresses:
+      'Fragile state, snowflake modules, and applies that only a handful of people will run.',
+    includes: [
       'Terraform: modules, naming, dependency direction, state and workspaces, plan/apply hygiene, and policy gates where they earn their keep',
-      'Pulumi: stacks and components, testing, and language-native patterns your team can sustain day to day',
+      'Pulumi: stacks and components, testing, and language-native patterns the team can sustain',
       'Crossplane: compositions, claims, provider configs, and keeping the control plane healthy through upgrades',
       'CI integration, promotion paths, and pairing so improvements survive the next hire cycle',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Scoped refactors or greenfield guardrails — PR-sized steps, clear owners, and docs people use. I can lead, pair, or review — whatever ships the outcome fastest.',
+    engagement:
+      'Scoped refactors or greenfield guardrails — PR-sized steps, clear owners, and docs people use. Implementation, pairing, or review, depending on what moves the work forward.',
   },
   cicd: {
     slug: 'cicd',
     title: 'CI/CD',
-    description:
-      'Improve delivery speed and reliability with simpler pipelines your team can actually maintain.',
-    lead: 'Greenfield pipelines or rescue of flaky jobs — stages, secrets, promotion paths, and failure signals your team will actually use.',
-    bulletsLeft: [
-      'Introducing or maturing CI/CD (GitHub Actions, GitLab CI, Jenkins — your stack, not a forced rewrite)',
+    description: 'Improve delivery speed and reliability with pipelines a team can maintain.',
+    lead: 'Greenfield pipelines or rescue of flaky jobs — stages, secrets, promotion paths, and failure signals people actually use.',
+    addresses: 'Slow or flaky delivery, opaque secrets, and pipelines nobody wants to touch.',
+    includes: [
+      'Introducing or maturing CI/CD (GitHub Actions, GitLab CI, Jenkins — the existing stack, not a forced rewrite)',
       'Stages, environments, promotion rules, and secrets/OIDC patterns that survive audits',
       'Speed and reliability: caching, parallelism, flaky tests, and failure signals people actually use',
-      'Tying pipelines to IaC and Kubernetes (Terraform, Pulumi, etc.) without one-off snowflakes',
+      'Tying pipelines to IaC and Kubernetes without one-off snowflakes',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Short discovery, then concrete pipeline design or refactor with docs your team can run. Often pairs well with IaC work or a health check.',
+    engagement:
+      'Short discovery, then concrete pipeline design or refactor with docs the team can run. Often pairs with IaC work or a health check.',
   },
   kubernetes: {
     slug: 'kubernetes',
     title: 'Kubernetes',
     description:
-      'Operate K8s and surrounding platform pieces with defaults and scaling behavior your team can predict — not fight.',
+      'Operate Kubernetes and surrounding platform pieces with defaults and scaling behavior a team can predict.',
     lead: 'Bootstrap or harden clusters: networking, upgrades, autoscaling, and runbooks so on-call is not guessing why capacity moved.',
-    bulletsLeft: [
-      'Cluster setup, add-ons, upgrades, and platform defaults that fit your org',
+    addresses: 'Upgrade fear, opaque networking, and autoscaling that surprises on-call.',
+    includes: [
+      'Cluster setup, add-ons, upgrades, and platform defaults that fit the org',
       'Networking, ingress, workloads, namespaces, and guardrails',
       'Automated scaling: HPA/VPA, cluster autoscaler, Karpenter, and capacity planning',
       'Observability and runbooks so on-call is not guessing why nodes or pods moved',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Hands-on in your repos, IaC, and cluster config — from bootstrap to tuning autoscaling. Outcome: a clear path from “it works” to “it scales predictably.”',
+    engagement:
+      'Hands-on in repos, IaC, and cluster config — from bootstrap to tuning autoscaling. Outcome: a clear path from “it works” to “it scales predictably.”',
   },
   'custom-tooling': {
     slug: 'custom-tooling',
     title: 'Custom tooling',
     description:
-      'Build lightweight internal tools that remove friction and automate repetitive work.',
-    lead: 'Internal CLIs, glue, and small apps shaped to your stack — ship something maintainable, not a science project.',
-    bulletsLeft: [
+      'Implementation and integration work: internal CLIs, glue, and small apps that bridge existing systems to the product path.',
+    lead: 'Lightweight tools shaped to the stack — maintainable glue, not a competing product.',
+    addresses:
+      'Manual toil and missing bridges between Git, cloud, identity, and delivery systems.',
+    includes: [
       'Internal CLIs and developer UX: flags, config, docs, and sensible defaults',
-      'Glue around AWS, GCP, Kubernetes, and your IaC APIs — the boring stuff that saves hours',
-      'CI/CD hooks, release helpers, and “make the right thing easy” wrappers',
-      'Handoff-friendly repos: tests where they matter, README your team will read',
+      'Glue around AWS, GCP, Kubernetes, and IaC APIs',
+      'CI/CD hooks, release helpers, and wrappers that make the right path the easy path',
+      'Handoff-friendly repos: tests where they matter, README the team will read',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Time-boxed build or a short spike plus roadmap. You choose: I ship a first version, we pair, or I review what you have and harden it.',
+    engagement:
+      'Time-boxed build or a short spike plus a written next path. Implementation, pairing, or review of what already exists.',
+    distinction:
+      'This is integration work. It is not a fourth product and it does not replace Repave, Overpass, Toll, or Dispatch.',
   },
   'architecture-review': {
     slug: 'architecture-review',
     title: 'Architecture Review',
     description:
-      'Stress-test big bets before you commit — networking, clusters, and how changes reach production.',
-    lead: 'A second opinion from someone who has run the same patterns: tradeoffs, risks, and what I would do in your shoes.',
-    bulletsLeft: [
+      'Stress-test large bets before they land — networking, clusters, and how changes reach production.',
+    lead: 'A second opinion on tradeoffs, risks, and a recommended path from someone who has run the same patterns.',
+    addresses: 'Irreversible platform bets made without a clear alternative or failure mode.',
+    includes: [
       'Multi-account, networking, and ingress patterns',
       'EKS layout, security groups, and platform boundaries',
-      'GitOps, pipelines, and how changes land in prod',
-      'Risks, alternatives, and what I would do in your shoes',
+      'GitOps, pipelines, and how changes land in production',
+      'Risks, alternatives, and a written recommendation',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'One or two working sessions plus written notes. Good before a big purchase, re-org, or hiring push.',
+    engagement:
+      'One or two working sessions plus written notes. Useful before a large purchase, re-org, or hiring push.',
   },
   'fractional-advisor': {
     slug: 'fractional-advisor',
     title: 'Fractional Platform Advisor',
     description:
-      'Senior platform judgment on a fixed cadence — strategy, vendors, and team direction without a full-time hire.',
+      'Ongoing architecture and engineering advisory on a bounded cadence — strategy, vendors, and operating decisions.',
     lead: 'Bounded hours: async or Slack on what is burning, RFC review, and hiring signal — useful, not ceremonial.',
-    bulletsLeft: [
+    addresses:
+      'Need for senior platform judgment without pretending OpsDevCode is a staffing firm.',
+    includes: [
       'Slack or async check-ins on what is burning',
       'Review of RFCs, designs, and incident follow-ups',
       'Hiring support: what to look for in platform roles',
       'Flexible hours — not a standing meeting factory',
     ],
-    rightTitle: 'Typical engagement',
-    rightBody:
-      'Retainer-style but bounded. We agree scope up front so it stays useful, not ceremonial.',
+    engagement:
+      'Retainer-style but bounded. Scope is agreed up front so the cadence stays useful, not ceremonial.',
   },
 }
 

@@ -43,9 +43,38 @@ describe('product portfolio', () => {
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
     const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
     assert.match(home, /Repave<\/strong> governs software delivery/)
-    assert.match(home, /Dispatch<\/strong> is the governed intelligent experience/)
+    assert.match(home, /Dispatch<\/strong> provides the governed experience/)
     assert.doesNotMatch(home, /sibling domains/)
     assert.doesNotMatch(home, /fourth store/)
     assert.doesNotMatch(home, /domain authority/)
+  })
+})
+
+describe('services and a11y basics', () => {
+  it('keeps indexed service slugs and company voice', () => {
+    const services = readFileSync(join(root, 'lib/services-detail.ts'), 'utf8')
+    for (const slug of [
+      'platform-health',
+      'finops',
+      'iac',
+      'cicd',
+      'kubernetes',
+      'custom-tooling',
+      'architecture-review',
+      'fractional-advisor',
+    ]) {
+      assert.match(services, new RegExp(`slug: '${slug}'`))
+    }
+    assert.match(services, /Toll is the engineering economics product/)
+    assert.doesNotMatch(services, /I focus/)
+    assert.doesNotMatch(services, /I ship/)
+    assert.doesNotMatch(services, /what I would do/)
+    assert.doesNotMatch(services, /without a full-time hire/)
+  })
+
+  it('hides the skip link until keyboard focus', () => {
+    const css = readFileSync(join(root, 'src/styles/site.css'), 'utf8')
+    assert.match(css, /\.skip-link:focus-visible/)
+    assert.match(css, /clip-path: inset\(50%\)/)
   })
 })

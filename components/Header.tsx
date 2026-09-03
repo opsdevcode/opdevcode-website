@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -22,6 +22,14 @@ function isActive(pathname: string, match?: string) {
 export default function Header() {
   const pathname = usePathname() || '/'
   const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
 
   return (
     <>
@@ -52,6 +60,7 @@ export default function Header() {
             className="nav-toggle"
             aria-expanded={open}
             aria-controls="site-nav"
+            aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
           >
             {open ? 'Close' : 'Menu'}

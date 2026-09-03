@@ -1,56 +1,61 @@
 import type { Metadata } from 'next'
 import PageFrame from '@/components/PageFrame'
+import { pageMeta } from '@/lib/seo'
 import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL } from '@/lib/site'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Company',
   description:
     'OpsDevCode is a founder-led company building engineering infrastructure for governed delivery, infrastructure state, economics, and intelligent action.',
-}
+  path: '/about',
+})
 
 export default function AboutPage() {
   return (
     <PageFrame>
       <section className="section" id="about">
-        <h1 className="page-title">Company</h1>
+        <p className="rail-label">Company</p>
+        <h1 className="page-title">OpsDevCode</h1>
         <p className="lede">
-          OpsDevCode was founded by a platform engineer who spent years working across cloud,
-          infrastructure, developer platforms, delivery systems, and engineering automation. The
-          public identity is the company and its products — not a freelance roster.
+          OpsDevCode builds governed engineering systems for organizations where software delivery
+          already spans people, platforms, automation, and agents.
         </p>
-        <div className="section--split">
+        <div className="product-page-grid">
           <div>
-            <h2>Founder-led</h2>
+            <h2>Why it exists</h2>
             <p>
-              Eric Skaggs founded OpsDevCode. There is no invented staff page. Company language
-              (“OpsDevCode builds”) names the work, not a hidden workforce.
-            </p>
-            <p style={{ marginTop: 12 }}>
-              <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
-              <a
-                href="https://www.linkedin.com/in/erskaggs/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
+              Most organizations still expose the org chart as the path to ship. OpsDevCode builds
+              products so delivery, infrastructure state, and economics stay distinct — and so
+              humans, automation, and agents can participate without becoming policy.
             </p>
           </div>
           <div>
-            <h2>What that background is for</h2>
-            <ul className="bullets">
-              <li>Governed software delivery</li>
-              <li>Infrastructure state and Kubernetes platforms</li>
-              <li>Infrastructure as Code</li>
-              <li>CI/CD and GitOps</li>
-              <li>Engineering economics</li>
-              <li>Governed agent workflows</li>
-            </ul>
+            <h2>How work is done</h2>
+            <p>
+              The company is founder-led. There is no invented staff page. Company language names
+              the work, not a hidden workforce. Services exist for adoption and implementation; they
+              are not the identity.
+            </p>
           </div>
         </div>
+      </section>
+
+      <section className="section" id="founder">
+        <h2 className="section-title">Founder</h2>
+        <p>
+          Eric Skaggs founded OpsDevCode after years working across cloud, infrastructure, developer
+          platforms, delivery systems, and engineering automation. That background informs the
+          products. It is not a freelance catalog.
+        </p>
+        <p style={{ marginTop: 12 }}>
+          <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+          <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
+          <a href="https://www.linkedin.com/in/erskaggs/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </p>
       </section>
 
       <section className="section" id="faq">
@@ -79,8 +84,8 @@ export default function AboutPage() {
           <div className="faq-item">
             <dt>What is Convergence?</dt>
             <dd>
-              An independent body of knowledge. OpsDevCode aligns with it. OpsDevCode does not own
-              it.
+              An independent, vendor-neutral body of knowledge. OpsDevCode chooses to align with it.
+              OpsDevCode does not own it, and it is not in the runtime path.
             </dd>
           </div>
         </dl>

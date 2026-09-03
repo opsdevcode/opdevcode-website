@@ -39,6 +39,13 @@
   color: var(--color-primary);
   font-variant-numeric: tabular-nums;
 }
+.product-index {
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+.meta-sep {
+  color: var(--color-text-muted);
+}
 
 .hero.rail .hero-grid {
   grid-column: 2;
@@ -151,10 +158,16 @@
   display: grid;
   gap: 2px;
   padding: 10px 8px;
+  min-height: 44px;
   border: 1px solid var(--color-border);
   color: inherit;
   text-decoration: none;
   font-size: var(--text-xs);
+}
+.sysmap-domains a:focus-visible,
+.sysmap-experience:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 .sysmap-domains a:hover,
 .sysmap-experience:hover {
@@ -286,7 +299,7 @@
 .compare-stack {
   display: none;
 }
-@media (max-width: 700px) {
+@media (max-width: 1023px) {
   .compare-wrap {
     display: none;
   }
@@ -417,4 +430,44 @@
 
 .wrap.home > section.section:nth-of-type(even) {
   background: color-mix(in srgb, var(--color-bg-muted) 55%, transparent);
+}
+
+.service-index {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--color-border);
+}
+.service-index a {
+  display: grid;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border);
+  color: inherit;
+  text-decoration: none;
+}
+.service-index a:hover {
+  color: inherit;
+}
+.service-index a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+.service-index strong {
+  color: var(--color-text);
+}
+.service-index span {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.service-distinction {
+  margin: 0 0 var(--space-24);
+}
+.compare td .meta-row {
+  margin: 0;
+}
+.sysmap--compact {
+  padding: 12px;
 }
