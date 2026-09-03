@@ -20,94 +20,119 @@
           system-ui,
           -apple-system,
           sans-serif;
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 48px;
-        padding: 64px 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 56px 72px 48px;
       }
-      .kicker {
-        font-size: 13px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #8898aa;
-        font-weight: 600;
-        margin-bottom: 22px;
-      }
-      h1 {
-        font-size: 46px;
-        letter-spacing: -0.045em;
-        line-height: 1.08;
+      .brand {
+        font-size: 72px;
         font-weight: 750;
-        max-width: 12ch;
+        letter-spacing: -0.055em;
+        line-height: 1;
       }
-      h1 span {
+      .thesis {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: -0.025em;
+        color: #425466;
+        max-width: 22ch;
+      }
+      .thesis span {
         color: #635bff;
       }
-      .url {
-        margin-top: 36px;
-        color: #8898aa;
-        font-size: 16px;
+      .system {
+        position: relative;
+        margin-top: 8px;
       }
-      .portfolio {
-        align-self: center;
-        background: #ffffff;
-        border: 1px solid #e6ebf1;
-        padding: 8px 0;
+      .system::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: 7px;
+        height: 1px;
+        background: #cfd7df;
       }
-      .portfolio-label {
-        font-size: 11px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #8898aa;
-        font-weight: 600;
-        padding: 10px 22px 12px;
-      }
-      .row {
+      .products {
         display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: baseline;
-        gap: 16px;
-        padding: 14px 22px;
-        border-top: 1px solid #e6ebf1;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        position: relative;
+      }
+      .products p {
+        padding-top: 28px;
+      }
+      .node {
+        position: absolute;
+        top: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #635bff;
+      }
+      .products p:nth-child(1) .node {
+        left: 0;
+      }
+      .products p:nth-child(2) .node {
+        left: calc(25% + 6px);
+      }
+      .products p:nth-child(3) .node {
+        left: calc(50% + 12px);
+      }
+      .products p:nth-child(4) .node {
+        left: calc(75% + 18px);
       }
       .name {
-        font-size: 22px;
-        font-weight: 650;
-        letter-spacing: -0.03em;
+        display: block;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+        margin-bottom: 6px;
       }
       .status {
+        display: block;
         font-size: 12px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #8898aa;
         font-weight: 600;
+      }
+      .foot {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 15px;
+        color: #8898aa;
       }
     </style>
   </head>
   <body>
     <div>
-      <p class="kicker">OpsDevCode</p>
-      <h1>Infrastructure for modern engineering organizations<span>.</span></h1>
-      <p class="url">opsdevco.de</p>
+      <p class="brand">OpsDevCode</p>
+      <p class="thesis">Infrastructure for modern engineering organizations<span>.</span></p>
     </div>
-    <div class="portfolio" aria-hidden="true">
-      <p class="portfolio-label">Products</p>
-      <div class="row">
-        <span class="name">Repave</span>
-        <span class="status">Available</span>
-      </div>
-      <div class="row">
-        <span class="name">Overpass</span>
-        <span class="status">In development</span>
-      </div>
-      <div class="row">
-        <span class="name">Toll</span>
-        <span class="status">In development</span>
-      </div>
-      <div class="row">
-        <span class="name">Dispatch</span>
-        <span class="status">Emerging</span>
+    <div class="system" aria-hidden="true">
+      <div class="products">
+        <p>
+          <span class="node"></span><span class="name">Repave</span
+          ><span class="status">Available</span>
+        </p>
+        <p>
+          <span class="node"></span><span class="name">Overpass</span
+          ><span class="status">In development</span>
+        </p>
+        <p>
+          <span class="node"></span><span class="name">Toll</span
+          ><span class="status">In development</span>
+        </p>
+        <p>
+          <span class="node"></span><span class="name">Dispatch</span
+          ><span class="status">Emerging</span>
+        </p>
       </div>
     </div>
+    <p class="foot">opsdevco.de</p>
   </body>
 </html>
