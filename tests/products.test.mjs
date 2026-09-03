@@ -25,6 +25,8 @@ describe('product portfolio', () => {
     assert.match(productsSrc, /maturity: 'available'/)
     assert.match(productsSrc, /maturity: 'in-development'/)
     assert.match(productsSrc, /maturity: 'emerging'/)
+    assert.match(productsSrc, /compareRole: 'Govern delivery'/)
+    assert.match(productsSrc, /compareRole: 'Ask and act'/)
   })
 
   it('hands Repave to repave.dev and siblings to GitHub identity repos', () => {
@@ -36,5 +38,14 @@ describe('product portfolio', () => {
 
   it('keeps the company thesis architectural', () => {
     assert.match(siteSrc, /Infrastructure for modern engineering organizations/)
+  })
+
+  it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
+    const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
+    assert.match(home, /Repave<\/strong> governs software delivery/)
+    assert.match(home, /Dispatch<\/strong> is the governed intelligent experience/)
+    assert.doesNotMatch(home, /sibling domains/)
+    assert.doesNotMatch(home, /fourth store/)
+    assert.doesNotMatch(home, /domain authority/)
   })
 })

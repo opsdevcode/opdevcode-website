@@ -12,8 +12,9 @@
 4. Click **Save**
 
 **The workflow is configured to use a PAT.** Add the secret:
-   - Create a PAT with `repo` scope at https://github.com/settings/tokens
-   - Add it as a repo secret: **Settings → Secrets and variables → Actions** → New repository secret → name: `RELEASE_PLEASE_TOKEN`
+
+- Create a PAT with `repo` scope at https://github.com/settings/tokens
+- Add it as a repo secret: **Settings → Secrets and variables → Actions** → New repository secret → name: `RELEASE_PLEASE_TOKEN`
 
 ## Version Check fails
 

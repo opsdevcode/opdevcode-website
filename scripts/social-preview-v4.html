@@ -1,64 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Social preview v4 — 1200×630</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      width: 1200px;
-      height: 630px;
-      overflow: hidden;
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-      color: #e8edf5;
-      background-color: #0a0d12;
-      background-image:
-        radial-gradient(ellipse 90% 65% at 12% 18%, rgba(56, 189, 248, 0.07), transparent 55%),
-        radial-gradient(ellipse 70% 50% at 88% 78%, rgba(99, 102, 241, 0.06), transparent 50%),
-        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-      background-size: auto, auto, 40px 40px, 40px 40px;
-      display: flex;
-      align-items: center;
-      padding: 0 96px;
-    }
-    .accent {
-      width: 4px;
-      align-self: stretch;
-      min-height: 220px;
-      margin-right: 40px;
-      border-radius: 2px;
-      background: linear-gradient(180deg, #38bdf8 0%, #6366f1 100%);
-      opacity: 0.85;
-    }
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 18px;
-    }
-    .title {
-      font-size: 64px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-    .sub {
-      font-size: 28px;
-      font-weight: 500;
-      color: #94a3b8;
-      letter-spacing: 0.01em;
-      max-width: 960px;
-      line-height: 1.4;
-    }
-  </style>
-</head>
-<body>
-  <div class="accent" aria-hidden="true"></div>
-  <div class="content">
-    <h1 class="title">OpsDevCode</h1>
-    <p class="sub">Simplify cloud infrastructure. Reduce complexity.</p>
-  </div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Social preview — OpsDevCode 1200×630</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: #f6f9fc;
+        color: #0a2540;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          sans-serif;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 40px;
+        padding: 64px 72px;
+      }
+      .kicker {
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #8898aa;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      h1 {
+        font-size: 44px;
+        letter-spacing: -0.045em;
+        line-height: 1.1;
+        font-weight: 750;
+      }
+      h1 span {
+        color: #635bff;
+      }
+      .url {
+        margin-top: 28px;
+        color: #8898aa;
+        font-size: 16px;
+      }
+      .map {
+        border: 1px solid #e6ebf1;
+        background: #ffffff;
+        padding: 20px;
+        align-self: center;
+      }
+      .actors {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8898aa;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .frame {
+        border: 1px solid #cfd7df;
+        padding: 12px;
+      }
+      .co {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .dom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .dom span {
+        border: 1px solid #e6ebf1;
+        padding: 8px 6px;
+        text-align: center;
+      }
+      .xp {
+        margin-top: 8px;
+        border: 1px dashed #cfd7df;
+        padding: 8px;
+        font-size: 12px;
+        color: #425466;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="kicker">OpsDevCode</p>
+      <h1>Infrastructure for modern engineering organizations<span>.</span></h1>
+      <p class="url">opsdevco.de</p>
+    </div>
+    <div class="map" aria-hidden="true">
+      <div class="actors"><span>Human</span><span>Automation</span><span>Agent</span></div>
+      <div class="frame">
+        <p class="co">OpsDevCode</p>
+        <div class="dom"><span>Repave</span><span>Overpass</span><span>Toll</span></div>
+        <p class="xp">Dispatch · governed experience</p>
+      </div>
+    </div>
+  </body>
 </html>

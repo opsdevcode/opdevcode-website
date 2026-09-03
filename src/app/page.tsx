@@ -2,20 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
-import EcosystemDiagram from '@/components/EcosystemDiagram'
-import ProductBlock from '@/components/ProductBlock'
+import SystemMap from '@/components/SystemMap'
+import ProductCard from '@/components/ProductCard'
+import ConvergePair from '@/components/ConvergePair'
 import { products } from '@/lib/products'
-import {
-  CALENDLY_URL,
-  CONVERGENCE_URL,
-  CONTACT_EMAIL,
-  SITE_DESCRIPTION,
-  SITE_TAGLINE,
-  SITE_URL,
-} from '@/lib/site'
+import { CALENDLY_URL, CONTACT_EMAIL, SITE_DESCRIPTION, SITE_TAGLINE, SITE_URL } from '@/lib/site'
 
 const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
-const socialPreviewImage = '/assets/preview-v4.png?v=5'
+const socialPreviewImage = '/assets/preview-v4.png?v=7'
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
@@ -80,131 +74,138 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <PageFrame home>
-        <section className="hero">
-          <div className="hero-inner">
-            <p className="hero-kicker">OpsDevCode</p>
-            <h1>
-              {SITE_TAGLINE.replace(/\.$/, '')}
-              <span className="highlight">.</span>
-            </h1>
-            <p className="sub">
-              Software delivery now spans people, platforms, automation, and agents. Most
-              organizations still expose their org chart, tooling boundaries, and specialist silos
-              as the path to ship. OpsDevCode builds the systems that let intent move through
-              governed engineering domains instead.
-            </p>
+        <section className="hero rail">
+          <p className="rail-label">Company</p>
+          <div className="hero-grid">
+            <div className="hero-copy">
+              <h1>
+                {SITE_TAGLINE.replace(/\.$/, '')}
+                <span className="highlight">.</span>
+              </h1>
+              <p className="sub">
+                Software delivery now spans engineers, platforms, automation, and agents. OpsDevCode
+                builds the governed systems that let them work together — without turning your org
+                chart or tooling stack into the delivery interface.
+              </p>
+              <div className="cta">
+                <Link className="btn primary" href="/products">
+                  Explore products
+                </Link>
+                <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                  Talk to OpsDevCode
+                </a>
+              </div>
+            </div>
+            <SystemMap compact />
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="problem-heading">
+          <p className="rail-label">System</p>
+          <div className="section--split">
+            <div>
+              <h2 id="problem-heading" className="section-title">
+                <span className="section-title-text">
+                  The delivery API should not be the org chart
+                </span>
+              </h2>
+              <p className="lede">
+                Engineers should not have to understand your organizational structure to ship.
+                Neither should your automation or agents.
+              </p>
+              <ul className="product-lines">
+                <li>
+                  <strong>Repave</strong> governs software delivery.
+                </li>
+                <li>
+                  <strong>Overpass</strong> understands infrastructure state.
+                </li>
+                <li>
+                  <strong>Toll</strong> connects engineering decisions to economics.
+                </li>
+                <li>
+                  <strong>Dispatch</strong> is the governed intelligent experience across them.
+                </li>
+              </ul>
+            </div>
+            <ul className="scan-list">
+              <li>A single change still travels through specialist queues.</li>
+              <li>Infrastructure knowledge is scattered across tools and tickets.</li>
+              <li>Delivery policy lives apart from delivery execution.</li>
+              <li>Cloud spend is divorced from ownership and decisions.</li>
+              <li>
+                Agents get layered onto fragmented APIs, with humans as the integration layer.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="products-heading">
+          <p className="rail-label">Products</p>
+          <div>
+            <div className="section-header-row">
+              <h2 id="products-heading" className="section-title">
+                <span className="section-title-text">Four products. One engineering system.</span>
+              </h2>
+              <Link href="/products">Compare →</Link>
+            </div>
+            <div className="product-grid">
+              {products.map((product) => (
+                <ProductCard
+                  key={product.slug}
+                  product={product}
+                  featured={product.slug === 'repave'}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="trust-heading">
+          <p className="rail-label">Governance</p>
+          <div className="section--split principles">
+            <div>
+              <h2 id="trust-heading" className="section-title">
+                <span className="section-title-text">
+                  Automation participates. It does not become authority.
+                </span>
+              </h2>
+              <p>
+                Humans, platforms, and agents can propose and, where allowed, act. Policy, gates,
+                and evidence stay with Repave, Overpass, and Toll. Dispatch never evaluates its own
+                policy or approves its own work.
+              </p>
+              <p>
+                <Link href="/approach">How the system is designed →</Link>
+              </p>
+            </div>
+            <ConvergePair />
+          </div>
+        </section>
+
+        <section className="section rail section--band" aria-labelledby="closing-cta-heading">
+          <p className="rail-label">Adoption</p>
+          <div className="close-row">
+            <div>
+              <h2 id="closing-cta-heading" className="closing-cta-title">
+                Need help integrating this?
+              </h2>
+              <p className="closing-cta-lead">
+                Architecture, modernization, and implementation remain available. They are not the
+                company identity.
+              </p>
+            </div>
             <div className="cta">
               <Link className="btn primary" href="/products">
                 Explore products
+              </Link>
+              <Link className="btn" href="/services">
+                Services
               </Link>
               <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                 Talk to OpsDevCode
               </a>
             </div>
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="problem-heading">
-          <h2 id="problem-heading" className="section-title">
-            <span className="section-title-text">The delivery API should not be the org chart</span>
-          </h2>
-          <p className="lede">
-            Engineers should not have to understand your organizational structure to ship. Neither
-            should your automation or agents.
-          </p>
-          <ul className="scan-list">
-            <li>A single change still travels through specialist queues.</li>
-            <li>Infrastructure knowledge is scattered across tools and tickets.</li>
-            <li>Delivery policy lives apart from delivery execution.</li>
-            <li>Cloud spend is divorced from ownership and decisions.</li>
-            <li>Agents get layered onto fragmented APIs, with humans as the integration layer.</li>
-          </ul>
-        </section>
-
-        <section className="section" aria-labelledby="system-heading">
-          <h2 id="system-heading" className="section-title">
-            <span className="section-title-text">One engineering system, four named parts</span>
-          </h2>
-          <p className="lede">
-            OpsDevCode is the company. Repave, Overpass, and Toll are sibling domains. Dispatch is
-            the governed experience across them — not a fourth store, and not the authority that
-            grades their work.
-          </p>
-          <EcosystemDiagram />
-        </section>
-
-        <section className="section" aria-labelledby="products-heading">
-          <h2 id="products-heading" className="section-title">
-            <span className="section-title-text">Products</span>
-          </h2>
-          <div className="product-stack">
-            {products.map((product) => (
-              <ProductBlock key={product.slug} product={product} />
-            ))}
-          </div>
-        </section>
-
-        <section className="section" aria-labelledby="trust-heading">
-          <h2 id="trust-heading" className="section-title">
-            <span className="section-title-text">
-              Automation participates. It does not become authority.
-            </span>
-          </h2>
-          <p className="lede">
-            Humans, platforms, and agents can propose and, where allowed, act. Policy, gates, and
-            evidence stay with the domain products. Dispatch never evaluates its own policy or
-            approves its own work.
-          </p>
-          <Link href="/approach">How the system is designed →</Link>
-        </section>
-
-        <section className="section" aria-labelledby="convergence-heading">
-          <h2 id="convergence-heading" className="section-title">
-            <span className="section-title-text">Informed by Convergence</span>
-          </h2>
-          <p className="lede">
-            Convergence is an independent, vendor-neutral body of knowledge about how specialized
-            engineering expertise participates in one delivery system. It is not an OpsDevCode
-            product, specification, or runtime.
-          </p>
-          <p>
-            OpsDevCode chooses to design in alignment with those principles.{' '}
-            <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
-              Read Convergence on GitHub
-            </a>
-            .
-          </p>
-        </section>
-
-        <section className="section" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="section-title">
-            <span className="section-title-text">Adoption and implementation help</span>
-          </h2>
-          <p className="lede">
-            Services remain available for architecture, adoption, platform modernization, and custom
-            integration. They are not the company identity.
-          </p>
-          <Link className="btn" href="/services">
-            Services
-          </Link>
-        </section>
-
-        <section className="section closing-cta" aria-labelledby="closing-cta-heading">
-          <p className="closing-cta-kicker">Next</p>
-          <h2 id="closing-cta-heading" className="closing-cta-title">
-            Start with the products
-          </h2>
-          <p className="closing-cta-lead">
-            Repave is the available delivery product. Overpass, Toll, and Dispatch are named domains
-            with honest maturity. Talk to OpsDevCode if you need a path through adoption.
-          </p>
-          <div className="cta">
-            <Link className="btn primary" href="/products">
-              Explore products
-            </Link>
-            <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Talk to OpsDevCode
-            </a>
           </div>
         </section>
       </PageFrame>

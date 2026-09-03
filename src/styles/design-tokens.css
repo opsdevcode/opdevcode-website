@@ -49,7 +49,7 @@
   --shadow-md: 0 4px 14px rgba(10, 23, 50, 0.08);
   --shadow-lg: 0 18px 48px rgba(10, 23, 50, 0.12);
   --shadow-card: 0 2px 8px rgba(10, 23, 50, 0.04);
-  --shadow-card-hover: 0 10px 28px rgba(10, 23, 50, 0.10);
+  --shadow-card-hover: 0 10px 28px rgba(10, 23, 50, 0.1);
   --shadow-rest: 0 1px 2px rgba(15, 23, 42, 0.045);
 
   /* Editorial highlight gradient (text fill on hero accent) */
@@ -107,6 +107,10 @@
   --space-96: 96px;
   --space-128: 128px;
 
+  --section-y: 64px;
+  --section-y-tight: 40px;
+  --grid-gap: 24px;
+
   /* === RADIUS === */
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -115,10 +119,9 @@
   --radius-full: 9999px;
 
   /* === LAYOUT === */
-  --max-width: 1080px;
+  --max-width: 1240px;
   --max-width-narrow: 720px;
-  --wrap-padding: clamp(24px, 5vw, 64px);
-  --header-height: 64px;
-  --prose-measure: 68ch;
+  --wrap-padding: clamp(20px, 4vw, 48px);
+  --header-height: 56px;
+  --prose-measure: 62ch;
 }
-
