@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import PageFrame from '@/components/PageFrame'
+import ProductMotif from '@/components/ProductMotif'
 import { getProduct, productSlugs } from '@/lib/products'
 
 export const dynamic = 'force-static'
@@ -29,18 +30,19 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <PageFrame>
-      <section className="section product-page">
+      <section className={`section product-page product-page--${product.slug}`}>
         <header className="product-page-head">
           <div>
-            <p className="product-kicker">
-              <span className={`maturity maturity--${product.maturity}`}>
-                {product.maturityLabel}
-              </span>
+            <p className="meta-row">
+              <span>{product.maturityIndex}</span>
+              {product.maturityLabel}
+              <span aria-hidden>·</span>
               {product.domain}
             </p>
             <h1 className="page-title">{product.name}</h1>
             <p className="product-job">{product.job}</p>
           </div>
+          <ProductMotif slug={product.slug} />
           <p className="cta-row">
             <a
               className="btn primary"
@@ -67,7 +69,7 @@ export default async function ProductPage({ params }: Props) {
         </header>
         <div className="product-page-grid">
           <div>
-            <h2>What it does</h2>
+            <h2>Job</h2>
             <p>{product.summary}</p>
             {product.body.map((para) => (
               <p key={para}>{para}</p>
@@ -86,7 +88,7 @@ export default async function ProductPage({ params }: Props) {
             </ul>
           </div>
           <div>
-            <h2>Does not own</h2>
+            <h2>Boundaries</h2>
             <ul className="bullets">
               {product.doesNot.map((item) => (
                 <li key={item}>{item}</li>

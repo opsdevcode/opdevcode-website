@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
-import ProductCard from '@/components/ProductCard'
 import { products } from '@/lib/products'
 import { SITE_DESCRIPTION } from '@/lib/site'
 
@@ -14,18 +13,92 @@ export default function ProductsPage() {
   return (
     <PageFrame>
       <section className="section">
-        <h1 className="page-title">Products</h1>
+        <p className="rail-label">Portfolio</p>
+        <h1 className="page-title">Why four products</h1>
         <p className="lede">
-          Four named parts of one engineering system. Domain products stay authoritative. Dispatch
-          is the experience across them.
+          Delivery, infrastructure state, and economics are different jobs. Dispatch is how people
+          and systems work across them — it does not replace them.
         </p>
-        <div className="product-grid">
-          {products.map((product) => (
-            <ProductCard
-              key={product.slug}
-              product={product}
-              featured={product.slug === 'repave'}
-            />
+        <div className="compare-wrap">
+          <table className="compare">
+            <caption className="visually-hidden">OpsDevCode product comparison</caption>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span className="visually-hidden">Dimension</span>
+                </th>
+                {products.map((p) => (
+                  <th key={p.slug} scope="col">
+                    <Link href={p.href}>{p.name}</Link>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Job</th>
+                {products.map((p) => (
+                  <td key={p.slug}>{p.domain}</td>
+                ))}
+              </tr>
+              <tr>
+                <th scope="row">Role</th>
+                {products.map((p) => (
+                  <td key={p.slug}>{p.compareRole}</td>
+                ))}
+              </tr>
+              <tr>
+                <th scope="row">Maturity</th>
+                {products.map((p) => (
+                  <td key={p.slug}>
+                    {p.maturityIndex} {p.maturityLabel}
+                  </td>
+                ))}
+              </tr>
+              <tr>
+                <th scope="row">Next</th>
+                {products.map((p) => (
+                  <td key={p.slug}>
+                    <a href={p.ctaHref} target="_blank" rel="noopener noreferrer">
+                      {p.ctaLabel}
+                    </a>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div className="compare-stack">
+          {products.map((p) => (
+            <article key={p.slug} className="compare-band">
+              <h2>
+                <Link href={p.href}>{p.name}</Link>
+              </h2>
+              <dl>
+                <div>
+                  <dt>Job</dt>
+                  <dd>{p.domain}</dd>
+                </div>
+                <div>
+                  <dt>Role</dt>
+                  <dd>{p.compareRole}</dd>
+                </div>
+                <div>
+                  <dt>Maturity</dt>
+                  <dd>
+                    {p.maturityIndex} {p.maturityLabel}
+                  </dd>
+                </div>
+                <div>
+                  <dt>Next</dt>
+                  <dd>
+                    <a href={p.ctaHref} target="_blank" rel="noopener noreferrer">
+                      {p.ctaLabel}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
+            </article>
           ))}
         </div>
         <p className="note" style={{ marginTop: 'var(--space-24)' }}>

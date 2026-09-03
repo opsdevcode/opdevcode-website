@@ -2,20 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
-import EcosystemDiagram from '@/components/EcosystemDiagram'
+import SystemMap from '@/components/SystemMap'
 import ProductCard from '@/components/ProductCard'
+import ConvergePair from '@/components/ConvergePair'
 import { products } from '@/lib/products'
-import {
-  CALENDLY_URL,
-  CONVERGENCE_URL,
-  CONTACT_EMAIL,
-  SITE_DESCRIPTION,
-  SITE_TAGLINE,
-  SITE_URL,
-} from '@/lib/site'
+import { CALENDLY_URL, CONTACT_EMAIL, SITE_DESCRIPTION, SITE_TAGLINE, SITE_URL } from '@/lib/site'
 
 const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
-const socialPreviewImage = '/assets/preview-v4.png?v=5'
+const socialPreviewImage = '/assets/preview-v4.png?v=7'
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
@@ -72,11 +66,6 @@ const structuredData = {
   ],
 }
 
-const repave = products.find((p) => p.slug === 'repave')
-const overpass = products.find((p) => p.slug === 'overpass')
-const toll = products.find((p) => p.slug === 'toll')
-const dispatch = products.find((p) => p.slug === 'dispatch')
-
 export default function HomePage() {
   return (
     <>
@@ -85,18 +74,18 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <PageFrame home>
-        <section className="hero">
+        <section className="hero rail">
+          <p className="rail-label">Company</p>
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="hero-kicker">OpsDevCode</p>
               <h1>
                 {SITE_TAGLINE.replace(/\.$/, '')}
                 <span className="highlight">.</span>
               </h1>
               <p className="sub">
-                Software delivery now spans people, platforms, automation, and agents. Most
-                organizations still expose the org chart as the path to ship. OpsDevCode builds
-                governed engineering domains instead.
+                Software delivery now spans engineers, platforms, automation, and agents. OpsDevCode
+                builds the governed systems that let them work together — without turning your org
+                chart or tooling stack into the delivery interface.
               </p>
               <div className="cta">
                 <Link className="btn primary" href="/products">
@@ -107,94 +96,103 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <EcosystemDiagram compact />
+            <SystemMap compact />
           </div>
         </section>
 
-        <section className="section section--split" aria-labelledby="problem-heading">
+        <section className="section rail" aria-labelledby="problem-heading">
+          <p className="rail-label">System</p>
+          <div className="section--split">
+            <div>
+              <h2 id="problem-heading" className="section-title">
+                <span className="section-title-text">
+                  The delivery API should not be the org chart
+                </span>
+              </h2>
+              <p className="lede">
+                Engineers should not have to understand your organizational structure to ship.
+                Neither should your automation or agents.
+              </p>
+              <ul className="product-lines">
+                <li>
+                  <strong>Repave</strong> governs software delivery.
+                </li>
+                <li>
+                  <strong>Overpass</strong> understands infrastructure state.
+                </li>
+                <li>
+                  <strong>Toll</strong> connects engineering decisions to economics.
+                </li>
+                <li>
+                  <strong>Dispatch</strong> is the governed intelligent experience across them.
+                </li>
+              </ul>
+            </div>
+            <ul className="scan-list">
+              <li>A single change still travels through specialist queues.</li>
+              <li>Infrastructure knowledge is scattered across tools and tickets.</li>
+              <li>Delivery policy lives apart from delivery execution.</li>
+              <li>Cloud spend is divorced from ownership and decisions.</li>
+              <li>
+                Agents get layered onto fragmented APIs, with humans as the integration layer.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="products-heading">
+          <p className="rail-label">Products</p>
           <div>
-            <h2 id="problem-heading" className="section-title">
-              <span className="section-title-text">
-                The delivery API should not be the org chart
-              </span>
-            </h2>
-            <p className="lede">
-              Engineers should not have to understand your organizational structure to ship. Neither
-              should your automation or agents.
-            </p>
-            <p className="note">
-              OpsDevCode is the company. Repave, Overpass, and Toll are sibling domains. Dispatch is
-              the experience across them — not a fourth store.
-            </p>
-          </div>
-          <ul className="scan-list">
-            <li>A single change still travels through specialist queues.</li>
-            <li>Infrastructure knowledge is scattered across tools and tickets.</li>
-            <li>Delivery policy lives apart from delivery execution.</li>
-            <li>Cloud spend is divorced from ownership and decisions.</li>
-            <li>Agents get layered onto fragmented APIs, with humans as the integration layer.</li>
-          </ul>
-        </section>
-
-        <section className="section" aria-labelledby="products-heading">
-          <div className="section-header-row">
-            <h2 id="products-heading" className="section-title">
-              <span className="section-title-text">Products</span>
-            </h2>
-            <Link href="/products">Compare the portfolio →</Link>
-          </div>
-          <div className="product-grid">
-            {repave ? <ProductCard product={repave} featured /> : null}
-            {overpass ? <ProductCard product={overpass} /> : null}
-            {toll ? <ProductCard product={toll} /> : null}
-            {dispatch ? <ProductCard product={dispatch} /> : null}
+            <div className="section-header-row">
+              <h2 id="products-heading" className="section-title">
+                <span className="section-title-text">Four products. One engineering system.</span>
+              </h2>
+              <Link href="/products">Compare →</Link>
+            </div>
+            <div className="product-grid">
+              {products.map((product) => (
+                <ProductCard
+                  key={product.slug}
+                  product={product}
+                  featured={product.slug === 'repave'}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="section section--split principles" aria-labelledby="trust-heading">
-          <div>
-            <h2 id="trust-heading" className="section-title">
-              <span className="section-title-text">
-                Automation participates. It does not become authority.
-              </span>
-            </h2>
-            <p>
-              Humans, platforms, and agents can propose and, where allowed, act. Policy, gates, and
-              evidence stay with the domain products. Dispatch never evaluates its own policy or
-              approves its own work.
-            </p>
-            <p>
-              <Link href="/approach">How the system is designed →</Link>
-            </p>
-          </div>
-          <div>
-            <h2 id="convergence-heading" className="section-title">
-              <span className="section-title-text">Informed by Convergence</span>
-            </h2>
-            <p>
-              Convergence is an independent, vendor-neutral body of knowledge. It is not an
-              OpsDevCode product, specification, or runtime. OpsDevCode chooses to design in
-              alignment with it.
-            </p>
-            <p>
-              <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
-                Read Convergence on GitHub →
-              </a>
-            </p>
+        <section className="section rail" aria-labelledby="trust-heading">
+          <p className="rail-label">Governance</p>
+          <div className="section--split principles">
+            <div>
+              <h2 id="trust-heading" className="section-title">
+                <span className="section-title-text">
+                  Automation participates. It does not become authority.
+                </span>
+              </h2>
+              <p>
+                Humans, platforms, and agents can propose and, where allowed, act. Policy, gates,
+                and evidence stay with Repave, Overpass, and Toll. Dispatch never evaluates its own
+                policy or approves its own work.
+              </p>
+              <p>
+                <Link href="/approach">How the system is designed →</Link>
+              </p>
+            </div>
+            <ConvergePair />
           </div>
         </section>
 
-        <section className="section section--band" aria-labelledby="closing-cta-heading">
+        <section className="section rail section--band" aria-labelledby="closing-cta-heading">
+          <p className="rail-label">Adoption</p>
           <div className="close-row">
             <div>
-              <p className="closing-cta-kicker">Adoption</p>
               <h2 id="closing-cta-heading" className="closing-cta-title">
                 Need help integrating this?
               </h2>
               <p className="closing-cta-lead">
                 Architecture, modernization, and implementation remain available. They are not the
-                company identity. Start with products; talk to OpsDevCode when adoption is the
-                blocker.
+                company identity.
               </p>
             </div>
             <div className="cta">

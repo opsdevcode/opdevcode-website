@@ -1,60 +1,59 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
-import EcosystemDiagram from '@/components/EcosystemDiagram'
-import { CONVERGENCE_URL } from '@/lib/site'
+import SystemMap from '@/components/SystemMap'
+import ConvergePair from '@/components/ConvergePair'
 
 export const metadata: Metadata = {
   title: 'Approach',
   description:
-    'How OpsDevCode designs engineering infrastructure so intent can move through governed domains instead of organizational silos.',
+    'How OpsDevCode lets humans, automation, and agents express intent through governed products — with evidence, not org-chart routing.',
 }
 
 export default function ApproachPage() {
   return (
     <PageFrame>
       <section className="section">
-        <h1 className="page-title">Approach</h1>
+        <p className="rail-label">Approach</p>
+        <h1 className="page-title">Intent, governed work, evidence</h1>
         <p className="lede">
-          The problem is not specialization. The problem is when specialization becomes the only way
-          work can move.
+          Specialization is necessary. Making people or agents tour the org chart to complete one
+          change is not.
         </p>
-        <div className="section--split">
-          <div>
-            <h2>Intent through domains</h2>
+        <ol className="approach-seq">
+          <li>
+            <span>01</span>
+            <h2>Who asks</h2>
+            <p>A human, an automation, or an agent. Same engineering intent; different surfaces.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h2>What they ask for</h2>
+            <p>A change in delivery, a read of infrastructure state, or an economics question.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h2>Where judgment lives</h2>
             <p>
-              Named domains for delivery, infrastructure state, and engineering economics. Each
-              keeps its own authority: gates, evidence, and stores.
+              Repave, Overpass, and Toll keep gates, evidence, and stores. Dispatch does not grade
+              policy.
             </p>
-          </div>
-          <div>
-            <h2>Experience is not ownership</h2>
-            <p>
-              Dispatch is how a human, automation, or agent can ask, propose, and sometimes act. It
-              does not grade policy. Trust: Advisory, Supervisory, Autonomous — only where the
-              domain already allows it.
-            </p>
-          </div>
+          </li>
+          <li>
+            <span>04</span>
+            <h2>What comes out</h2>
+            <p>A governed change or a refusal — plus a record of what ran and why.</p>
+          </li>
+        </ol>
+        <SystemMap />
+        <div className="converge-follow">
+          <ConvergePair />
         </div>
-        <EcosystemDiagram />
-        <div className="section--split" style={{ marginTop: 'var(--space-32)' }}>
-          <div>
-            <h2>Alignment, not ownership of the idea</h2>
-            <p>
-              Convergence is independent. OpsDevCode does not specify it, and Convergence is not
-              required to use OpsDevCode products.{' '}
-              <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
-                Convergence on GitHub
-              </a>
-              .
-            </p>
-          </div>
-          <p>
-            <Link className="btn primary" href="/products">
-              Products
-            </Link>
-          </p>
-        </div>
+        <p style={{ marginTop: 'var(--space-32)' }}>
+          <Link className="btn primary" href="/products">
+            Products
+          </Link>
+        </p>
       </section>
     </PageFrame>
   )

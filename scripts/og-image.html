@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>OG Image - Screenshot at 1200x630</title>
+    <title>OG Image - OpsDevCode 1200x630</title>
     <style>
       * {
         margin: 0;
@@ -12,46 +12,57 @@
       body {
         width: 1200px;
         height: 630px;
-        background: #0b0f17;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        background: #ffffff;
+        color: #0a2540;
         font-family:
           ui-sans-serif,
           system-ui,
           -apple-system,
           sans-serif;
-        color: #e7eefc;
+        display: flex;
+        padding: 72px 80px;
+        flex-direction: column;
+        justify-content: space-between;
       }
-      .logo {
-        width: 200px;
-        height: 200px;
-        object-fit: contain;
-        margin-bottom: 28px;
+      .kicker {
+        font-size: 14px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #8898aa;
+        font-weight: 600;
       }
-      .name {
-        font-size: 44px;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        margin-bottom: 10px;
+      h1 {
+        font-size: 52px;
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+        max-width: 16ch;
+        font-weight: 750;
       }
-      .tagline {
-        font-size: 22px;
-        color: #a6b3cc;
-        margin-bottom: 12px;
+      h1 span {
+        color: #635bff;
+      }
+      .row {
+        display: flex;
+        gap: 28px;
+        font-size: 16px;
+        color: #425466;
+        letter-spacing: 0.02em;
       }
       .url {
-        font-size: 18px;
-        color: #6b7a99;
+        font-size: 16px;
+        color: #8898aa;
       }
     </style>
   </head>
   <body>
-    <!-- Logo has transparent bg; dark page bg makes it visible. Use opsdevco-logo-o-mark (icon only) + our text for full control. -->
-    <img src="../public/assets/opsdevco-logo-o-mark.png" alt="" class="logo" />
-    <div class="name">OpsDevCode</div>
-    <div class="tagline">Platform Engineering Advisory</div>
-    <div class="url">opsdevco.de</div>
+    <p class="kicker">OpsDevCode</p>
+    <h1>Infrastructure for modern engineering organizations<span>.</span></h1>
+    <p class="row">
+      <span>Repave</span>
+      <span>Overpass</span>
+      <span>Toll</span>
+      <span>Dispatch</span>
+    </p>
+    <p class="url">opsdevco.de</p>
   </body>
 </html>

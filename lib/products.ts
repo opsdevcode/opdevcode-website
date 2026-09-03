@@ -13,7 +13,9 @@ export type Product = {
   doesNot: string[]
   maturity: ProductMaturity
   maturityLabel: string
+  maturityIndex: string
   maturityNote: string
+  compareRole: string
   href: string
   ctaLabel: string
   ctaHref: string
@@ -53,6 +55,8 @@ export const products: Product[] = [
     ],
     maturity: 'available',
     maturityLabel: 'Available',
+    maturityIndex: '01',
+    compareRole: 'Govern delivery',
     maturityNote:
       'The delivery lifecycle is implemented: generate, adopt, configure, and upgrade. Observe and remediate are not marketed as product capabilities yet.',
     href: '/products/repave',
@@ -86,6 +90,8 @@ export const products: Product[] = [
     ],
     maturity: 'in-development',
     maturityLabel: 'In development',
+    maturityIndex: '02',
+    compareRole: 'Understand state',
     maturityNote:
       'Product identity and engine pieces exist. The hosted state store is off by default. Do not treat Overpass as a fully standalone operational product yet.',
     href: '/products/overpass',
@@ -116,6 +122,8 @@ export const products: Product[] = [
     ],
     maturity: 'in-development',
     maturityLabel: 'In development',
+    maturityIndex: '03',
+    compareRole: 'Attribute economics',
     maturityNote:
       'The economics boundary is defined and some capture exists in the Repave runtime. Toll is not a standalone billing platform.',
     href: '/products/toll',
@@ -141,6 +149,8 @@ export const products: Product[] = [
     ],
     maturity: 'emerging',
     maturityLabel: 'Emerging',
+    maturityIndex: '04',
+    compareRole: 'Ask and act',
     maturityNote:
       'The architecture and trust model are defined. Broader cross-domain action is still developing. Do not read current Dispatch as general autonomy.',
     href: '/products/dispatch',
