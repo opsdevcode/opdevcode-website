@@ -9,7 +9,7 @@ import { products } from '@/lib/products'
 import { CALENDLY_URL, CONTACT_EMAIL, SITE_DESCRIPTION, SITE_TAGLINE, SITE_URL } from '@/lib/site'
 
 const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
-const socialPreviewImage = '/assets/preview-v4.png?v=8'
+const socialPreviewImage = '/assets/preview-v4.png?v=9'
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
