@@ -21,8 +21,8 @@
           -apple-system,
           sans-serif;
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 40px;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
         padding: 64px 72px;
       }
       .kicker {
@@ -31,68 +31,56 @@
         text-transform: uppercase;
         color: #8898aa;
         font-weight: 600;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
       }
       h1 {
-        font-size: 44px;
+        font-size: 46px;
         letter-spacing: -0.045em;
-        line-height: 1.1;
+        line-height: 1.08;
         font-weight: 750;
+        max-width: 12ch;
       }
       h1 span {
         color: #635bff;
       }
       .url {
-        margin-top: 28px;
+        margin-top: 36px;
         color: #8898aa;
         font-size: 16px;
       }
-      .map {
-        border: 1px solid #e6ebf1;
-        background: #ffffff;
-        padding: 20px;
+      .portfolio {
         align-self: center;
+        background: #ffffff;
+        border: 1px solid #e6ebf1;
+        padding: 8px 0;
       }
-      .actors {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 8px;
-        font-size: 11px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #8898aa;
-        text-align: center;
-        margin-bottom: 16px;
-      }
-      .frame {
-        border: 1px solid #cfd7df;
-        padding: 12px;
-      }
-      .co {
+      .portfolio-label {
         font-size: 11px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-      .dom {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 8px;
-        font-size: 13px;
+        color: #8898aa;
         font-weight: 600;
+        padding: 10px 22px 12px;
       }
-      .dom span {
-        border: 1px solid #e6ebf1;
-        padding: 8px 6px;
-        text-align: center;
+      .row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: baseline;
+        gap: 16px;
+        padding: 14px 22px;
+        border-top: 1px solid #e6ebf1;
       }
-      .xp {
-        margin-top: 8px;
-        border: 1px dashed #cfd7df;
-        padding: 8px;
+      .name {
+        font-size: 22px;
+        font-weight: 650;
+        letter-spacing: -0.03em;
+      }
+      .status {
         font-size: 12px;
-        color: #425466;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8898aa;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -102,12 +90,23 @@
       <h1>Infrastructure for modern engineering organizations<span>.</span></h1>
       <p class="url">opsdevco.de</p>
     </div>
-    <div class="map" aria-hidden="true">
-      <div class="actors"><span>Human</span><span>Automation</span><span>Agent</span></div>
-      <div class="frame">
-        <p class="co">OpsDevCode</p>
-        <div class="dom"><span>Repave</span><span>Overpass</span><span>Toll</span></div>
-        <p class="xp">Dispatch · governed experience</p>
+    <div class="portfolio" aria-hidden="true">
+      <p class="portfolio-label">Products</p>
+      <div class="row">
+        <span class="name">Repave</span>
+        <span class="status">Available</span>
+      </div>
+      <div class="row">
+        <span class="name">Overpass</span>
+        <span class="status">In development</span>
+      </div>
+      <div class="row">
+        <span class="name">Toll</span>
+        <span class="status">In development</span>
+      </div>
+      <div class="row">
+        <span class="name">Dispatch</span>
+        <span class="status">Emerging</span>
       </div>
     </div>
   </body>
