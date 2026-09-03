@@ -1,6 +1,6 @@
 {
   "name": "opdevcode-website",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run format:check && npm run typecheck",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm test",
+    "test": "node --test tests/*.test.mjs",
     "og:generate": "node scripts/screenshot-og.js",
     "netlify:login": "netlify login",
     "netlify:link": "netlify link",

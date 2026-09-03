@@ -1,60 +1,74 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
+import EcosystemDiagram from '@/components/EcosystemDiagram'
+import ProductBlock from '@/components/ProductBlock'
+import { products } from '@/lib/products'
+import {
+  CALENDLY_URL,
+  CONVERGENCE_URL,
+  CONTACT_EMAIL,
+  SITE_DESCRIPTION,
+  SITE_TAGLINE,
+  SITE_URL,
+} from '@/lib/site'
 
-const shareTitle =
-  'OpsDevCode — Fix your cloud & Kubernetes platform before it breaks at scale'
-const shareDescription =
-  'I help teams stabilize infrastructure, fix scaling issues, and reduce cloud waste across AWS, GCP, and Kubernetes — managed or self-hosted.'
-
-const socialPreviewImage = '/assets/preview-v4.png?v=4'
+const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
+const socialPreviewImage = '/assets/preview-v4.png?v=5'
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
-  description: shareDescription,
+  description: SITE_DESCRIPTION,
   openGraph: {
     title: shareTitle,
-    description: shareDescription,
-    url: 'https://opsdevco.de/',
+    description: SITE_DESCRIPTION,
+    url: `${SITE_URL}/`,
     type: 'website',
     images: [
       {
         url: socialPreviewImage,
         width: 1200,
         height: 630,
-        alt: 'OpsDevCode — Fix your cloud & Kubernetes platform before it breaks at scale',
+        alt: shareTitle,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: shareTitle,
-    description: shareDescription,
+    description: SITE_DESCRIPTION,
     images: [socialPreviewImage],
   },
 }
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: 'OpsDevCode',
-  description: shareDescription,
-  url: 'https://opsdevco.de',
-  email: 'eric@opsdevco.de',
-  areaServed: 'Worldwide',
-  serviceType: [
-    'Platform Engineering',
-    'Kubernetes',
-    'AWS',
-    'GCP',
-    'Cloud Infrastructure',
-    'CI/CD',
-    'GitOps',
-    'Infrastructure as Code',
-    'Reliability',
-    'FinOps',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'OpsDevCode',
+      url: SITE_URL,
+      email: CONTACT_EMAIL,
+      logo: `${SITE_URL}/assets/opsdevco-logo-o-terminal.png`,
+      sameAs: ['https://github.com/opsdevcode', 'https://repave.dev'],
+      description: SITE_DESCRIPTION,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'OpsDevCode',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Repave',
+      applicationCategory: 'DeveloperApplication',
+      url: 'https://repave.dev',
+      description: 'Governed software delivery.',
+    },
   ],
 }
 
@@ -65,195 +79,135 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <Header />
-      <main id="main">
-        <div className="wrap home">
-          <section className="hero">
-            <div className="hero-inner">
-              <h1>
-                Fix your cloud &amp; Kubernetes platform
-                <br />
-                <span className="highlight">before it breaks at scale.</span>
-              </h1>
-              <p className="sub">
-                I help teams stabilize infrastructure, fix scaling issues, and reduce cloud
-                waste across <span className="anchor-soft">AWS, GCP, and Kubernetes</span>{' '}
-                — managed or self-hosted.
-              </p>
-              <p className="hero-fit">
-                Experience across production environments in AWS and GCP.
-              </p>
-              <div className="cta">
-                <a
-                  className="btn primary"
-                  href="https://calendly.com/eric-opsdevco/30min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Book a Platform Audit
-                </a>
-              </div>
-            </div>
-          </section>
-
-          <section
-            className="section sounds-familiar home-flow home-flow--clarity home-flow--recognition"
-            aria-labelledby="sounds-familiar-heading"
-          >
-            <h2 id="sounds-familiar-heading" className="section-title">
-              <span className="section-title-text">Where platforms start to fail</span>
-            </h2>
-            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              If you&apos;re running cloud or Kubernetes in production, you&apos;ve
-              probably seen this:
-            </p>
-            <ul className="sounds-familiar-list scan-list">
-              <li>Scaling works… until it doesn&apos;t</li>
-              <li>Costs grow faster than usage</li>
-              <li>CI/CD slows down delivery</li>
-              <li>Infrastructure feels fragile under real load</li>
-            </ul>
-            <p className="note" style={{ marginTop: 'var(--space-20)' }}>
-              These aren&apos;t theoretical problems — they show up in production.
-            </p>
-          </section>
-
-          <section
-            className="section audience home-flow home-flow--clarity home-flow--interlude"
-            aria-labelledby="what-i-work-on-heading"
-          >
-            <h2 id="what-i-work-on-heading" className="section-title">
-              <span className="section-title-text">What I work on</span>
-            </h2>
-            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              I work directly on production systems:
-            </p>
-            <ul className="scan-list">
-              <li>Cloud architecture (AWS &amp; GCP)</li>
-              <li>Kubernetes (managed and self-hosted)</li>
-              <li>Infrastructure as Code (Terraform, Pulumi, Crossplane)</li>
-              <li>CI/CD pipeline design and optimization</li>
-              <li>GitOps and deployment workflows</li>
-              <li>Scaling and cost optimization</li>
-              <li>AI-assisted engineering workflows and agentic tooling to improve developer velocity</li>
-            </ul>
-          </section>
-
-          <section className="section services-section home-flow home-flow--outcomes">
-            <h2 className="section-title">
-              <span className="section-title-text">How I can help</span>
-            </h2>
-            <div className="grid grid-2col">
-              <Link href="/services#audit" className="tile">
-                <h3>Platform Audit</h3>
-                <p className="tile-tagline">Find what&apos;s broken, fragile, or overpriced.</p>
-                <p>
-                  A fast, focused review of your cloud and Kubernetes setup to identify
-                  what&apos;s broken, fragile, or costing too much.
-                </p>
-              </Link>
-              <Link href="/services#build-fix" className="tile">
-                <h3>Platform Build / Fix</h3>
-                <p className="tile-tagline">Stabilize and simplify your platform so it scales reliably.</p>
-                <p>
-                  I design, rebuild, or stabilize your platform so it behaves predictably
-                  under real-world load and doesn&apos;t break when you scale. This includes
-                  infrastructure as code, CI/CD pipelines, and deployment workflows that
-                  remove manual steps and improve reliability.
-                </p>
-              </Link>
-              <Link href="/services#advisory" className="tile">
-                <h3>Advisory</h3>
-                <p className="tile-tagline">Get senior platform guidance without adding headcount.</p>
-                <p>
-                  Ongoing support to help you make the right platform decisions as you
-                  scale.
-                </p>
-              </Link>
-            </div>
-          </section>
-
-          <section
-            className="section how-work home-flow home-flow--clarity home-flow--interlude"
-            aria-labelledby="how-work-heading"
-          >
-            <h2 id="how-work-heading" className="section-title">
-              <span className="section-title-text">How I work</span>
-            </h2>
-            <div className="grid grid-2col">
-              <div className="tile">
-                <p>
-                  <strong>Fixed scope, clear outcomes.</strong> Time-boxed engagements with
-                  a defined result — not an open-ended retainer.
-                </p>
-              </div>
-              <div className="tile">
-                <p>
-                  <strong>In your stack.</strong> I work in your repos, clusters, and cloud
-                  accounts — not from the outside.
-                </p>
-              </div>
-              <div className="tile">
-                <p>
-                  <strong>Senior, direct, hands-on.</strong> Depth across AWS, GCP,
-                  Kubernetes, CI/CD, and IaC.
-                </p>
-              </div>
-              <div className="tile">
-                <p>
-                  <strong>Systems your team can run.</strong> The goal is a platform they
-                  fully understand after I leave — not a dependency.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <section
-            className="section example-outcomes home-flow home-flow--outcomes"
-            aria-labelledby="example-outcomes-heading"
-          >
-            <h2 id="example-outcomes-heading" className="section-title">
-              <span className="section-title-text">Outcomes in practice</span>
-            </h2>
-            <ul className="example-outcomes-list scan-list">
-              <li>Stabilized Kubernetes platforms that scale predictably.</li>
-              <li>Cut cloud spend by removing waste, not by blanket downsizing.</li>
-              <li>Hardened delivery pipelines — fewer failed deploys, faster recovery.</li>
-              <li>Unblocked architecture decisions that were stalling the team.</li>
-            </ul>
-          </section>
-
-          <section
-            className="section closing-cta home-flow home-flow--finale"
-            aria-labelledby="closing-cta-heading"
-          >
-            <p className="closing-cta-kicker">Next step</p>
-            <h2 id="closing-cta-heading" className="closing-cta-title">
-              Book a Platform Audit
-            </h2>
-            <p className="closing-cta-lead">
-              If something in your platform feels off — scaling, cost, or reliability —
-              it usually gets worse as you grow. This is the fastest way to get clarity
-              on what to fix.
-            </p>
-            <p className="closing-cta-support">
-              Not sure if this is a fit? We can figure that out quickly on a short call.
+      <PageFrame home>
+        <section className="hero">
+          <div className="hero-inner">
+            <p className="hero-kicker">OpsDevCode</p>
+            <h1>
+              {SITE_TAGLINE.replace(/\.$/, '')}
+              <span className="highlight">.</span>
+            </h1>
+            <p className="sub">
+              Software delivery now spans people, platforms, automation, and agents. Most
+              organizations still expose their org chart, tooling boundaries, and specialist silos
+              as the path to ship. OpsDevCode builds the systems that let intent move through
+              governed engineering domains instead.
             </p>
             <div className="cta">
-              <a
-                className="btn primary"
-                href="https://calendly.com/eric-opsdevco/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Book a Platform Audit
+              <Link className="btn primary" href="/products">
+                Explore products
+              </Link>
+              <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Talk to OpsDevCode
               </a>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <Footer />
-        </div>
-      </main>
+        <section className="section" aria-labelledby="problem-heading">
+          <h2 id="problem-heading" className="section-title">
+            <span className="section-title-text">The delivery API should not be the org chart</span>
+          </h2>
+          <p className="lede">
+            Engineers should not have to understand your organizational structure to ship. Neither
+            should your automation or agents.
+          </p>
+          <ul className="scan-list">
+            <li>A single change still travels through specialist queues.</li>
+            <li>Infrastructure knowledge is scattered across tools and tickets.</li>
+            <li>Delivery policy lives apart from delivery execution.</li>
+            <li>Cloud spend is divorced from ownership and decisions.</li>
+            <li>Agents get layered onto fragmented APIs, with humans as the integration layer.</li>
+          </ul>
+        </section>
+
+        <section className="section" aria-labelledby="system-heading">
+          <h2 id="system-heading" className="section-title">
+            <span className="section-title-text">One engineering system, four named parts</span>
+          </h2>
+          <p className="lede">
+            OpsDevCode is the company. Repave, Overpass, and Toll are sibling domains. Dispatch is
+            the governed experience across them — not a fourth store, and not the authority that
+            grades their work.
+          </p>
+          <EcosystemDiagram />
+        </section>
+
+        <section className="section" aria-labelledby="products-heading">
+          <h2 id="products-heading" className="section-title">
+            <span className="section-title-text">Products</span>
+          </h2>
+          <div className="product-stack">
+            {products.map((product) => (
+              <ProductBlock key={product.slug} product={product} />
+            ))}
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="trust-heading">
+          <h2 id="trust-heading" className="section-title">
+            <span className="section-title-text">
+              Automation participates. It does not become authority.
+            </span>
+          </h2>
+          <p className="lede">
+            Humans, platforms, and agents can propose and, where allowed, act. Policy, gates, and
+            evidence stay with the domain products. Dispatch never evaluates its own policy or
+            approves its own work.
+          </p>
+          <Link href="/approach">How the system is designed →</Link>
+        </section>
+
+        <section className="section" aria-labelledby="convergence-heading">
+          <h2 id="convergence-heading" className="section-title">
+            <span className="section-title-text">Informed by Convergence</span>
+          </h2>
+          <p className="lede">
+            Convergence is an independent, vendor-neutral body of knowledge about how specialized
+            engineering expertise participates in one delivery system. It is not an OpsDevCode
+            product, specification, or runtime.
+          </p>
+          <p>
+            OpsDevCode chooses to design in alignment with those principles.{' '}
+            <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
+              Read Convergence on GitHub
+            </a>
+            .
+          </p>
+        </section>
+
+        <section className="section" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="section-title">
+            <span className="section-title-text">Adoption and implementation help</span>
+          </h2>
+          <p className="lede">
+            Services remain available for architecture, adoption, platform modernization, and custom
+            integration. They are not the company identity.
+          </p>
+          <Link className="btn" href="/services">
+            Services
+          </Link>
+        </section>
+
+        <section className="section closing-cta" aria-labelledby="closing-cta-heading">
+          <p className="closing-cta-kicker">Next</p>
+          <h2 id="closing-cta-heading" className="closing-cta-title">
+            Start with the products
+          </h2>
+          <p className="closing-cta-lead">
+            Repave is the available delivery product. Overpass, Toll, and Dispatch are named domains
+            with honest maturity. Talk to OpsDevCode if you need a path through adoption.
+          </p>
+          <div className="cta">
+            <Link className="btn primary" href="/products">
+              Explore products
+            </Link>
+            <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              Talk to OpsDevCode
+            </a>
+          </div>
+        </section>
+      </PageFrame>
       <Reveal />
     </>
   )

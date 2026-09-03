@@ -1,177 +1,117 @@
 import type { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import PageFrame from '@/components/PageFrame'
+import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Company',
   description:
-    'Eric Skaggs — a platform engineer focused on fixing scaling issues, stabilizing platforms, and improving how teams ship and operate software in production.',
+    'OpsDevCode is a founder-led company building engineering infrastructure for governed delivery, infrastructure state, economics, and intelligent action.',
 }
 
 export default function AboutPage() {
   return (
-    <>
-      <Header active="About" />
-      <main id="main">
-        <div className="wrap">
-          <section className="section" id="about">
-            <h2 className="section-title">About</h2>
-            <div className="split">
-              <div className="tile">
-                <h3>Hi, I&apos;m Eric</h3>
-                <p>
-                  I&apos;m a platform engineer with 8+ years working on real-world
-                  infrastructure.
-                </p>
-                <p style={{ marginTop: 10 }}>
-                  I focus on systems that are already running — fixing scaling issues,
-                  stabilizing platforms, and improving how teams ship and operate
-                  software.
-                </p>
-                <p style={{ marginTop: 10 }}>
-                  No theory, no over-engineering — just practical solutions that work in
-                  production.
-                </p>
-              </div>
-              <div className="tile">
-                <h3>What I work on</h3>
-                <ul className="bullets">
-                  <li>Cloud architecture (AWS &amp; GCP)</li>
-                  <li>Kubernetes (managed and self-hosted)</li>
-                  <li>Infrastructure as Code (Terraform, Pulumi, Crossplane)</li>
-                  <li>CI/CD pipeline design and optimization</li>
-                  <li>GitOps and deployment workflows</li>
-                  <li>Scaling and cost optimization</li>
-                  <li>AI-assisted engineering workflows and agentic tooling to improve developer velocity</li>
-                </ul>
-                <p style={{ marginTop: 12 }}>
-                  <span className="pill">AWS</span>{' '}
-                  <span className="pill">GCP</span>{' '}
-                  <span className="pill">Kubernetes</span>{' '}
-                  <span className="pill">IaC</span>{' '}
-                  <span className="pill">CI/CD</span>{' '}
-                  <span className="pill">GitOps</span>
-                </p>
-                <p style={{ marginTop: 12, color: 'var(--color-text-muted)', fontSize: 14 }}>
-                  — Eric Skaggs
-                </p>
-                <p style={{ marginTop: 14 }}>
-                  <a href="https://github.com/opsdevcode" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                  <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
-                  <a
-                    href="https://www.linkedin.com/in/erskaggs/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </p>
-              </div>
-            </div>
-            <p className="note" style={{ marginTop: 'var(--space-24)' }}>
-              I&apos;ve worked on systems where scaling, cost, and reliability issues show
-              up fast—and need to be fixed without slowing the team down.
+    <PageFrame>
+      <section className="section" id="about">
+        <h1 className="page-title">Company</h1>
+        <p className="lede">
+          OpsDevCode was founded by a platform engineer who spent years working across cloud,
+          infrastructure, developer platforms, delivery systems, and engineering automation. The
+          public identity is the company and its products — not a freelance roster.
+        </p>
+        <div className="split">
+          <div className="tile">
+            <h2>Founder-led</h2>
+            <p>
+              Eric Skaggs founded OpsDevCode. There is no invented staff page. Company language
+              (“OpsDevCode builds”) names the work, not a hidden workforce.
             </p>
-          </section>
-
-          <section className="section" id="experience">
-            <h2 className="section-title">Experience</h2>
-            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              Experience includes:
-            </p>
-            <ul className="bullets">
-              <li>Fixing Kubernetes clusters that fail under load</li>
-              <li>Debugging node scaling and scheduling issues</li>
-              <li>Reducing cloud cost inefficiencies in AWS and GCP environments</li>
-              <li>Stabilizing CI/CD pipelines slowing down delivery</li>
-            </ul>
-          </section>
-
-          <section className="section" id="faq">
-            <h2 className="section-title">FAQ</h2>
-            <dl className="faq-list">
-              <div className="faq-item">
-                <dt>How long does a typical engagement last?</dt>
-                <dd>
-                  Most work is time-boxed. A Platform Audit runs a few days to two weeks.
-                  Build / Fix work usually lands in weeks, not quarters. Advisory is
-                  bounded hours on a cadence you choose.
-                </dd>
-              </div>
-              <div className="faq-item">
-                <dt>Do you work on AWS, GCP, or both?</dt>
-                <dd>
-                  Both, hands-on. If your platform spans both, that&apos;s fine — a lot of
-                  the work is making the seams predictable.
-                </dd>
-              </div>
-              <div className="faq-item">
-                <dt>Managed Kubernetes or self-hosted?</dt>
-                <dd>
-                  Either. EKS and GKE for managed, and self-hosted for teams that need to
-                  run their own control plane. The tradeoffs matter — I&apos;ll tell you
-                  when one is the wrong fit.
-                </dd>
-              </div>
-              <div className="faq-item">
-                <dt>Do you work async or do we need to be on calls?</dt>
-                <dd>
-                  Async-first — Slack, email, PRs. I&apos;ll schedule calls when they move
-                  the work forward.
-                </dd>
-              </div>
-              <div className="faq-item">
-                <dt>What if we&apos;re on Azure or another cloud?</dt>
-                <dd>
-                  My hands-on depth is AWS and GCP. For other clouds I can advise on
-                  architecture and process, but I&apos;ll be upfront if a hands-on
-                  engagement isn&apos;t the right fit.
-                </dd>
-              </div>
-            </dl>
-          </section>
-
-          <section className="section" id="contact">
-            <h2 className="section-title">Book a Platform Audit</h2>
-            <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
-              If something in your platform feels off — scaling, cost, or reliability —
-              it usually gets worse as you grow. This is the fastest way to get clarity
-              on what to fix.
-            </p>
-            <div className="contact">
+            <p style={{ marginTop: 12 }}>
+              <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              <span style={{ color: 'var(--color-text-muted)', margin: '0 8px' }}>·</span>
               <a
-                href="https://calendly.com/eric-opsdevco/30min"
+                href="https://www.linkedin.com/in/erskaggs/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span>
-                  <strong>Book a Platform Audit</strong>
-                  <br />
-                  <span style={{ color: 'var(--color-text-muted)' }}>
-                    calendly.com/eric-opsdevco/30min
-                  </span>
-                </span>
-                <span style={{ color: 'var(--color-primary)' }}>→</span>
+                LinkedIn
               </a>
-              <a href="mailto:eric@opsdevco.de?subject=Platform%20Audit%20-%20OpsDevCode&body=What%20you%E2%80%99re%20running%3A%0AWhat%E2%80%99s%20hurting%3A%0AWhat%20would%20good%20look%20like%20in%2030%20days%3A">
-                <span>
-                  <strong>Email</strong>
-                  <br />
-                  <span style={{ color: 'var(--color-text-muted)' }}>eric@opsdevco.de</span>
-                </span>
-                <span style={{ color: 'var(--color-primary)' }}>→</span>
-              </a>
-            </div>
-            <p className="note" style={{ marginTop: 'var(--space-16)' }}>
-              Not sure if this is a fit? We can figure that out quickly on a short call.
             </p>
-          </section>
-
-          <Footer />
+          </div>
+          <div className="tile">
+            <h2>What that background is for</h2>
+            <ul className="bullets">
+              <li>Governed software delivery</li>
+              <li>Infrastructure state and Kubernetes platforms</li>
+              <li>Infrastructure as Code</li>
+              <li>CI/CD and GitOps</li>
+              <li>Engineering economics</li>
+              <li>Governed agent workflows</li>
+            </ul>
+          </div>
         </div>
-      </main>
-    </>
+      </section>
+
+      <section className="section" id="faq">
+        <h2 className="section-title">FAQ</h2>
+        <dl className="faq-list">
+          <div className="faq-item">
+            <dt>Is OpsDevCode a consulting firm?</dt>
+            <dd>
+              No. Products are primary. Services exist for adoption, architecture, and
+              implementation.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>Is Repave the company platform?</dt>
+            <dd>
+              No. Repave is the governed software delivery product. OpsDevCode is the umbrella.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>Does Dispatch own the other products?</dt>
+            <dd>
+              No. Dispatch is a governed experience across domain capabilities. Domain products
+              remain authoritative.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>What is Convergence?</dt>
+            <dd>
+              An independent body of knowledge. OpsDevCode aligns with it. OpsDevCode does not own
+              it.
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section className="section" id="contact">
+        <h2 className="section-title">Talk to OpsDevCode</h2>
+        <p className="note" style={{ marginBottom: 'var(--space-16)' }}>
+          Product questions, adoption, or whether services are the right door.
+        </p>
+        <div className="contact">
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+            <span>
+              <strong>Schedule a conversation</strong>
+              <br />
+              <span style={{ color: 'var(--color-text-muted)' }}>
+                calendly.com/eric-opsdevco/30min
+              </span>
+            </span>
+            <span style={{ color: 'var(--color-primary)' }}>→</span>
+          </a>
+          <a href={`mailto:${CONTACT_EMAIL}?subject=OpsDevCode`}>
+            <span>
+              <strong>Email</strong>
+              <br />
+              <span style={{ color: 'var(--color-text-muted)' }}>{CONTACT_EMAIL}</span>
+            </span>
+            <span style={{ color: 'var(--color-primary)' }}>→</span>
+          </a>
+        </div>
+      </section>
+    </PageFrame>
   )
 }
