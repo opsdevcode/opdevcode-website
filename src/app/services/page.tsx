@@ -18,29 +18,29 @@ export default function ServicesPage() {
           OpsDevCode is a product company. Advisory and implementation work remains available when a
           team needs a path through architecture, adoption, or custom integration.
         </p>
-        <div className="grid grid-2col">
-          <div className="tile" id="architecture">
+        <div className="product-page-grid">
+          <div className="" id="architecture">
             <h2>Architecture and adoption</h2>
             <p>
               Map current delivery, state, and economics practices onto the product domains. Decide
               what to adopt, what to integrate, and what to leave alone.
             </p>
           </div>
-          <div className="tile" id="modernization">
+          <div id="modernization">
             <h2>Platform modernization</h2>
             <p>
               Kubernetes, cloud accounts, IaC, and CI/CD work in service of a governed path — not as
               a standalone consulting catalog.
             </p>
           </div>
-          <div className="tile" id="integration">
+          <div id="integration">
             <h2>Product integration</h2>
             <p>
               Help connecting Repave and related runtime pieces to existing Git, cloud, and identity
               systems.
             </p>
           </div>
-          <div className="tile" id="advisory">
+          <div id="advisory">
             <h2>Engineering systems advisory</h2>
             <p>
               Time-boxed review of designs, incidents, and operating models. Founder-led. No
@@ -84,27 +84,25 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section" id="how">
-        <h2 className="section-title">How the work is scoped</h2>
-        <div className="steps-row">
-          <div className="tile">
-            <h3>1. Short call</h3>
-            <p>What you run, what is blocking, whether products or services are the right door.</p>
-          </div>
-          <div className="tile">
-            <h3>2. Bounded outcome</h3>
-            <p>Time-boxed. No open-ended hours as the default model.</p>
-          </div>
-          <div className="tile">
-            <h3>3. In your systems</h3>
-            <p>Repos, clusters, and cloud accounts when the work is hands-on.</p>
-          </div>
-          <div className="tile">
-            <h3>4. You keep the system</h3>
-            <p>The point is ownership after the engagement, not a permanent dependency.</p>
-          </div>
+      <h2 className="section-title">How the work is scoped</h2>
+      <div className="product-page-grid" id="how">
+        <div>
+          <h2>1. Short call</h2>
+          <p>What you run, what is blocking, whether products or services are the right door.</p>
         </div>
-      </section>
+        <div>
+          <h2>2. Bounded outcome</h2>
+          <p>Time-boxed. No open-ended hours as the default model.</p>
+        </div>
+        <div>
+          <h2>3. In your systems</h2>
+          <p>Repos, clusters, and cloud accounts when the work is hands-on.</p>
+        </div>
+        <div>
+          <h2>4. You keep the system</h2>
+          <p>The point is ownership after the engagement, not a permanent dependency.</p>
+        </div>
+      </div>
 
       <p className="cta-row">
         <a className="btn primary" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">

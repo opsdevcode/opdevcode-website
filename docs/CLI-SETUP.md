@@ -75,18 +75,18 @@ GoDaddy blocks API access for accounts with fewer than 10 domains. Use manual se
 2. Go to [dcc.godaddy.com](https://dcc.godaddy.com) → select **opsdevco.de** → **DNS** (or **Manage DNS**).
 3. Add or edit these records:
 
-| Type  | Name | Value                              | TTL  |
-|-------|------|------------------------------------|------|
-| A     | @    | 75.2.60.5                          | 600  |
-| CNAME | www  | opdevcode-website.netlify.app      | 3600 |
+| Type  | Name | Value                         | TTL  |
+| ----- | ---- | ----------------------------- | ---- |
+| A     | @    | 75.2.60.5                     | 600  |
+| CNAME | www  | opdevcode-website.netlify.app | 3600 |
 
 4. Remove any conflicting A or CNAME records for `@` or `www`.
 5. Save. DNS may take 5–60 minutes to propagate. Netlify will provision HTTPS automatically.
 
 ### DNS records reference
 
-| Type  | Name | Value                    |
-|-------|------|--------------------------|
+| Type  | Name | Value                   |
+| ----- | ---- | ----------------------- |
 | A     | @    | 75.2.60.5 (Netlify LB)  |
 | CNAME | www  | [your-site].netlify.app |
 
@@ -94,20 +94,20 @@ GoDaddy blocks API access for accounts with fewer than 10 domains. Use manual se
 
 To restrict certificate issuance to Netlify's Let's Encrypt account, add a CAA record in GoDaddy:
 
-| Type | Name | Value |
-|------|------|-------|
-| CAA | @ | `0 issue "letsencrypt.org;accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/54403714"` |
+| Type | Name | Value                                                                                          |
+| ---- | ---- | ---------------------------------------------------------------------------------------------- |
+| CAA  | @    | `0 issue "letsencrypt.org;accounturi=https://acme-v02.api.letsencrypt.org/acme/acct/54403714"` |
 
 ## Scripts reference
 
-| Script              | Command                 | Description                    |
-|---------------------|-------------------------|--------------------------------|
-| Login               | `npm run netlify:login` | Authenticate with Netlify      |
-| Link                | `npm run netlify:link`  | Link repo to Netlify site      |
-| Deploy              | `npm run netlify:deploy`| Deploy to production           |
-| Status              | `npm run netlify:status`| Show linked site info          |
-| Domain (full)       | `npm run domain:add`    | Add domain + configure GoDaddy |
-| Domain (DNS only)   | `npm run domain:godaddy`| Configure GoDaddy DNS only     |
+| Script            | Command                  | Description                    |
+| ----------------- | ------------------------ | ------------------------------ |
+| Login             | `npm run netlify:login`  | Authenticate with Netlify      |
+| Link              | `npm run netlify:link`   | Link repo to Netlify site      |
+| Deploy            | `npm run netlify:deploy` | Deploy to production           |
+| Status            | `npm run netlify:status` | Show linked site info          |
+| Domain (full)     | `npm run domain:add`     | Add domain + configure GoDaddy |
+| Domain (DNS only) | `npm run domain:godaddy` | Configure GoDaddy DNS only     |
 
 ## Troubleshooting
 

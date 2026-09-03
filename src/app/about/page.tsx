@@ -18,8 +18,8 @@ export default function AboutPage() {
           infrastructure, developer platforms, delivery systems, and engineering automation. The
           public identity is the company and its products — not a freelance roster.
         </p>
-        <div className="split">
-          <div className="tile">
+        <div className="section--split">
+          <div>
             <h2>Founder-led</h2>
             <p>
               Eric Skaggs founded OpsDevCode. There is no invented staff page. Company language
@@ -39,7 +39,7 @@ export default function AboutPage() {
               </a>
             </p>
           </div>
-          <div className="tile">
+          <div>
             <h2>What that background is for</h2>
             <ul className="bullets">
               <li>Governed software delivery</li>
