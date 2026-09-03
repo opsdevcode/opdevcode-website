@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Product } from '@/lib/products'
 import ProductMotif from '@/components/ProductMotif'
+import MaturityMeta from '@/components/MaturityMeta'
 
 export default function ProductCard({
   product,
@@ -14,10 +15,7 @@ export default function ProductCard({
       className={`product-card product-card--${product.slug}${featured ? ' product-card--featured' : ''}`}
     >
       <div className="product-card-top">
-        <p className="meta-row">
-          <span>{product.maturityIndex}</span>
-          {product.maturityLabel}
-        </p>
+        <MaturityMeta index={product.maturityIndex} label={product.maturityLabel} />
         <ProductMotif slug={product.slug} />
       </div>
       <h3>

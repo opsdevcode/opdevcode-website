@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
+import MaturityMeta from '@/components/MaturityMeta'
 import { products } from '@/lib/products'
-import { SITE_DESCRIPTION } from '@/lib/site'
+import { pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Products',
-  description: SITE_DESCRIPTION,
-}
+  description:
+    'Repave, Overpass, Toll, and Dispatch: governed software delivery, infrastructure state, engineering economics, and a governed intelligent experience.',
+  path: '/products',
+})
 
 export default function ProductsPage() {
   return (
@@ -51,7 +54,7 @@ export default function ProductsPage() {
                 <th scope="row">Maturity</th>
                 {products.map((p) => (
                   <td key={p.slug}>
-                    {p.maturityIndex} {p.maturityLabel}
+                    <MaturityMeta index={p.maturityIndex} label={p.maturityLabel} />
                   </td>
                 ))}
               </tr>
@@ -86,7 +89,7 @@ export default function ProductsPage() {
                 <div>
                   <dt>Maturity</dt>
                   <dd>
-                    {p.maturityIndex} {p.maturityLabel}
+                    <MaturityMeta index={p.maturityIndex} label={p.maturityLabel} />
                   </dd>
                 </div>
                 <div>

@@ -14,6 +14,7 @@ const socialPreviewImage = '/assets/preview-v4.png?v=7'
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
   description: SITE_DESCRIPTION,
+  alternates: { canonical: `${SITE_URL}/` },
   openGraph: {
     title: shareTitle,
     description: SITE_DESCRIPTION,
@@ -46,6 +47,11 @@ const structuredData = {
       url: SITE_URL,
       email: CONTACT_EMAIL,
       logo: `${SITE_URL}/assets/opsdevco-logo-o-terminal.png`,
+      founder: {
+        '@type': 'Person',
+        name: 'Eric Skaggs',
+        url: 'https://www.linkedin.com/in/erskaggs/',
+      },
       sameAs: ['https://github.com/opsdevcode', 'https://repave.dev'],
       description: SITE_DESCRIPTION,
     },
@@ -124,7 +130,7 @@ export default function HomePage() {
                   <strong>Toll</strong> connects engineering decisions to economics.
                 </li>
                 <li>
-                  <strong>Dispatch</strong> is the governed intelligent experience across them.
+                  <strong>Dispatch</strong> provides the governed experience across them.
                 </li>
               </ul>
             </div>

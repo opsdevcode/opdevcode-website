@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import PageFrame from '@/components/PageFrame'
 import ProductMotif from '@/components/ProductMotif'
+import MaturityMeta from '@/components/MaturityMeta'
+import { pageMeta } from '@/lib/seo'
 import { getProduct, productSlugs } from '@/lib/products'
 
 export const dynamic = 'force-static'
@@ -17,10 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const product = getProduct(slug)
   if (!product) return { title: 'Product' }
-  return {
+  return pageMeta({
     title: product.name,
     description: `${product.domain}. ${product.summary}`,
-  }
+    path: `/products/${slug}`,
+  })
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -33,12 +36,11 @@ export default async function ProductPage({ params }: Props) {
       <section className={`section product-page product-page--${product.slug}`}>
         <header className="product-page-head">
           <div>
-            <p className="meta-row">
-              <span>{product.maturityIndex}</span>
-              {product.maturityLabel}
-              <span aria-hidden>·</span>
-              {product.domain}
-            </p>
+            <MaturityMeta
+              index={product.maturityIndex}
+              label={product.maturityLabel}
+              extra={product.domain}
+            />
             <h1 className="page-title">{product.name}</h1>
             <p className="product-job">{product.job}</p>
           </div>

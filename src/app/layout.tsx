@@ -19,10 +19,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OpsDevCode — Infrastructure for modern engineering organizations',
     description: SITE_DESCRIPTION,
-    images: ['/assets/og-image.png'],
     url: SITE_URL,
+    type: 'website',
+    images: [
+      {
+        url: '/assets/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'OpsDevCode — Infrastructure for modern engineering organizations.',
+      },
+    ],
   },
-  twitter: { card: 'summary_large_image', images: ['/assets/og-image.png'] },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OpsDevCode — Infrastructure for modern engineering organizations',
+    description: SITE_DESCRIPTION,
+    images: ['/assets/og-image.png'],
+  },
   icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
 }
 

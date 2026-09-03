@@ -1,26 +1,24 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
+import PageFrame from '@/components/PageFrame'
 
 export default function NotFound() {
   return (
-    <>
-      <Header />
-      <main id="main">
-        <div className="wrap">
-          <div className="section err-main">
-            <h1>404</h1>
-            <p>
-              That page does not exist. The company site is organized around products and services.
-            </p>
-            <Link className="btn primary" href="/">
-              Go home
-            </Link>
-            <Link className="btn" href="/products" style={{ marginLeft: 'var(--space-12)' }}>
-              Products
-            </Link>
-          </div>
-        </div>
-      </main>
-    </>
+    <PageFrame>
+      <section className="section err-main">
+        <p className="rail-label">Error</p>
+        <h1 className="page-title">404</h1>
+        <p className="lede">
+          That page does not exist. The company site is organized around products and services.
+        </p>
+        <p className="cta-row">
+          <Link className="btn primary" href="/">
+            Go home
+          </Link>
+          <Link className="btn" href="/products">
+            Products
+          </Link>
+        </p>
+      </section>
+    </PageFrame>
   )
 }

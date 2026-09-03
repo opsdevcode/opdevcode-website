@@ -3,12 +3,14 @@ import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import SystemMap from '@/components/SystemMap'
 import ConvergePair from '@/components/ConvergePair'
+import { pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: 'Approach',
   description:
-    'How OpsDevCode lets humans, automation, and agents express intent through governed products — with evidence, not org-chart routing.',
-}
+    'How humans, automation, and agents express intent through governed products — with evidence, not org-chart routing.',
+  path: '/approach',
+})
 
 export default function ApproachPage() {
   return (
@@ -29,7 +31,10 @@ export default function ApproachPage() {
           <li>
             <span>02</span>
             <h2>What they ask for</h2>
-            <p>A change in delivery, a read of infrastructure state, or an economics question.</p>
+            <p>
+              Intent toward a domain product: delivery, infrastructure state, or economics. Dispatch
+              can carry the conversation; it does not own the store.
+            </p>
           </li>
           <li>
             <span>03</span>
