@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/og-image.png',
+        url: '/assets/preview-v5.png',
         width: 1200,
         height: 630,
         alt: 'OpsDevCode — Infrastructure for modern engineering organizations.',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'OpsDevCode — Infrastructure for modern engineering organizations',
     description: SITE_DESCRIPTION,
-    images: ['/assets/og-image.png'],
+    images: ['/assets/preview-v5.png'],
   },
   icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
 }

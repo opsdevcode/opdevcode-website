@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <title>OG Image - OpsDevCode 1200x630</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
@@ -13,70 +19,106 @@
         width: 1200px;
         height: 630px;
         overflow: hidden;
-        background: #ffffff;
+        background: #f6f9fc;
         color: #0a2540;
-        font-family:
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        position: relative;
+      }
+      .frame {
+        position: relative;
+        z-index: 1;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 64px 72px;
+        padding: 56px 72px 52px;
       }
-      .kicker {
-        font-size: 13px;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #8898aa;
-        font-weight: 600;
+      .top {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #635bff;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        color: #ffffff;
+        font-family: ui-monospace, 'SF Mono', monospace;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.08em;
+      }
+      .wordmark {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
       }
       h1 {
-        font-size: 48px;
-        letter-spacing: -0.045em;
-        line-height: 1.08;
-        font-weight: 750;
-        max-width: 14ch;
+        font-size: 76px;
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        line-height: 0.98;
       }
-      h1 span {
+      h1 em {
+        font-style: normal;
         color: #635bff;
       }
-      .products {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px;
+      .bottom {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 32px;
         border-top: 1px solid #e6ebf1;
         padding-top: 28px;
       }
-      .products strong {
-        display: block;
-        font-size: 20px;
-        letter-spacing: -0.03em;
-        margin-bottom: 6px;
-      }
-      .products span {
-        font-size: 12px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: #8898aa;
+      .products {
+        font-size: 32px;
         font-weight: 600;
+        letter-spacing: -0.03em;
+        color: #0a2540;
       }
       .url {
-        font-size: 16px;
-        color: #8898aa;
+        font-size: 28px;
+        font-weight: 600;
+        color: #425466;
+        letter-spacing: -0.02em;
+      }
+      .orb {
+        position: absolute;
+        right: -160px;
+        top: 50%;
+        width: 560px;
+        height: 560px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 22px solid rgba(99, 91, 255, 0.2);
+        pointer-events: none;
+      }
+      .orb::after {
+        content: '';
+        position: absolute;
+        inset: 52px;
+        border-radius: 50%;
+        border: 22px solid rgba(99, 91, 255, 0.32);
       }
     </style>
   </head>
   <body>
-    <p class="kicker">OpsDevCode</p>
-    <h1>Infrastructure for modern engineering organizations<span>.</span></h1>
-    <div class="products" aria-hidden="true">
-      <p><strong>Repave</strong><span>Available</span></p>
-      <p><strong>Overpass</strong><span>In development</span></p>
-      <p><strong>Toll</strong><span>In development</span></p>
-      <p><strong>Dispatch</strong><span>Emerging</span></p>
+    <div class="orb" aria-hidden="true"></div>
+    <div class="frame">
+      <div class="top">
+        <div class="mark" aria-hidden="true">&gt;_</div>
+        <p class="wordmark">OpsDevCode</p>
+      </div>
+      <h1>Infrastructure for<br />modern engineering<br />organizations<em>.</em></h1>
+      <div class="bottom">
+        <p class="products">Repave · Overpass · Toll · Dispatch</p>
+        <p class="url">opsdevco.de</p>
+      </div>
     </div>
-    <p class="url">opsdevco.de</p>
   </body>
 </html>

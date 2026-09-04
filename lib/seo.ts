@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
 
-const OG_IMAGE = '/assets/og-image.png'
+const OG_IMAGE = '/assets/preview-v5.png'
 const OG_ALT = 'OpsDevCode — Infrastructure for modern engineering organizations.'
 
 export function pageMeta({
