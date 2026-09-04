@@ -29,11 +29,23 @@ describe('product portfolio', () => {
     assert.match(productsSrc, /compareRole: 'Ask and act'/)
   })
 
-  it('hands Repave to repave.dev and siblings to GitHub identity repos', () => {
-    assert.match(productsSrc, /ctaHref: 'https:\/\/repave\.dev'/)
+  it('hands Repave to its product hostname and siblings to GitHub identity repos', () => {
+    assert.match(siteSrc, /repave: 'https:\/\/repave\.opsdevco\.de'/)
+    assert.match(productsSrc, /ctaHref: PRODUCT_URLS\.repave/)
     assert.match(productsSrc, /opsdevcode\/overpass/)
     assert.match(productsSrc, /opsdevcode\/toll/)
     assert.match(productsSrc, /opsdevcode\/dispatch/)
+  })
+
+  it('does not publish product hostnames without deployed targets', () => {
+    for (const slug of ['overpass', 'toll', 'dispatch']) {
+      assert.match(siteSrc, new RegExp(`${slug}: null`))
+    }
+  })
+
+  it('builds robots sitemap from SITE_URL', () => {
+    const robots = readFileSync(join(root, 'src/app/robots.ts'), 'utf8')
+    assert.match(robots, /sitemap: `\$\{SITE_URL\}\/sitemap\.xml`/)
   })
 
   it('keeps the company thesis architectural', () => {

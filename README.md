@@ -1,6 +1,6 @@
 # OpsDevCode Website
 
-Company and product ecosystem site for [OpsDevCode](https://opsdevco.de). Built with [Next.js](https://nextjs.org) (App Router, static export) and deployed on Netlify. This is not the Repave product site; that lives at [repave.dev](https://repave.dev).
+Company and product ecosystem site for [OpsDevCode](https://opsdevco.de). Built with [Next.js](https://nextjs.org) (App Router, static export) and deployed on Netlify. This is not the Repave product site; that lives at [repave.opsdevco.de](https://repave.opsdevco.de).
 
 ## Tech stack
 
@@ -66,3 +66,6 @@ Deployed on [Netlify](https://netlify.com). Build: `npm run build`, publish: `ou
 - **Preview**: Each PR gets a deploy preview URL
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for workflow and PR guidelines.
+
+Product hostname ownership and activation rules are documented in
+[docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md).

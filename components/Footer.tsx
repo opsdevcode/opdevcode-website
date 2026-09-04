@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CONVERGENCE_URL, GITHUB_ORG_URL } from '@/lib/site'
+import { CONVERGENCE_URL, GITHUB_ORG_URL, REPAVE_URL } from '@/lib/site'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -43,8 +43,8 @@ export default function Footer() {
           <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://repave.dev" target="_blank" rel="noopener noreferrer">
-            repave.dev
+          <a href={REPAVE_URL} target="_blank" rel="noopener noreferrer">
+            repave.opsdevco.de
           </a>
         </div>
       </div>

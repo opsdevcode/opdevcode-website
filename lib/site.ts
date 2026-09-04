@@ -1,7 +1,13 @@
 export const SITE_URL = 'https://opsdevco.de'
 export const CALENDLY_URL = 'https://calendly.com/eric-opsdevco/30min'
 export const CONTACT_EMAIL = 'eric@opsdevco.de'
-export const REPAVE_URL = 'https://repave.dev'
+export const PRODUCT_URLS = {
+  repave: 'https://repave.opsdevco.de',
+  overpass: null,
+  toll: null,
+  dispatch: null,
+} as const
+export const REPAVE_URL = PRODUCT_URLS.repave
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 
