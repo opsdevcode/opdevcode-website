@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.4.0...opdevcode-website-v1.5.0) (2026-09-04)
+
+
+### Features
+
+* point marketing links at repave.opsdevco.de ([1bddae8](https://github.com/opsdevcode/opdevcode-website/commit/1bddae89a6d50e402f68b065b38ebf58b5135c40))
+* point marketing links at repave.opsdevco.de ([4b81787](https://github.com/opsdevcode/opdevcode-website/commit/4b81787c27345a26d7b1c70a46ec50c1ae483703))
+
 ## [1.4.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.3.0...opdevcode-website-v1.4.0) (2026-09-03)
 
 
