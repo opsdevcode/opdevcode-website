@@ -6,7 +6,14 @@ import SystemMap from '@/components/SystemMap'
 import ProductCard from '@/components/ProductCard'
 import ConvergePair from '@/components/ConvergePair'
 import { products } from '@/lib/products'
-import { CALENDLY_URL, CONTACT_EMAIL, SITE_DESCRIPTION, SITE_TAGLINE, SITE_URL } from '@/lib/site'
+import {
+  CALENDLY_URL,
+  CONTACT_EMAIL,
+  REPAVE_URL,
+  SITE_DESCRIPTION,
+  SITE_TAGLINE,
+  SITE_URL,
+} from '@/lib/site'
 
 const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
 const socialPreviewImage = '/assets/preview-v5.png'
@@ -52,7 +59,7 @@ const structuredData = {
         name: 'Eric Skaggs',
         url: 'https://www.linkedin.com/in/erskaggs/',
       },
-      sameAs: ['https://github.com/opsdevcode', 'https://repave.dev'],
+      sameAs: ['https://github.com/opsdevcode', REPAVE_URL],
       description: SITE_DESCRIPTION,
     },
     {
@@ -66,7 +73,7 @@ const structuredData = {
       '@type': 'SoftwareApplication',
       name: 'Repave',
       applicationCategory: 'DeveloperApplication',
-      url: 'https://repave.dev',
+      url: REPAVE_URL,
       description: 'Governed software delivery.',
     },
   ],

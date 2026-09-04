@@ -1,3 +1,5 @@
+import { PRODUCT_URLS } from '@/lib/site'
+
 export type ProductSlug = 'repave' | 'overpass' | 'toll' | 'dispatch'
 
 export type ProductMaturity = 'available' | 'in-development' | 'emerging'
@@ -61,7 +63,7 @@ export const products: Product[] = [
       'The delivery lifecycle is implemented: generate, adopt, configure, and upgrade. Observe and remediate are not marketed as product capabilities yet.',
     href: '/products/repave',
     ctaLabel: 'Explore Repave',
-    ctaHref: 'https://repave.dev',
+    ctaHref: PRODUCT_URLS.repave,
     secondaryHref: 'https://github.com/opsdevcode/repave',
     secondaryLabel: 'GitHub',
   },
