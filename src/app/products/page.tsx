@@ -62,9 +62,7 @@ export default function ProductsPage() {
                 <th scope="row">Next</th>
                 {products.map((p) => (
                   <td key={p.slug}>
-                    <a href={p.ctaHref} target="_blank" rel="noopener noreferrer">
-                      {p.ctaLabel}
-                    </a>
+                    <a href={p.publicUrl}>{p.name} site</a>
                   </td>
                 ))}
               </tr>
@@ -95,9 +93,7 @@ export default function ProductsPage() {
                 <div>
                   <dt>Next</dt>
                   <dd>
-                    <a href={p.ctaHref} target="_blank" rel="noopener noreferrer">
-                      {p.ctaLabel}
-                    </a>
+                    <a href={p.publicUrl}>{p.name} site</a>
                   </dd>
                 </div>
               </dl>

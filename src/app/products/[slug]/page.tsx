@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: product.name,
     description: `${product.domain}. ${product.summary}`,
     path: `/products/${slug}`,
+    canonicalUrl: `${product.publicUrl}/`,
   })
 }
 

@@ -44,10 +44,10 @@ if [[ -z "${TOKEN}" ]]; then
   exit 1
 fi
 
-echo "Adding ${DOMAIN} and www.${DOMAIN} to site ${SITE_ID}..."
+echo "Adding ${DOMAIN}, www, and product identity hosts to site ${SITE_ID}..."
 curl -sSf -X PATCH "https://api.netlify.com/api/v1/sites/${SITE_ID}" \
   -H "Authorization: Bearer ${TOKEN}" \
   -H "Content-Type: application/json" \
-  -d "{\"custom_domain\": \"${DOMAIN}\", \"domain_aliases\": [\"www.${DOMAIN}\"]}" > /dev/null
+  -d "{\"custom_domain\": \"${DOMAIN}\", \"domain_aliases\": [\"www.${DOMAIN}\", \"overpass.${DOMAIN}\", \"toll.${DOMAIN}\", \"dispatch.${DOMAIN}\"]}" > /dev/null
 
 echo "Done. DNS may take a few minutes. Configure GoDaddy DNS manually (see docs/CLI-SETUP.md)."

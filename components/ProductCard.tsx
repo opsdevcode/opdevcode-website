@@ -26,9 +26,7 @@ export default function ProductCard({
       <p className="product-card-summary">{product.summary}</p>
       <p className="cta-row">
         <Link href={product.href}>{product.name} →</Link>
-        <a href={product.ctaHref} target="_blank" rel="noopener noreferrer">
-          {product.ctaLabel}
-        </a>
+        <a href={product.publicUrl}>{product.name} site →</a>
       </p>
     </article>
   )

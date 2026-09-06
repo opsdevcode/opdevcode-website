@@ -8,14 +8,16 @@ export function pageMeta({
   title,
   description = SITE_DESCRIPTION,
   path,
+  canonicalUrl,
   absoluteTitle,
 }: {
   title: string
   description?: string
   path: string
+  canonicalUrl?: string
   absoluteTitle?: string
 }): Metadata {
-  const canonical = `${SITE_URL}${path === '/' ? '/' : path}`
+  const canonical = canonicalUrl ?? `${SITE_URL}${path === '/' ? '/' : path}`
   const ogTitle = absoluteTitle ?? `${title} | OpsDevCode`
   return {
     title: absoluteTitle ? { absolute: absoluteTitle } : title,

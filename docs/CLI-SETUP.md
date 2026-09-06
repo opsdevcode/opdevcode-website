@@ -71,24 +71,30 @@ npm run domain:godaddy
 
 GoDaddy blocks API access for accounts with fewer than 10 domains. Use manual setup:
 
-1. Add the domain in Netlify: **Site overview** → **Domain management** → **Add domain** → enter `opsdevco.de` and `www.opsdevco.de`.
+1. Add the domain in Netlify: **Site overview** → **Domain management** → **Add domain** → enter `opsdevco.de`, `www.opsdevco.de`, `overpass.opsdevco.de`, `toll.opsdevco.de`, and `dispatch.opsdevco.de`. Do **not** add `repave.opsdevco.de` (Route 53) or `convergence.opsdevco.de`.
 2. Go to [dcc.godaddy.com](https://dcc.godaddy.com) → select **opsdevco.de** → **DNS** (or **Manage DNS**).
 3. Add or edit these records:
 
-| Type  | Name | Value                         | TTL  |
-| ----- | ---- | ----------------------------- | ---- |
-| A     | @    | 75.2.60.5                     | 600  |
-| CNAME | www  | opdevcode-website.netlify.app | 3600 |
+| Type  | Name     | Value                         | TTL  |
+| ----- | -------- | ----------------------------- | ---- |
+| A     | @        | 75.2.60.5                     | 600  |
+| CNAME | www      | opdevcode-website.netlify.app | 3600 |
+| CNAME | overpass | opdevcode-website.netlify.app | 3600 |
+| CNAME | toll     | opdevcode-website.netlify.app | 3600 |
+| CNAME | dispatch | opdevcode-website.netlify.app | 3600 |
 
 4. Remove any conflicting A or CNAME records for `@` or `www`.
 5. Save. DNS may take 5–60 minutes to propagate. Netlify will provision HTTPS automatically.
 
 ### DNS records reference
 
-| Type  | Name | Value                   |
-| ----- | ---- | ----------------------- |
-| A     | @    | 75.2.60.5 (Netlify LB)  |
-| CNAME | www  | [your-site].netlify.app |
+| Type  | Name     | Value                   |
+| ----- | -------- | ----------------------- |
+| A     | @        | 75.2.60.5 (Netlify LB)  |
+| CNAME | www      | [your-site].netlify.app |
+| CNAME | overpass | [your-site].netlify.app |
+| CNAME | toll     | [your-site].netlify.app |
+| CNAME | dispatch | [your-site].netlify.app |
 
 ### Optional: CAA record (Let's Encrypt only)
 
