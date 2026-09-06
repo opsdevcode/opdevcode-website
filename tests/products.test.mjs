@@ -43,11 +43,10 @@ describe('product portfolio', () => {
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/repave/)
   })
 
-  it('rewrites product identity hosts on the company Netlify site', () => {
-    assert.match(netlify, /https:\/\/overpass\.opsdevco\.de\/\*/)
-    assert.match(netlify, /https:\/\/toll\.opsdevco\.de\/\*/)
-    assert.match(netlify, /https:\/\/dispatch\.opsdevco\.de\/\*/)
-    assert.match(netlify, /to = "\/products\/overpass"/)
+  it('does not rewrite product identity hosts onto the company Netlify site', () => {
+    assert.doesNotMatch(netlify, /https:\/\/overpass\.opsdevco\.de\/\*/)
+    assert.doesNotMatch(netlify, /https:\/\/toll\.opsdevco\.de\/\*/)
+    assert.doesNotMatch(netlify, /https:\/\/dispatch\.opsdevco\.de\/\*/)
   })
 
   it('does not treat Convergence as a product host', () => {

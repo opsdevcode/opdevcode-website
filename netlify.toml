@@ -97,23 +97,6 @@
   to = "/services/iac"
   status = 301
 
-# Product subdomains share this site. Canonical URLs are the product hosts.
-[[redirects]]
-  from = "https://overpass.opsdevco.de/*"
-  to = "/products/overpass"
-  status = 200
-  force = true
-[[redirects]]
-  from = "https://toll.opsdevco.de/*"
-  to = "/products/toll"
-  status = 200
-  force = true
-[[redirects]]
-  from = "https://dispatch.opsdevco.de/*"
-  to = "/products/dispatch"
-  status = 200
-  force = true
-
 # Security & transport
 [[headers]]
   for = "/*"

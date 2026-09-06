@@ -14,10 +14,11 @@ Convergence is not a product and must not receive a product-style subdomain.
 | Authoritative DNS | AWS Route53 |
 | DNS changes | Pulumi (`opsdevcode/repave-aws-infra`, stack `domains`) |
 | Company website | Netlify (`opsdevco.de`, `www`) |
-| Product HTTP | EKS ingress-nginx NLB |
+| Product HTTP | EKS ingress-nginx NLB (IP-mode, AWS Load Balancer Controller) |
 
 Do **not** manage product records at GoDaddy. Do **not** run
-`npm run domain:godaddy` (retired).
+`npm run domain:godaddy` (retired). Do **not** 200-rewrite product hosts
+on Netlify; those names are Route53 aliases to the cluster NLB.
 
 `repave.opsdevco.de` remains a **delegated child** Route53 zone. The parent
 `opsdevco.de` zone holds Netlify, mail, and product aliases plus NS for
