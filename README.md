@@ -33,15 +33,15 @@ npm run check
 
 ## Site architecture
 
-| Route                                       | Role                                              |
-| ------------------------------------------- | ------------------------------------------------- |
-| `/`                                         | Company thesis, problem, ecosystem, products      |
-| `/products`                                 | Portfolio                                         |
-| `/products/{repave,overpass,toll,dispatch}` | Domain pages; hand off to product sites or GitHub |
-| `/approach`                                 | How the parts fit; Convergence boundary           |
-| `/services`                                 | Secondary advisory / implementation               |
-| `/about`                                    | Company and founder                               |
-| `/privacy`                                  | Privacy                                           |
+| Route                                       | Role                                                          |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| `/`                                         | Company thesis, problem, ecosystem, products                  |
+| `/products`                                 | Portfolio                                                     |
+| `/products/{repave,overpass,toll,dispatch}` | Compact product identity; canonical hosts are `*.opsdevco.de` |
+| `/approach`                                 | How the parts fit; Convergence boundary                       |
+| `/services`                                 | Secondary advisory / implementation                           |
+| `/about`                                    | Company and founder                                           |
+| `/privacy`                                  | Privacy                                                       |
 
 Redirects: `/tools` → `/products`, `/agentic` → `/products/dispatch`.
 

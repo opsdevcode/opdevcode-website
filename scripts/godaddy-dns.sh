@@ -47,4 +47,13 @@ curl -sSf -X PUT "${BASE}/CNAME/www" \
   -d "[{\"data\": \"${NETLIFY_SITE}\", \"ttl\": 3600}]"
 echo "  CNAME www -> ${NETLIFY_SITE}"
 
+# Product identity hosts (marketing). Do not CNAME repave — that is Route53 NS.
+for host in overpass toll dispatch; do
+  curl -sSf -X PUT "${BASE}/CNAME/${host}" \
+    -H "Authorization: ${AUTH}" \
+    -H "Content-Type: application/json" \
+    -d "[{\"data\": \"${NETLIFY_SITE}\", \"ttl\": 3600}]"
+  echo "  CNAME ${host} -> ${NETLIFY_SITE}"
+done
+
 echo "Done. DNS may take a few minutes to propagate."

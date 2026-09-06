@@ -7,6 +7,7 @@ import { dirname, join } from 'node:path'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const productsSrc = readFileSync(join(root, 'lib/products.ts'), 'utf8')
 const siteSrc = readFileSync(join(root, 'lib/site.ts'), 'utf8')
+const netlify = readFileSync(join(root, 'netlify.toml'), 'utf8')
 
 describe('product portfolio', () => {
   it('exposes four named products with distinct domains', () => {
@@ -22,25 +23,36 @@ describe('product portfolio', () => {
   it('does not treat Repave as the umbrella or Dispatch as a data domain', () => {
     assert.match(productsSrc, /not the OpsDevCode umbrella/)
     assert.match(productsSrc, /not a fourth data domain/)
-    assert.match(productsSrc, /maturity: 'available'/)
+    assert.match(productsSrc, /maturity: 'early-access'/)
     assert.match(productsSrc, /maturity: 'in-development'/)
     assert.match(productsSrc, /maturity: 'emerging'/)
     assert.match(productsSrc, /compareRole: 'Govern delivery'/)
     assert.match(productsSrc, /compareRole: 'Ask and act'/)
   })
 
-  it('hands Repave to its product hostname and siblings to GitHub identity repos', () => {
+  it('routes public CTAs to product subdomains, not private GitHub', () => {
     assert.match(siteSrc, /repave: 'https:\/\/repave\.opsdevco\.de'/)
-    assert.match(productsSrc, /ctaHref: PRODUCT_URLS\.repave/)
-    assert.match(productsSrc, /opsdevcode\/overpass/)
-    assert.match(productsSrc, /opsdevcode\/toll/)
-    assert.match(productsSrc, /opsdevcode\/dispatch/)
+    assert.match(siteSrc, /overpass: 'https:\/\/overpass\.opsdevco\.de'/)
+    assert.match(siteSrc, /toll: 'https:\/\/toll\.opsdevco\.de'/)
+    assert.match(siteSrc, /dispatch: 'https:\/\/dispatch\.opsdevco\.de'/)
+    assert.match(productsSrc, /publicUrl: PRODUCT_URLS\.repave/)
+    assert.match(productsSrc, /publicUrl: PRODUCT_URLS\.overpass/)
+    assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/overpass/)
+    assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/toll/)
+    assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/dispatch/)
+    assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/repave/)
   })
 
-  it('does not publish product hostnames without deployed targets', () => {
-    for (const slug of ['overpass', 'toll', 'dispatch']) {
-      assert.match(siteSrc, new RegExp(`${slug}: null`))
-    }
+  it('rewrites product identity hosts on the company Netlify site', () => {
+    assert.match(netlify, /https:\/\/overpass\.opsdevco\.de\/\*/)
+    assert.match(netlify, /https:\/\/toll\.opsdevco\.de\/\*/)
+    assert.match(netlify, /https:\/\/dispatch\.opsdevco\.de\/\*/)
+    assert.match(netlify, /to = "\/products\/overpass"/)
+  })
+
+  it('does not treat Convergence as a product host', () => {
+    assert.doesNotMatch(siteSrc, /convergence\.opsdevco/)
+    assert.doesNotMatch(netlify, /convergence\.opsdevco/)
   })
 
   it('builds robots sitemap from SITE_URL', () => {
@@ -50,6 +62,8 @@ describe('product portfolio', () => {
 
   it('keeps the company thesis architectural', () => {
     assert.match(siteSrc, /Infrastructure for modern engineering organizations/)
+    assert.doesNotMatch(siteSrc, /intelligent platform layer/)
+    assert.doesNotMatch(siteSrc, /Platform engineering as a service/)
   })
 
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
