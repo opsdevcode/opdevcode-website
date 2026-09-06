@@ -1,59 +1,10 @@
 #!/usr/bin/env bash
-# Set GoDaddy DNS records to point domain to Netlify.
-# Requires: GODADDY_API_KEY, GODADDY_API_SECRET env vars.
-# Get keys at: https://developer.godaddy.com/keys
+# Retired. Product and company DNS for opsdevco.de is Route53 / Pulumi
+# (opsdevcode/repave-aws-infra, stack `domains`). GoDaddy is registrar only.
 #
-# Usage:
-#   DOMAIN=opsdevco.de NETLIFY_SITE=your-site.netlify.app ./scripts/godaddy-dns.sh
-#   Or: npm run domain:godaddy (loads .env from project root if present)
-
+# Do not use this script for recurring DNS. There is no GoDaddy API dependency.
 set -euo pipefail
-
-# Load .env from project root if it exists
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-[[ -f "${SCRIPT_DIR}/../.env" ]] && set -a && source "${SCRIPT_DIR}/../.env" && set +a
-
-NETLIFY_LB_IP="75.2.60.5"
-DOMAIN="${DOMAIN:-opsdevco.de}"
-NETLIFY_SITE="${NETLIFY_SITE:-}"
-if [[ -z "${NETLIFY_SITE}" || "${NETLIFY_SITE}" == *"YOUR_SITE"* ]]; then
-  echo "Error: Set NETLIFY_SITE in .env to your Netlify site (e.g. opdevcode-website-abc123.netlify.app)"
-  echo "  Find it at: app.netlify.com -> Site overview -> Site information"
-  exit 1
-fi
-
-if [[ -z "${GODADDY_API_KEY:-}" || -z "${GODADDY_API_SECRET:-}" ]]; then
-  echo "Error: GODADDY_API_KEY and GODADDY_API_SECRET must be set."
-  echo "Get keys at: https://developer.godaddy.com/keys"
-  exit 1
-fi
-
-AUTH="sso-key ${GODADDY_API_KEY}:${GODADDY_API_SECRET}"
-BASE="https://api.godaddy.com/v1/domains/${DOMAIN}/records"
-
-echo "Setting DNS for ${DOMAIN} -> Netlify (${NETLIFY_SITE})..."
-
-# A record for root domain
-curl -sSf -X PUT "${BASE}/A/@" \
-  -H "Authorization: ${AUTH}" \
-  -H "Content-Type: application/json" \
-  -d "[{\"data\": \"${NETLIFY_LB_IP}\", \"ttl\": 600}]"
-echo "  A @ -> ${NETLIFY_LB_IP}"
-
-# CNAME for www
-curl -sSf -X PUT "${BASE}/CNAME/www" \
-  -H "Authorization: ${AUTH}" \
-  -H "Content-Type: application/json" \
-  -d "[{\"data\": \"${NETLIFY_SITE}\", \"ttl\": 3600}]"
-echo "  CNAME www -> ${NETLIFY_SITE}"
-
-# Product identity hosts (marketing). Do not CNAME repave — that is Route53 NS.
-for host in overpass toll dispatch; do
-  curl -sSf -X PUT "${BASE}/CNAME/${host}" \
-    -H "Authorization: ${AUTH}" \
-    -H "Content-Type: application/json" \
-    -d "[{\"data\": \"${NETLIFY_SITE}\", \"ttl\": 3600}]"
-  echo "  CNAME ${host} -> ${NETLIFY_SITE}"
-done
-
-echo "Done. DNS may take a few minutes to propagate."
+echo "Retired: opsdevco.de DNS is managed in Route53 (repave-aws-infra domains stack)." >&2
+echo "GoDaddy remains the registrar. Change nameservers only once, from Pulumi" >&2
+echo "output company_name_servers. See docs/PRODUCT-DOMAINS.md." >&2
+exit 1
