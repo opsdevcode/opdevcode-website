@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.1...opdevcode-website-v1.7.0) (2026-09-06)
+
+
+### Features
+
+* **site:** point Repave visitors at the product proof ([806a833](https://github.com/opsdevcode/opdevcode-website/commit/806a83302c8fe354e7912c79aa271121337216ec))
+
 ## [1.6.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.0...opdevcode-website-v1.6.1) (2026-09-06)
 
 
