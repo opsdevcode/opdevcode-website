@@ -10,6 +10,7 @@ export const PRODUCT_URLS = {
 } as const
 
 export const REPAVE_URL = PRODUCT_URLS.repave
+export const REPAVE_PROOF_URL = `${REPAVE_URL}/proof`
 export const REPAVE_WAITLIST_URL = `${REPAVE_URL}/waitlist`
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'

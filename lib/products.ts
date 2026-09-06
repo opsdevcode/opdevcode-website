@@ -1,4 +1,4 @@
-import { CALENDLY_URL, PRODUCT_URLS, waitlistUrl } from '@/lib/site'
+import { CALENDLY_URL, PRODUCT_URLS, REPAVE_PROOF_URL, waitlistUrl } from '@/lib/site'
 
 export type ProductSlug = 'repave' | 'overpass' | 'toll' | 'dispatch'
 
@@ -67,8 +67,8 @@ export const products: Product[] = [
     publicUrl: PRODUCT_URLS.repave,
     ctaLabel: 'Explore Repave',
     ctaHref: PRODUCT_URLS.repave,
-    secondaryHref: waitlistUrl('repave'),
-    secondaryLabel: 'Join waitlist',
+    secondaryHref: REPAVE_PROOF_URL,
+    secondaryLabel: 'See the governed lifecycle',
   },
   {
     slug: 'overpass',
