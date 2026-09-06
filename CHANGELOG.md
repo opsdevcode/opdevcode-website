@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.5.0...opdevcode-website-v1.6.0) (2026-09-06)
+
+
+### Features
+
+* establish OpsDevCode product identity hosts ([df80277](https://github.com/opsdevcode/opdevcode-website/commit/df80277bb391cdc3dda34c1cf72ae0d3095ce514))
+* establish OpsDevCode product subdomains ([fff58c1](https://github.com/opsdevcode/opdevcode-website/commit/fff58c19634d457691c510774a093f8bf2433dbf))
+
 ## [1.5.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.4.0...opdevcode-website-v1.5.0) (2026-09-04)
 
 
