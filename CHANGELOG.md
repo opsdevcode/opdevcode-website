@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.0...opdevcode-website-v1.6.1) (2026-09-06)
+
+
+### Bug Fixes
+
+* **site:** stop 200-rewriting product hosts on Netlify ([85361f6](https://github.com/opsdevcode/opdevcode-website/commit/85361f666a9d10fe160bb129233e3f7aa3381ece))
+* **site:** stop 200-rewriting product hosts on Netlify ([fe9e2fb](https://github.com/opsdevcode/opdevcode-website/commit/fe9e2fbe4fdf90b760d57d75b4817f76c14a40cb))
+
 ## [1.6.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.5.0...opdevcode-website-v1.6.0) (2026-09-06)
 
 
