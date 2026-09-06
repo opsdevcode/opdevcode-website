@@ -64,7 +64,7 @@ The site is hosted on [Netlify](https://www.netlify.com). To connect or redeploy
 3. Select `opsdevcode/opdevcode-website`.
 4. Netlify reads `netlify.toml` — build: `npm run build`, publish: `out/`.
 5. Deploy.
-6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management**, then set DNS at GoDaddy: A record `@` → `75.2.60.5`, CNAME `www` → `[site].netlify.app`. See [docs/CLI-SETUP.md](docs/CLI-SETUP.md) for details.
+6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management**. DNS is Route53/Pulumi, not GoDaddy record edits. See [docs/CLI-SETUP.md](docs/CLI-SETUP.md) and [docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md).
 
 Every push to the deploy branch triggers a new deploy. **PRs get preview deploys by default** — each PR gets a unique URL (`deploy-preview-<PR#>--<site>.netlify.app`). Always verify the preview before merging.
 
