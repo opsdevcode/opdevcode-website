@@ -16,16 +16,17 @@ alwaysApply: true
 
 ## No Direct Pushes to main
 
-- Direct pushes to `main` are blocked for non-owners
 - All changes to `main` must go through a PR
+- Direct Push Guard audits pushes to `main`: merged PRs pass; raw git pushes fail unless allowlisted
 - Optional: repos may define `ALLOWED_DIRECT_PUSH_USERS` for bypass exceptions
+- Do not treat the GitHub org name as an “owner” username; that check never matches on org repos
 
 ## Required Checks
 
 PRs must pass required status checks before merging. Common checks include:
 
 - **Version Check** – enforces Conventional Commits and version bump (when applicable)
-- **Direct Push Guard** – blocks direct pushes to main for non-owners
+- **Direct Push Guard** – post-merge audit on `main` (not a PR gate); must not fail GitHub PR merges
 
 Check names may vary by repo; refer to `CONTRIBUTING.md` or `.github/workflows/` for specifics.
 

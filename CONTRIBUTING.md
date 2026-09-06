@@ -18,16 +18,20 @@ changes safely and how CI enforces conventions in this repo.
 
 ## Pull requests
 
-All changes to `main` must go through a PR. Direct pushes are blocked for
-non‑owners.
+All changes to `main` must go through a PR.
 
-Required checks on `main`:
+Required checks on pull requests:
 
 - `Version Check`
-- `Direct Push Guard`
 
-Optional: define a repo variable `ALLOWED_DIRECT_PUSH_USERS` with a
-comma-separated list of GitHub usernames that may bypass PRs.
+`Direct Push Guard` runs on pushes to `main`. It **passes** when the commit
+belongs to a merged pull request (including GitHub UI merge/squash), and
+**fails** only for a true direct `git push` from an account that is not
+allowlisted. Optional: define repo variable `ALLOWED_DIRECT_PUSH_USERS` with a
+comma-separated list of GitHub usernames that may push to `main` without a PR.
+
+Note: comparing `github.actor` to the org name (`opsdevcode`) is not an owner
+bypass — use the allowlist or a merged PR.
 
 ## Conventional Commits
 
