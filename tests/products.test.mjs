@@ -41,6 +41,8 @@ describe('product portfolio', () => {
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/toll/)
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/dispatch/)
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/repave/)
+    assert.match(productsSrc, /See the governed lifecycle/)
+    assert.match(siteSrc, /REPAVE_PROOF_URL = `\$\{REPAVE_URL\}\/proof`/)
   })
 
   it('does not rewrite product identity hosts onto the company Netlify site', () => {
