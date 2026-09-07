@@ -1,17 +1,17 @@
 [build]
   publish = "out"
-  command = "npm run build"
+  command = "npm test && npm run build"
 
 [build.environment]
   NODE_VERSION = "22"
 
 [context.deploy-preview]
   publish = "out"
-  command = "npm run build"
+  command = "npm test && npm run build"
 
 [context.branch-deploy]
   publish = "out"
-  command = "npm run build"
+  command = "npm test && npm run build"
 
 # Social preview: short URLs → static asset (avoid long /assets/ paths in shares)
 [[redirects]]

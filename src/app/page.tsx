@@ -158,82 +158,91 @@ export default function HomePage() {
         {repave ? (
           <section className="section rail" aria-labelledby="start-heading">
             <p className="rail-label">Start here</p>
-            <h2 id="start-heading" className="section-title">
-              <span className="section-title-text">Start with Repave</span>
-            </h2>
-            <p className="lede">
-              Your platform team shouldn&apos;t lose responsibility for something the moment it is
-              created. Repave is the first product entering external validation — the practical
-              entry point into the system, not the company itself. Overpass, Toll, and Dispatch
-              remain part of the system; they are not equal conversion doors today.
-            </p>
-            <ul className="scan-list">
-              <li>Create from standards.</li>
-              <li>Continue observing after creation.</li>
-              <li>Identify drift.</li>
-              <li>Upgrade safely.</li>
-              <li>Keep evidence of what happened.</li>
-            </ul>
-            <div className="product-grid">
-              <ProductCard product={repave} featured />
-            </div>
-            <div className="cta" style={{ marginTop: 'var(--space-24)' }}>
-              <a className="btn primary" href={REPAVE_WAITLIST_URL}>
-                Try Repave with your repository
-              </a>
-              <a className="btn" href={REPAVE_URL}>
-                Explore Repave
-              </a>
+            <div>
+              <h2 id="start-heading" className="section-title">
+                <span className="section-title-text">Start with Repave</span>
+              </h2>
+              <p className="lede">
+                Your platform team shouldn&apos;t lose responsibility for something the moment it is
+                created. Repave is the first product entering external validation — the practical
+                entry point into the system, not the company itself. Overpass, Toll, and Dispatch
+                remain part of the system; they are not equal conversion doors today.
+              </p>
+              <ul className="scan-list">
+                <li>Create from standards.</li>
+                <li>Continue observing after creation.</li>
+                <li>Identify drift.</li>
+                <li>Upgrade safely.</li>
+                <li>Keep evidence of what happened.</li>
+              </ul>
+              <div className="product-grid">
+                <ProductCard product={repave} featured />
+              </div>
+              <div className="cta" style={{ marginTop: 'var(--space-24)' }}>
+                <a className="btn primary" href={REPAVE_WAITLIST_URL}>
+                  Try Repave with your repository
+                </a>
+                <a className="btn" href={REPAVE_URL}>
+                  Explore Repave
+                </a>
+              </div>
             </div>
           </section>
         ) : null}
 
         <section className="section rail" aria-labelledby="system-heading">
           <p className="rail-label">Products</p>
-          <h2 id="system-heading" className="section-title">
-            <span className="section-title-text">Four products, four questions</span>
-          </h2>
-          <p className="lede">
-            OpsDevCode is the company. These products do different jobs, at different maturity, in
-            one system.
-          </p>
-          <ul className="product-lines">
-            {products.map((product) => {
-              const copy = productQuestions[product.slug]
-              return (
-                <li key={product.slug}>
-                  <strong>{product.name}</strong> — {copy.question} {copy.role}{' '}
-                  {product.maturityLabel}.
-                </li>
-              )
-            })}
-          </ul>
+          <div>
+            <h2 id="system-heading" className="section-title">
+              <span className="section-title-text">Four products, four questions</span>
+            </h2>
+            <p className="lede">
+              OpsDevCode is the company. These products do different jobs, at different maturity, in
+              one system.
+            </p>
+            <ul className="product-lines">
+              {products.map((product) => {
+                const copy = productQuestions[product.slug]
+                return (
+                  <li key={product.slug}>
+                    <strong>{product.name}</strong> — {copy.question} {copy.role}{' '}
+                    {product.maturityLabel}.
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </section>
 
         <section className="section rail" aria-labelledby="connected-heading">
           <p className="rail-label">System</p>
-          <h2 id="connected-heading" className="section-title">
-            <span className="section-title-text">These aren&apos;t four unrelated tools</span>
-          </h2>
-          <p className="lede">
-            A repository Repave governs runs on infrastructure Overpass understands, incurs costs
-            Toll can explain, and can be operated through Dispatch. The value is in the connection.
-          </p>
+          <div>
+            <h2 id="connected-heading" className="section-title">
+              <span className="section-title-text">These aren&apos;t four unrelated tools</span>
+            </h2>
+            <p className="lede">
+              A repository Repave governs runs on infrastructure Overpass understands, incurs costs
+              Toll can explain, and can be operated through Dispatch. The value is in the
+              connection.
+            </p>
+          </div>
         </section>
 
         <section className="section rail" aria-labelledby="difference-heading">
           <p className="rail-label">Difference</p>
-          <h2 id="difference-heading" className="section-title">
-            <span className="section-title-text">
-              Most engineering tools help with a moment. OpsDevCode is being built around the
-              lifecycle.
-            </span>
-          </h2>
-          <p className="lede">
-            Developer portals can help create services. Infrastructure tools can show
-            infrastructure. FinOps tools can analyze spending. Assistants can answer questions. The
-            thesis is that those should not remain disconnected experiences.
-          </p>
+          <div>
+            <h2 id="difference-heading" className="section-title">
+              <span className="section-title-text">
+                Most engineering tools help with a moment. OpsDevCode is being built around the
+                lifecycle.
+              </span>
+            </h2>
+            <p className="lede">
+              Developer portals can help create services. Infrastructure tools can show
+              infrastructure. FinOps tools can analyze spending. Assistants can answer questions.
+              The thesis is that those should not remain disconnected experiences.
+            </p>
+          </div>
         </section>
 
         <section className="section rail" aria-labelledby="proof-heading">
