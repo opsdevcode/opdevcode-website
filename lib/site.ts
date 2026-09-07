@@ -9,6 +9,21 @@ export const PRODUCT_URLS = {
   dispatch: 'https://dispatch.opsdevco.de',
 } as const
 
+/** Dedicated product hosts that currently answer HTTP. Dead hosts must not be linked from the company site. */
+export const PRODUCT_HOST_LIVE: Record<keyof typeof PRODUCT_URLS, boolean> = {
+  repave: true,
+  overpass: false,
+  toll: false,
+  dispatch: false,
+}
+
+export function productSiteHref(slug: keyof typeof PRODUCT_URLS): string {
+  if (PRODUCT_HOST_LIVE[slug]) {
+    return PRODUCT_URLS[slug]
+  }
+  return `/products/${slug}`
+}
+
 export const REPAVE_URL = PRODUCT_URLS.repave
 export const REPAVE_PROOF_URL = `${REPAVE_URL}/proof`
 export const REPAVE_WAITLIST_URL = `${REPAVE_URL}/waitlist`

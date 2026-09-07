@@ -43,13 +43,18 @@ describe('product portfolio', () => {
     assert.match(productsSrc, /Generate\. Adopt\. Configure\. Upgrade\. Observe\. Remediate\./)
   })
 
-  it('routes public CTAs to product subdomains, not private GitHub', () => {
+  it('routes visitor site links to live hosts or company product pages', () => {
     assert.match(siteSrc, /repave: 'https:\/\/repave\.opsdevco\.de'/)
     assert.match(siteSrc, /overpass: 'https:\/\/overpass\.opsdevco\.de'/)
     assert.match(siteSrc, /toll: 'https:\/\/toll\.opsdevco\.de'/)
     assert.match(siteSrc, /dispatch: 'https:\/\/dispatch\.opsdevco\.de'/)
-    assert.match(productsSrc, /publicUrl: PRODUCT_URLS\.repave/)
-    assert.match(productsSrc, /publicUrl: PRODUCT_URLS\.overpass/)
+    assert.match(siteSrc, /overpass: false/)
+    assert.match(siteSrc, /toll: false/)
+    assert.match(siteSrc, /dispatch: false/)
+    assert.match(productsSrc, /publicUrl: productSiteHref\('repave'\)/)
+    assert.match(productsSrc, /publicUrl: productSiteHref\('overpass'\)/)
+    assert.match(productsSrc, /publicUrl: productSiteHref\('toll'\)/)
+    assert.match(productsSrc, /publicUrl: productSiteHref\('dispatch'\)/)
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/overpass/)
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/toll/)
     assert.doesNotMatch(productsSrc, /github.com\/opsdevcode\/dispatch/)

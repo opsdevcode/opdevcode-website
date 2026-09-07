@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Product } from '@/lib/products'
 import ProductMotif from '@/components/ProductMotif'
 import MaturityMeta from '@/components/MaturityMeta'
+import ProductSiteLink from '@/components/ProductSiteLink'
 
 export default function ProductCard({
   product,
@@ -26,7 +27,7 @@ export default function ProductCard({
       <p className="product-card-summary">{product.summary}</p>
       <p className="cta-row">
         <Link href={product.href}>{product.name} →</Link>
-        <a href={product.publicUrl}>{product.name} site →</a>
+        <ProductSiteLink href={product.publicUrl}>{product.name} site →</ProductSiteLink>
       </p>
     </article>
   )
