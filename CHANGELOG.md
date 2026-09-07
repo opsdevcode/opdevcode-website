@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.7.0...opdevcode-website-v1.8.0) (2026-09-07)
+
+
+### Features
+
+* **site:** lead homepage with problem, outcome, and lifecycle ([b40d801](https://github.com/opsdevcode/opdevcode-website/commit/b40d8018d18957c0d2f5ac4b2bcaaa32b396e014))
+* **site:** lead homepage with problem, outcome, and lifecycle ([93c8bf6](https://github.com/opsdevcode/opdevcode-website/commit/93c8bf689d6e596c75c3d66c27efa219aac6694a))
+
 ## [1.7.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.1...opdevcode-website-v1.7.0) (2026-09-06)
 
 
