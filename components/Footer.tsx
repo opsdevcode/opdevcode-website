@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { BrandMark } from '@/components/BrandMark'
-import { CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS } from '@/lib/site'
+import { CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS, productSiteHref } from '@/lib/site'
+import ProductSiteLink from '@/components/ProductSiteLink'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -16,10 +17,10 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer-label">Products</p>
-          <a href={PRODUCT_URLS.repave}>Repave</a>
-          <a href={PRODUCT_URLS.overpass}>Overpass</a>
-          <a href={PRODUCT_URLS.toll}>Toll</a>
-          <a href={PRODUCT_URLS.dispatch}>Dispatch</a>
+          <ProductSiteLink href={productSiteHref('repave')}>Repave</ProductSiteLink>
+          <ProductSiteLink href={productSiteHref('overpass')}>Overpass</ProductSiteLink>
+          <ProductSiteLink href={productSiteHref('toll')}>Toll</ProductSiteLink>
+          <ProductSiteLink href={productSiteHref('dispatch')}>Dispatch</ProductSiteLink>
         </div>
         <div>
           <p className="footer-label">Company</p>

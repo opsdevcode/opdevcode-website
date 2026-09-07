@@ -21,9 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}${path}`,
     lastModified,
   }))
-  const productHosts = products.map((product) => ({
-    url: `${product.publicUrl}/`,
-    lastModified,
-  }))
+  const productHosts = products
+    .filter((product) => product.publicUrl.startsWith('http'))
+    .map((product) => ({
+      url: `${product.publicUrl}/`,
+      lastModified,
+    }))
   return [...companyPages, ...productHosts]
 }

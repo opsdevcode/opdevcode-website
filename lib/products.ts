@@ -1,4 +1,10 @@
-import { CALENDLY_URL, PRODUCT_URLS, REPAVE_PROOF_URL, waitlistUrl } from '@/lib/site'
+import {
+  CALENDLY_URL,
+  PRODUCT_URLS,
+  REPAVE_PROOF_URL,
+  productSiteHref,
+  waitlistUrl,
+} from '@/lib/site'
 
 export type ProductSlug = 'repave' | 'overpass' | 'toll' | 'dispatch'
 
@@ -64,7 +70,7 @@ export const products: Product[] = [
     maturityNote:
       'Implemented: generate, adopt, configure, upgrade, observe, and remediate. Hosted generate is waitlist-first. Invoice is the current close. There is no card form on the waitlist.',
     href: '/products/repave',
-    publicUrl: PRODUCT_URLS.repave,
+    publicUrl: productSiteHref('repave'),
     ctaLabel: 'Explore Repave',
     ctaHref: PRODUCT_URLS.repave,
     secondaryHref: REPAVE_PROOF_URL,
@@ -101,7 +107,7 @@ export const products: Product[] = [
     maturityNote:
       'Identity and engine pieces exist. The hosted state store is off by default. Join the waitlist or talk to OpsDevCode for early access. Do not treat Overpass as generally available.',
     href: '/products/overpass',
-    publicUrl: PRODUCT_URLS.overpass,
+    publicUrl: productSiteHref('overpass'),
     ctaLabel: 'Join waitlist',
     ctaHref: waitlistUrl('overpass'),
     secondaryHref: CALENDLY_URL,
@@ -139,7 +145,7 @@ export const products: Product[] = [
     maturityNote:
       'The economics boundary is defined and capture exists for early-access enablement. Toll is not a standalone billing platform and is not generally available.',
     href: '/products/toll',
-    publicUrl: PRODUCT_URLS.toll,
+    publicUrl: productSiteHref('toll'),
     ctaLabel: 'Join waitlist',
     ctaHref: waitlistUrl('toll'),
     secondaryHref: CALENDLY_URL,
@@ -177,7 +183,7 @@ export const products: Product[] = [
     maturityNote:
       'The architecture and trust model are defined. Do not read current Dispatch as general autonomy or as a generally available agent product.',
     href: '/products/dispatch',
-    publicUrl: PRODUCT_URLS.dispatch,
+    publicUrl: productSiteHref('dispatch'),
     ctaLabel: 'Join waitlist',
     ctaHref: waitlistUrl('dispatch'),
     secondaryHref: CALENDLY_URL,

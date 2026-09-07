@@ -4,6 +4,7 @@ import PageFrame from '@/components/PageFrame'
 import MaturityMeta from '@/components/MaturityMeta'
 import { products } from '@/lib/products'
 import { pageMeta } from '@/lib/seo'
+import ProductSiteLink from '@/components/ProductSiteLink'
 
 export const metadata: Metadata = pageMeta({
   title: 'Products',
@@ -62,7 +63,7 @@ export default function ProductsPage() {
                 <th scope="row">Next</th>
                 {products.map((p) => (
                   <td key={p.slug}>
-                    <a href={p.publicUrl}>{p.name} site</a>
+                    <ProductSiteLink href={p.publicUrl}>{p.name} site</ProductSiteLink>
                   </td>
                 ))}
               </tr>
@@ -93,7 +94,7 @@ export default function ProductsPage() {
                 <div>
                   <dt>Next</dt>
                   <dd>
-                    <a href={p.publicUrl}>{p.name} site</a>
+                    <ProductSiteLink href={p.publicUrl}>{p.name} site</ProductSiteLink>
                   </dd>
                 </div>
               </dl>
