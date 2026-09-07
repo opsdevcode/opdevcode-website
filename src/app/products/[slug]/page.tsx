@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import PageFrame from '@/components/PageFrame'
-import ProductMotif from '@/components/ProductMotif'
+import ProductSignature from '@/components/ProductSignature'
 import MaturityMeta from '@/components/MaturityMeta'
 import { pageMeta } from '@/lib/seo'
 import { getProduct, productSlugs } from '@/lib/products'
@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: Props) {
             <h1 className="page-title">{product.name}</h1>
             <p className="product-job">{product.job}</p>
           </div>
-          <ProductMotif slug={product.slug} />
+          <ProductSignature slug={product.slug} />
           <p className="cta-row">
             <a
               className="btn primary"
