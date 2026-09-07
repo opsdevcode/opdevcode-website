@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
-import { COMPANY_BANNER_SRC, SITE_DESCRIPTION, SITE_SHARE_TITLE, SITE_URL } from '@/lib/site'
+import {
+  COMPANY_OG_HEIGHT,
+  COMPANY_OG_SRC,
+  COMPANY_OG_WIDTH,
+  SITE_DESCRIPTION,
+  SITE_SHARE_TITLE,
+  SITE_URL,
+} from '@/lib/site'
 
-const OG_IMAGE = COMPANY_BANNER_SRC
+const OG_IMAGE = COMPANY_OG_SRC
 const OG_ALT = SITE_SHARE_TITLE
 
 export function pageMeta({
@@ -28,7 +35,7 @@ export function pageMeta({
       description,
       url: canonical,
       type: 'website',
-      images: [{ url: OG_IMAGE, width: 1280, height: 720, alt: OG_ALT }],
+      images: [{ url: OG_IMAGE, width: COMPANY_OG_WIDTH, height: COMPANY_OG_HEIGHT, alt: OG_ALT }],
     },
     twitter: {
       card: 'summary_large_image',

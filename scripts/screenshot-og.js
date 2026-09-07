@@ -1,23 +1,35 @@
 #!/usr/bin/env node
-const { chromium } = require('playwright')
-const path = require('path')
+/**
+ * Derive the 1200×630 share card from the org-profile banner.
+ * The banner is the brand visual; do not invent a second OG layout.
+ */
+const { execFileSync } = require('child_process')
 const fs = require('fs')
+const os = require('os')
+const path = require('path')
 
-;(async () => {
-  const ogHtmlPath = path.join(__dirname, 'og-image.html')
-  const ogOutPath = path.join(__dirname, '..', 'public', 'assets', 'og-image.png')
-  const previewV5Path = path.join(__dirname, '..', 'public', 'assets', 'preview-v5.png')
-  const html = fs.readFileSync(ogHtmlPath, 'utf8')
+const root = path.join(__dirname, '..')
+const banner = path.join(root, 'public', 'assets', 'opsdevco-banner.png')
+const ogOut = path.join(root, 'public', 'assets', 'og-image.png')
+const previewOut = path.join(root, 'public', 'assets', 'preview-v5.png')
 
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
-  await page.setViewportSize({ width: 1200, height: 630 })
-  await page.setContent(html, { waitUntil: 'networkidle' })
-  await page.evaluate(() => document.fonts.ready)
-  await page.screenshot({ path: ogOutPath })
-  fs.copyFileSync(ogOutPath, previewV5Path)
+if (!fs.existsSync(banner)) {
+  throw new Error(`missing brand banner: ${banner}`)
+}
 
-  await browser.close()
-  console.log('Saved:', ogOutPath)
-  console.log('Saved:', previewV5Path)
-})()
+const work = fs.mkdtempSync(path.join(os.tmpdir(), 'opsdevco-og-'))
+const scaled = path.join(work, 'scaled.jpg')
+const cropped = path.join(work, 'og.jpg')
+
+execFileSync('sips', ['-z', '675', '1200', banner, '--out', scaled], { stdio: 'inherit' })
+execFileSync(
+  'sips',
+  ['--cropOffset', '0', '0', '--cropToHeightWidth', '630', '1200', scaled, '--out', cropped],
+  { stdio: 'inherit' }
+)
+execFileSync('sips', ['-s', 'format', 'png', cropped, '--out', ogOut], { stdio: 'inherit' })
+fs.copyFileSync(ogOut, previewOut)
+fs.rmSync(work, { recursive: true, force: true })
+
+console.log('Saved:', ogOut)
+console.log('Saved:', previewOut)

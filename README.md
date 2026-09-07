@@ -56,7 +56,7 @@ Redirects: `/tools` → `/products`, `/agentic` → `/products/dispatch`.
 | `npm start`           | Serve the Next production server (not used by Netlify) |
 | `npm run check`       | Lint, format, typecheck, tests                         |
 | `npm test`            | Node test runner against `lib/` contracts              |
-| `npm run og:generate` | Generate OG image (requires Playwright)                |
+| `npm run og:generate` | Crop the org banner to the 1200×630 share card (`sips`) |
 
 ## Deployment
 

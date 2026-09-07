@@ -5,8 +5,10 @@ import Reveal from '@/components/Reveal'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
-  COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
+  COMPANY_OG_HEIGHT,
+  COMPANY_OG_SRC,
+  COMPANY_OG_WIDTH,
   CONTACT_EMAIL,
   REPAVE_URL,
   REPAVE_WAITLIST_URL,
@@ -17,7 +19,7 @@ import {
 } from '@/lib/site'
 
 const shareTitle = SITE_SHARE_TITLE
-const socialPreviewImage = COMPANY_BANNER_SRC
+const socialPreviewImage = COMPANY_OG_SRC
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
@@ -31,8 +33,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialPreviewImage,
-        width: 1280,
-        height: 720,
+        width: COMPANY_OG_WIDTH,
+        height: COMPANY_OG_HEIGHT,
         alt: shareTitle,
       },
     ],

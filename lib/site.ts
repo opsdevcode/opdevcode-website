@@ -20,6 +20,10 @@ export const SITE_TAGLINE = 'Governed golden paths for platform engineering.'
 export const SITE_SHARE_TITLE = `OpsDevCode — ${SITE_TAGLINE.replace(/\.$/, '')}`
 export const COMPANY_LOGO_SRC = '/assets/opsdevco-logo.png'
 export const COMPANY_BANNER_SRC = '/assets/opsdevco-banner.png'
+/** 1200×630 crop of COMPANY_BANNER_SRC — the only share/unfurl image. */
+export const COMPANY_OG_SRC = '/assets/og-image.png'
+export const COMPANY_OG_WIDTH = 1200
+export const COMPANY_OG_HEIGHT = 630
 
 export const SITE_DESCRIPTION =
   'OpsDevCode builds engineering infrastructure for a world of humans, automation, and agents: governed software delivery, infrastructure state, engineering economics, and a governed intelligent experience.'

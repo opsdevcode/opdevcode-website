@@ -2,8 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import {
-  COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
+  COMPANY_OG_HEIGHT,
+  COMPANY_OG_SRC,
+  COMPANY_OG_WIDTH,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
   SITE_TAGLINE,
@@ -30,9 +32,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: COMPANY_BANNER_SRC,
-        width: 1280,
-        height: 720,
+        url: COMPANY_OG_SRC,
+        width: COMPANY_OG_WIDTH,
+        height: COMPANY_OG_HEIGHT,
         alt: SITE_SHARE_TITLE,
       },
     ],
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_SHARE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [COMPANY_BANNER_SRC],
+    images: [COMPANY_OG_SRC],
   },
   icons: { icon: COMPANY_LOGO_SRC },
 }
