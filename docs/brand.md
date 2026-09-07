@@ -8,7 +8,7 @@ does not own marketing copy or infrastructure.
 
 **The governed section.**
 
-OpsDevCode is drawn as an engineering *section cut* through a living system:
+OpsDevCode is drawn as an engineering _section cut_ through a living system:
 open joints, planes, and witness marks. The four products are different
 **readings of the same cut** (delivery, state, economics, interaction)—not four
 mascots and not a mandatory pipeline.
@@ -17,19 +17,19 @@ That idea must remain identifiable with the logos removed.
 
 ## Existing identity (what we keep / drop)
 
-| Asset | Verdict |
-| --- | --- |
-| GitHub org banner as site lockup | Drop. Share art is not a logo. |
-| PNG “O / terminal” marks | Drop. Weak family DNA, huge rasters, not a system. |
-| Stripe-like Inter + `#635bff` + navy | Drop. Generic developer-tool kit. |
-| Product accents amber / teal / blue / violet | Keep as *hue families*; retune for one paper/ink system. |
-| Rail layout on the company site | Keep. It already reads as a drawing annotation. |
-| Repave v3 kit (`repave/docs/brand`, ADR 009) | **Product equity to evolve, not ignore.** Keep amber-as-scarce-brand (not status). Drop isometric “platform-layer” mark and tagline *The intelligent platform layer* as **family** authority — ADR 020 + this grammar win. Inter-on-navy is Repave-local history, not the company system. |
-| Overpass `web_identity` teal + cream | Keep teal as the Overpass hue family; restyle geometry to section DNA. |
-| Toll / Dispatch public identity pages | Missing locally; do not invent fake UI. Apply grammar when those hosts exist. |
+| Asset                                        | Verdict                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub org banner as site lockup             | Drop. Share art is not a logo.                                                                                                                                                                                                                                                            |
+| PNG “O / terminal” marks                     | Deleted from `public/assets/`. Not in git.                                                                                                                                                                                                                                                |
+| Stripe-like Inter + `#635bff` + navy         | Drop. Generic developer-tool kit.                                                                                                                                                                                                                                                         |
+| Product accents amber / teal / blue / violet | Keep as _hue families_; retune for one paper/ink system.                                                                                                                                                                                                                                  |
+| Rail layout on the company site              | Keep. It already reads as a drawing annotation.                                                                                                                                                                                                                                           |
+| Repave v3 kit (`repave/docs/brand`, ADR 009) | **Product equity to evolve, not ignore.** Keep amber-as-scarce-brand (not status). Drop isometric “platform-layer” mark and tagline _The intelligent platform layer_ as **family** authority — ADR 020 + this grammar win. Inter-on-navy is Repave-local history, not the company system. |
+| Overpass `web_identity` teal + cream         | Keep teal as the Overpass hue family; restyle geometry to section DNA.                                                                                                                                                                                                                    |
+| Toll / Dispatch public identity pages        | Missing locally; do not invent fake UI. Apply grammar when those hosts exist.                                                                                                                                                                                                             |
 
 The company mark is **not** another product icon. Four open L-corners form an
-empty aperture: the family. Products draw *inside* that same 32-unit stroke
+empty aperture: the family. Products draw _inside_ that same 32-unit stroke
 grammar. See `docs/logo.md` on the company site: one drawing for GitHub, the
 favicon, the header lockup, and share cards.
 
@@ -38,15 +38,16 @@ favicon, the header lockup, and share cards.
 Shared DNA: 32-unit grid, 1.5 stroke, square caps, miter joins, no fill, open
 joints. Color is the only product-specific pigment; geometry carries meaning.
 
-| Mark | Concept |
-| --- | --- |
-| OpsDevCode | Four open corners. Empty center. The system. |
-| Repave | Offset passes of a path (lifecycle / restore). |
-| Overpass | Two planes and spanning members (topology). |
-| Toll | Measured gap (attribution / exchange). |
-| Dispatch | Intent through a gate into action. |
+| Mark       | Concept                                        |
+| ---------- | ---------------------------------------------- |
+| OpsDevCode | Four open corners. Empty center. The system.   |
+| Repave     | Offset passes of a path (lifecycle / restore). |
+| Overpass   | Two planes and spanning members (topology).    |
+| Toll       | Measured gap (attribution / exchange).         |
+| Dispatch   | Intent through a gate into action.             |
 
-Files: `svg/mark-*.svg`, `*-mono.svg`, `lockup-*.svg`, `favicon-opsdevcode.svg`.
+Files: `svg/mark-*.svg`, `*-mono.svg`, `lockup-*.svg`, `favicon-opsdevcode.svg`,
+`github-avatar-opsdevcode.png`.
 
 **Clearspace:** ≥ 6 units around the mark. **Minimum:** 16 CSS px for the mark.
 
@@ -74,11 +75,11 @@ See `tokens.json`.
 
 ## Typography
 
-| Role | Face | Why |
-| --- | --- | --- |
-| Display | IBM Plex Serif | Instrument / drawing caption, not Inter hero |
-| Body | IBM Plex Sans | Technical, licensed (OFL) |
-| Data / code | IBM Plex Mono | Tabular evidence |
+| Role        | Face           | Why                                          |
+| ----------- | -------------- | -------------------------------------------- |
+| Display     | IBM Plex Serif | Instrument / drawing caption, not Inter hero |
+| Body        | IBM Plex Sans  | Technical, licensed (OFL)                    |
+| Data / code | IBM Plex Mono  | Tabular evidence                             |
 
 Do not use Inter as the brand face.
 
