@@ -14,7 +14,7 @@ export default function Reveal() {
     // Auto-target: home sections + their grids/CTA, so we don't need JSX churn.
     const auto = Array.from(
       document.querySelectorAll<HTMLElement>(
-        '.wrap.home > section.section, .wrap.home .hero-inner > *, .wrap.home .grid, .wrap.home .engagement-steps, .wrap.home .before-after-split'
+        '.wrap.home > section, .wrap.home .hero-grid, .wrap.home .product-grid, .wrap.home .section--split, .wrap.home .close-row'
       )
     )
     const seen = new Set<HTMLElement>()

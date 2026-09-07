@@ -146,18 +146,28 @@ header {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
-.brand-logo {
+img.brand-logo {
   width: 44px;
   height: 44px;
+  max-width: none;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 10px;
   background: #0b1220;
 }
+img.brand-logo--lockup {
+  width: min(220px, 52vw);
+  height: 52px;
+  object-position: 6% 12%;
+}
 @media (min-width: 768px) {
-  .brand-logo {
+  img.brand-logo {
     width: 48px;
     height: 48px;
+  }
+  img.brand-logo--lockup {
+    width: 240px;
+    height: 56px;
   }
 }
 .brand strong {
@@ -1120,12 +1130,18 @@ footer a:focus-visible {
   align-items: center;
   gap: 12px;
 }
-.footer-logo {
+img.footer-logo {
   width: 40px;
   height: 40px;
+  max-width: none;
   object-fit: cover;
   border-radius: 10px;
   background: #0b1220;
+}
+img.footer-logo--lockup {
+  width: 160px;
+  height: 44px;
+  object-position: 6% 12%;
 }
 @media (min-width: 768px) {
   .footer-logo {
@@ -1645,12 +1661,6 @@ footer {
   font-size: var(--text-sm);
   margin-bottom: 6px;
 }
-.footer-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-}
-
 @media (max-width: 640px) {
   :root {
     --section-y: 40px;

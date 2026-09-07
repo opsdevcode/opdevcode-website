@@ -81,7 +81,7 @@ describe('homepage rail layout', () => {
 
   it('gives every homepage rail section a label plus one content child', () => {
     const sections = extractRailSections(home)
-    assert.ok(sections.length >= 6, `expected several rail sections, got ${sections.length}`)
+    assert.ok(sections.length >= 5, `expected several rail sections, got ${sections.length}`)
     for (const inner of sections) {
       const children = countTopLevelTags(inner)
       assert.equal(

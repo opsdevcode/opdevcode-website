@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { COMPANY_LOGO_SRC, CONVERGENCE_URL } from '@/lib/site'
+import { COMPANY_BANNER_SRC, CONVERGENCE_URL } from '@/lib/site'
 
 const navItems = [
   { href: '/products', label: 'Products', match: '/products' },
@@ -45,15 +45,15 @@ export default function Header() {
             onClick={() => setOpen(false)}
           >
             <Image
-              className="brand-logo"
-              src={COMPANY_LOGO_SRC}
+              className="brand-logo brand-logo--lockup"
+              src={COMPANY_BANNER_SRC}
               alt=""
-              width={96}
-              height={96}
+              width={320}
+              height={90}
               priority
               aria-hidden
             />
-            <strong className="brand-wordmark">OpsDevCode</strong>
+            <strong className="brand-wordmark visually-hidden">OpsDevCode</strong>
           </Link>
           <button
             type="button"
