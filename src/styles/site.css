@@ -1,4 +1,4 @@
-/* OpsDevCode — Stripe-inspired, light, refined */
+/* OpsDevCode — governed section (paper / ink) */
 
 * {
   box-sizing: border-box;
@@ -146,34 +146,18 @@ header {
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
-img.brand-logo {
-  width: 44px;
-  height: 44px;
-  max-width: none;
-  object-fit: cover;
+.brand-mark,
+.footer-mark {
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  border-radius: 10px;
-  background: #0b1220;
+  color: var(--color-text);
 }
-img.brand-logo--lockup {
-  width: min(220px, 52vw);
-  height: 52px;
-  object-position: 6% 12%;
-}
-@media (min-width: 768px) {
-  img.brand-logo {
-    width: 48px;
-    height: 48px;
-  }
-  img.brand-logo--lockup {
-    width: 240px;
-    height: 56px;
-  }
-}
-.brand strong {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: var(--text-xl);
+.brand strong,
+.brand-wordmark {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.05rem;
   letter-spacing: -0.03em;
   color: var(--color-text);
 }
@@ -264,9 +248,7 @@ nav a:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 12px 24px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: var(--text-sm);
+  font-family: var(--font-body);
   letter-spacing: -0.01em;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -305,54 +287,41 @@ nav a:focus-visible {
 .btn.primary {
   border: none;
   background: var(--color-primary);
-  color: #ffffff;
-  font-weight: 700;
+  color: var(--color-bg);
+  font-weight: 500;
   padding: 13px 28px;
   letter-spacing: -0.02em;
-  box-shadow:
-    0 1px 0 color-mix(in srgb, #ffffff 18%, transparent),
-    0 2px 10px rgba(55, 48, 163, 0.38);
-  transition:
-    background-color var(--duration-ui) var(--ease-ui),
-    box-shadow var(--duration-ui) var(--ease-ui),
-    transform var(--duration-ui) var(--ease-ui),
-    filter var(--duration-fast) var(--ease-out-soft);
+  box-shadow: none;
 }
 .btn.primary:hover {
   background: var(--color-primary-hover);
-  box-shadow:
-    0 1px 0 color-mix(in srgb, #ffffff 22%, transparent),
-    0 5px 20px rgba(55, 48, 163, 0.42);
-  transform: translateY(-1px);
-  filter: brightness(1.04);
+  box-shadow: none;
+  transform: none;
+  filter: none;
 }
 .btn.primary:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(55, 48, 163, 0.35);
+  transform: none;
+  box-shadow: none;
   filter: none;
-  transition-duration: 0.12s;
 }
 .btn.primary:focus-visible {
-  outline: 2px solid color-mix(in srgb, #ffffff 55%, var(--color-primary));
+  outline: 2px solid var(--color-text);
   outline-offset: 2px;
 }
 
 /* === TYPOGRAPHY === */
 h1 {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2.625rem, 5.35vw, 4.125rem);
-  line-height: 1.06;
-  letter-spacing: -0.045em;
+  font-weight: 400;
+  font-size: clamp(2.25rem, 4.8vw, 3.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
   color: var(--color-text);
   margin: 0 0 var(--space-24);
   max-width: min(100%, var(--prose-measure));
 }
 h1 .highlight {
-  background: linear-gradient(135deg, var(--color-primary), #0073e6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-text);
 }
 h2 {
   font-family: var(--font-display);
@@ -383,10 +352,10 @@ h3 {
 }
 .hero h1 {
   margin: 0 0 var(--space-36);
-  font-size: clamp(2.75rem, 5.65vw, 4.375rem);
-  font-weight: 800;
-  letter-spacing: -0.048em;
-  line-height: 1.04;
+  font-size: clamp(2.35rem, 4.8vw, 3.65rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 .hero h1::after {
   content: '';
@@ -394,12 +363,7 @@ h3 {
   width: min(3.75rem, 22vw);
   height: 1px;
   margin-top: var(--space-24);
-  border-radius: 1px;
-  background: linear-gradient(
-    90deg,
-    color-mix(in srgb, var(--color-primary) 32%, var(--color-border)),
-    color-mix(in srgb, var(--color-border) 55%, transparent)
-  );
+  background: var(--color-border);
 }
 .hero .sub {
   margin: 0 0 var(--space-16);
@@ -1130,24 +1094,11 @@ footer a:focus-visible {
   align-items: center;
   gap: 12px;
 }
-img.footer-logo {
-  width: 40px;
-  height: 40px;
-  max-width: none;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #0b1220;
-}
-img.footer-logo--lockup {
-  width: 160px;
-  height: 44px;
-  object-position: 6% 12%;
-}
-@media (min-width: 768px) {
-  .footer-logo {
-    width: 48px;
-    height: 48px;
-  }
+.footer-mark {
+  width: 28px;
+  height: 28px;
+  color: var(--color-text);
+  flex-shrink: 0;
 }
 
 /* === GRID LAYOUTS === */
@@ -1391,51 +1342,21 @@ code.inline {
   border-radius: 0;
 }
 
-/* --- Refined primary button (subtle gradient + sheen) --------- */
+/* --- Primary button: ink, not a SaaS sheen --------- */
 .btn.primary {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-primary) 92%, white) 0%,
-    var(--color-primary) 55%,
-    color-mix(in srgb, var(--color-primary) 88%, black) 100%
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.22),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.08),
-    0 1px 0 rgba(99, 91, 255, 0.18),
-    0 6px 20px -6px rgba(55, 48, 163, 0.55);
+  background: var(--color-primary);
+  color: var(--color-bg);
+  box-shadow: none;
 }
 .btn.primary::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.28) 50%,
-    transparent 65%
-  );
-  transform: translateX(-120%);
-  transition: transform 700ms var(--ease-ui);
-  pointer-events: none;
-}
-.btn.primary:hover::after {
-  transform: translateX(120%);
+  content: none;
 }
 .btn.primary:hover {
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--color-primary-hover) 95%, white) 0%,
-    var(--color-primary-hover) 55%,
-    color-mix(in srgb, var(--color-primary-hover) 92%, black) 100%
-  );
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.28),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
-    0 2px 0 rgba(99, 91, 255, 0.22),
-    0 14px 30px -8px rgba(55, 48, 163, 0.6);
+  background: var(--color-primary-hover);
+  color: var(--color-bg);
+  box-shadow: none;
 }
 
 /* --- Glass header + subtle gradient hover for tiles --- */

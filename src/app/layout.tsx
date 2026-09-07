@@ -1,19 +1,33 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import type { ReactNode } from 'react'
+import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import './globals.css'
 import {
-  COMPANY_BANNER_SRC,
-  COMPANY_LOGO_SRC,
+  COMPANY_MARK_SRC,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
   SITE_TAGLINE,
   SITE_URL,
 } from '@/lib/site'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const plexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-sans',
+})
+const plexSerif = IBM_Plex_Serif({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-serif',
+})
+const plexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-ibm-mono',
+})
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#F3EFE6',
 }
 
 export const metadata: Metadata = {
@@ -30,9 +44,9 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: COMPANY_BANNER_SRC,
-        width: 1280,
-        height: 720,
+        url: '/brand/og-opsdevcode.svg',
+        width: 1200,
+        height: 630,
         alt: SITE_SHARE_TITLE,
       },
     ],
@@ -41,14 +55,18 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_SHARE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [COMPANY_BANNER_SRC],
+    images: ['/brand/og-opsdevcode.svg'],
   },
-  icons: { icon: COMPANY_LOGO_SRC },
+  icons: { icon: COMPANY_MARK_SRC },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${plexSans.variable} ${plexSerif.variable} ${plexMono.variable}`}
+      suppressHydrationWarning
+    >
       <body>{children}</body>
     </html>
   )

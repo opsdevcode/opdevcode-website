@@ -1,50 +1,80 @@
-import Link from 'next/link'
-
 export default function SystemMap({ compact }: { compact?: boolean }) {
   return (
     <figure className={compact ? 'sysmap sysmap--compact' : 'sysmap'}>
       <figcaption className="visually-hidden">
-        Humans, automation, and agents express engineering intent into OpsDevCode. Repave governs
-        software delivery, Overpass understands infrastructure state, and Toll connects engineering
-        decisions to economics. Dispatch is the governed intelligent experience across those
-        products. It does not own their stores. Convergence is an independent body of knowledge that
-        informs the design; it is not in the runtime path.
+        OpsDevCode is a governed section through an engineering system. Repave reads delivery,
+        Overpass reads state, Toll reads economics, and Dispatch reads interaction. The products are
+        planes on one cut, not a required sequence. Convergence informs design and is not in the
+        runtime path.
       </figcaption>
+      <svg className="sysmap-section" viewBox="0 0 640 400" aria-hidden="true">
+        <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.28">
+          <path d="M40 40 H600 V360 H40 Z" />
+        </g>
+        <g
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.75"
+          strokeLinecap="square"
+          strokeLinejoin="miter"
+        >
+          <path d="M80 120 V80 H160" />
+          <path d="M480 80 H560 V120" />
+          <path d="M560 280 V320 H480" />
+          <path d="M160 320 H80 V280" />
+        </g>
+        <text className="sysmap-svg-kicker" x="320" y="54" textAnchor="middle">
+          OPSDEVCODE
+        </text>
+        <text className="sysmap-svg-note" x="320" y="72" textAnchor="middle">
+          governed section · not a pipeline
+        </text>
+        <g className="sysmap-plane sysmap-plane--repave">
+          <path d="M200 148 H280" />
+          <path d="M200 168 H250" />
+          <path d="M230 188 H280" />
+          <path d="M200 148 V168" />
+          <path d="M280 168 V188" />
+        </g>
+        <text className="sysmap-label sysmap-label--repave" x="200" y="136">
+          Repave · delivery
+        </text>
+        <g className="sysmap-plane sysmap-plane--overpass">
+          <path d="M360 150 H460" />
+          <path d="M360 178 H460" />
+          <path d="M385 150 V178" />
+          <path d="M435 150 V178" />
+        </g>
+        <text className="sysmap-label sysmap-label--overpass" x="360" y="138">
+          Overpass · state
+        </text>
+        <g className="sysmap-plane sysmap-plane--toll">
+          <path d="M200 250 H240" />
+          <path d="M268 250 H308" />
+          <path d="M240 236 V264" />
+          <path d="M268 236 V264" />
+        </g>
+        <text className="sysmap-label sysmap-label--toll" x="200" y="224">
+          Toll · economics
+        </text>
+        <g className="sysmap-plane sysmap-plane--dispatch">
+          <path d="M360 248 H390" />
+          <path d="M390 232 V268" />
+          <path d="M430 232 V268" />
+          <path d="M410 250 H470" />
+          <path className="sysmap-intent" d="M458 242 L470 250 L458 258" />
+        </g>
+        <text className="sysmap-label sysmap-label--dispatch" x="360" y="222">
+          Dispatch · interaction
+        </text>
+        <text className="sysmap-svg-foot" x="320" y="348" textAnchor="middle">
+          planes meet at the company aperture
+        </text>
+      </svg>
       <p className="sysmap-aside">
         Design informed by <span>Convergence</span>
         <small>Independent · not in the runtime path</small>
       </p>
-      <div className="sysmap-actors" aria-hidden="true">
-        <span>Human</span>
-        <span>Automation</span>
-        <span>Agent</span>
-      </div>
-      <svg className="sysmap-funnel" viewBox="0 0 300 28" aria-hidden="true">
-        <path d="M50 2 L150 26 M150 2 L150 26 M250 2 L150 26" />
-      </svg>
-      <p className="sysmap-intent">Intent</p>
-      <div className="sysmap-join sysmap-join--short" aria-hidden="true" />
-      <div className="sysmap-frame">
-        <p className="sysmap-company">OpsDevCode</p>
-        <div className="sysmap-domains">
-          <Link href="/products/repave">
-            <strong>Repave</strong>
-            <span>Delivery</span>
-          </Link>
-          <Link href="/products/overpass">
-            <strong>Overpass</strong>
-            <span>State</span>
-          </Link>
-          <Link href="/products/toll">
-            <strong>Toll</strong>
-            <span>Economics</span>
-          </Link>
-        </div>
-        <Link href="/products/dispatch" className="sysmap-experience">
-          <span>Governed experience</span>
-          <strong>Dispatch</strong>
-        </Link>
-      </div>
     </figure>
   )
 }

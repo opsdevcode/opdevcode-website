@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialPreviewImage,
-        width: 1280,
-        height: 720,
+        width: 1200,
+        height: 630,
         alt: shareTitle,
       },
     ],

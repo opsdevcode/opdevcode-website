@@ -28,7 +28,7 @@ export function pageMeta({
       description,
       url: canonical,
       type: 'website',
-      images: [{ url: OG_IMAGE, width: 1280, height: 720, alt: OG_ALT }],
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: OG_ALT }],
     },
     twitter: {
       card: 'summary_large_image',
