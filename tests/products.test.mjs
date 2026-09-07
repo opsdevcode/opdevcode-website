@@ -69,11 +69,31 @@ describe('product portfolio', () => {
 
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
     const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
-    assert.match(home, /Repave<\/strong> governs software delivery/)
-    assert.match(home, /Dispatch<\/strong> provides the governed experience/)
+    assert.match(home, /Building software is easier than keeping it healthy/)
+    assert.match(home, /SITE_TAGLINE/)
+    assert.match(home, /Start with Repave/)
+    assert.match(home, /Is it being maintained correctly\?/)
+    assert.match(home, /What do we have, and what depends on what\?/)
+    assert.match(home, /What is it costing us\?/)
+    assert.match(home, /How do I work with all of this\?/)
+    assert.match(home, /These aren&apos;t four unrelated tools/)
+    assert.match(home, /not equal conversion doors today/)
+    assert.match(home, /<SystemMap compact \/>/)
+    assert.match(home, /Try Repave with your repository/)
+    assert.match(home, /REPAVE_WAITLIST_URL/)
+    assert.doesNotMatch(home, /hero-grid/)
+    assert.doesNotMatch(home, /ConvergePair/)
     assert.doesNotMatch(home, /sibling domains/)
     assert.doesNotMatch(home, /fourth store/)
     assert.doesNotMatch(home, /domain authority/)
+    assert.doesNotMatch(home, /intelligent platform layer/)
+  })
+
+  it('keeps Convergence off the product hierarchy on the homepage', () => {
+    const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
+    assert.match(home, /not an OpsDevCode product/)
+    assert.match(home, /not in the runtime path/)
+    assert.doesNotMatch(home, /slug: 'convergence'/)
   })
 })
 
