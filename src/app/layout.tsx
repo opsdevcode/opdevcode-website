@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
+import { COMPANY_LOGO_SRC, SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ['/assets/preview-v5.png'],
   },
-  icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
+  icons: { icon: COMPANY_LOGO_SRC },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

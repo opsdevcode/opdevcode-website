@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { CONVERGENCE_URL } from '@/lib/site'
+import { COMPANY_LOGO_SRC, CONVERGENCE_URL } from '@/lib/site'
 
 const navItems = [
   { href: '/products', label: 'Products', match: '/products' },
@@ -46,10 +46,10 @@ export default function Header() {
           >
             <Image
               className="brand-logo"
-              src="/assets/opsdevco-logo-o-terminal.png"
+              src={COMPANY_LOGO_SRC}
               alt=""
-              width={72}
-              height={72}
+              width={96}
+              height={96}
               priority
               aria-hidden
             />

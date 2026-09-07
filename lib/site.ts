@@ -17,6 +17,7 @@ export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
+export const COMPANY_LOGO_SRC = '/assets/opsdevco-logo.png'
 
 export const SITE_DESCRIPTION =
   'OpsDevCode builds engineering infrastructure for a world of humans, automation, and agents: governed software delivery, infrastructure state, engineering economics, and a governed intelligent experience.'

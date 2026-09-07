@@ -7,6 +7,7 @@ import ProductCard from '@/components/ProductCard'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
+  COMPANY_LOGO_SRC,
   CONTACT_EMAIL,
   REPAVE_URL,
   REPAVE_WAITLIST_URL,
@@ -53,7 +54,7 @@ const structuredData = {
       name: 'OpsDevCode',
       url: SITE_URL,
       email: CONTACT_EMAIL,
-      logo: `${SITE_URL}/assets/opsdevco-logo-o-terminal.png`,
+      logo: `${SITE_URL}${COMPANY_LOGO_SRC}`,
       founder: {
         '@type': 'Person',
         name: 'Eric Skaggs',

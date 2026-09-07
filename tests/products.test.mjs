@@ -67,6 +67,19 @@ describe('product portfolio', () => {
     assert.doesNotMatch(siteSrc, /Platform engineering as a service/)
   })
 
+  it('uses the GitHub org emblem on company chrome, not the terminal lockup', () => {
+    const header = readFileSync(join(root, 'components/Header.tsx'), 'utf8')
+    const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
+    const layout = readFileSync(join(root, 'src/app/layout.tsx'), 'utf8')
+    assert.match(siteSrc, /COMPANY_LOGO_SRC = '\/assets\/opsdevco-logo\.png'/)
+    assert.match(header, /COMPANY_LOGO_SRC/)
+    assert.match(footer, /COMPANY_LOGO_SRC/)
+    assert.match(layout, /COMPANY_LOGO_SRC/)
+    assert.doesNotMatch(header, /opsdevco-logo-o-terminal/)
+    assert.doesNotMatch(footer, /opsdevco-logo-o-terminal/)
+    assert.doesNotMatch(layout, /opsdevco-logo-o-terminal/)
+  })
+
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
     const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
     assert.match(home, /Building software is easier than keeping it healthy/)
