@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.9.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.8.0...opdevcode-website-v1.9.0) (2026-09-07)
+
+
+### Features
+
+* **site:** restore a short visual homepage with human copy first ([60dddc9](https://github.com/opsdevcode/opdevcode-website/commit/60dddc9d63e1eafd210a956870e5af7ba6aed75b))
+* **site:** use the dark profile banner and tagline ([0c1df5f](https://github.com/opsdevcode/opdevcode-website/commit/0c1df5f36a4a9ce871e50bb9ebecbbc0e87625fb))
+* **site:** use the GitHub org mark on company chrome ([a816271](https://github.com/opsdevcode/opdevcode-website/commit/a816271615523ff226ed987d0de5742e04da925d))
+* **site:** use the GitHub org mark on company chrome ([ce61b60](https://github.com/opsdevcode/opdevcode-website/commit/ce61b60153b88198567b9f32d809e6635906bb59))
+
+
+### Bug Fixes
+
+* **site:** keep rail content out of the label column ([73cba1b](https://github.com/opsdevcode/opdevcode-website/commit/73cba1b21eeae1490450477275a14dd8ac94070a))
+
 ## [1.8.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.7.0...opdevcode-website-v1.8.0) (2026-09-07)
 
 
