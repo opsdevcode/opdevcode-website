@@ -444,7 +444,6 @@
 .product-signature .endorsement {
   letter-spacing: 0.04em;
 }
-}
 .sysmap:not(.sysmap--compact) {
   margin-top: var(--space-32);
 }
