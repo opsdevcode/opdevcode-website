@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.9.0...opdevcode-website-v1.10.0) (2026-09-07)
+
+
+### Features
+
+* apply governed-section identity on the company site ([c3871af](https://github.com/opsdevcode/opdevcode-website/commit/c3871af7fc363a24ec02c20aca4c0de8826be0b4))
+
 ## [1.9.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.8.0...opdevcode-website-v1.9.0) (2026-09-07)
 
 
