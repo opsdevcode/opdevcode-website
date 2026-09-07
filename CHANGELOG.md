@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.0...opdevcode-website-v1.11.1) (2026-09-07)
+
+
+### Bug Fixes
+
+* stop linking company site to dead product hosts ([#83](https://github.com/opsdevcode/opdevcode-website/issues/83)) ([f7b4e19](https://github.com/opsdevcode/opdevcode-website/commit/f7b4e198f4a315b740dc98bd449b112729a4e63d))
+
 ## [1.11.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.10.0...opdevcode-website-v1.11.0) (2026-09-07)
 
 
