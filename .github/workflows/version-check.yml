@@ -20,7 +20,7 @@ jobs:
         run: git log "origin/${{ github.base_ref }}"..HEAD --pretty=format:'%h %s'
 
       - name: Check Conventional Commits
-        uses: wagoid/commitlint-github-action@9763196e10f27aef304c9b8b660d31d97fce0f99 # wagoid/commitlint-github-action@v5
+        uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed # wagoid/commitlint-github-action@v6.2.1
         with:
           configFile: .commitlintrc.cjs
           helpURL: https://github.com/opsdevcode/opdevcode-website/blob/main/CONTRIBUTING.md#conventional-commits
