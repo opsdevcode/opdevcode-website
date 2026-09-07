@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.10.0...opdevcode-website-v1.11.0) (2026-09-07)
+
+
+### Features
+
+* **site:** give the company homepage flow and one logo ([#78](https://github.com/opsdevcode/opdevcode-website/issues/78)) ([6caadd9](https://github.com/opsdevcode/opdevcode-website/commit/6caadd9e98fa5f82666f2ed770bb130eb3b358c0))
+
 ## [1.10.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.9.0...opdevcode-website-v1.10.0) (2026-09-07)
 
 
