@@ -22,22 +22,22 @@
     "domain:netlify": "scripts/add-netlify-domain.sh"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.3.4",
-    "next": "^15.5.12",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "@eslint/eslintrc": "^3.3.7",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.3",
-    "@types/node": "^22.10.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "eslint": "^9.39.3",
-    "eslint-config-next": "^15.5.12",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "eslint": "^10.10.0",
+    "eslint-config-next": "^16.3.4",
     "eslint-config-prettier": "^10.1.8",
-    "netlify-cli": "^17.0.0",
-    "playwright": "^1.58.2",
-    "prettier": "^3.8.1",
-    "typescript": "^5.9.3"
+    "netlify-cli": "^27.5.0",
+    "playwright": "^1.62.1",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   }
 }
