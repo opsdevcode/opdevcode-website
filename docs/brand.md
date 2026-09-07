@@ -30,7 +30,8 @@ That idea must remain identifiable with the logos removed.
 
 The company mark is **not** another product icon. Four open L-corners form an
 empty aperture: the family. Products draw *inside* that same 32-unit stroke
-grammar.
+grammar. See `docs/logo.md` on the company site: one drawing for GitHub, the
+favicon, the header lockup, and share cards.
 
 ## Logo family
 

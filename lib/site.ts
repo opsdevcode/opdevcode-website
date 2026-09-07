@@ -18,8 +18,9 @@ export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Governed golden paths for platform engineering.'
 export const SITE_SHARE_TITLE = `OpsDevCode — ${SITE_TAGLINE.replace(/\.$/, '')}`
-export const COMPANY_LOGO_SRC = '/brand/mark-opsdevcode.svg'
 export const COMPANY_MARK_SRC = '/brand/mark-opsdevcode.svg'
+export const COMPANY_LOCKUP_SRC = '/brand/lockup-opsdevcode.svg'
+export const COMPANY_LOGO_SRC = '/brand/favicon-opsdevcode.svg'
 export const COMPANY_BANNER_SRC = '/brand/og-opsdevcode.svg'
 
 export const SITE_DESCRIPTION =

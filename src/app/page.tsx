@@ -4,6 +4,7 @@ import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
 import SystemMap from '@/components/SystemMap'
 import ProductCard from '@/components/ProductCard'
+import ProductFlow from '@/components/ProductFlow'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
@@ -131,6 +132,12 @@ export default function HomePage() {
                   Explore products
                 </Link>
               </div>
+              <p className="plane-rule" aria-hidden="true">
+                <span className="plane-rule-seg plane-rule-seg--repave" />
+                <span className="plane-rule-seg plane-rule-seg--overpass" />
+                <span className="plane-rule-seg plane-rule-seg--toll" />
+                <span className="plane-rule-seg plane-rule-seg--dispatch" />
+              </p>
             </div>
             <SystemMap compact />
           </div>
@@ -147,14 +154,27 @@ export default function HomePage() {
               </h2>
               <p className="lede">Keeping everything healthy as the organization grows is.</p>
             </div>
-            <ul className="scan-list">
-              <li>Repositories drift from the standards they were meant to follow.</li>
-              <li>Infrastructure relationships become hard to understand.</li>
-              <li>Costs become disconnected from the products and teams creating them.</li>
-              <li>
-                Engineers end up stitching together more tools just to understand what is happening.
+            <ol className="problem-planes">
+              <li className="problem-planes-item problem-planes-item--repave">
+                <span>01</span>
+                <p>Repositories drift from the standards they were meant to follow.</p>
               </li>
-            </ul>
+              <li className="problem-planes-item problem-planes-item--overpass">
+                <span>02</span>
+                <p>Infrastructure relationships become hard to understand.</p>
+              </li>
+              <li className="problem-planes-item problem-planes-item--toll">
+                <span>03</span>
+                <p>Costs become disconnected from the products and teams creating them.</p>
+              </li>
+              <li className="problem-planes-item problem-planes-item--dispatch">
+                <span>04</span>
+                <p>
+                  Engineers end up stitching together more tools just to understand what is
+                  happening.
+                </p>
+              </li>
+            </ol>
           </div>
         </section>
 
@@ -171,16 +191,7 @@ export default function HomePage() {
               These aren&apos;t four unrelated tools. Repave is the first external door — not the
               company. Overpass, Toll, and Dispatch are not equal conversion doors today.
             </p>
-            <ul className="product-lines">
-              {products.map((product) => {
-                const copy = productQuestions[product.slug]
-                return (
-                  <li key={product.slug}>
-                    <strong>{product.name}</strong> — {copy.question}
-                  </li>
-                )
-              })}
-            </ul>
+            <ProductFlow questions={productQuestions} />
             <div className="product-grid">
               {products.map((product) => (
                 <ProductCard
@@ -195,23 +206,39 @@ export default function HomePage() {
 
         <section className="section rail" aria-labelledby="system-heading">
           <p className="rail-label">System</p>
-          <div className="section--split">
-            <div>
-              <h2 id="system-heading" className="section-title">
-                <span className="section-title-text">The value is in the connection</span>
-              </h2>
-              <p className="lede">
-                A repository Repave governs runs on infrastructure Overpass understands, incurs
-                costs Toll can explain, and can be operated through Dispatch. Most tools help with a
-                moment. This system is being built around the lifecycle.
-              </p>
-              <p>
-                <Link href="/approach">How the system is designed →</Link>
-              </p>
-            </div>
+          <div>
+            <h2 id="system-heading" className="section-title">
+              <span className="section-title-text">The value is in the connection</span>
+            </h2>
             <p className="lede">
-              Convergence is an independent body of knowledge that informs the design. It is not an
-              OpsDevCode product and is not in the runtime path.
+              A repository Repave governs runs on infrastructure Overpass understands, incurs costs
+              Toll can explain, and can be operated through Dispatch. Most tools help with a moment.
+              This system is being built around the lifecycle.
+            </p>
+            <ol className="system-chain">
+              <li className="system-chain-item system-chain-item--repave">
+                <span>Repave</span>
+                governs the repository
+              </li>
+              <li className="system-chain-item system-chain-item--overpass">
+                <span>Overpass</span>
+                reads the estate
+              </li>
+              <li className="system-chain-item system-chain-item--toll">
+                <span>Toll</span>
+                attributes the spend
+              </li>
+              <li className="system-chain-item system-chain-item--dispatch">
+                <span>Dispatch</span>
+                carries the intent
+              </li>
+            </ol>
+            <p className="sysmap-aside system-converge-note">
+              Design informed by <span>Convergence</span>
+              <small>Independent · not an OpsDevCode product · not in the runtime path</small>
+            </p>
+            <p>
+              <Link href="/approach">How the system is designed →</Link>
             </p>
           </div>
         </section>

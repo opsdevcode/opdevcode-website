@@ -30,6 +30,19 @@ describe('product portfolio', () => {
     assert.match(productsSrc, /compareRole: 'Ask and act'/)
   })
 
+  it('gives every product the same editorial density as Repave', () => {
+    const ownsBlocks = [...productsSrc.matchAll(/owns: \[([\s\S]*?)\],/g)]
+    assert.equal(ownsBlocks.length, 4)
+    for (const block of ownsBlocks) {
+      const items = [...block[1].matchAll(/'/g)].length / 2
+      assert.ok(items >= 6, `owns list too thin: ${block[1]}`)
+    }
+    assert.match(productsSrc, /Custody\. Relationships\. Drift\. Blast radius\. Transactions\./)
+    assert.match(productsSrc, /Spend\. Ownership\. Utilization\. Waste\. Coverage\./)
+    assert.match(productsSrc, /Intent\. Proposal\. Gate\. Action\./)
+    assert.match(productsSrc, /Generate\. Adopt\. Configure\. Upgrade\. Observe\. Remediate\./)
+  })
+
   it('routes public CTAs to product subdomains, not private GitHub', () => {
     assert.match(siteSrc, /repave: 'https:\/\/repave\.opsdevco\.de'/)
     assert.match(siteSrc, /overpass: 'https:\/\/overpass\.opsdevco\.de'/)
@@ -74,9 +87,11 @@ describe('product portfolio', () => {
     const layout = readFileSync(join(root, 'src/app/layout.tsx'), 'utf8')
     const seo = readFileSync(join(root, 'lib/seo.ts'), 'utf8')
     assert.match(siteSrc, /COMPANY_MARK_SRC = '\/brand\/mark-opsdevcode\.svg'/)
+    assert.match(siteSrc, /COMPANY_LOCKUP_SRC = '\/brand\/lockup-opsdevcode\.svg'/)
+    assert.match(siteSrc, /COMPANY_LOGO_SRC = '\/brand\/favicon-opsdevcode\.svg'/)
     assert.match(header, /BrandMark/)
     assert.match(footer, /BrandMark/)
-    assert.match(layout, /COMPANY_MARK_SRC/)
+    assert.match(layout, /COMPANY_LOGO_SRC/)
     assert.match(layout, /IBM_Plex_Sans/)
     assert.match(siteSrc, /SITE_SHARE_TITLE/)
     assert.match(seo, /SITE_SHARE_TITLE/)
@@ -100,6 +115,10 @@ describe('product portfolio', () => {
     assert.match(home, /not equal conversion doors today/)
     assert.match(home, /<div className="hero-grid">/)
     assert.match(home, /<SystemMap compact \/>/)
+    assert.match(home, /<ProductFlow questions=\{productQuestions\} \/>/)
+    assert.match(home, /problem-planes/)
+    assert.match(home, /system-chain/)
+    assert.doesNotMatch(home, /product-lines/)
     assert.match(home, /Try Repave with your repository/)
     assert.match(home, /REPAVE_WAITLIST_URL/)
     assert.doesNotMatch(home, /ConvergePair/)
