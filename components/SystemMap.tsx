@@ -8,9 +8,13 @@ export default function SystemMap({ compact }: { compact?: boolean }) {
         runtime path.
       </figcaption>
       <svg className="sysmap-section" viewBox="0 0 640 400" aria-hidden="true">
-        <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.28">
+        <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
           <path d="M40 40 H600 V360 H40 Z" />
         </g>
+        <rect className="sysmap-bed sysmap-bed--repave" x="184" y="112" width="110" height="92" />
+        <rect className="sysmap-bed sysmap-bed--overpass" x="344" y="112" width="130" height="92" />
+        <rect className="sysmap-bed sysmap-bed--toll" x="184" y="214" width="140" height="72" />
+        <rect className="sysmap-bed sysmap-bed--dispatch" x="344" y="214" width="140" height="72" />
         <g
           fill="none"
           stroke="currentColor"

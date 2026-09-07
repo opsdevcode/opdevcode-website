@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import './globals.css'
 import {
-  COMPANY_MARK_SRC,
+  COMPANY_LOGO_SRC,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
   SITE_TAGLINE,
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ['/brand/og-opsdevcode.svg'],
   },
-  icons: { icon: COMPANY_MARK_SRC },
+  icons: { icon: COMPANY_LOGO_SRC, apple: COMPANY_LOGO_SRC },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

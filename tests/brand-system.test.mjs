@@ -27,10 +27,32 @@ describe('governed-section brand system', () => {
       'mark-toll.svg',
       'mark-dispatch.svg',
       'section-system.svg',
+      'lockup-opsdevcode.svg',
+      'favicon-opsdevcode.svg',
     ]) {
       const svg = readFileSync(join(root, 'public/brand', name), 'utf8')
       assert.match(svg, /<svg/)
       assert.match(svg, /stroke-linecap="square"/)
     }
+  })
+
+  it('uses one company drawing for mark, favicon, lockup, chrome, and share card', () => {
+    const corner = 'M6 13 V6 H13'
+    const mark = readFileSync(join(root, 'components/BrandMark.tsx'), 'utf8')
+    const files = [
+      'public/brand/mark-opsdevcode.svg',
+      'public/brand/favicon-opsdevcode.svg',
+      'public/brand/lockup-opsdevcode.svg',
+      'public/brand/og-opsdevcode.svg',
+    ]
+    for (const file of files) {
+      assert.match(readFileSync(join(root, file), 'utf8'), new RegExp(corner))
+    }
+    assert.match(mark, /M6 13 V6 H13/)
+    const og = readFileSync(join(root, 'public/brand/og-opsdevcode.svg'), 'utf8')
+    assert.match(og, /OpsDevCode/)
+    assert.match(og, /Governed golden paths for platform engineering/)
+    assert.doesNotMatch(og, /Infrastructure for modern engineering organizations/)
+    assert.doesNotMatch(og, /Repave - delivery/)
   })
 })
