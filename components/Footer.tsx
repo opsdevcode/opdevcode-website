@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS } from '@/lib/site'
+import { COMPANY_BANNER_SRC, CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS } from '@/lib/site'
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -9,11 +9,11 @@ export default function Footer() {
       <div className="footer-grid">
         <div className="footer-brand">
           <Image
-            className="footer-logo"
-            src="/assets/opsdevco-logo-o-terminal.png"
+            className="footer-logo footer-logo--lockup"
+            src={COMPANY_BANNER_SRC}
             alt=""
-            width={32}
-            height={32}
+            width={200}
+            height={56}
             aria-hidden
           />
           <div>

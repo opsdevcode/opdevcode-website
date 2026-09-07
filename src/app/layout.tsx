@@ -1,7 +1,14 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
+import {
+  COMPANY_BANNER_SRC,
+  COMPANY_LOGO_SRC,
+  SITE_DESCRIPTION,
+  SITE_SHARE_TITLE,
+  SITE_TAGLINE,
+  SITE_URL,
+} from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -12,31 +19,31 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'OpsDevCode | Infrastructure for modern engineering organizations',
+    default: `OpsDevCode | ${SITE_TAGLINE.replace(/\.$/, '')}`,
     template: '%s | OpsDevCode',
   },
   description: SITE_DESCRIPTION,
   openGraph: {
-    title: 'OpsDevCode — Infrastructure for modern engineering organizations',
+    title: SITE_SHARE_TITLE,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     type: 'website',
     images: [
       {
-        url: '/assets/preview-v5.png',
-        width: 1200,
-        height: 630,
-        alt: 'OpsDevCode — Infrastructure for modern engineering organizations.',
+        url: COMPANY_BANNER_SRC,
+        width: 1280,
+        height: 720,
+        alt: SITE_SHARE_TITLE,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OpsDevCode — Infrastructure for modern engineering organizations',
+    title: SITE_SHARE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/assets/preview-v5.png'],
+    images: [COMPANY_BANNER_SRC],
   },
-  icons: { icon: '/assets/opsdevco-logo-o-terminal.png' },
+  icons: { icon: COMPANY_LOGO_SRC },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -62,9 +62,27 @@ describe('product portfolio', () => {
   })
 
   it('keeps the company thesis architectural', () => {
-    assert.match(siteSrc, /Infrastructure for modern engineering organizations/)
+    assert.match(siteSrc, /Governed golden paths for platform engineering/)
+    assert.doesNotMatch(siteSrc, /Infrastructure for modern engineering organizations/)
     assert.doesNotMatch(siteSrc, /intelligent platform layer/)
     assert.doesNotMatch(siteSrc, /Platform engineering as a service/)
+  })
+
+  it('uses the dark org-profile mark on company chrome, not the terminal lockup', () => {
+    const header = readFileSync(join(root, 'components/Header.tsx'), 'utf8')
+    const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
+    const layout = readFileSync(join(root, 'src/app/layout.tsx'), 'utf8')
+    const seo = readFileSync(join(root, 'lib/seo.ts'), 'utf8')
+    assert.match(siteSrc, /COMPANY_LOGO_SRC = '\/assets\/opsdevco-logo\.png'/)
+    assert.match(siteSrc, /COMPANY_BANNER_SRC = '\/assets\/opsdevco-banner\.png'/)
+    assert.match(header, /COMPANY_BANNER_SRC/)
+    assert.match(footer, /COMPANY_BANNER_SRC/)
+    assert.match(layout, /COMPANY_LOGO_SRC/)
+    assert.match(siteSrc, /SITE_SHARE_TITLE/)
+    assert.match(seo, /SITE_SHARE_TITLE/)
+    assert.doesNotMatch(header, /opsdevco-logo-o-terminal/)
+    assert.doesNotMatch(footer, /opsdevco-logo-o-terminal/)
+    assert.doesNotMatch(layout, /opsdevco-logo-o-terminal/)
   })
 
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
@@ -78,10 +96,10 @@ describe('product portfolio', () => {
     assert.match(home, /How do I work with all of this\?/)
     assert.match(home, /These aren&apos;t four unrelated tools/)
     assert.match(home, /not equal conversion doors today/)
+    assert.match(home, /<div className="hero-grid">/)
     assert.match(home, /<SystemMap compact \/>/)
     assert.match(home, /Try Repave with your repository/)
     assert.match(home, /REPAVE_WAITLIST_URL/)
-    assert.doesNotMatch(home, /hero-grid/)
     assert.doesNotMatch(home, /ConvergePair/)
     assert.doesNotMatch(home, /sibling domains/)
     assert.doesNotMatch(home, /fourth store/)
@@ -91,7 +109,7 @@ describe('product portfolio', () => {
 
   it('keeps Convergence off the product hierarchy on the homepage', () => {
     const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
-    assert.match(home, /not an OpsDevCode product/)
+    assert.match(home, /not an\s+OpsDevCode product/)
     assert.match(home, /not in the runtime path/)
     assert.doesNotMatch(home, /slug: 'convergence'/)
   })
