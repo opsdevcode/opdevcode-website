@@ -7,17 +7,19 @@ import ProductCard from '@/components/ProductCard'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
+  COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
   CONTACT_EMAIL,
   REPAVE_URL,
   REPAVE_WAITLIST_URL,
   SITE_DESCRIPTION,
+  SITE_SHARE_TITLE,
   SITE_TAGLINE,
   SITE_URL,
 } from '@/lib/site'
 
-const shareTitle = 'OpsDevCode — Infrastructure for modern engineering organizations'
-const socialPreviewImage = '/assets/preview-v5.png'
+const shareTitle = SITE_SHARE_TITLE
+const socialPreviewImage = COMPANY_BANNER_SRC
 
 export const metadata: Metadata = {
   title: { absolute: 'OpsDevCode' },
@@ -31,8 +33,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: socialPreviewImage,
-        width: 1200,
-        height: 630,
+        width: 1280,
+        height: 720,
         alt: shareTitle,
       },
     ],

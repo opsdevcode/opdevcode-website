@@ -62,19 +62,24 @@ describe('product portfolio', () => {
   })
 
   it('keeps the company thesis architectural', () => {
-    assert.match(siteSrc, /Infrastructure for modern engineering organizations/)
+    assert.match(siteSrc, /Governed golden paths for platform engineering/)
+    assert.doesNotMatch(siteSrc, /Infrastructure for modern engineering organizations/)
     assert.doesNotMatch(siteSrc, /intelligent platform layer/)
     assert.doesNotMatch(siteSrc, /Platform engineering as a service/)
   })
 
-  it('uses the GitHub org emblem on company chrome, not the terminal lockup', () => {
+  it('uses the dark org-profile mark on company chrome, not the terminal lockup', () => {
     const header = readFileSync(join(root, 'components/Header.tsx'), 'utf8')
     const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
     const layout = readFileSync(join(root, 'src/app/layout.tsx'), 'utf8')
+    const seo = readFileSync(join(root, 'lib/seo.ts'), 'utf8')
     assert.match(siteSrc, /COMPANY_LOGO_SRC = '\/assets\/opsdevco-logo\.png'/)
+    assert.match(siteSrc, /COMPANY_BANNER_SRC = '\/assets\/opsdevco-banner\.png'/)
     assert.match(header, /COMPANY_LOGO_SRC/)
     assert.match(footer, /COMPANY_LOGO_SRC/)
     assert.match(layout, /COMPANY_LOGO_SRC/)
+    assert.match(siteSrc, /SITE_SHARE_TITLE/)
+    assert.match(seo, /SITE_SHARE_TITLE/)
     assert.doesNotMatch(header, /opsdevco-logo-o-terminal/)
     assert.doesNotMatch(footer, /opsdevco-logo-o-terminal/)
     assert.doesNotMatch(layout, /opsdevco-logo-o-terminal/)

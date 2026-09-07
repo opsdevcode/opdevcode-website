@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { SITE_DESCRIPTION, SITE_URL } from '@/lib/site'
+import { COMPANY_BANNER_SRC, SITE_DESCRIPTION, SITE_SHARE_TITLE, SITE_URL } from '@/lib/site'
 
-const OG_IMAGE = '/assets/preview-v5.png'
-const OG_ALT = 'OpsDevCode — Infrastructure for modern engineering organizations.'
+const OG_IMAGE = COMPANY_BANNER_SRC
+const OG_ALT = SITE_SHARE_TITLE
 
 export function pageMeta({
   title,
@@ -28,7 +28,7 @@ export function pageMeta({
       description,
       url: canonical,
       type: 'website',
-      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: OG_ALT }],
+      images: [{ url: OG_IMAGE, width: 1280, height: 720, alt: OG_ALT }],
     },
     twitter: {
       card: 'summary_large_image',
