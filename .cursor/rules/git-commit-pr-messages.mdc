@@ -45,7 +45,7 @@ References may appear as **ticket IDs** (e.g. `PLAT-684`, `INFOSEC-123`, `ESC-45
 - Include testing information only if testing was performed or is relevant
 - Mention breaking changes only if they exist
 - Link to related issues or documentation when relevant
-- **AI assistant usage**: If Cursor, Claude Code, or other AI assistants were used extensively in creating the PR, mention this in the stewardship section (e.g., "Created with Cursor (Composer 1)" or "Assisted by Claude Code"). Include the specific model name if known.
+- Do **not** attribute PRs to coding tools or vendors (no "Created with Cursor", "Assisted by Claude Code", or similar). Authorship is OpsDevCode.
 
 ### When Creating PRs (AI Assistants)
 
@@ -98,7 +98,7 @@ CI runs **commitlint** with `@commitlint/config-conventional` (see `.commitlintr
   - Good: `feat: stripe-inspired light redesign`
   - Bad: `feat: Stripe-inspired light redesign` (capital `S` fails)
 - **`footer-leading-blank`**: If you use a [conventional footer](https://www.conventionalcommits.org/) (`BREAKING CHANGE:`, `Reviewed-by:`, `Co-authored-by:`, etc.), put a **blank line** between the body and the footer.
-  - Avoid non-standard footer lines such as `Made-with: Cursor` in commits; they can trigger footer parsing warnings. Put AI assistant attribution in the **PR stewardship** section instead.
+  - Avoid non-standard footer lines such as `Made-with: Cursor` or `Co-authored-by:` naming an AI assistant; they can trigger footer parsing warnings and are not company authorship.
 
 When drafting commits for this repo, prefer **lowercase subjects** and skip custom footer lines unless they follow conventional footer format with a proper blank line before them.
 
