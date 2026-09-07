@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
-import SystemMap from '@/components/SystemMap'
-import ProductCard from '@/components/ProductCard'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
@@ -109,132 +107,103 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <PageFrame home>
-        <section className="hero rail">
-          <p className="rail-label">Company</p>
-          <div className="hero-grid">
-            <div className="hero-copy">
-              <h1>
-                Building software is easier than keeping it healthy as everything around it changes
-                <span className="highlight">.</span>
-              </h1>
-              <p className="hero-fit">{SITE_TAGLINE}</p>
-              <p className="sub">
-                OpsDevCode connects how engineering organizations govern software delivery,
-                understand infrastructure, connect cost to ownership, and operate the system as it
-                changes.
-              </p>
-              <div className="cta">
-                <a className="btn primary" href={REPAVE_WAITLIST_URL}>
-                  Try Repave with your repository
-                </a>
-                <Link className="btn" href="/products">
-                  Explore products
-                </Link>
-              </div>
-            </div>
-            <SystemMap compact />
-          </div>
-        </section>
-
-        <section className="section rail" aria-labelledby="problem-heading">
-          <p className="rail-label">Problem</p>
-          <div className="section--split">
-            <div>
-              <h2 id="problem-heading" className="section-title">
-                <span className="section-title-text">
-                  Creating software isn&apos;t the hard part anymore
-                </span>
-              </h2>
-              <p className="lede">Keeping everything healthy as the organization grows is.</p>
-            </div>
-            <ul className="scan-list">
-              <li>Repositories drift from the standards they were meant to follow.</li>
-              <li>Infrastructure relationships become hard to understand.</li>
-              <li>Costs become disconnected from the products and teams creating them.</li>
-              <li>
-                Engineers end up stitching together more tools just to understand what is happening.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="section rail" aria-labelledby="products-heading">
-          <p className="rail-label">Products</p>
-          <div>
-            <div className="section-header-row">
-              <h2 id="products-heading" className="section-title">
-                <span className="section-title-text">Start with Repave</span>
-              </h2>
-              <Link href="/products">Compare →</Link>
-            </div>
-            <p className="lede">
-              These aren&apos;t four unrelated tools. Repave is the first external door — not the
-              company. Overpass, Toll, and Dispatch are not equal conversion doors today.
+        <section className="hero">
+          <div className="hero-inner">
+            <h1>
+              Building software is easier than keeping it healthy as everything around it changes
+              <span className="highlight">.</span>
+            </h1>
+            <p className="hero-fit">{SITE_TAGLINE}</p>
+            <p className="sub">
+              OpsDevCode connects how engineering organizations govern software delivery, understand
+              infrastructure, connect cost to ownership, and operate the system as it changes.
             </p>
-            <ul className="product-lines">
-              {products.map((product) => {
-                const copy = productQuestions[product.slug]
-                return (
-                  <li key={product.slug}>
-                    <strong>{product.name}</strong> — {copy.question}
-                  </li>
-                )
-              })}
-            </ul>
-            <div className="product-grid">
-              {products.map((product) => (
-                <ProductCard
-                  key={product.slug}
-                  product={product}
-                  featured={product.slug === 'repave'}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section rail" aria-labelledby="system-heading">
-          <p className="rail-label">System</p>
-          <div className="section--split">
-            <div>
-              <h2 id="system-heading" className="section-title">
-                <span className="section-title-text">The value is in the connection</span>
-              </h2>
-              <p className="lede">
-                A repository Repave governs runs on infrastructure Overpass understands, incurs
-                costs Toll can explain, and can be operated through Dispatch. Most tools help with a
-                moment. This system is being built around the lifecycle.
-              </p>
-              <p>
-                <Link href="/approach">How the system is designed →</Link>
-              </p>
-            </div>
-            <p className="lede">
-              Convergence is an independent body of knowledge that informs the design. It is not an
-              OpsDevCode product and is not in the runtime path.
-            </p>
-          </div>
-        </section>
-
-        <section className="section rail section--band" aria-labelledby="closing-cta-heading">
-          <p className="rail-label">Next</p>
-          <div className="close-row">
-            <div>
-              <h2 id="closing-cta-heading" className="closing-cta-title">
-                If you have a repository, start the conversation there
-              </h2>
-              <p className="closing-cta-lead">
-                Early access is a conversation, not self-serve hosted availability.
-              </p>
-            </div>
             <div className="cta">
               <a className="btn primary" href={REPAVE_WAITLIST_URL}>
                 Try Repave with your repository
               </a>
-              <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                Talk to OpsDevCode
-              </a>
+              <Link className="btn" href="/products">
+                Explore products
+              </Link>
             </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="problem-heading">
+          <h2 id="problem-heading" className="section-title">
+            <span className="section-title-text">
+              Creating software isn&apos;t the hard part anymore
+            </span>
+          </h2>
+          <p className="lede">Keeping everything healthy as the organization grows is.</p>
+          <ul className="scan-list">
+            <li>Repositories drift from the standards they were meant to follow.</li>
+            <li>Infrastructure relationships become hard to understand.</li>
+            <li>Costs become disconnected from the products and teams creating them.</li>
+            <li>
+              Engineers end up stitching together more tools just to understand what is happening.
+            </li>
+          </ul>
+        </section>
+
+        <section className="section" aria-labelledby="products-heading">
+          <h2 id="products-heading" className="section-title">
+            <span className="section-title-text">Start with Repave</span>
+          </h2>
+          <p className="lede">
+            These aren&apos;t four unrelated tools. Repave is the first external door — not the
+            company. Overpass, Toll, and Dispatch are not equal conversion doors today.
+          </p>
+          <ul className="home-questions">
+            {products.map((product) => {
+              const copy = productQuestions[product.slug]
+              return (
+                <li key={product.slug}>
+                  <Link href={product.href}>
+                    <strong>{product.name}</strong>
+                    <span>{copy.question}</span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+          <p className="home-follow">
+            <Link href="/products">Compare products →</Link>
+          </p>
+        </section>
+
+        <section className="section" aria-labelledby="system-heading">
+          <h2 id="system-heading" className="section-title">
+            <span className="section-title-text">The value is in the connection</span>
+          </h2>
+          <p className="lede">
+            A repository Repave governs runs on infrastructure Overpass understands, incurs costs
+            Toll can explain, and can be operated through Dispatch. Most tools help with a moment.
+            This system is being built around the lifecycle.
+          </p>
+          <p className="lede">
+            Convergence is an independent body of knowledge that informs the design. It is not an
+            OpsDevCode product and is not in the runtime path.
+          </p>
+          <p className="home-follow">
+            <Link href="/approach">How the system is designed →</Link>
+          </p>
+        </section>
+
+        <section className="section section--band" aria-labelledby="closing-cta-heading">
+          <h2 id="closing-cta-heading" className="closing-cta-title">
+            If you have a repository, start the conversation there
+          </h2>
+          <p className="closing-cta-lead">
+            Early access is a conversation, not self-serve hosted availability.
+          </p>
+          <div className="cta">
+            <a className="btn primary" href={REPAVE_WAITLIST_URL}>
+              Try Repave with your repository
+            </a>
+            <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              Talk to OpsDevCode
+            </a>
           </div>
         </section>
       </PageFrame>

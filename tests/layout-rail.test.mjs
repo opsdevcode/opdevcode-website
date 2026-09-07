@@ -81,15 +81,7 @@ describe('homepage rail layout', () => {
 
   it('gives every homepage rail section a label plus one content child', () => {
     const sections = extractRailSections(home)
-    assert.ok(sections.length >= 5, `expected several rail sections, got ${sections.length}`)
-    for (const inner of sections) {
-      const children = countTopLevelTags(inner)
-      assert.equal(
-        children,
-        2,
-        `rail section must be [rail-label, content]. got ${children} top-level children:\n${inner.slice(0, 240)}`
-      )
-    }
+    assert.equal(sections.length, 0, 'homepage should not use the labeled rail layout')
   })
 })
 

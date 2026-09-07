@@ -1501,72 +1501,90 @@ code.inline {
 }
 
 /* === COMPOSITION PASS === */
+.wrap.home .hero h1::after,
 .hero h1::after {
-  display: none;
+  display: block;
 }
-.hero-grid {
-  display: grid;
-  gap: var(--grid-gap);
-  align-items: start;
-}
-@media (min-width: 960px) {
-  .hero-grid {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: var(--space-40);
-  }
+.wrap.home .hero-inner {
+  max-width: min(100%, 42rem);
 }
 .wrap.home .hero {
-  padding: var(--space-32) 0 var(--space-40);
+  padding: var(--space-40) 0 var(--space-48);
 }
-.wrap.home .hero-copy h1 {
-  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
-  max-width: 16ch;
+.wrap.home .hero h1 {
+  font-size: clamp(2.15rem, 4vw, 3.15rem);
+  max-width: none;
   margin-bottom: var(--space-16);
-  line-height: 1.08;
+  line-height: 1.1;
 }
-.hero-copy .sub {
-  max-width: 48ch;
-  margin-bottom: var(--space-20);
-  line-height: 1.55;
+.wrap.home .hero .hero-fit,
+.wrap.home .hero .sub {
+  max-width: none;
 }
-.hero .cta {
+.wrap.home .hero .cta {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-12);
+  margin-top: var(--space-8);
 }
 
-.section--split {
+.wrap.home .lede {
+  max-width: 46rem;
+}
+.wrap.home .scan-list {
+  max-width: 46rem;
+}
+
+.home-questions {
+  list-style: none;
+  margin: var(--space-24) 0 0;
+  padding: 0;
+  max-width: 46rem;
+  border-top: 1px solid var(--color-border);
+}
+.home-questions a {
   display: grid;
-  gap: var(--space-32);
+  gap: 4px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--color-border);
+  color: inherit;
+  text-decoration: none;
 }
-@media (min-width: 900px) {
-  .section--split {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+.home-questions a:hover {
+  color: inherit;
 }
-.section--split .lede {
-  margin-bottom: var(--space-12);
+.home-questions a:hover strong {
+  color: var(--color-primary);
 }
-.section-header-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--space-12);
-  margin-bottom: var(--space-20);
+.home-questions a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
 }
-.section-header-row .section-title {
-  margin-bottom: 0;
+.home-questions strong {
+  font-size: var(--text-lg);
+  letter-spacing: -0.02em;
+}
+.home-questions span {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.home-follow {
+  margin: var(--space-20) 0 0;
+}
+.wrap.home .section--band .cta {
+  margin-top: var(--space-20);
 }
 
 .wrap.home > section.section {
-  padding-top: 36px;
-  padding-bottom: 36px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .wrap.home .hero + .section,
 .wrap.home .section + .section {
   border-top: 1px solid var(--color-border);
+}
+.wrap.home > section.section:nth-of-type(even) {
+  background-color: transparent;
 }
 .principles p {
   margin: 0 0 var(--space-12);
