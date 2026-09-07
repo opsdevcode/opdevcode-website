@@ -1,7 +1,9 @@
 # Contributing
 
-Thanks for contributing to opdevcode-website! This guide focuses on how to make
-changes safely and how CI enforces conventions in this repo.
+Company process (branch, PR, squash, no tool-vendor authorship):
+[OpsDevCode CONTRIBUTING](https://github.com/opsdevcode/.github/blob/main/CONTRIBUTING.md).
+
+This guide covers **this repo**: Netlify previews, `Version Check`, and Conventional Commits.
 
 ## Development workflow
 

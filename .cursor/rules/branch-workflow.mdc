@@ -54,7 +54,7 @@ PR descriptions must follow the template (typically `.github/PULL_REQUEST_TEMPLA
 
 - **what** – high-level description of changes
 - **why** – rationale and business case
-- **how** – testing, docs, breaking changes, AI assistant usage
+- **how** – testing, docs, breaking changes
 - **references** – links to issues or docs (e.g. `closes #123`)
 
 ## Branch Protection (GitHub Settings)

@@ -1,6 +1,24 @@
 # OpsDevCode Website
 
+**OpsDevCode company/public website.**
+
 Company and product ecosystem site for [OpsDevCode](https://opsdevco.de). Built with [Next.js](https://nextjs.org) (App Router, static export) and deployed on Netlify. This is not the Repave product site; that lives at [repave.opsdevco.de](https://repave.opsdevco.de).
+
+| | |
+| --- | --- |
+| Maturity | Public company site. Product pages are portfolio context, not a substitute for `{product}.opsdevco.de`. |
+| Authoritative scope | `opsdevco.de` marketing/company surface. Product runtimes own their hosts. |
+| Architecture | this README · [docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md) |
+| Local test | `npm run check` |
+| Company process | [OpsDevCode CONTRIBUTING](https://github.com/opsdevcode/.github/blob/main/CONTRIBUTING.md) |
+
+## Ownership
+
+| Concern | Owner |
+| --- | --- |
+| Company site | This repo (Netlify) |
+| Product hosts | Product repos + infra |
+| Production deploy | Netlify on `main` (not `repave-aws-infra`) |
 
 ## Tech stack
 

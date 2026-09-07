@@ -25,7 +25,6 @@
 - How was this tested?
 - How is it documented?
 - Are breaking changes or surprising behavior expected?
-- Notable co-authors, collaborators, or AI assistants?
 
 ## references
 
