@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
@@ -105,6 +105,16 @@ describe('product portfolio', () => {
     assert.doesNotMatch(header, /opsdevco-logo-o-terminal/)
     assert.doesNotMatch(footer, /opsdevco-logo-o-terminal/)
     assert.doesNotMatch(layout, /opsdevco-logo-o-terminal/)
+    assert.equal(existsSync(join(root, 'logo-preview.html')), false)
+    for (const retired of [
+      'public/assets/opsdevco-logo.png',
+      'public/assets/opsdevco-logo-o-mark.png',
+      'public/assets/opsdevco-logo-o-terminal.png',
+      'public/assets/opsdevco-banner.png',
+    ]) {
+      assert.equal(existsSync(join(root, retired)), false, retired)
+    }
+    assert.equal(existsSync(join(root, 'public/brand/github-avatar-opsdevcode.png')), true)
   })
 
   it('uses buyer-facing homepage copy, not internal architecture jargon', () => {
