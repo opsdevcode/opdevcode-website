@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.1...opdevcode-website-v1.12.0) (2026-09-12)
+
+
+### Features
+
+* **site:** align public company story with product reality ([#87](https://github.com/opsdevcode/opdevcode-website/issues/87)) ([d6eedf4](https://github.com/opsdevcode/opdevcode-website/commit/d6eedf4b2c6814598ea49d808565ab085e05f12c))
+
 ## [1.11.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.0...opdevcode-website-v1.11.1) (2026-09-07)
 
 
