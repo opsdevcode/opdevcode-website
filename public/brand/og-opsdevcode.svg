@@ -8,6 +8,6 @@
     <path d="M13 26 H6 V19"/>
   </g>
   <text x="220" y="318" fill="#1A1F1C" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="56" font-weight="500" letter-spacing="-0.02em">OpsDevCode</text>
-  <text x="220" y="362" fill="#3F433F" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="22">Governed golden paths for platform engineering.</text>
+  <text x="220" y="362" fill="#3F433F" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="22">Infrastructure for modern engineering organizations.</text>
   <text x="72" y="560" fill="#5C615A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">opsdevco.de</text>
 </svg>

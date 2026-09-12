@@ -11,8 +11,9 @@ import {
   COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
   CONTACT_EMAIL,
+  REPAVE_EVALUATE_URL,
+  REPAVE_PROOF_URL,
   REPAVE_URL,
-  REPAVE_WAITLIST_URL,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
   SITE_TAGLINE,
@@ -125,12 +126,12 @@ export default function HomePage() {
                 changes.
               </p>
               <div className="cta">
-                <a className="btn primary" href={REPAVE_WAITLIST_URL}>
+                <a className="btn primary" href={REPAVE_EVALUATE_URL}>
                   Try Repave with your repository
                 </a>
-                <Link className="btn" href="/products">
-                  Explore products
-                </Link>
+                <a className="btn" href={REPAVE_PROOF_URL}>
+                  See the governed lifecycle
+                </a>
               </div>
               <p className="plane-rule" aria-hidden="true">
                 <span className="plane-rule-seg plane-rule-seg--repave" />
@@ -188,8 +189,11 @@ export default function HomePage() {
               <Link href="/products">Compare →</Link>
             </div>
             <p className="lede">
-              These aren&apos;t four unrelated tools. Repave is the first external door — not the
-              company. Overpass, Toll, and Dispatch are not equal conversion doors today.
+              These aren&apos;t four unrelated tools. OpsDevCode is building delivery,
+              infrastructure state, economics, and interaction as parts of one engineering system,
+              with explicit boundaries. Repave is the first external door — not the company.
+              Overpass, Toll, and Dispatch have public product sites; they are not equal evaluation
+              doors today.
             </p>
             <ProductFlow questions={productQuestions} />
             <div className="product-grid">
@@ -211,9 +215,9 @@ export default function HomePage() {
               <span className="section-title-text">The value is in the connection</span>
             </h2>
             <p className="lede">
-              A repository Repave governs runs on infrastructure Overpass understands, incurs costs
-              Toll can explain, and can be operated through Dispatch. Most tools help with a moment.
-              This system is being built around the lifecycle.
+              Most tools help with a moment. This system is being built around the lifecycle. The
+              four jobs belong together; a complete customer-visible workflow across all four
+              products is not what you should expect to run today.
             </p>
             <ol className="system-chain">
               <li className="system-chain-item system-chain-item--repave">
@@ -222,11 +226,11 @@ export default function HomePage() {
               </li>
               <li className="system-chain-item system-chain-item--overpass">
                 <span>Overpass</span>
-                reads the estate
+                understands infrastructure state
               </li>
               <li className="system-chain-item system-chain-item--toll">
                 <span>Toll</span>
-                attributes the spend
+                connects cost evidence
               </li>
               <li className="system-chain-item system-chain-item--dispatch">
                 <span>Dispatch</span>
@@ -255,7 +259,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="cta">
-              <a className="btn primary" href={REPAVE_WAITLIST_URL}>
+              <a className="btn primary" href={REPAVE_EVALUATE_URL}>
                 Try Repave with your repository
               </a>
               <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
