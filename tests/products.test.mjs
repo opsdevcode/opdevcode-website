@@ -161,6 +161,8 @@ describe('product portfolio', () => {
   })
 
   it('does not overclaim Overpass live-cloud, Toll savings, or Dispatch autonomy', () => {
+    const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
+    const productsPage = readFileSync(join(root, 'src/app/products/page.tsx'), 'utf8')
     assert.doesNotMatch(productsSrc, /blast radius from a proposed or live change/i)
     assert.doesNotMatch(productsSrc, /Commitment coverage as evidence/)
     assert.doesNotMatch(productsSrc, /Waste findings as evidence/)
@@ -173,6 +175,7 @@ describe('product portfolio', () => {
     assert.doesNotMatch(productsSrc, /realized savings/)
     assert.doesNotMatch(home, /attributes the spend/)
     assert.doesNotMatch(home, /reads the estate/)
+    assert.match(productsPage, /not yet a\s+standalone four-product interaction surface/)
   })
 
   it('keeps Convergence off the product hierarchy on the homepage', () => {

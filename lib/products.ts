@@ -128,7 +128,7 @@ export const products: Product[] = [
       'FOCUS ingest and persistence as cost evidence',
       'Utilization sampling from identified sources',
       'Engineering identity for ownership correlation',
-      'Product authority for spend-to-ownership questions; spend/waste execution still in Repave'
+      'Product authority for spend-to-ownership questions; spend/waste execution still in Repave',
       'Refusal to treat missing utilization as zero',
       'Period capture without invoice authority',
     ],
