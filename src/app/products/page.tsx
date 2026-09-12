@@ -21,7 +21,8 @@ export default function ProductsPage() {
         <h1 className="page-title">Why four products</h1>
         <p className="lede">
           Delivery, infrastructure state, and economics are different jobs. Dispatch is how people
-          and systems work across them — it does not replace them.
+          and systems will work across them — it does not replace them, and it is not yet a
+          standalone four-product interaction surface.
         </p>
         <div className="compare-wrap">
           <table className="compare">

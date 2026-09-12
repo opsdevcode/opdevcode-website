@@ -41,11 +41,11 @@ backup for the same hosts.
 
 The application registry is `PRODUCT_URLS` in `lib/site.ts`. Intended hosts
 remain `<product>.opsdevco.de`. **Visitor links on this site only go to hosts
-that currently answer HTTP** (`PRODUCT_HOST_LIVE`). Overpass, Toll, and Dispatch
-hosts time out today (NLB/ingress not serving those names). Until they do, the
-company site links those products to `/products/<slug>` on `opsdevco.de`.
-Waitlist/invite stays on the live Repave origin:
-`https://repave.opsdevco.de/waitlist`.
+that currently answer GET** (`PRODUCT_HOST_LIVE`). A live product host is a
+public identity surface, not an evaluation door. Repave remains the only
+founder-assisted evaluation path:
+`https://repave.opsdevco.de/waitlist?intent=evaluate`. Do not send unauthenticated
+visitors to `/try`.
 
 Do not CNAME sibling product hosts to the Repave origin (CanonicalHostMiddleware
 would 308 them). Do not link unauthenticated visitors to private GitHub product

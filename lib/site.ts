@@ -9,12 +9,12 @@ export const PRODUCT_URLS = {
   dispatch: 'https://dispatch.opsdevco.de',
 } as const
 
-/** Dedicated product hosts that currently answer HTTP. Dead hosts must not be linked from the company site. */
+/** Dedicated product hosts that currently answer GET. Dead hosts must not be linked from the company site. */
 export const PRODUCT_HOST_LIVE: Record<keyof typeof PRODUCT_URLS, boolean> = {
   repave: true,
-  overpass: false,
-  toll: false,
-  dispatch: false,
+  overpass: true,
+  toll: true,
+  dispatch: true,
 }
 
 export function productSiteHref(slug: keyof typeof PRODUCT_URLS): string {
@@ -27,11 +27,12 @@ export function productSiteHref(slug: keyof typeof PRODUCT_URLS): string {
 export const REPAVE_URL = PRODUCT_URLS.repave
 export const REPAVE_PROOF_URL = `${REPAVE_URL}/proof`
 export const REPAVE_WAITLIST_URL = `${REPAVE_URL}/waitlist`
+export const REPAVE_EVALUATE_URL = `${REPAVE_WAITLIST_URL}?intent=evaluate`
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 
 export const SITE_TITLE = 'OpsDevCode'
-export const SITE_TAGLINE = 'Governed golden paths for platform engineering.'
+export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
 export const SITE_SHARE_TITLE = `OpsDevCode — ${SITE_TAGLINE.replace(/\.$/, '')}`
 export const COMPANY_MARK_SRC = '/brand/mark-opsdevcode.svg'
 export const COMPANY_LOCKUP_SRC = '/brand/lockup-opsdevcode.svg'
