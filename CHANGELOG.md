@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.17.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.17.0...opdevcode-website-v1.17.1) (2026-09-20)
+
+### Bug Fixes
+
+- hold the company homepage thesis on two lines
+
 ## [1.17.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.16.0...opdevcode-website-v1.17.0) (2026-09-20)
 
 ### Features
