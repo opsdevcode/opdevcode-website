@@ -24,11 +24,44 @@ function HiddenCaption({ children }: { children: string }) {
   return <figcaption className="visually-hidden">{children}</figcaption>
 }
 
+function SvgWords({
+  words,
+  className,
+  x,
+  y,
+  anchor = 'middle',
+  gap = 8,
+  size = 12,
+}: {
+  words: string[]
+  className: string
+  x: number
+  y: number
+  anchor?: 'start' | 'middle' | 'end'
+  gap?: number
+  size?: number
+}) {
+  return (
+    <text className={className} x={x} y={y} textAnchor={anchor} fontSize={size}>
+      {words.map((word, index) => (
+        <tspan key={`${word}-${index}`} dx={index === 0 ? undefined : gap}>
+          {word}
+        </tspan>
+      ))}
+    </text>
+  )
+}
+
 function HeroCut() {
   return (
-    <svg className="sysmap-section" viewBox="0 0 640 360" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 640 400" aria-hidden="true">
+      <title>Partial section cut</title>
+      <desc>
+        Software state and governed intent meet an ink policy gate. The gate is a plane, not a
+        product domain.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
-        <path d="M48 36 H592 V300" />
+        <path d="M48 28 H592 V372" />
       </g>
       <g
         fill="none"
@@ -37,120 +70,166 @@ function HeroCut() {
         strokeLinecap="square"
         strokeLinejoin="miter"
       >
-        <path d="M88 108 V68 H168" />
-        <path d="M472 68 H552 V108" />
+        <path d="M88 96 V56 H168" />
+        <path d="M472 56 H552 V96" />
       </g>
-      <rect className="sysmap-bed sysmap-bed--repave" x="168" y="128" width="132" height="96" />
-      <rect className="sysmap-bed sysmap-bed--dispatch" x="340" y="128" width="148" height="96" />
-      <g className="sysmap-plane sysmap-plane--repave">
-        <path d="M188 164 H256" />
-        <path d="M188 184 H238" />
-        <path d="M218 204 H256" />
-        <path d="M188 164 V184" />
-        <path d="M256 184 V204" />
-      </g>
-      <g className="sysmap-plane sysmap-plane--dispatch">
-        <path d="M360 176 H394" />
-        <path d="M394 156 V196" />
-        <path d="M434 156 V196" />
-        <path d="M414 176 H476" />
-        <path className="sysmap-intent" d="M464 168 L476 176 L464 184" />
-      </g>
-      <text className="sysmap-svg-kicker" x="320" y="56" textAnchor="middle">
+      <text className="sysmap-svg-kicker" x="320" y="48" textAnchor="middle" fontSize={12}>
         SECTION
       </text>
-      <text className="sysmap-svg-note" x="320" y="76" textAnchor="middle">
-        partial cut · not the whole system
-      </text>
-      <text className="sysmap-label sysmap-label--repave" x="188" y="150">
-        software state
-      </text>
-      <text className="sysmap-label sysmap-label--dispatch" x="360" y="150">
-        governed intent
-      </text>
-      <g fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
-        <path className="sysmap-policy-rule" d="M148 220 H492" />
+      <SvgWords
+        className="sysmap-svg-note"
+        x={320}
+        y={68}
+        words={['partial', 'cut', '·', 'not', 'the', 'whole', 'system']}
+      />
+      <SvgWords
+        className="sysmap-label sysmap-label--repave"
+        x={234}
+        y={124}
+        words={['software', 'state']}
+      />
+      <SvgWords
+        className="sysmap-label sysmap-label--dispatch"
+        x={414}
+        y={124}
+        words={['governed', 'intent']}
+      />
+      <rect className="sysmap-bed sysmap-bed--repave" x="168" y="138" width="132" height="88" />
+      <rect className="sysmap-bed sysmap-bed--dispatch" x="340" y="138" width="148" height="88" />
+      <g className="sysmap-plane sysmap-plane--repave">
+        <path d="M188 168 H256" />
+        <path d="M188 188 H238" />
+        <path d="M218 206 H256" />
+        <path d="M188 168 V188" />
+        <path d="M256 188 V206" />
       </g>
-      <text className="sysmap-svg-note" x="320" y="244" textAnchor="middle">
-        policy gate · ink
-      </text>
-      <text className="sysmap-svg-foot" x="320" y="332" textAnchor="middle">
-        the drawing continues past the frame
-      </text>
+      <g className="sysmap-plane sysmap-plane--dispatch">
+        <path d="M360 182 H394" />
+        <path d="M394 162 V202" />
+        <path d="M434 162 V202" />
+        <path d="M414 182 H476" />
+        <path className="sysmap-intent" d="M464 174 L476 182 L464 190" />
+      </g>
+      <g fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
+        <path className="sysmap-policy-rule" d="M148 250 H492" />
+      </g>
+      <SvgWords
+        className="sysmap-svg-note"
+        x={320}
+        y={274}
+        words={['policy', 'gate', '·', 'ink']}
+      />
+      <SvgWords
+        className="sysmap-svg-foot"
+        x={320}
+        y={352}
+        words={['the', 'drawing', 'continues', 'past', 'the', 'frame']}
+      />
     </svg>
   )
 }
 
 function FamilyDesktop() {
   return (
-    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 460" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 500" aria-hidden="true">
+      <title>Engineering system</title>
+      <desc>
+        Four independent domains. Neutral rules are context. Product-colored planes are authority.
+        Dispatch coordinates and does not own the other domains.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
-        <path d="M36 36 H684 V424 H36 Z" />
+        <path d="M36 28 H684 V472 H36 Z" />
       </g>
-      <text className="sysmap-title" x="360" y="64" textAnchor="middle">
-        Engineering system
+      <SvgWords
+        className="sysmap-title"
+        x={360}
+        y={56}
+        size={22}
+        words={['Engineering', 'system']}
+      />
+      <SvgWords
+        className="sysmap-svg-note"
+        x={360}
+        y={76}
+        words={['four', 'authoritative', 'domains', '·', 'not', 'a', 'runtime', 'topology']}
+      />
+
+      <text className="sysmap-svg-kicker" x="156" y="108" textAnchor="middle" fontSize={12}>
+        <tspan x="156" dy="0">
+          SOFTWARE
+        </tspan>
+        <tspan x="156" dy="14">
+          STATE
+        </tspan>
       </text>
-      <text className="sysmap-svg-note" x="360" y="84" textAnchor="middle">
-        four authoritative domains · not a runtime topology
+      <text className="sysmap-svg-kicker" x="360" y="108" textAnchor="middle" fontSize={12}>
+        <tspan x="360" dy="0">
+          INFRASTRUCTURE
+        </tspan>
+        <tspan x="360" dy="14">
+          STATE
+        </tspan>
+      </text>
+      <text className="sysmap-svg-kicker" x="564" y="108" textAnchor="middle" fontSize={12}>
+        <tspan x="564" dy="0">
+          ECONOMIC
+        </tspan>
+        <tspan x="564" dy="14">
+          STATE
+        </tspan>
       </text>
 
-      <text className="sysmap-svg-kicker" x="156" y="118">
-        SOFTWARE STATE
-      </text>
-      <text className="sysmap-svg-kicker" x="360" y="118" textAnchor="middle">
-        INFRASTRUCTURE STATE
-      </text>
-      <text className="sysmap-svg-kicker" x="564" y="118" textAnchor="middle">
-        ECONOMIC STATE
-      </text>
-
-      <rect className="sysmap-bed sysmap-bed--repave" x="88" y="132" width="136" height="88" />
-      <rect className="sysmap-bed sysmap-bed--overpass" x="292" y="132" width="136" height="88" />
-      <rect className="sysmap-bed sysmap-bed--toll" x="496" y="132" width="136" height="88" />
+      <rect className="sysmap-bed sysmap-bed--repave" x="88" y="148" width="136" height="80" />
+      <rect className="sysmap-bed sysmap-bed--overpass" x="292" y="148" width="136" height="80" />
+      <rect className="sysmap-bed sysmap-bed--toll" x="496" y="148" width="136" height="80" />
 
       <g className="sysmap-plane sysmap-plane--repave sysmap-path--repave">
-        <path d="M108 168 H196" />
-        <path d="M108 188 H168" />
-        <path d="M148 204 H196" />
+        <path d="M108 176 H196" />
+        <path d="M108 196 H168" />
+        <path d="M148 212 H196" />
       </g>
       <g className="sysmap-plane sysmap-plane--overpass sysmap-path--overpass">
-        <path d="M312 164 H408" />
-        <path d="M312 192 H408" />
-        <path d="M336 164 V192" />
-        <path d="M384 164 V192" />
+        <path d="M312 172 H408" />
+        <path d="M312 200 H408" />
+        <path d="M336 172 V200" />
+        <path d="M384 172 V200" />
       </g>
       <g className="sysmap-plane sysmap-plane--toll sysmap-path--toll">
-        <path d="M516 176 H556" />
-        <path d="M572 176 H612" />
-        <path d="M556 160 V192" />
-        <path d="M572 160 V192" />
+        <path d="M516 184 H556" />
+        <path d="M572 184 H612" />
+        <path d="M556 168 V200" />
+        <path d="M572 168 V200" />
       </g>
 
       <g fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square" opacity="0.7">
-        <path d="M156 220 V268" />
-        <path d="M360 220 V268" />
-        <path d="M564 220 V268" />
-        <path d="M156 268 H564" />
-        <path d="M360 268 V304" />
+        <path d="M156 228 V256" />
+        <path d="M360 228 V256" />
+        <path d="M564 228 V256" />
+        <path d="M156 256 H564" />
+        <path d="M360 256 V300" />
       </g>
-      <text className="sysmap-svg-note" x="360" y="292" textAnchor="middle">
-        connected engineering context · does not transfer authority
-      </text>
+      <SvgWords
+        className="sysmap-svg-note"
+        x={360}
+        y={278}
+        words={['context', '·', 'no', 'authority', 'transfer']}
+      />
 
-      <rect className="sysmap-bed sysmap-bed--dispatch" x="292" y="312" width="136" height="72" />
+      <rect className="sysmap-bed sysmap-bed--dispatch" x="292" y="312" width="136" height="64" />
       <g className="sysmap-plane sysmap-plane--dispatch sysmap-path--dispatch">
-        <path d="M312 348 H346" />
-        <path d="M346 332 V364" />
-        <path d="M386 332 V364" />
-        <path d="M366 348 H408" />
-        <path className="sysmap-intent" d="M396 340 L408 348 L396 356" />
+        <path d="M312 344 H346" />
+        <path d="M346 328 V360" />
+        <path d="M386 328 V360" />
+        <path d="M366 344 H408" />
+        <path className="sysmap-intent" d="M396 336 L408 344 L396 352" />
       </g>
-      <text className="sysmap-svg-kicker" x="360" y="400" textAnchor="middle">
-        GOVERNED INTENT + ACTION
-      </text>
-      <text className="sysmap-svg-foot" x="360" y="428" textAnchor="middle">
-        Dispatch coordinates. Domains remain owners.
-      </text>
+      <SvgWords className="sysmap-svg-kicker" x={360} y={404} words={['GOVERNED', 'INTENT']} />
+      <SvgWords
+        className="sysmap-svg-foot"
+        x={360}
+        y={448}
+        words={['Dispatch', 'coordinates.', 'Domains', 'remain', 'owners.']}
+      />
     </svg>
   )
 }
@@ -167,6 +246,29 @@ function FamilyMobile() {
           </a>
         </li>
       ))}
+      <li className="sysmap-stack-item sysmap-stack-item--gate">
+        <p className="sysmap-kicker">Policy gate</p>
+        <p>Ink plane. Not a product domain. Authority stays with the domain that evaluates it.</p>
+      </li>
+    </ol>
+  )
+}
+
+function HeroMobile() {
+  return (
+    <ol className="sysmap-stack sysmap-field--mobile">
+      <li className="sysmap-stack-item sysmap-stack-item--repave">
+        <p className="sysmap-kicker">Software state</p>
+        <p>Repave reads the approved and observed repository cut.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--dispatch">
+        <p className="sysmap-kicker">Governed intent</p>
+        <p>Dispatch carries the question. It does not take domain authority.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--gate">
+        <p className="sysmap-kicker">Policy gate · ink</p>
+        <p>A plane on the cut, not a product domain.</p>
+      </li>
     </ol>
   )
 }
@@ -193,9 +295,13 @@ function PolicyCut() {
       <text className="sysmap-svg-kicker" x="80" y="196">
         CONTEXT
       </text>
-      <text className="sysmap-svg-note" x="80" y="216">
-        domain state · identity · requested change
-      </text>
+      <SvgWords
+        className="sysmap-svg-note"
+        x={80}
+        y={216}
+        anchor="start"
+        words={['domain', 'state', '·', 'identity', '·', 'requested', 'change']}
+      />
       <g fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="square">
         <path className="sysmap-policy-rule" d="M48 248 H672" />
         <path d="M360 248 V248" />
@@ -203,9 +309,12 @@ function PolicyCut() {
       <text className="sysmap-svg-kicker" x="360" y="276" textAnchor="middle">
         POLICY EVALUATE
       </text>
-      <text className="sysmap-svg-note" x="360" y="296" textAnchor="middle">
-        ink decision boundary · not a product domain
-      </text>
+      <SvgWords
+        className="sysmap-svg-note"
+        x={360}
+        y={296}
+        words={['ink', 'decision', 'boundary', '·', 'not', 'a', 'product', 'domain']}
+      />
       <path
         d="M360 308 V336"
         fill="none"
@@ -219,63 +328,115 @@ function PolicyCut() {
       <text className="sysmap-svg-kicker" x="500" y="360">
         REFUSED
       </text>
-      <text className="sysmap-svg-foot" x="360" y="392" textAnchor="middle">
-        direction: evaluation is explicit. current gates stay with domains.
-      </text>
+      <SvgWords
+        className="sysmap-svg-foot"
+        x={360}
+        y={392}
+        words={['evaluation', 'is', 'explicit.', 'gates', 'stay', 'with', 'domains.']}
+      />
     </svg>
   )
 }
 
 function ContextCut() {
   return (
-    <svg className="sysmap-section" viewBox="0 0 720 360" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 400" aria-hidden="true">
+      <title>Cross-domain context</title>
+      <desc>
+        What changed, what did it affect, and what did it cost. Connections are context, not a
+        required pipeline.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
-        <path d="M36 28 H684 V332 H36 Z" />
+        <path d="M36 24 H684 V392 H36 Z" />
       </g>
-      <text className="sysmap-svg-kicker" x="120" y="64" textAnchor="middle">
-        WHAT CHANGED?
+      <text className="sysmap-svg-kicker" x="120" y="52" textAnchor="middle" fontSize={12}>
+        CHANGED
       </text>
-      <text className="sysmap-svg-kicker" x="360" y="64" textAnchor="middle">
-        WHAT DID IT AFFECT?
+      <text className="sysmap-svg-kicker" x="360" y="52" textAnchor="middle" fontSize={12}>
+        AFFECTED
       </text>
-      <text className="sysmap-svg-kicker" x="600" y="64" textAnchor="middle">
-        WHAT DID IT COST?
+      <text className="sysmap-svg-kicker" x="600" y="52" textAnchor="middle" fontSize={12}>
+        COST
       </text>
-      <rect className="sysmap-bed sysmap-bed--repave" x="56" y="84" width="128" height="64" />
-      <rect className="sysmap-bed sysmap-bed--overpass" x="296" y="84" width="128" height="64" />
-      <rect className="sysmap-bed sysmap-bed--toll" x="536" y="84" width="128" height="64" />
-      <text className="sysmap-label sysmap-label--repave" x="72" y="122">
+      <text className="sysmap-label sysmap-label--repave" x="120" y="78" textAnchor="middle">
         Repave
       </text>
-      <text className="sysmap-label sysmap-label--overpass" x="312" y="122">
+      <text className="sysmap-label sysmap-label--overpass" x="360" y="78" textAnchor="middle">
         Overpass
       </text>
-      <text className="sysmap-label sysmap-label--toll" x="552" y="122">
+      <text className="sysmap-label sysmap-label--toll" x="600" y="78" textAnchor="middle">
         Toll
       </text>
+      <rect className="sysmap-bed sysmap-bed--repave" x="56" y="92" width="128" height="56" />
+      <rect className="sysmap-bed sysmap-bed--overpass" x="296" y="92" width="128" height="56" />
+      <rect className="sysmap-bed sysmap-bed--toll" x="536" y="92" width="128" height="56" />
       <g fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="square" opacity="0.75">
-        <path d="M120 148 V200" />
-        <path d="M360 148 V200" />
-        <path d="M600 148 V200" />
-        <path d="M120 200 H600" />
-        <path d="M360 200 V236" />
+        <path d="M120 148 V176" />
+        <path d="M360 148 V176" />
+        <path d="M600 148 V176" />
+        <path d="M120 176 H600" />
       </g>
-      <text className="sysmap-svg-note" x="360" y="192" textAnchor="middle">
-        context may cross · authority does not
+      <SvgWords
+        className="sysmap-svg-note"
+        x={360}
+        y={196}
+        words={['context', 'may', 'cross', '·', 'authority', 'does', 'not']}
+      />
+      <g fill="none" stroke="currentColor" strokeLinecap="square">
+        <path className="sysmap-policy-rule" d="M56 228 H664" />
+      </g>
+      <SvgWords
+        className="sysmap-svg-kicker"
+        x={360}
+        y={250}
+        words={['policy', 'gate', '·', 'ink']}
+      />
+      <text className="sysmap-svg-note" x="360" y="268" textAnchor="middle" fontSize={12}>
+        not a product domain
       </text>
-      <rect className="sysmap-bed sysmap-bed--dispatch" x="296" y="240" width="128" height="52" />
-      <text className="sysmap-label sysmap-label--dispatch" x="312" y="272">
+      <text className="sysmap-label sysmap-label--dispatch" x="360" y="300" textAnchor="middle">
         Dispatch
       </text>
-      <text className="sysmap-svg-foot" x="360" y="316" textAnchor="middle">
-        conceptual example · not a required pipeline
-      </text>
+      <rect className="sysmap-bed sysmap-bed--dispatch" x="296" y="312" width="128" height="48" />
+      <SvgWords
+        className="sysmap-svg-foot"
+        x={360}
+        y={380}
+        words={['conceptual', 'example', '·', 'not', 'a', 'required', 'pipeline']}
+      />
     </svg>
   )
 }
 
+function ContextMobile() {
+  return (
+    <ol className="sysmap-stack sysmap-field--mobile">
+      <li className="sysmap-stack-item sysmap-stack-item--repave">
+        <p className="sysmap-kicker">What changed?</p>
+        <p>Repave owns the software-state reading.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--overpass">
+        <p className="sysmap-kicker">What did it affect?</p>
+        <p>Overpass owns infrastructure relationships.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--toll">
+        <p className="sysmap-kicker">What did it cost?</p>
+        <p>Toll owns the economic record.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--gate">
+        <p className="sysmap-kicker">Policy gate · ink</p>
+        <p>A plane across the cut. Not a fifth product and not a badge on a card.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--dispatch">
+        <p className="sysmap-kicker">Who asks?</p>
+        <p>Dispatch can coordinate the question. Authority stays in the domain.</p>
+      </li>
+    </ol>
+  )
+}
+
 const captions: Record<SystemMapVariant, string> = {
-  hero: 'A partial section cut through the OpsDevCode engineering system. Software state and governed intent meet an ink policy gate. The frame is incomplete because this is not the whole drawing.',
+  hero: 'A partial section cut through the OpsDevCode engineering system. Software state and governed intent meet an ink policy gate. The gate is a plane, not a product domain. The frame is incomplete because this is not the whole drawing.',
   family:
     'OpsDevCode is the parent view of four independent domains. Repave owns software state, Overpass owns infrastructure state, Toll owns economic state, and Dispatch owns governed intent. Neutral rules are context. Product-colored planes are authority. This is not a runtime hierarchy and Dispatch does not own the other domains.',
   policy:
@@ -297,7 +458,12 @@ export default function SystemMap({
   return (
     <figure className={`sysmap sysmap--${kind}${compact ? ' sysmap--compact' : ''}`}>
       <HiddenCaption>{captions[kind]}</HiddenCaption>
-      {kind === 'hero' && <HeroCut />}
+      {kind === 'hero' && (
+        <>
+          <HeroCut />
+          <HeroMobile />
+        </>
+      )}
       {kind === 'family' && (
         <>
           <FamilyDesktop />
@@ -318,7 +484,12 @@ export default function SystemMap({
         </>
       )}
       {kind === 'policy' && <PolicyCut />}
-      {kind === 'context' && <ContextCut />}
+      {kind === 'context' && (
+        <>
+          <ContextCut />
+          <ContextMobile />
+        </>
+      )}
       {family && (
         <p className="sysmap-aside">
           Design informed by <span>Convergence</span>
