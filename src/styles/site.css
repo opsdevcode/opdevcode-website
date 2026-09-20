@@ -1661,6 +1661,9 @@ footer {
 .wrap.home h2.section-title::before {
   content: none;
   display: none;
+  width: 0;
+  height: 0;
+  margin: 0;
 }
 .home-hero {
   padding: var(--space-96) 0 var(--space-80);
@@ -1858,6 +1861,6 @@ footer {
   .start-list li {
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    padding: var(--space-20) var(--space-4);
+    padding: var(--space-20) var(--space-12);
   }
 }
