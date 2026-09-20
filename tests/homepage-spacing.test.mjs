@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
 const css = readFileSync(join(root, 'src/styles/site.css'), 'utf8')
+const system = readFileSync(join(root, 'src/styles/system.css'), 'utf8')
 
 describe('homepage inset from frames and rules', () => {
   it('keeps the five-section parent homepage without SystemMap', () => {
@@ -23,15 +24,21 @@ describe('homepage inset from frames and rules', () => {
     assert.match(css, /\.product-card--portfolio \{\s*[\s\S]*?padding: var\(--space-32\);/)
     assert.match(
       css,
-      /\.why-list li,\s*\.start-list li \{\s*[\s\S]*?padding: var\(--space-24\) var\(--space-16\);/
+      /\.why-list li \+ li,\s*\.start-list li \+ li \{\s*[\s\S]*?padding-top: var\(--space-24\);/
     )
     assert.match(css, /\.start-featured \{\s*[\s\S]*?padding: var\(--space-32\) 0;/)
     assert.match(css, /\.product-card--portfolio \.cta-row \{\s*margin-top: var\(--space-24\);/)
   })
 
-  it('keeps why-four titles off the ornament rule and restores word spacing', () => {
+  it('keeps homepage type off column rules, title ornaments, and the aperture bed', () => {
+    assert.match(system, /\.wrap\.home \{\s*[\s\S]*?background-image: none;/)
+    assert.doesNotMatch(
+      system,
+      /\.wrap\.home \{[^}]*background-image: linear-gradient/
+    )
     assert.match(css, /\.wrap\.home h2\.section-title \{\s*display: block;/)
-    assert.match(css, /\.wrap\.home h2\.section-title::before \{\s*content: none;/)
+    assert.match(css, /\.wrap\.home h2\.section-title::before,/)
+    assert.match(css, /content: none;/)
     assert.match(
       css,
       /\.home-support,\s*\.home-measure,\s*\.wrap\.home \.lede \{\s*[\s\S]*?word-spacing: 0\.04em;/

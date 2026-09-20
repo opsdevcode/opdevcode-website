@@ -650,9 +650,7 @@ a.tile:hover h3 {
 }
 
 .wrap.home h2.section-title {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-12);
+  display: block;
 }
 .wrap.home .tile p strong {
   font-weight: 600;
@@ -1306,20 +1304,13 @@ code.inline {
    Layered on top of the base stylesheet so it overrides safely.
    ============================================================ */
 
-/* --- Ornamental section rule replacing the dot mark ----------- */
-.wrap.home h2.section-title::before {
-  content: '';
-  width: clamp(28px, 4.4vw, 56px);
-  height: 1px;
-  margin-top: 0.78em;
-  margin-right: var(--space-12);
-  border-radius: 0;
-  background: var(--rule-ornament);
-  box-shadow: none;
-  flex-shrink: 0;
-  display: inline-block;
-  align-self: flex-start;
-  transform: translateY(-2px);
+/* Homepage titles are editorial type, not product-page ornaments */
+.wrap.home h2.section-title::before,
+.wrap.home h2.section-title::after,
+.wrap.home .home-hero h1::before,
+.wrap.home .home-hero h1::after {
+  content: none;
+  display: none;
 }
 .wrap.home .home-flow--clarity h2.section-title::before,
 .wrap.home .home-flow--trust h2.section-title::before,
@@ -1419,9 +1410,8 @@ code.inline {
   }
 }
 
-/* Ornament dot under each section title’s leading rule (replaces bullet) */
 .wrap.home h2.section-title {
-  gap: var(--space-12);
+  display: block;
 }
 
 /* === COMPOSITION PASS === */
@@ -1797,19 +1787,31 @@ footer {
   margin: var(--space-40) 0;
   padding: 0;
   max-width: 42rem;
-  border-top: 1px solid var(--color-border);
+  border: none;
 }
 .why-list li,
 .start-list li {
   display: grid;
   gap: var(--space-8);
-  padding: var(--space-24) var(--space-16);
+  margin: 0;
+  padding: var(--space-20) 0 var(--space-24);
+  border: none;
   border-bottom: 1px solid var(--color-border);
-  border-top: none;
+}
+.why-list li:first-child,
+.start-list li:first-child {
+  padding-top: var(--space-8);
 }
 .why-list li:last-child,
 .start-list li:last-child {
-  padding-bottom: var(--space-24);
+  border-bottom: none;
+  padding-bottom: var(--space-8);
+}
+.why-list li + li,
+.start-list li + li {
+  margin-top: var(--space-16);
+  padding-top: var(--space-24);
+  border-top: 1px solid var(--color-border);
 }
 .why-list li {
   grid-template-columns: 8.5rem minmax(0, 1fr);
@@ -1861,6 +1863,10 @@ footer {
   .start-list li {
     grid-template-columns: 1fr;
     gap: var(--space-8);
-    padding: var(--space-20) var(--space-12);
+  }
+  .why-list li + li,
+  .start-list li + li {
+    margin-top: var(--space-20);
+    padding-top: var(--space-32);
   }
 }
