@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.15.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.14.0...opdevcode-website-v1.15.0) (2026-09-20)
+
+
+### Features
+
+* **web:** add Repave sales first screen ([#97](https://github.com/opsdevcode/opdevcode-website/issues/97)) ([583219c](https://github.com/opsdevcode/opdevcode-website/commit/583219cb5bd5b195bb66ed2b1e56f433c3bffaed))
+
+
+### Bug Fixes
+
+* **web:** hold Repave hero line breaks and header spacing ([#99](https://github.com/opsdevcode/opdevcode-website/issues/99)) ([20da774](https://github.com/opsdevcode/opdevcode-website/commit/20da7745bd88e05bc1b97f74e4329b0b8faa3e13))
+* **web:** recompose policy map and thesis statement ([#96](https://github.com/opsdevcode/opdevcode-website/issues/96)) ([5b94ba0](https://github.com/opsdevcode/opdevcode-website/commit/5b94ba0c53b7cb87faa2e942e84d638b2d26f38d))
+
 ## [1.14.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.13.0...opdevcode-website-v1.14.0) (2026-09-20)
 
 
