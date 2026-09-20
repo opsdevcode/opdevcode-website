@@ -26,7 +26,7 @@ That idea must remain identifiable with the logos removed.
 | Rail layout on the company site              | Keep. It already reads as a drawing annotation.                                                                                                                                                                                                                                           |
 | Repave v3 kit (`repave/docs/brand`, ADR 009) | **Product equity to evolve, not ignore.** Keep amber-as-scarce-brand (not status). Drop isometric “platform-layer” mark and tagline _The intelligent platform layer_ as **family** authority — ADR 020 + this grammar win. Inter-on-navy is Repave-local history, not the company system. |
 | Overpass `web_identity` teal + cream         | Keep teal as the Overpass hue family; restyle geometry to section DNA.                                                                                                                                                                                                                    |
-| Toll / Dispatch public identity pages        | Missing locally; do not invent fake UI. Apply grammar when those hosts exist.                                                                                                                                                                                                             |
+| Toll / Dispatch public identity pages        | Live on `toll.opsdevco.de` and `dispatch.opsdevco.de`. Copy family tokens; do not import this site’s CSS.                                                                                                                                                                                 |
 
 The company mark is **not** another product icon. Four open L-corners form an
 empty aperture: the family. Products draw _inside_ that same 32-unit stroke
@@ -71,7 +71,7 @@ Ink text on paper is the accessible default. Accents label planes and marks,
 not body copy. Light is the drawing mode; dark is a later inverse, not a neon
 theme.
 
-See `tokens.json`.
+Copyable token snippet (not a runtime package): [`tokens.json`](tokens.json). CSS SoT: `src/styles/design-tokens.css`.
 
 ## Typography
 
