@@ -27,6 +27,9 @@
 
   --color-border: #c9c2b3;
   --color-border-strong: #8f8778;
+  --rule-reference: 1px;
+  --rule-structural: 1.5px;
+  --rule-emphasis: 2px;
 
   --color-repave: #c4841a;
   --color-overpass: #1a7a72;

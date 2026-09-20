@@ -101,6 +101,21 @@ Primitives: `svg/diagram-primitives.svg`. Signature system:
 Explain a change (a plane resolving, a gap measuring, intent crossing a gate).
 Honor `prefers-reduced-motion`. Never decorate.
 
+## SystemMap
+
+SystemMap is the company visual language: architectural section drawing, not a
+flowchart and not a product logo. The company site owns the implementation.
+Product sites copy the grammar locally later — no shared package.
+
+Primitives in use: **section** (mono label + rule), **cut** (reveals another
+domain without transferring authority), **plane** (product accent = domain
+authority), **context rule** (ink/rule, thinner), **policy gate** (ink
+structural rule, never a fifth accent), **state point / mark** (authority
+anchor).
+
+Policy is a first-class company mechanism, not a fifth product. Do not draw
+OPA as the company category. Do not place Relay in the public family.
+
 ## What this does not govern
 
 Runtime UI chrome inside Repave (except future adoption of tokens), DNS,
