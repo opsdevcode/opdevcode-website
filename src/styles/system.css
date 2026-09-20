@@ -436,6 +436,7 @@
   margin-bottom: var(--space-12);
 }
 .product-motif {
+  display: block;
   width: 40px;
   height: 40px;
   flex-shrink: 0;
@@ -495,6 +496,17 @@
 }
 .compare thead th {
   font-size: var(--text-base);
+}
+.compare-product {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.compare-product-mark {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 .compare tbody th {
   font-size: 11px;

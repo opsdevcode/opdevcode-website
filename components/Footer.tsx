@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { BrandMark } from '@/components/BrandMark'
+import { BrandMark, ProductMark } from '@/components/BrandMark'
+import { products } from '@/lib/products'
 import { CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS, productSiteHref } from '@/lib/site'
 import ProductSiteLink from '@/components/ProductSiteLink'
 
@@ -17,10 +18,16 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer-label">Products</p>
-          <ProductSiteLink href={productSiteHref('repave')}>Repave</ProductSiteLink>
-          <ProductSiteLink href={productSiteHref('overpass')}>Overpass</ProductSiteLink>
-          <ProductSiteLink href={productSiteHref('toll')}>Toll</ProductSiteLink>
-          <ProductSiteLink href={productSiteHref('dispatch')}>Dispatch</ProductSiteLink>
+          {products.map((product) => (
+            <ProductSiteLink
+              key={product.slug}
+              href={productSiteHref(product.slug)}
+              className="footer-product"
+            >
+              <ProductMark slug={product.slug} className="footer-product-mark" />
+              {product.name}
+            </ProductSiteLink>
+          ))}
         </div>
         <div>
           <p className="footer-label">Company</p>

@@ -39,6 +39,14 @@ export const COMPANY_LOCKUP_SRC = '/brand/lockup-opsdevcode.svg'
 export const COMPANY_LOGO_SRC = '/brand/favicon-opsdevcode.svg'
 export const COMPANY_BANNER_SRC = '/brand/og-opsdevcode.svg'
 
+/** Official product marks — files in public/brand/, not a second drawing. */
+export const PRODUCT_MARK_SRC = {
+  repave: '/brand/mark-repave.svg',
+  overpass: '/brand/mark-overpass.svg',
+  toll: '/brand/mark-toll.svg',
+  dispatch: '/brand/mark-dispatch.svg',
+} as const
+
 export const SITE_DESCRIPTION =
   'OpsDevCode builds engineering infrastructure for a world of humans, automation, and agents: governed software delivery, infrastructure state, engineering economics, and a governed intelligent experience.'
 

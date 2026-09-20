@@ -71,6 +71,30 @@ describe('governed-section brand system', () => {
       assert.match(svg, /<svg/)
       assert.match(svg, /stroke-linecap="square"/)
     }
+    const accents = {
+      'mark-repave.svg': '#C4841A',
+      'mark-overpass.svg': '#1A7A72',
+      'mark-toll.svg': '#2B5F9E',
+      'mark-dispatch.svg': '#5B4A8A',
+    }
+    for (const [name, accent] of Object.entries(accents)) {
+      assert.match(readFileSync(join(root, 'public/brand', name), 'utf8'), new RegExp(accent))
+    }
+  })
+
+  it('renders product chrome from official mark files', () => {
+    const mark = readFileSync(join(root, 'components/BrandMark.tsx'), 'utf8')
+    const site = readFileSync(join(root, 'lib/site.ts'), 'utf8')
+    const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
+    const productsPage = readFileSync(join(root, 'src/app/products/page.tsx'), 'utf8')
+    assert.match(site, /repave: '\/brand\/mark-repave\.svg'/)
+    assert.match(site, /overpass: '\/brand\/mark-overpass\.svg'/)
+    assert.match(site, /toll: '\/brand\/mark-toll\.svg'/)
+    assert.match(site, /dispatch: '\/brand\/mark-dispatch\.svg'/)
+    assert.match(mark, /PRODUCT_MARK_SRC/)
+    assert.doesNotMatch(mark, /productPaths/)
+    assert.match(footer, /ProductMark/)
+    assert.match(productsPage, /ProductMark/)
   })
 
   it('uses one company drawing for mark, favicon, lockup, chrome, and share card', () => {

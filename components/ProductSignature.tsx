@@ -10,7 +10,11 @@ const captions: Record<string, string> = {
 export default function ProductSignature({ slug }: { slug: string }) {
   return (
     <figure className={`product-signature product-signature--${slug}`}>
-      <ProductMark slug={slug} className={`product-motif product-motif--${slug}`} />
+      <ProductMark
+        slug={slug}
+        className={`product-motif product-motif--${slug}`}
+        decorative={false}
+      />
       <figcaption>{captions[slug] ?? captions.repave}</figcaption>
       <p className="endorsement">by OpsDevCode</p>
     </figure>
