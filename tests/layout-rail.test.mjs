@@ -79,17 +79,11 @@ describe('homepage rail layout', () => {
     assert.match(css, /\.rail > :not\(\.rail-label\) \{\s*grid-column: 2;/)
   })
 
-  it('gives every homepage rail section a label plus one content child', () => {
+  it('does not use rail grammar on the company homepage', () => {
     const sections = extractRailSections(home)
-    assert.ok(sections.length >= 5, `expected several rail sections, got ${sections.length}`)
-    for (const inner of sections) {
-      const children = countTopLevelTags(inner)
-      assert.equal(
-        children,
-        2,
-        `rail section must be [rail-label, content]. got ${children} top-level children:\n${inner.slice(0, 240)}`
-      )
-    }
+    assert.equal(sections.length, 0, `expected no homepage rails, got ${sections.length}`)
+    assert.doesNotMatch(home, /rail-label/)
+    assert.doesNotMatch(home, /className="hero rail"/)
   })
 })
 

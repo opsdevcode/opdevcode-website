@@ -1,196 +1,185 @@
 # Changelog
 
-## [1.15.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.14.0...opdevcode-website-v1.15.0) (2026-09-20)
-
+## [1.16.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.15.0...opdevcode-website-v1.16.0) (2026-09-20)
 
 ### Features
 
-* **web:** add Repave sales first screen ([#97](https://github.com/opsdevcode/opdevcode-website/issues/97)) ([583219c](https://github.com/opsdevcode/opdevcode-website/commit/583219cb5bd5b195bb66ed2b1e56f433c3bffaed))
+- establish company parent homepage
 
+## [1.15.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.14.0...opdevcode-website-v1.15.0) (2026-09-20)
+
+### Features
+
+- **web:** add Repave sales first screen ([#97](https://github.com/opsdevcode/opdevcode-website/issues/97)) ([583219c](https://github.com/opsdevcode/opdevcode-website/commit/583219cb5bd5b195bb66ed2b1e56f433c3bffaed))
 
 ### Bug Fixes
 
-* **web:** hold Repave hero line breaks and header spacing ([#99](https://github.com/opsdevcode/opdevcode-website/issues/99)) ([20da774](https://github.com/opsdevcode/opdevcode-website/commit/20da7745bd88e05bc1b97f74e4329b0b8faa3e13))
-* **web:** recompose policy map and thesis statement ([#96](https://github.com/opsdevcode/opdevcode-website/issues/96)) ([5b94ba0](https://github.com/opsdevcode/opdevcode-website/commit/5b94ba0c53b7cb87faa2e942e84d638b2d26f38d))
+- **web:** hold Repave hero line breaks and header spacing ([#99](https://github.com/opsdevcode/opdevcode-website/issues/99)) ([20da774](https://github.com/opsdevcode/opdevcode-website/commit/20da7745bd88e05bc1b97f74e4329b0b8faa3e13))
+- **web:** recompose policy map and thesis statement ([#96](https://github.com/opsdevcode/opdevcode-website/issues/96)) ([5b94ba0](https://github.com/opsdevcode/opdevcode-website/commit/5b94ba0c53b7cb87faa2e942e84d638b2d26f38d))
 
 ## [1.14.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.13.0...opdevcode-website-v1.14.0) (2026-09-20)
 
-
 ### Features
 
-* policy-native company architecture story ([#93](https://github.com/opsdevcode/opdevcode-website/issues/93)) ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
-* **web:** establish OpsDevCode company visual system ([#94](https://github.com/opsdevcode/opdevcode-website/issues/94)) ([b3c2fba](https://github.com/opsdevcode/opdevcode-website/commit/b3c2fbac2c9443c12b9444ab3fa0700d55dbc191))
-* **web:** position policy as a shared decision plane ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
+- policy-native company architecture story ([#93](https://github.com/opsdevcode/opdevcode-website/issues/93)) ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
+- **web:** establish OpsDevCode company visual system ([#94](https://github.com/opsdevcode/opdevcode-website/issues/94)) ([b3c2fba](https://github.com/opsdevcode/opdevcode-website/commit/b3c2fbac2c9443c12b9444ab3fa0700d55dbc191))
+- **web:** position policy as a shared decision plane ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
 
 ## [1.13.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.12.0...opdevcode-website-v1.13.0) (2026-09-20)
 
-
 ### Features
 
-* **web:** render official product marks ([#91](https://github.com/opsdevcode/opdevcode-website/issues/91)) ([790a032](https://github.com/opsdevcode/opdevcode-website/commit/790a0328bd252079b0064db5da75bcccf54a9561))
+- **web:** render official product marks ([#91](https://github.com/opsdevcode/opdevcode-website/issues/91)) ([790a032](https://github.com/opsdevcode/opdevcode-website/commit/790a0328bd252079b0064db5da75bcccf54a9561))
 
 ## [1.12.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.1...opdevcode-website-v1.12.0) (2026-09-20)
 
-
 ### Features
 
-* **site:** align public company story with product reality ([#87](https://github.com/opsdevcode/opdevcode-website/issues/87)) ([d6eedf4](https://github.com/opsdevcode/opdevcode-website/commit/d6eedf4b2c6814598ea49d808565ab085e05f12c))
-* **web:** establish product family foundation ([#90](https://github.com/opsdevcode/opdevcode-website/issues/90)) ([9e608f0](https://github.com/opsdevcode/opdevcode-website/commit/9e608f01b5768191fa788dc1e8ea05ca3fc5830c))
+- **site:** align public company story with product reality ([#87](https://github.com/opsdevcode/opdevcode-website/issues/87)) ([d6eedf4](https://github.com/opsdevcode/opdevcode-website/commit/d6eedf4b2c6814598ea49d808565ab085e05f12c))
+- **web:** establish product family foundation ([#90](https://github.com/opsdevcode/opdevcode-website/issues/90)) ([9e608f0](https://github.com/opsdevcode/opdevcode-website/commit/9e608f01b5768191fa788dc1e8ea05ca3fc5830c))
 
 ## [1.11.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.0...opdevcode-website-v1.11.1) (2026-09-07)
 
-
 ### Bug Fixes
 
-* stop linking company site to dead product hosts ([#83](https://github.com/opsdevcode/opdevcode-website/issues/83)) ([f7b4e19](https://github.com/opsdevcode/opdevcode-website/commit/f7b4e198f4a315b740dc98bd449b112729a4e63d))
+- stop linking company site to dead product hosts ([#83](https://github.com/opsdevcode/opdevcode-website/issues/83)) ([f7b4e19](https://github.com/opsdevcode/opdevcode-website/commit/f7b4e198f4a315b740dc98bd449b112729a4e63d))
 
 ## [1.11.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.10.0...opdevcode-website-v1.11.0) (2026-09-07)
 
-
 ### Features
 
-* **site:** give the company homepage flow and one logo ([#78](https://github.com/opsdevcode/opdevcode-website/issues/78)) ([6caadd9](https://github.com/opsdevcode/opdevcode-website/commit/6caadd9e98fa5f82666f2ed770bb130eb3b358c0))
+- **site:** give the company homepage flow and one logo ([#78](https://github.com/opsdevcode/opdevcode-website/issues/78)) ([6caadd9](https://github.com/opsdevcode/opdevcode-website/commit/6caadd9e98fa5f82666f2ed770bb130eb3b358c0))
 
 ## [1.10.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.9.0...opdevcode-website-v1.10.0) (2026-09-07)
 
-
 ### Features
 
-* apply governed-section identity on the company site ([c3871af](https://github.com/opsdevcode/opdevcode-website/commit/c3871af7fc363a24ec02c20aca4c0de8826be0b4))
+- apply governed-section identity on the company site ([c3871af](https://github.com/opsdevcode/opdevcode-website/commit/c3871af7fc363a24ec02c20aca4c0de8826be0b4))
 
 ## [1.9.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.8.0...opdevcode-website-v1.9.0) (2026-09-07)
 
-
 ### Features
 
-* **site:** restore a short visual homepage with human copy first ([60dddc9](https://github.com/opsdevcode/opdevcode-website/commit/60dddc9d63e1eafd210a956870e5af7ba6aed75b))
-* **site:** use the dark profile banner and tagline ([0c1df5f](https://github.com/opsdevcode/opdevcode-website/commit/0c1df5f36a4a9ce871e50bb9ebecbbc0e87625fb))
-* **site:** use the GitHub org mark on company chrome ([a816271](https://github.com/opsdevcode/opdevcode-website/commit/a816271615523ff226ed987d0de5742e04da925d))
-* **site:** use the GitHub org mark on company chrome ([ce61b60](https://github.com/opsdevcode/opdevcode-website/commit/ce61b60153b88198567b9f32d809e6635906bb59))
-
+- **site:** restore a short visual homepage with human copy first ([60dddc9](https://github.com/opsdevcode/opdevcode-website/commit/60dddc9d63e1eafd210a956870e5af7ba6aed75b))
+- **site:** use the dark profile banner and tagline ([0c1df5f](https://github.com/opsdevcode/opdevcode-website/commit/0c1df5f36a4a9ce871e50bb9ebecbbc0e87625fb))
+- **site:** use the GitHub org mark on company chrome ([a816271](https://github.com/opsdevcode/opdevcode-website/commit/a816271615523ff226ed987d0de5742e04da925d))
+- **site:** use the GitHub org mark on company chrome ([ce61b60](https://github.com/opsdevcode/opdevcode-website/commit/ce61b60153b88198567b9f32d809e6635906bb59))
 
 ### Bug Fixes
 
-* **site:** keep rail content out of the label column ([73cba1b](https://github.com/opsdevcode/opdevcode-website/commit/73cba1b21eeae1490450477275a14dd8ac94070a))
+- **site:** keep rail content out of the label column ([73cba1b](https://github.com/opsdevcode/opdevcode-website/commit/73cba1b21eeae1490450477275a14dd8ac94070a))
 
 ## [1.8.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.7.0...opdevcode-website-v1.8.0) (2026-09-07)
 
-
 ### Features
 
-* **site:** lead homepage with problem, outcome, and lifecycle ([b40d801](https://github.com/opsdevcode/opdevcode-website/commit/b40d8018d18957c0d2f5ac4b2bcaaa32b396e014))
-* **site:** lead homepage with problem, outcome, and lifecycle ([93c8bf6](https://github.com/opsdevcode/opdevcode-website/commit/93c8bf689d6e596c75c3d66c27efa219aac6694a))
+- **site:** lead homepage with problem, outcome, and lifecycle ([b40d801](https://github.com/opsdevcode/opdevcode-website/commit/b40d8018d18957c0d2f5ac4b2bcaaa32b396e014))
+- **site:** lead homepage with problem, outcome, and lifecycle ([93c8bf6](https://github.com/opsdevcode/opdevcode-website/commit/93c8bf689d6e596c75c3d66c27efa219aac6694a))
 
 ## [1.7.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.1...opdevcode-website-v1.7.0) (2026-09-06)
 
-
 ### Features
 
-* **site:** point Repave visitors at the product proof ([806a833](https://github.com/opsdevcode/opdevcode-website/commit/806a83302c8fe354e7912c79aa271121337216ec))
+- **site:** point Repave visitors at the product proof ([806a833](https://github.com/opsdevcode/opdevcode-website/commit/806a83302c8fe354e7912c79aa271121337216ec))
 
 ## [1.6.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.6.0...opdevcode-website-v1.6.1) (2026-09-06)
 
-
 ### Bug Fixes
 
-* **site:** stop 200-rewriting product hosts on Netlify ([85361f6](https://github.com/opsdevcode/opdevcode-website/commit/85361f666a9d10fe160bb129233e3f7aa3381ece))
-* **site:** stop 200-rewriting product hosts on Netlify ([fe9e2fb](https://github.com/opsdevcode/opdevcode-website/commit/fe9e2fbe4fdf90b760d57d75b4817f76c14a40cb))
+- **site:** stop 200-rewriting product hosts on Netlify ([85361f6](https://github.com/opsdevcode/opdevcode-website/commit/85361f666a9d10fe160bb129233e3f7aa3381ece))
+- **site:** stop 200-rewriting product hosts on Netlify ([fe9e2fb](https://github.com/opsdevcode/opdevcode-website/commit/fe9e2fbe4fdf90b760d57d75b4817f76c14a40cb))
 
 ## [1.6.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.5.0...opdevcode-website-v1.6.0) (2026-09-06)
 
-
 ### Features
 
-* establish OpsDevCode product identity hosts ([df80277](https://github.com/opsdevcode/opdevcode-website/commit/df80277bb391cdc3dda34c1cf72ae0d3095ce514))
-* establish OpsDevCode product subdomains ([fff58c1](https://github.com/opsdevcode/opdevcode-website/commit/fff58c19634d457691c510774a093f8bf2433dbf))
+- establish OpsDevCode product identity hosts ([df80277](https://github.com/opsdevcode/opdevcode-website/commit/df80277bb391cdc3dda34c1cf72ae0d3095ce514))
+- establish OpsDevCode product subdomains ([fff58c1](https://github.com/opsdevcode/opdevcode-website/commit/fff58c19634d457691c510774a093f8bf2433dbf))
 
 ## [1.5.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.4.0...opdevcode-website-v1.5.0) (2026-09-04)
 
-
 ### Features
 
-* point marketing links at repave.opsdevco.de ([1bddae8](https://github.com/opsdevcode/opdevcode-website/commit/1bddae89a6d50e402f68b065b38ebf58b5135c40))
-* point marketing links at repave.opsdevco.de ([4b81787](https://github.com/opsdevcode/opdevcode-website/commit/4b81787c27345a26d7b1c70a46ec50c1ae483703))
+- point marketing links at repave.opsdevco.de ([1bddae8](https://github.com/opsdevcode/opdevcode-website/commit/1bddae89a6d50e402f68b065b38ebf58b5135c40))
+- point marketing links at repave.opsdevco.de ([4b81787](https://github.com/opsdevcode/opdevcode-website/commit/4b81787c27345a26d7b1c70a46ec50c1ae483703))
 
 ## [1.4.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.3.0...opdevcode-website-v1.4.0) (2026-09-03)
 
-
 ### Features
 
-* **about:** add experience section ([27ec0d6](https://github.com/opsdevcode/opdevcode-website/commit/27ec0d6fef62233e18868af7bb0d4e64fe7693cf))
-* **brand:** use terminal logo for header, footer, and favicon ([aabd300](https://github.com/opsdevcode/opdevcode-website/commit/aabd300ce3b7bec8f5625184a72d56711f5faa61))
-* CI/CD and custom tooling services, tools copy, larger logos ([77921fb](https://github.com/opsdevcode/opdevcode-website/commit/77921fb14f4e6923861be190f0be63e5353bb23c))
-* CI/CD, custom tooling, tools copy, larger logos ([73069f6](https://github.com/opsdevcode/opdevcode-website/commit/73069f6fcab11619caa79f2e16c7a704aae54955))
-* dark theme with tighter spacing ([4629866](https://github.com/opsdevcode/opdevcode-website/commit/4629866340230561e1124cf7e2ae98edadc8b837))
-* dark theme with tighter spacing ([97e4305](https://github.com/opsdevcode/opdevcode-website/commit/97e4305017bffab91c5b74b88495b2b1dd872c59))
-* **home:** add differentiation, engagement, and recognition copy ([305120e](https://github.com/opsdevcode/opdevcode-website/commit/305120eaae19392d14e9e4c72e9125a897a26481))
-* **home:** add example outcomes section ([352489b](https://github.com/opsdevcode/opdevcode-website/commit/352489b047b8c73c95780ed213b629b1b2410b58))
-* **home:** add hero differentiator line ([8e12519](https://github.com/opsdevcode/opdevcode-website/commit/8e12519041ab1a9e1600b7da9d831ccb53c8d97c))
-* **home:** add how engagement works section and closing cta ([d1d1168](https://github.com/opsdevcode/opdevcode-website/commit/d1d11684fb493dd166f05216fee324c9371f7898))
-* **home:** add outcome taglines to service cards ([2be2145](https://github.com/opsdevcode/opdevcode-website/commit/2be2145b5b5ce43985a6b1621a373184919b3194))
-* **home:** add point of view section ([6f37426](https://github.com/opsdevcode/opdevcode-website/commit/6f37426e84cbdf470f4d24566b684896df6d7a87))
-* **home:** add primary problem section below hero ([2c75cbf](https://github.com/opsdevcode/opdevcode-website/commit/2c75cbf440933406e4cdf47fd3626110e19afb51))
-* **home:** add primary problem section below hero ([d02e622](https://github.com/opsdevcode/opdevcode-website/commit/d02e622de9b7c7d1ee1d5ad1adbcab6cb22aa0bc))
-* **home:** add supporting copy for scope, trust, and ownership ([ffc9f06](https://github.com/opsdevcode/opdevcode-website/commit/ffc9f0685c369f49730a550d0a7e796be0ef30c9))
-* **home:** align cta copy and isolate finale section ([92f71eb](https://github.com/opsdevcode/opdevcode-website/commit/92f71eb8e808bda3a1c3a812c8eb2311c83ef607))
-* **home:** conversion-focused homepage copy and layout ([1e43cf4](https://github.com/opsdevcode/opdevcode-website/commit/1e43cf4d9277a841e5a800a2c40cff4c551cfab8))
-* **home:** conversion-focused homepage copy and layout ([bd09f6b](https://github.com/opsdevcode/opdevcode-website/commit/bd09f6bfddde4fffb2d591fe2a2a4b9f4c7f319e))
-* **home:** homepage conversion copy, layout, and polish ([63e5291](https://github.com/opsdevcode/opdevcode-website/commit/63e52917888fec38fb7d86400788753f48d114b2))
-* **home:** homepage CTA copy and finale section polish ([4a847ce](https://github.com/opsdevcode/opdevcode-website/commit/4a847ce8810f22b2e426a95638883f9a24671c82))
-* **home:** homepage spacing, scan flow, and narrative CTA ([42ae9e3](https://github.com/opsdevcode/opdevcode-website/commit/42ae9e3e80d3c2c6fed634ff30bc113f5370732a))
-* **home:** improve hero typography and homepage scan flow ([d0f8465](https://github.com/opsdevcode/opdevcode-website/commit/d0f8465ab0bdbc9fb55bd9a51cf78135966963bd))
-* **home:** markup for scan lists, trust placement, and finale CTA ([8cfbd4b](https://github.com/opsdevcode/opdevcode-website/commit/8cfbd4b6d0fc28fa9201e812e84bd4c9cc05093e))
-* **home:** narrative rhythm, tokens, and closing cta ([c504749](https://github.com/opsdevcode/opdevcode-website/commit/c5047499439ed429b25310089936e48eb832bdd9))
-* **home:** outcome-led services copy and homepage polish ([c1d3def](https://github.com/opsdevcode/opdevcode-website/commit/c1d3def6cea89a8182699d8b879370b1bbaabb3b))
-* **homepage:** tighten copy, audience sections, and trust strip ([c9e19d4](https://github.com/opsdevcode/opdevcode-website/commit/c9e19d4917b78797d90fb1468eefe3c75540146b))
-* **homepage:** tighten copy, audience sections, trust strip ([30943c0](https://github.com/opsdevcode/opdevcode-website/commit/30943c0bb05d6b3f9f24a93c5f1773c952123680))
-* **home:** polish homepage copy, astro parity, and interactions ([c1bba07](https://github.com/opsdevcode/opdevcode-website/commit/c1bba074f25ba85d60f72d2dfa9f8e3896af567e))
-* **home:** trust copy and homepage visual polish ([8b52fef](https://github.com/opsdevcode/opdevcode-website/commit/8b52fef1fa7af96a920a066fb68dcad5e06f6ad1))
-* migrate site from Astro to Next.js ([cda1ad7](https://github.com/opsdevcode/opdevcode-website/commit/cda1ad7d091c34f791c6677466bd50bc9836accf))
-* migrate site from Astro to Next.js ([b053605](https://github.com/opsdevcode/opdevcode-website/commit/b05360592912eb4eacc10d29a3372ed15ce85b67))
-* Next.js migration + visual overhaul + desktop layout ([8a09b40](https://github.com/opsdevcode/opdevcode-website/commit/8a09b40e2dce16d7fc381272be6bb68e17735599))
-* Next.js migration + visual overhaul + desktop layout ([079625e](https://github.com/opsdevcode/opdevcode-website/commit/079625ee8767695b3a62b02a0cbc0dbfbc60c859))
-* OpsDevCode rebrand and FinOps service ([9330d61](https://github.com/opsdevcode/opdevcode-website/commit/9330d61ddb7b649df53a9f8ada3918af1b3df2d9))
-* OpsDevCode rebrand and FinOps service ([3b457ea](https://github.com/opsdevcode/opdevcode-website/commit/3b457eaf05b08f5069b1cd76b307da075032c16b))
-* **seo:** social preview v3 and refined open graph metadata ([c0fce95](https://github.com/opsdevcode/opdevcode-website/commit/c0fce95665f5dcf4c97eeb5a2a32a14cd712233d))
-* **seo:** social preview v3 and refined open graph metadata ([bb4861d](https://github.com/opsdevcode/opdevcode-website/commit/bb4861d19b940a36644668fef0e402550e876177))
-* **seo:** social preview v4 with simplify cloud tagline ([e42abae](https://github.com/opsdevcode/opdevcode-website/commit/e42abaea3a5f9e631fd9352df3d4b6464666120f))
-* **seo:** social preview v4 with simplify cloud tagline ([f7db6d0](https://github.com/opsdevcode/opdevcode-website/commit/f7db6d08ed7d9bc9def615296da2d4d93408634a))
-* **services:** add per-service detail pages and linked tiles ([d2ae3f4](https://github.com/opsdevcode/opdevcode-website/commit/d2ae3f453c53ad4c7e915f4b8693b5e287499b85))
-* **services:** Kubernetes offering, aligned copy, K8s in how-it-works ([f0867c0](https://github.com/opsdevcode/opdevcode-website/commit/f0867c0fd963a0307ebc772a9dc10c7b9f3c5e9b))
-* **services:** Kubernetes service tile, copy alignment, K8s in step 2 ([d6fef15](https://github.com/opsdevcode/opdevcode-website/commit/d6fef15554021be5af6eb832472503984b6e272f))
-* **services:** per-service detail pages and linked service tiles ([a55def2](https://github.com/opsdevcode/opdevcode-website/commit/a55def2ef56daa108fd3a3f0266b8b2a39642a2c))
-* **services:** reframe platform audit bullets as "what you get" ([f9a0dea](https://github.com/opsdevcode/opdevcode-website/commit/f9a0deaeadbab6928a941ccdacadff9b69e8f23f))
-* **services:** rename Terraform cleanup to IaC (/services/iac) ([074a02e](https://github.com/opsdevcode/opdevcode-website/commit/074a02ed8a909b24a74651666b751b780bc16c20))
-* ship stripe-inspired light redesign to production ([63aadcf](https://github.com/opsdevcode/opdevcode-website/commit/63aadcf80ecd446186f9f06ec6894fb1b9c7c463))
-* **site:** editorial typography, dark mode, and reveal polish ([d9a04e2](https://github.com/opsdevcode/opdevcode-website/commit/d9a04e201b726c04b53fa43d671d19867e7d95d2))
-* **site:** editorial typography, dark mode, and reveal polish ([6c37618](https://github.com/opsdevcode/opdevcode-website/commit/6c37618ec5d1869963d77eec21e1efe57b3e18fc))
-* **site:** refine homepage copy, CTAs, and tools intros ([76b711f](https://github.com/opsdevcode/opdevcode-website/commit/76b711fb225da18e87ae2be2c46b4ecd69bd13b7))
-* **site:** refine homepage copy, CTAs, and tools intros ([2cf4cae](https://github.com/opsdevcode/opdevcode-website/commit/2cf4caea18965b9d836c43fedd6c0c2c5444c4c4))
-* **site:** reposition around cloud and kubernetes platform engineering ([540b0df](https://github.com/opsdevcode/opdevcode-website/commit/540b0df43c22d36ff42456046bf89304c79153a5))
-* **site:** reposition around cloud and kubernetes platform engineering ([d299397](https://github.com/opsdevcode/opdevcode-website/commit/d29939738ea64cd708b92d58869441e89ab0b2bf))
-* **site:** reposition OpsDevCode around product ecosystem ([02e378e](https://github.com/opsdevcode/opdevcode-website/commit/02e378e5722e8eef44262cd5db528c2f5a56bb90))
-* **site:** reposition OpsDevCode around product ecosystem ([f458f1c](https://github.com/opsdevcode/opdevcode-website/commit/f458f1cdbf7e9ea3972d9719ac4ae3cd92b115a1))
-* Stripe-inspired light redesign ([9bf563d](https://github.com/opsdevcode/opdevcode-website/commit/9bf563d5141f883b09711060049f784f2bd97f97))
-* Stripe-inspired light redesign ([79d1991](https://github.com/opsdevcode/opdevcode-website/commit/79d1991c6db3b5f3cfb2e9e4e62e2aba2159df75))
-* **styles:** homepage rhythm, scan flow, and narrative finale ([a2cb790](https://github.com/opsdevcode/opdevcode-website/commit/a2cb7907e1b561c9884328a46f1ad484ce10db77))
-
+- **about:** add experience section ([27ec0d6](https://github.com/opsdevcode/opdevcode-website/commit/27ec0d6fef62233e18868af7bb0d4e64fe7693cf))
+- **brand:** use terminal logo for header, footer, and favicon ([aabd300](https://github.com/opsdevcode/opdevcode-website/commit/aabd300ce3b7bec8f5625184a72d56711f5faa61))
+- CI/CD and custom tooling services, tools copy, larger logos ([77921fb](https://github.com/opsdevcode/opdevcode-website/commit/77921fb14f4e6923861be190f0be63e5353bb23c))
+- CI/CD, custom tooling, tools copy, larger logos ([73069f6](https://github.com/opsdevcode/opdevcode-website/commit/73069f6fcab11619caa79f2e16c7a704aae54955))
+- dark theme with tighter spacing ([4629866](https://github.com/opsdevcode/opdevcode-website/commit/4629866340230561e1124cf7e2ae98edadc8b837))
+- dark theme with tighter spacing ([97e4305](https://github.com/opsdevcode/opdevcode-website/commit/97e4305017bffab91c5b74b88495b2b1dd872c59))
+- **home:** add differentiation, engagement, and recognition copy ([305120e](https://github.com/opsdevcode/opdevcode-website/commit/305120eaae19392d14e9e4c72e9125a897a26481))
+- **home:** add example outcomes section ([352489b](https://github.com/opsdevcode/opdevcode-website/commit/352489b047b8c73c95780ed213b629b1b2410b58))
+- **home:** add hero differentiator line ([8e12519](https://github.com/opsdevcode/opdevcode-website/commit/8e12519041ab1a9e1600b7da9d831ccb53c8d97c))
+- **home:** add how engagement works section and closing cta ([d1d1168](https://github.com/opsdevcode/opdevcode-website/commit/d1d11684fb493dd166f05216fee324c9371f7898))
+- **home:** add outcome taglines to service cards ([2be2145](https://github.com/opsdevcode/opdevcode-website/commit/2be2145b5b5ce43985a6b1621a373184919b3194))
+- **home:** add point of view section ([6f37426](https://github.com/opsdevcode/opdevcode-website/commit/6f37426e84cbdf470f4d24566b684896df6d7a87))
+- **home:** add primary problem section below hero ([2c75cbf](https://github.com/opsdevcode/opdevcode-website/commit/2c75cbf440933406e4cdf47fd3626110e19afb51))
+- **home:** add primary problem section below hero ([d02e622](https://github.com/opsdevcode/opdevcode-website/commit/d02e622de9b7c7d1ee1d5ad1adbcab6cb22aa0bc))
+- **home:** add supporting copy for scope, trust, and ownership ([ffc9f06](https://github.com/opsdevcode/opdevcode-website/commit/ffc9f0685c369f49730a550d0a7e796be0ef30c9))
+- **home:** align cta copy and isolate finale section ([92f71eb](https://github.com/opsdevcode/opdevcode-website/commit/92f71eb8e808bda3a1c3a812c8eb2311c83ef607))
+- **home:** conversion-focused homepage copy and layout ([1e43cf4](https://github.com/opsdevcode/opdevcode-website/commit/1e43cf4d9277a841e5a800a2c40cff4c551cfab8))
+- **home:** conversion-focused homepage copy and layout ([bd09f6b](https://github.com/opsdevcode/opdevcode-website/commit/bd09f6bfddde4fffb2d591fe2a2a4b9f4c7f319e))
+- **home:** homepage conversion copy, layout, and polish ([63e5291](https://github.com/opsdevcode/opdevcode-website/commit/63e52917888fec38fb7d86400788753f48d114b2))
+- **home:** homepage CTA copy and finale section polish ([4a847ce](https://github.com/opsdevcode/opdevcode-website/commit/4a847ce8810f22b2e426a95638883f9a24671c82))
+- **home:** homepage spacing, scan flow, and narrative CTA ([42ae9e3](https://github.com/opsdevcode/opdevcode-website/commit/42ae9e3e80d3c2c6fed634ff30bc113f5370732a))
+- **home:** improve hero typography and homepage scan flow ([d0f8465](https://github.com/opsdevcode/opdevcode-website/commit/d0f8465ab0bdbc9fb55bd9a51cf78135966963bd))
+- **home:** markup for scan lists, trust placement, and finale CTA ([8cfbd4b](https://github.com/opsdevcode/opdevcode-website/commit/8cfbd4b6d0fc28fa9201e812e84bd4c9cc05093e))
+- **home:** narrative rhythm, tokens, and closing cta ([c504749](https://github.com/opsdevcode/opdevcode-website/commit/c5047499439ed429b25310089936e48eb832bdd9))
+- **home:** outcome-led services copy and homepage polish ([c1d3def](https://github.com/opsdevcode/opdevcode-website/commit/c1d3def6cea89a8182699d8b879370b1bbaabb3b))
+- **homepage:** tighten copy, audience sections, and trust strip ([c9e19d4](https://github.com/opsdevcode/opdevcode-website/commit/c9e19d4917b78797d90fb1468eefe3c75540146b))
+- **homepage:** tighten copy, audience sections, trust strip ([30943c0](https://github.com/opsdevcode/opdevcode-website/commit/30943c0bb05d6b3f9f24a93c5f1773c952123680))
+- **home:** polish homepage copy, astro parity, and interactions ([c1bba07](https://github.com/opsdevcode/opdevcode-website/commit/c1bba074f25ba85d60f72d2dfa9f8e3896af567e))
+- **home:** trust copy and homepage visual polish ([8b52fef](https://github.com/opsdevcode/opdevcode-website/commit/8b52fef1fa7af96a920a066fb68dcad5e06f6ad1))
+- migrate site from Astro to Next.js ([cda1ad7](https://github.com/opsdevcode/opdevcode-website/commit/cda1ad7d091c34f791c6677466bd50bc9836accf))
+- migrate site from Astro to Next.js ([b053605](https://github.com/opsdevcode/opdevcode-website/commit/b05360592912eb4eacc10d29a3372ed15ce85b67))
+- Next.js migration + visual overhaul + desktop layout ([8a09b40](https://github.com/opsdevcode/opdevcode-website/commit/8a09b40e2dce16d7fc381272be6bb68e17735599))
+- Next.js migration + visual overhaul + desktop layout ([079625e](https://github.com/opsdevcode/opdevcode-website/commit/079625ee8767695b3a62b02a0cbc0dbfbc60c859))
+- OpsDevCode rebrand and FinOps service ([9330d61](https://github.com/opsdevcode/opdevcode-website/commit/9330d61ddb7b649df53a9f8ada3918af1b3df2d9))
+- OpsDevCode rebrand and FinOps service ([3b457ea](https://github.com/opsdevcode/opdevcode-website/commit/3b457eaf05b08f5069b1cd76b307da075032c16b))
+- **seo:** social preview v3 and refined open graph metadata ([c0fce95](https://github.com/opsdevcode/opdevcode-website/commit/c0fce95665f5dcf4c97eeb5a2a32a14cd712233d))
+- **seo:** social preview v3 and refined open graph metadata ([bb4861d](https://github.com/opsdevcode/opdevcode-website/commit/bb4861d19b940a36644668fef0e402550e876177))
+- **seo:** social preview v4 with simplify cloud tagline ([e42abae](https://github.com/opsdevcode/opdevcode-website/commit/e42abaea3a5f9e631fd9352df3d4b6464666120f))
+- **seo:** social preview v4 with simplify cloud tagline ([f7db6d0](https://github.com/opsdevcode/opdevcode-website/commit/f7db6d08ed7d9bc9def615296da2d4d93408634a))
+- **services:** add per-service detail pages and linked tiles ([d2ae3f4](https://github.com/opsdevcode/opdevcode-website/commit/d2ae3f453c53ad4c7e915f4b8693b5e287499b85))
+- **services:** Kubernetes offering, aligned copy, K8s in how-it-works ([f0867c0](https://github.com/opsdevcode/opdevcode-website/commit/f0867c0fd963a0307ebc772a9dc10c7b9f3c5e9b))
+- **services:** Kubernetes service tile, copy alignment, K8s in step 2 ([d6fef15](https://github.com/opsdevcode/opdevcode-website/commit/d6fef15554021be5af6eb832472503984b6e272f))
+- **services:** per-service detail pages and linked service tiles ([a55def2](https://github.com/opsdevcode/opdevcode-website/commit/a55def2ef56daa108fd3a3f0266b8b2a39642a2c))
+- **services:** reframe platform audit bullets as "what you get" ([f9a0dea](https://github.com/opsdevcode/opdevcode-website/commit/f9a0deaeadbab6928a941ccdacadff9b69e8f23f))
+- **services:** rename Terraform cleanup to IaC (/services/iac) ([074a02e](https://github.com/opsdevcode/opdevcode-website/commit/074a02ed8a909b24a74651666b751b780bc16c20))
+- ship stripe-inspired light redesign to production ([63aadcf](https://github.com/opsdevcode/opdevcode-website/commit/63aadcf80ecd446186f9f06ec6894fb1b9c7c463))
+- **site:** editorial typography, dark mode, and reveal polish ([d9a04e2](https://github.com/opsdevcode/opdevcode-website/commit/d9a04e201b726c04b53fa43d671d19867e7d95d2))
+- **site:** editorial typography, dark mode, and reveal polish ([6c37618](https://github.com/opsdevcode/opdevcode-website/commit/6c37618ec5d1869963d77eec21e1efe57b3e18fc))
+- **site:** refine homepage copy, CTAs, and tools intros ([76b711f](https://github.com/opsdevcode/opdevcode-website/commit/76b711fb225da18e87ae2be2c46b4ecd69bd13b7))
+- **site:** refine homepage copy, CTAs, and tools intros ([2cf4cae](https://github.com/opsdevcode/opdevcode-website/commit/2cf4caea18965b9d836c43fedd6c0c2c5444c4c4))
+- **site:** reposition around cloud and kubernetes platform engineering ([540b0df](https://github.com/opsdevcode/opdevcode-website/commit/540b0df43c22d36ff42456046bf89304c79153a5))
+- **site:** reposition around cloud and kubernetes platform engineering ([d299397](https://github.com/opsdevcode/opdevcode-website/commit/d29939738ea64cd708b92d58869441e89ab0b2bf))
+- **site:** reposition OpsDevCode around product ecosystem ([02e378e](https://github.com/opsdevcode/opdevcode-website/commit/02e378e5722e8eef44262cd5db528c2f5a56bb90))
+- **site:** reposition OpsDevCode around product ecosystem ([f458f1c](https://github.com/opsdevcode/opdevcode-website/commit/f458f1cdbf7e9ea3972d9719ac4ae3cd92b115a1))
+- Stripe-inspired light redesign ([9bf563d](https://github.com/opsdevcode/opdevcode-website/commit/9bf563d5141f883b09711060049f784f2bd97f97))
+- Stripe-inspired light redesign ([79d1991](https://github.com/opsdevcode/opdevcode-website/commit/79d1991c6db3b5f3cfb2e9e4e62e2aba2159df75))
+- **styles:** homepage rhythm, scan flow, and narrative finale ([a2cb790](https://github.com/opsdevcode/opdevcode-website/commit/a2cb7907e1b561c9884328a46f1ad484ce10db77))
 
 ### Bug Fixes
 
-* **about:** correct linkedin profile url ([7664472](https://github.com/opsdevcode/opdevcode-website/commit/76644724eb1f2ae6ebcaf67c59e1050e012b6b39))
-* **about:** correct linkedin profile url ([be1055a](https://github.com/opsdevcode/opdevcode-website/commit/be1055a83f11de625c9a3db467ccc2559213b58d))
-* **agentic:** use Link for All services (ESLint no-html-link) ([8c9f90a](https://github.com/opsdevcode/opdevcode-website/commit/8c9f90a90dce794e4706f1b8794c2f6330781ea3))
-* **brand:** mark logo + OpsDevCode wordmark ([edb253d](https://github.com/opsdevcode/opdevcode-website/commit/edb253de6b55c79bfd8ac916218d11e3db09ee8f))
-* **brand:** use mark logo + text OpsDevCode; drop embedded OPSDEVCO bitmap ([ba40b9a](https://github.com/opsdevcode/opdevcode-website/commit/ba40b9a39c4e18f91b14a840d8c698891adebe7d))
-* **content:** tighten hero, cta, and platform build copy ([6b5cc7b](https://github.com/opsdevcode/opdevcode-website/commit/6b5cc7bcd8afde0db8f53799d238f8a204b71ade))
-* **home:** emphasize IaC in hero subline with stack list ([dcb584f](https://github.com/opsdevcode/opdevcode-website/commit/dcb584f6edcb0179f9131e623a65dbc9adde8f50))
-* **home:** wrap section titles in section-title-text for flex layout ([ce27570](https://github.com/opsdevcode/opdevcode-website/commit/ce27570ba20cd9460fed0448d51491de226b02df))
-* **services:** use K8s instead of EKS in Kubernetes copy ([970330d](https://github.com/opsdevcode/opdevcode-website/commit/970330db9037a5d14d3f5f5740c29e827c6fbebb))
-* **site:** use variable weight for Fraunces with axes ([4b67eca](https://github.com/opsdevcode/opdevcode-website/commit/4b67eca45e2d5ebaaf3502aea585c2d0cdba0b33))
-* **style:** revert typography fonts to original inter stack ([21d4fb2](https://github.com/opsdevcode/opdevcode-website/commit/21d4fb2c6ed61448fc663747d95a72337a368a5e))
-* **style:** revert typography to Inter stack ([8a48645](https://github.com/opsdevcode/opdevcode-website/commit/8a48645489659f5ca85a4768b091ba9f45eb24ba))
-* **ui:** remove dark mode and keep light theme only ([7fa3759](https://github.com/opsdevcode/opdevcode-website/commit/7fa3759eec3f28796084071f5f9f2f9cc3bb9150))
+- **about:** correct linkedin profile url ([7664472](https://github.com/opsdevcode/opdevcode-website/commit/76644724eb1f2ae6ebcaf67c59e1050e012b6b39))
+- **about:** correct linkedin profile url ([be1055a](https://github.com/opsdevcode/opdevcode-website/commit/be1055a83f11de625c9a3db467ccc2559213b58d))
+- **agentic:** use Link for All services (ESLint no-html-link) ([8c9f90a](https://github.com/opsdevcode/opdevcode-website/commit/8c9f90a90dce794e4706f1b8794c2f6330781ea3))
+- **brand:** mark logo + OpsDevCode wordmark ([edb253d](https://github.com/opsdevcode/opdevcode-website/commit/edb253de6b55c79bfd8ac916218d11e3db09ee8f))
+- **brand:** use mark logo + text OpsDevCode; drop embedded OPSDEVCO bitmap ([ba40b9a](https://github.com/opsdevcode/opdevcode-website/commit/ba40b9a39c4e18f91b14a840d8c698891adebe7d))
+- **content:** tighten hero, cta, and platform build copy ([6b5cc7b](https://github.com/opsdevcode/opdevcode-website/commit/6b5cc7bcd8afde0db8f53799d238f8a204b71ade))
+- **home:** emphasize IaC in hero subline with stack list ([dcb584f](https://github.com/opsdevcode/opdevcode-website/commit/dcb584f6edcb0179f9131e623a65dbc9adde8f50))
+- **home:** wrap section titles in section-title-text for flex layout ([ce27570](https://github.com/opsdevcode/opdevcode-website/commit/ce27570ba20cd9460fed0448d51491de226b02df))
+- **services:** use K8s instead of EKS in Kubernetes copy ([970330d](https://github.com/opsdevcode/opdevcode-website/commit/970330db9037a5d14d3f5f5740c29e827c6fbebb))
+- **site:** use variable weight for Fraunces with axes ([4b67eca](https://github.com/opsdevcode/opdevcode-website/commit/4b67eca45e2d5ebaaf3502aea585c2d0cdba0b33))
+- **style:** revert typography fonts to original inter stack ([21d4fb2](https://github.com/opsdevcode/opdevcode-website/commit/21d4fb2c6ed61448fc663747d95a72337a368a5e))
+- **style:** revert typography to Inter stack ([8a48645](https://github.com/opsdevcode/opdevcode-website/commit/8a48645489659f5ca85a4768b091ba9f45eb24ba))
+- **ui:** remove dark mode and keep light theme only ([7fa3759](https://github.com/opsdevcode/opdevcode-website/commit/7fa3759eec3f28796084071f5f9f2f9cc3bb9150))
 
 ## [1.3.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.2.0...opdevcode-website-v1.3.0) (2026-03-04)
 
