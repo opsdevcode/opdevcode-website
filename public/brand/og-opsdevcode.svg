@@ -1,13 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="OpsDevCode">
   <title>OpsDevCode</title>
   <rect width="1200" height="630" fill="#F3EFE6"/>
-  <g fill="none" stroke="#1A1F1C" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" transform="translate(72 255) scale(3.6)">
+  <g fill="none" stroke="#C9C2B3" stroke-width="1">
+    <path d="M48 48 H1152 V582 H48 Z"/>
+  </g>
+  <g fill="none" stroke="#1A1F1C" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M80 120 V80 H140"/>
+    <path d="M1060 80 H1120 V120"/>
+  </g>
+  <g fill="none" stroke="#1A1F1C" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" transform="translate(80 210) scale(2.2)">
     <path d="M6 13 V6 H13"/>
     <path d="M19 6 H26 V13"/>
     <path d="M26 19 V26 H19"/>
     <path d="M13 26 H6 V19"/>
   </g>
-  <text x="220" y="318" fill="#1A1F1C" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="56" font-weight="500" letter-spacing="-0.02em">OpsDevCode</text>
-  <text x="220" y="362" fill="#3F433F" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="22">Infrastructure for modern engineering organizations.</text>
-  <text x="72" y="560" fill="#5C615A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">opsdevco.de</text>
+  <rect x="220" y="200" width="200" height="88" fill="#F3EFE6" stroke="#C4841A" stroke-width="1.5"/>
+  <rect x="460" y="200" width="200" height="88" fill="#F3EFE6" stroke="#1A7A72" stroke-width="1.5"/>
+  <rect x="700" y="200" width="200" height="88" fill="#F3EFE6" stroke="#2B5F9E" stroke-width="1.5"/>
+  <text x="240" y="252" fill="#C4841A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">SOFTWARE</text>
+  <text x="480" y="252" fill="#1A7A72" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">INFRASTRUCTURE</text>
+  <text x="720" y="252" fill="#2B5F9E" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">ECONOMICS</text>
+  <path d="M320 288 V340 H800 V288" fill="none" stroke="#1A1F1C" stroke-width="1.5" stroke-linecap="square"/>
+  <rect x="500" y="340" width="200" height="64" fill="#F3EFE6" stroke="#5B4A8A" stroke-width="1.5"/>
+  <text x="520" y="378" fill="#5B4A8A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="16">GOVERNED INTENT</text>
+  <text x="80" y="500" fill="#1A1F1C" font-family="IBM Plex Serif, Georgia, serif" font-size="42">OpsDevCode</text>
+  <text x="80" y="544" fill="#3F433F" font-family="IBM Plex Sans, ui-sans-serif, sans-serif" font-size="22">Infrastructure for modern engineering organizations.</text>
+  <text x="80" y="578" fill="#5C615A" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14">opsdevco.de · parent system · not a fifth product</text>
 </svg>

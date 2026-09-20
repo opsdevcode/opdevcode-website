@@ -118,8 +118,7 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--surface-glass);
-  backdrop-filter: blur(16px) saturate(1.15);
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
 header {
@@ -1361,7 +1360,7 @@ code.inline {
 
 /* --- Paper sticky header (not white glass) + tile hover ring --- */
 .header-wrap {
-  background: var(--surface-glass);
+  background: var(--color-bg);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1582,6 +1581,7 @@ footer {
   font-size: var(--text-sm);
   margin-bottom: 6px;
 }
+.footer-grid a.footer-product,
 .footer-product {
   display: flex;
   align-items: center;

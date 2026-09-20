@@ -49,6 +49,7 @@ export const products: Product[] = [
     body: [
       'Repave owns the governed lifecycle of software repositories: golden-path generation, brownfield adoption, configuration change on an approved baseline, standards upgrades, observation of governed state, and restore of supported drift.',
       'Those lifecycle capabilities are implemented. Hosted access is waitlist and invite — not general self-serve availability. Portal and catalog surfaces are ways to use Repave; they are not the product category, and Repave is not the OpsDevCode umbrella.',
+      'Observe now attaches a structured policy preview — allowed, denied, conditionally allowed, or unknown — from recorded ownership, baseline, and evidence. Writes still stop on deterministic gates. That is evaluation and routing, not family-wide enforcement.',
     ],
     owns: [
       'Repository generation from approved blueprints',
@@ -86,6 +87,7 @@ export const products: Product[] = [
     body: [
       'Overpass understands infrastructure from state it holds: inventory, proven relationships, impact from that stored reachability, drift against that understanding, and gated state transactions.',
       'Those capabilities are implemented in the Overpass runtime. This is not live-cloud discovery, not a cloud apply engine, and not generally available. Hosted custody is enabled per early-access partner.',
+      'Overpass supplies policy-evaluable infrastructure truth from accepted Terraform or OpenTofu snapshots and proven dependency edges. Policy interprets those facts. Overpass does not continuously evaluate policy, and it does not remediate — an authorized executor does.',
     ],
     owns: [
       'Terraform and OpenTofu state custody',
@@ -123,6 +125,7 @@ export const products: Product[] = [
     body: [
       'Toll is the engineering economics product: it connects cost and utilization evidence to ownership without becoming a billing warehouse or a savings engine.',
       'FOCUS ingest, persistence, and utilization sampling run in Toll. Spend attribution and waste recommendation still execute in Repave until later extraction. Toll does not invoice, execute purchases, or claim savings percentages.',
+      'The policy direction is economic context: attributed spend, budgets, and thresholds as constraints that can require approvals or evidence near a cost boundary. Toll does not enforce spend in real time today.',
     ],
     owns: [
       'FOCUS ingest and persistence as cost evidence',
@@ -160,7 +163,8 @@ export const products: Product[] = [
       'Ask, propose, and where allowed act across engineering domains without moving policy authority into the agent.',
     body: [
       'Dispatch is the governed interaction product: intent to proposal to allowed action. It consumes Repave, Overpass, and Toll; those products remain authoritative. It is not a fourth data domain.',
-      'The public Dispatch host is identity, not the hosted assistant. Today the assistant still runs in Repave. Generate is the wired write. Reads can surface other capabilities. Dispatch never evaluates policy or approves its own work. This is not a standalone four-product interaction product.',
+      'The public Dispatch host is identity, not the hosted assistant. Today the assistant still runs in Repave. Generate is the wired write. Reads can surface other capabilities. Dispatch never evaluates the shared policy-decision port or approves its own work. This is not a standalone four-product interaction product.',
+      'Direction — not current enforcement — includes who may invoke a capability, permitted scope, approval boundaries, dry-run versus execute, required evidence, and time-bounded delegation. Present capability is the hosted confirm path and identity host.',
     ],
     owns: [
       'Intent capture into a proposal',

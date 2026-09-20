@@ -3,16 +3,15 @@ import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
 import SystemMap from '@/components/SystemMap'
-import ProductCard from '@/components/ProductCard'
-import ProductFlow from '@/components/ProductFlow'
+import { ProductMark } from '@/components/BrandMark'
+import ProductSiteLink from '@/components/ProductSiteLink'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
   COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
   CONTACT_EMAIL,
-  REPAVE_EVALUATE_URL,
-  REPAVE_PROOF_URL,
+  PRODUCT_URLS,
   REPAVE_URL,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
@@ -84,22 +83,30 @@ const structuredData = {
   ],
 }
 
-const productQuestions: Record<ProductSlug, { question: string; role: string }> = {
+const domainCopy: Record<ProductSlug, { plane: string; responsibility: string; href: string }> = {
   repave: {
-    question: 'Is it being maintained correctly?',
-    role: 'Govern how software changes throughout its lifecycle.',
+    plane: 'Software / repository state',
+    responsibility:
+      'Governed repository lifecycle from approved state through observation, change, remediation, and verification.',
+    href: PRODUCT_URLS.repave,
   },
   overpass: {
-    question: 'What do we have, and what depends on what?',
-    role: 'Understand infrastructure state, inventory, and relationships.',
+    plane: 'Infrastructure state + relationships',
+    responsibility:
+      'Infrastructure state, resource identity, relationships, and impact context — without becoming a cloud apply engine.',
+    href: PRODUCT_URLS.overpass,
   },
   toll: {
-    question: 'What is it costing us?',
-    role: 'Connect infrastructure spending to products, services, and decisions.',
+    plane: 'Engineering economics',
+    responsibility:
+      'Durable economic state connected to engineering context and evidence. Not an invoice and not a savings engine.',
+    href: PRODUCT_URLS.toll,
   },
   dispatch: {
-    question: 'How do I work with all of this?',
-    role: 'Give users an intelligent, governed way to interact with the system.',
+    plane: 'Governed intent + action',
+    responsibility:
+      'The path from human intent to a governed outcome while authority remains with the owning domain.',
+    href: PRODUCT_URLS.dispatch,
   },
 }
 
@@ -115,46 +122,44 @@ export default function HomePage() {
           <p className="rail-label">Company</p>
           <div className="hero-grid">
             <div className="hero-copy">
+              <p className="hero-kicker">OpsDevCode · parent system</p>
               <h1>
                 Building software is easier than keeping it healthy as everything around it changes
                 <span className="highlight">.</span>
               </h1>
               <p className="hero-fit">{SITE_TAGLINE}</p>
               <p className="sub">
-                OpsDevCode connects how engineering organizations govern software delivery,
-                understand infrastructure, connect cost to ownership, and operate the system as it
-                changes.
+                OpsDevCode is building the engineering-state and governed-change layer across
+                systems engineering organizations already use. Four independent products read
+                delivery, infrastructure, economics, and intent. The company site is the system
+                view.
               </p>
               <div className="cta">
-                <a className="btn primary" href={REPAVE_EVALUATE_URL}>
-                  Try Repave with your repository
-                </a>
-                <a className="btn" href={REPAVE_PROOF_URL}>
-                  See the governed lifecycle
+                <Link className="btn primary" href="/products">
+                  Explore the products
+                </Link>
+                <a className="btn" href={PRODUCT_URLS.repave}>
+                  Open Repave
                 </a>
               </div>
-              <p className="plane-rule" aria-hidden="true">
-                <span className="plane-rule-seg plane-rule-seg--repave" />
-                <span className="plane-rule-seg plane-rule-seg--overpass" />
-                <span className="plane-rule-seg plane-rule-seg--toll" />
-                <span className="plane-rule-seg plane-rule-seg--dispatch" />
-              </p>
             </div>
-            <SystemMap compact />
+            <SystemMap compact variant="hero" />
           </div>
         </section>
 
         <section className="section rail" aria-labelledby="problem-heading">
           <p className="rail-label">Problem</p>
-          <div className="section--split">
-            <div>
-              <h2 id="problem-heading" className="section-title">
-                <span className="section-title-text">
-                  Creating software isn&apos;t the hard part anymore
-                </span>
-              </h2>
-              <p className="lede">Keeping everything healthy as the organization grows is.</p>
-            </div>
+          <div>
+            <h2 id="problem-heading" className="section-title">
+              <span className="section-title-text">Specialization isn&apos;t the problem.</span>
+            </h2>
+            <p className="lede">Fragmentation is.</p>
+            <p>
+              Engineering organizations correctly specialize across software delivery, platform
+              engineering, infrastructure, reliability, economics, and governance. The failure
+              starts when organizational, tool, and domain boundaries become the interface people
+              must navigate to finish one outcome.
+            </p>
             <ol className="problem-planes">
               <li className="problem-planes-item problem-planes-item--repave">
                 <span>01</span>
@@ -171,40 +176,11 @@ export default function HomePage() {
               <li className="problem-planes-item problem-planes-item--dispatch">
                 <span>04</span>
                 <p>
-                  Engineers end up stitching together more tools just to understand what is
-                  happening.
+                  Engineers stitch tools together just to ask what changed, what it affected, and
+                  what it cost.
                 </p>
               </li>
             </ol>
-          </div>
-        </section>
-
-        <section className="section rail" aria-labelledby="products-heading">
-          <p className="rail-label">Products</p>
-          <div>
-            <div className="section-header-row">
-              <h2 id="products-heading" className="section-title">
-                <span className="section-title-text">Start with Repave</span>
-              </h2>
-              <Link href="/products">Compare →</Link>
-            </div>
-            <p className="lede">
-              These aren&apos;t four unrelated tools. OpsDevCode is building delivery,
-              infrastructure state, economics, and interaction as parts of one engineering system,
-              with explicit boundaries. Repave is the first external door — not the company.
-              Overpass, Toll, and Dispatch have public product sites; they are not equal evaluation
-              doors today.
-            </p>
-            <ProductFlow questions={productQuestions} />
-            <div className="product-grid">
-              {products.map((product) => (
-                <ProductCard
-                  key={product.slug}
-                  product={product}
-                  featured={product.slug === 'repave'}
-                />
-              ))}
-            </div>
           </div>
         </section>
 
@@ -212,37 +188,257 @@ export default function HomePage() {
           <p className="rail-label">System</p>
           <div>
             <h2 id="system-heading" className="section-title">
-              <span className="section-title-text">The value is in the connection</span>
+              <span className="section-title-text">
+                One engineering system. Specialized domains.
+              </span>
             </h2>
             <p className="lede">
-              Most tools help with a moment. This system is being built around the lifecycle. The
-              four jobs belong together; a complete customer-visible workflow across all four
-              products is not what you should expect to run today.
+              OpsDevCode is the parent. Repave, Overpass, Toll, and Dispatch are siblings. This is
+              not a central runtime, not a required bundle, and not four SKUs of one monolith.
+              Design informed by Convergence — independent, not an OpsDevCode product, not in the
+              runtime path.
             </p>
-            <ol className="system-chain">
-              <li className="system-chain-item system-chain-item--repave">
-                <span>Repave</span>
-                governs the repository
-              </li>
-              <li className="system-chain-item system-chain-item--overpass">
-                <span>Overpass</span>
-                understands infrastructure state
-              </li>
-              <li className="system-chain-item system-chain-item--toll">
-                <span>Toll</span>
-                connects cost evidence
-              </li>
-              <li className="system-chain-item system-chain-item--dispatch">
-                <span>Dispatch</span>
-                carries the intent
-              </li>
-            </ol>
-            <p className="sysmap-aside system-converge-note">
-              Design informed by <span>Convergence</span>
-              <small>Independent · not an OpsDevCode product · not in the runtime path</small>
+            <SystemMap variant="family" />
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="policy-heading">
+          <p className="rail-label">Policy</p>
+          <div>
+            <p className="hero-kicker">Policy-native delivery</p>
+            <h2 id="policy-heading" className="section-title">
+              <span className="section-title-text">Governance should be executable.</span>
+            </h2>
+            <p className="lede">
+              Policy turns intent, observed state, economic context, and delegated authority into
+              an explainable decision. OpsDevCode then routes that decision through the appropriate
+              delivery lifecycle.
             </p>
             <p>
-              <Link href="/approach">How the system is designed →</Link>
+              Policy is a shared decision plane, not a fifth product and not a central authority
+              that replaces domain ownership. Decision and enforcement remain separate. Current
+              gates stay with the products that already evaluate them.
+            </p>
+            <ol className="model-axis">
+              <li>
+                <span>Intent</span> Teams or agents express what they want to change.
+              </li>
+              <li>
+                <span>Context</span> Products contribute authoritative facts they already own.
+              </li>
+              <li>
+                <span>Decision</span> Policy returns allowed, denied, conditional, or unknown.
+              </li>
+              <li>
+                <span>Ownership</span> The correct product orchestrates or executes.
+              </li>
+              <li>
+                <span>Evidence</span> The input digest, decision, and outcome are recorded.
+              </li>
+              <li>
+                <span>Observe</span> Resulting state feeds the next decision.
+              </li>
+            </ol>
+            <p>
+              <Link href="/architecture">How the decision plane stays distributed →</Link>
+            </p>
+            <SystemMap variant="policy" />
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="domains-heading">
+          <p className="rail-label">Domains</p>
+          <div>
+            <h2 id="domains-heading" className="section-title">
+              <span className="section-title-text">Four authorities. One design language.</span>
+            </h2>
+            <p className="lede">
+              Independent products. Connected engineering context. No product is an OPA wrapper, a
+              portal, or the company.
+            </p>
+            <ol className="domain-ledger">
+              {products.map((product) => {
+                const copy = domainCopy[product.slug]
+                return (
+                  <li
+                    key={product.slug}
+                    className={`domain-ledger-item domain-ledger-item--${product.slug}`}
+                  >
+                    <ProductMark slug={product.slug} className="domain-ledger-mark" />
+                    <div>
+                      <p className="domain-ledger-plane">{copy.plane}</p>
+                      <h3>{product.name}</h3>
+                      <p>{copy.responsibility}</p>
+                      <p className="cta-row">
+                        <ProductSiteLink href={copy.href}>{product.name} site →</ProductSiteLink>
+                        <Link href={product.href}>{product.name} on OpsDevCode →</Link>
+                      </p>
+                    </div>
+                  </li>
+                )
+              })}
+            </ol>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="independence-heading">
+          <p className="rail-label">Independence</p>
+          <div>
+            <h2 id="independence-heading" className="section-title">
+              <span className="section-title-text">Independent products. Connected context.</span>
+            </h2>
+            <p className="lede">
+              Repave can operate in its domain without Toll. Toll owns engineering economics
+              independently. Overpass owns infrastructure state independently. Dispatch coordinates
+              governed intent without taking domain authority. Customers are not required to use all
+              four.
+            </p>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="context-heading">
+          <p className="rail-label">Context</p>
+          <div>
+            <h2 id="context-heading" className="section-title">
+              <span className="section-title-text">
+                What changed, what did it affect, what did it cost?
+              </span>
+            </h2>
+            <p className="lede">
+              A company-level question, not a production workflow you should expect to run across
+              all four products today. Context can cross domains. Authority does not.
+            </p>
+            <SystemMap variant="context" />
+            <ol className="model-axis">
+              <li>
+                <span>Intended</span>
+              </li>
+              <li>
+                <span>Observed</span>
+              </li>
+              <li>
+                <span>Difference</span>
+              </li>
+              <li>
+                <span>Change</span>
+              </li>
+              <li>
+                <span>Verified</span>
+              </li>
+              <li>
+                <span>Evidence</span>
+              </li>
+            </ol>
+            <p className="section-note">
+              Vocabulary for why engineering state matters. Not a claim that every product
+              implements every stage.
+            </p>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="principles-heading">
+          <p className="rail-label">Principles</p>
+          <div>
+            <h2 id="principles-heading" className="section-title">
+              <span className="section-title-text">How the system is designed</span>
+            </h2>
+            <ol className="principle-rows">
+              <li>
+                <span>01 /</span>
+                <div>
+                  <h3>Domain authority stays with the domain</h3>
+                  <p>Coordination does not transfer ownership.</p>
+                </div>
+              </li>
+              <li>
+                <span>02 /</span>
+                <div>
+                  <h3>Integrate commodity. Own differentiation.</h3>
+                  <p>
+                    OpsDevCode integrates systems such as source control, cloud platforms,
+                    infrastructure engines, and observability rather than rebuilding them merely for
+                    ownership.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>03 /</span>
+                <div>
+                  <h3>Intent is not authority</h3>
+                  <p>Understanding an outcome does not automatically authorize its execution.</p>
+                </div>
+              </li>
+              <li>
+                <span>04 /</span>
+                <div>
+                  <h3>State before automation</h3>
+                  <p>
+                    Reliable action depends on understanding what should be true and what is
+                    actually true.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>05 /</span>
+                <div>
+                  <h3>Evidence over assumption</h3>
+                  <p>
+                    Changes should produce enough evidence to determine what happened and whether
+                    the intended outcome occurred.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="entry-heading">
+          <p className="rail-label">Products</p>
+          <div>
+            <h2 id="entry-heading" className="section-title">
+              <span className="section-title-text">Enter the domain that owns the question</span>
+            </h2>
+            <p className="lede">
+              This page explains the system. Each product site explains its domain. Hosted access
+              remains conservative.
+            </p>
+            <ul className="entry-list">
+              {products.map((product) => (
+                <li
+                  key={product.slug}
+                  className={`entry-list-item entry-list-item--${product.slug}`}
+                >
+                  <ProductMark slug={product.slug} className="entry-mark" />
+                  <div>
+                    <strong>{product.name}</strong>
+                    <p>{domainCopy[product.slug].plane}</p>
+                    <ProductSiteLink href={domainCopy[product.slug].href}>
+                      {product.slug}.opsdevco.de
+                    </ProductSiteLink>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="section rail" aria-labelledby="direction-heading">
+          <p className="rail-label">Direction</p>
+          <div>
+            <h2 id="direction-heading" className="section-title">
+              <span className="section-title-text">
+                Keep authority local. Make change explainable.
+              </span>
+            </h2>
+            <p className="lede">
+              The direction is engineering systems where specialized domains stay authoritative,
+              context can cross those boundaries, governed change can be understood, resulting state
+              can be verified, and evidence can survive the change.
+            </p>
+            <p>
+              That is company direction, not current availability of a four-product workflow.
+              Today&apos;s product truth remains: Repave is the first evaluation door; Overpass,
+              Toll, and Dispatch have public identity hosts at different maturity.
             </p>
           </div>
         </section>
@@ -252,16 +448,17 @@ export default function HomePage() {
           <div className="close-row">
             <div>
               <h2 id="closing-cta-heading" className="closing-cta-title">
-                If you have a repository, start the conversation there
+                Explore the products
               </h2>
               <p className="closing-cta-lead">
-                Early access is a conversation, not self-serve hosted availability.
+                Start with the domain that owns the work. Early access is a conversation, not
+                self-serve hosted availability.
               </p>
             </div>
             <div className="cta">
-              <a className="btn primary" href={REPAVE_EVALUATE_URL}>
-                Try Repave with your repository
-              </a>
+              <Link className="btn primary" href="/products">
+                Explore the products
+              </Link>
               <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                 Talk to OpsDevCode
               </a>

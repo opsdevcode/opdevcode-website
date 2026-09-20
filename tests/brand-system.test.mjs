@@ -39,9 +39,9 @@ describe('governed-section brand system', () => {
 
   it('uses paper sticky header, not white glass', () => {
     const css = readFileSync(join(root, 'src/styles/site.css'), 'utf8')
-    assert.match(css, /\.header-wrap \{[\s\S]*?background: var\(--surface-glass\)/)
+    assert.match(css, /\.header-wrap \{[\s\S]*?background: var\(--color-bg\)/)
     assert.doesNotMatch(css, /rgba\(255,\s*255,\s*255/)
-    assert.match(css, /--surface-glass/)
+    assert.doesNotMatch(css, /backdrop-filter/)
   })
 
   it('keeps referenced SEO and mark assets on disk', () => {
@@ -113,6 +113,8 @@ describe('governed-section brand system', () => {
     const og = readFileSync(join(root, 'public/brand/og-opsdevcode.svg'), 'utf8')
     assert.match(og, /OpsDevCode/)
     assert.match(og, /Infrastructure for modern engineering organizations/)
+    assert.match(og, /SOFTWARE/)
+    assert.match(og, /GOVERNED INTENT/)
     assert.doesNotMatch(og, /Governed golden paths for platform engineering/)
     assert.doesNotMatch(og, /Repave - delivery/)
   })

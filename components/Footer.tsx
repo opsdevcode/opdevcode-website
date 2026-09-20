@@ -14,6 +14,7 @@ export default function Footer() {
           <div>
             <strong>OpsDevCode</strong>
             <p>© {year} · opsdevco.de</p>
+            <p>Infrastructure for modern engineering organizations.</p>
           </div>
         </div>
         <div>
@@ -37,12 +38,12 @@ export default function Footer() {
           <Link href="/privacy">Privacy</Link>
         </div>
         <div>
-          <p className="footer-label">Elsewhere</p>
-          <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
-            Convergence
-          </a>
+          <p className="footer-label">Resources</p>
           <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
             GitHub
+          </a>
+          <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
+            Convergence
           </a>
           <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
             repave.opsdevco.de

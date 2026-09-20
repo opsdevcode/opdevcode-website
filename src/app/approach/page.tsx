@@ -20,7 +20,8 @@ export default function ApproachPage() {
         <h1 className="page-title">Intent, governed work, evidence</h1>
         <p className="lede">
           Specialization is necessary. Making people or agents tour the org chart to complete one
-          change is not.
+          change is not.           Policy-native delivery makes repeatable rules into explainable decisions without creating
+          a fifth product.
         </p>
         <ol className="approach-seq">
           <li>
@@ -40,8 +41,10 @@ export default function ApproachPage() {
             <span>03</span>
             <h2>Where judgment lives</h2>
             <p>
-              Repave, Overpass, and Toll keep gates, evidence, and stores. Dispatch does not grade
-              policy.
+              Repave, Overpass, and Toll keep gates, evidence, and stores. Dispatch can coordinate
+              policy evaluation; it does not become the policy authority. Where a policy engine is
+              used, Open Policy Agent may appear as implementation detail — not as the company
+              category.
             </p>
           </li>
           <li>
@@ -50,7 +53,8 @@ export default function ApproachPage() {
             <p>A governed change or a refusal — plus a record of what ran and why.</p>
           </li>
         </ol>
-        <SystemMap />
+        <SystemMap variant="policy" />
+        <SystemMap variant="family" />
         <div className="converge-follow">
           <ConvergePair />
         </div>
