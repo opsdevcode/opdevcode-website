@@ -1658,7 +1658,7 @@ footer {
   font-size: clamp(2.6rem, 6vw, 4.15rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
-  max-width: 14ch;
+  max-width: 18ch;
   margin: 0 0 var(--space-24);
 }
 .home-support,
@@ -1667,9 +1667,47 @@ footer {
   line-height: 1.6;
 }
 .home-support {
-  margin: 0 0 var(--space-32);
+  margin: 0 0 var(--space-20);
   font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   color: var(--color-text-secondary);
+}
+.home-quiet {
+  margin: 0 0 var(--space-32);
+  max-width: 40ch;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+.home-follow {
+  margin: var(--space-24) 0 0;
+}
+.product-card--portfolio .product-card-job {
+  margin: 0 0 var(--space-8);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-text);
+}
+.start-featured {
+  max-width: 40rem;
+  margin: var(--space-32) 0 var(--space-16);
+  padding: var(--space-24) 0;
+  border-top: 1px solid var(--color-border);
+}
+.start-featured h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  margin: 0 0 var(--space-12);
+}
+.start-featured p {
+  max-width: 48ch;
+  margin: 0 0 var(--space-12);
+}
+.start-featured-meta,
+.start-maturity {
+  margin: 0 0 var(--space-8);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
 }
 .home-hero .cta {
   display: flex;
@@ -1743,11 +1781,18 @@ footer {
   margin: 0;
   color: var(--color-text-secondary);
 }
+.home-company {
+  color: var(--color-text-secondary);
+}
+.home-company .section-title {
+  color: var(--color-text);
+}
 .home-company-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-12) var(--space-24);
   margin: var(--space-20) 0 0;
+  font-size: var(--text-sm);
 }
 @media (max-width: 640px) {
   .wrap.home .home-hero h1 {

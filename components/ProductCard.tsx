@@ -10,13 +10,13 @@ export default function ProductCard({
   featured,
   variant = 'default',
   job,
-  hostLabel,
+  jobTitle,
 }: {
   product: Product
   featured?: boolean
   variant?: 'default' | 'portfolio'
   job?: string
-  hostLabel?: string
+  jobTitle?: string
 }) {
   if (variant === 'portfolio') {
     return (
@@ -26,11 +26,10 @@ export default function ProductCard({
           <p className="product-card-maturity">{product.maturityLabel}</p>
         </div>
         <h3>{product.name}</h3>
+        <p className="product-card-job">{jobTitle ?? product.domain}</p>
         <p className="product-card-summary">{job ?? product.summary}</p>
         <p className="cta-row">
-          <ProductSiteLink href={product.publicUrl}>
-            {hostLabel ?? `${product.slug}.opsdevco.de`}
-          </ProductSiteLink>
+          <ProductSiteLink href={product.publicUrl}>Explore {product.name} →</ProductSiteLink>
         </p>
       </article>
     )

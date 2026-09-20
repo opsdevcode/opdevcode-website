@@ -11,7 +11,6 @@ import {
   CONVERGENCE_URL,
   CONTACT_EMAIL,
   PRODUCT_URLS,
-  REPAVE_EVALUATE_URL,
   REPAVE_URL,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
@@ -77,49 +76,62 @@ const structuredData = {
       name: 'Repave',
       applicationCategory: 'DeveloperApplication',
       url: REPAVE_URL,
-      description: 'Governed software delivery.',
+      description: 'Governed software state.',
     },
   ],
 }
 
-const portfolioCopy: Record<
-  ProductSlug,
-  { job: string; host: string; start: string; startHref: string }
-> = {
+const portfolioCopy: Record<ProductSlug, { title: string; body: string }> = {
   repave: {
-    job: 'Keep repositories on an approved path after they exist — generate, adopt, observe, and restore supported drift.',
-    host: 'repave.opsdevco.de',
-    start: 'The current evaluation door: waitlist and hosted generate, not general self-serve.',
-    startHref: REPAVE_EVALUATE_URL,
+    title: 'Governed software state.',
+    body: 'Know how repositories are meant to operate, understand how they operate now, and manage supported change across their lifecycle.',
   },
   overpass: {
-    job: 'Keep accepted infrastructure state readable — what exists, how it connects, and what a change could reach.',
-    host: 'overpass.opsdevco.de',
-    start: 'Public identity and product truth. Hosted custody is partner-gated.',
-    startHref: PRODUCT_URLS.overpass,
+    title: 'Infrastructure state and relationships.',
+    body: 'Understand infrastructure as durable state — including the resources, versions, and relationships that determine what a change can affect.',
   },
   toll: {
-    job: 'Connect engineering cost evidence to context without becoming an invoice or a savings engine.',
-    host: 'toll.opsdevco.de',
-    start: 'Public identity for engineering economics. Not an invoice system.',
-    startHref: PRODUCT_URLS.toll,
+    title: 'Engineering economics.',
+    body: 'Connect cloud economics to engineering context so teams can understand what their systems cost and the evidence behind that cost.',
   },
   dispatch: {
-    job: 'Take a requested outcome into a governed path while the owning product keeps authority.',
-    host: 'dispatch.opsdevco.de',
-    start: 'Public identity for governed intent. The hosted assistant still runs in Repave.',
-    startHref: PRODUCT_URLS.dispatch,
+    title: 'Governed intent and action.',
+    body: 'Give engineers a simpler way to ask for outcomes and take action while authority remains with the systems that own the underlying domains.',
   },
 }
 
 const whyFour: { name: string; job: string }[] = [
-  { name: 'Repave', job: 'Software and repository state' },
-  { name: 'Overpass', job: 'Infrastructure state and relationships' },
-  { name: 'Toll', job: 'Engineering economics' },
-  { name: 'Dispatch', job: 'Governed intent and action' },
+  { name: 'Repave', job: 'Software and repository state.' },
+  { name: 'Overpass', job: 'Infrastructure state and relationships.' },
+  { name: 'Toll', job: 'Engineering economics.' },
+  { name: 'Dispatch', job: 'Intent and governed action.' },
+]
+
+const startOther: {
+  slug: Exclude<ProductSlug, 'repave'>
+  name: string
+  blurb: string
+}[] = [
+  {
+    slug: 'overpass',
+    name: 'Overpass',
+    blurb: 'For infrastructure state and relationships.',
+  },
+  {
+    slug: 'toll',
+    name: 'Toll',
+    blurb: 'For engineering economics and cost attribution.',
+  },
+  {
+    slug: 'dispatch',
+    name: 'Dispatch',
+    blurb: 'For governed intent and action across engineering systems.',
+  },
 ]
 
 export default function HomePage() {
+  const repave = products.find((product) => product.slug === 'repave')
+
   return (
     <>
       <script
@@ -129,19 +141,29 @@ export default function HomePage() {
       <PageFrame home>
         <section className="home-hero" aria-labelledby="home-thesis">
           <h1 id="home-thesis">
-            Building software is easier than keeping it healthy as everything around it changes
-            <span className="highlight">.</span>
+            Engineering systems should know
+            <br />
+            more than how to run.
           </h1>
           <p className="home-support">
-            OpsDevCode is a product company. Four independent products cover software delivery,
-            infrastructure state, engineering economics, and governed intent.
+            They should know what should be true, what is true now, what changed, what it affects,
+            and whether the result is still aligned with intent.
+          </p>
+          <p className="home-support">
+            OpsDevCode builds products that make that engineering state visible, governable, and
+            useful.
+          </p>
+          <p className="home-quiet">
+            Software state. Infrastructure state. Engineering economics.
+            <br />
+            Governed action.
           </p>
           <div className="cta">
             <a className="btn primary" href="#products">
-              See the products
+              See the products →
             </a>
             <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Talk to OpsDevCode
+              Talk to OpsDevCode →
             </a>
           </div>
         </section>
@@ -152,11 +174,11 @@ export default function HomePage() {
           aria-labelledby="portfolio-heading"
         >
           <h2 id="portfolio-heading" className="section-title">
-            Four products. One company.
+            Four products. Four engineering domains.
           </h2>
           <p className="lede home-measure">
-            Each product owns its domain. None of them is the company, and none is a required next
-            step after another.
+            Each product owns a distinct part of the engineering system and can stand on its own.
+            Together, they share a common approach to understanding state, change, and evidence.
           </p>
           <div className="product-grid product-grid--portfolio">
             {products.map((product) => (
@@ -164,20 +186,27 @@ export default function HomePage() {
                 key={product.slug}
                 product={product}
                 variant="portfolio"
-                job={portfolioCopy[product.slug].job}
-                hostLabel={portfolioCopy[product.slug].host}
+                jobTitle={portfolioCopy[product.slug].title}
+                job={portfolioCopy[product.slug].body}
               />
             ))}
           </div>
+          <p className="home-follow">
+            <Link href="/products">Compare the products →</Link>
+          </p>
         </section>
 
         <section className="section home-why" aria-labelledby="why-heading">
           <h2 id="why-heading" className="section-title">
-            Why four
+            Different engineering problems deserve different owners.
           </h2>
           <p className="lede home-measure">
-            Delivery, infrastructure, cost, and intent are different jobs. Treating them as one
-            product hides the owner of the work.
+            Repository lifecycle, infrastructure state, engineering economics, and governed action
+            are related problems. They are not the same problem.
+          </p>
+          <p className="home-measure">
+            OpsDevCode keeps those responsibilities separate so each product can own its domain
+            without becoming the source of truth for everything else.
           </p>
           <ul className="why-list">
             {whyFour.map((item) => (
@@ -188,29 +217,47 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="home-measure">
-            Customers are not required to use all four. How the products relate is documented on{' '}
-            <Link href="/architecture">Architecture</Link> and{' '}
-            <Link href="/approach">Approach</Link>.
+            Use one product or use several. They are independent products — not four required steps
+            in a bundle.
+          </p>
+          <p className="home-follow">
+            <Link href="/architecture">See how the system is designed →</Link>
           </p>
         </section>
 
         <section className="section home-start" aria-labelledby="start-heading">
           <h2 id="start-heading" className="section-title">
-            How to start
+            Start with the problem you need to solve.
           </h2>
           <p className="lede home-measure">
-            Repave is the current evaluation door. The other products have public identity pages at
-            the maturity they have earned. There is no hosted four-product workflow to try.
+            You don&apos;t need to adopt an OpsDevCode stack. Start with the product that owns the
+            engineering problem in front of you.
           </p>
+          {repave ? (
+            <article className="start-featured">
+              <p className="start-featured-meta">{repave.maturityLabel}</p>
+              <h3>Repave</h3>
+              <p>
+                For teams dealing with repository lifecycle, standards, drift, and governed change.
+              </p>
+              <p>
+                Repave is the most complete place to begin evaluating the OpsDevCode approach today.
+              </p>
+              <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
+                Explore Repave →
+              </a>
+            </article>
+          ) : null}
           <ul className="start-list">
-            {products.map((product) => {
-              const copy = portfolioCopy[product.slug]
+            {startOther.map((item) => {
+              const product = products.find((entry) => entry.slug === item.slug)
               return (
-                <li key={product.slug}>
-                  <strong>{product.name}</strong>
-                  <p>{copy.start}</p>
-                  <a href={copy.startHref} target="_blank" rel="noopener noreferrer">
-                    {copy.host}
+                <li key={item.slug}>
+                  <strong>{item.name}</strong>
+                  <p>{item.blurb}</p>
+                  {product ? <p className="start-maturity">{product.maturityLabel}</p> : null}
+                  <a href={PRODUCT_URLS[item.slug]} target="_blank" rel="noopener noreferrer">
+                    Explore {item.name} →
                   </a>
                 </li>
               )
@@ -220,18 +267,29 @@ export default function HomePage() {
 
         <section className="section home-company" aria-labelledby="company-heading">
           <h2 id="company-heading" className="section-title">
-            The company
+            Built as a product company for engineering systems.
           </h2>
           <p className="lede home-measure">
-            OpsDevCode is founder-led. The products are the public work. Services exist when a team
-            needs help adopting them. Convergence is independent research — not an OpsDevCode
-            product.
+            OpsDevCode is a founder-led software company building focused products for the parts of
+            engineering operations that become difficult as systems and organizations grow.
           </p>
+          <p className="home-measure">The products are the company.</p>
+          <p className="home-measure">
+            Services exist to help teams adopt and apply them — not to turn OpsDevCode into a
+            consulting catalog.
+          </p>
+          <p className="home-measure">
+            Convergence is independent research exploring how specialized engineering capabilities
+            can work together without collapsing their ownership.
+          </p>
+          <p className="home-measure">It informs how we think.</p>
+          <p className="home-measure">It is not an OpsDevCode product or runtime dependency.</p>
           <p className="home-company-links">
-            <Link href="/about">Company</Link>
-            <Link href="/services">Services</Link>
+            <Link href="/about">About OpsDevCode →</Link>
+            <Link href="/approach">Our approach →</Link>
+            <Link href="/services">Services →</Link>
             <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
-              Convergence
+              Convergence ↗
             </a>
           </p>
         </section>
