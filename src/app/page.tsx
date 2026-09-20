@@ -119,7 +119,7 @@ export default function HomePage() {
       />
       <PageFrame home>
         <section className="hero rail">
-          <p className="rail-label">Company</p>
+          <p className="rail-label">Thesis</p>
           <div className="hero-grid">
             <div className="hero-copy">
               <p className="hero-kicker">OpsDevCode · parent system</p>
@@ -129,18 +129,18 @@ export default function HomePage() {
               </h1>
               <p className="hero-fit">{SITE_TAGLINE}</p>
               <p className="sub">
-                OpsDevCode is building the engineering-state and governed-change layer across
-                systems engineering organizations already use. Four independent products read
-                delivery, infrastructure, economics, and intent. The company site is the system
-                view.
+                OpsDevCode is the parent view of an engineering system: specialized domains,
+                connected context, and governed change. Four independent products read delivery,
+                infrastructure, economics, and intent. This site is the system — not a fifth
+                product.
               </p>
               <div className="cta">
-                <Link className="btn primary" href="/products">
-                  Explore the products
-                </Link>
-                <a className="btn" href={PRODUCT_URLS.repave}>
-                  Open Repave
+                <a className="btn primary" href="#system">
+                  Explore the system
                 </a>
+                <Link className="btn" href="/products">
+                  Products
+                </Link>
               </div>
             </div>
             <SystemMap compact variant="hero" />
@@ -184,7 +184,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section rail" aria-labelledby="system-heading">
+        <section className="section rail" id="system" aria-labelledby="system-heading">
           <p className="rail-label">System</p>
           <div>
             <h2 id="system-heading" className="section-title">
@@ -198,51 +198,12 @@ export default function HomePage() {
               Design informed by Convergence — independent, not an OpsDevCode product, not in the
               runtime path.
             </p>
-            <SystemMap variant="family" />
-          </div>
-        </section>
-
-        <section className="section rail" aria-labelledby="policy-heading">
-          <p className="rail-label">Policy</p>
-          <div>
-            <p className="hero-kicker">Policy-native delivery</p>
-            <h2 id="policy-heading" className="section-title">
-              <span className="section-title-text">Governance should be executable.</span>
-            </h2>
-            <p className="lede">
-              Policy turns intent, observed state, economic context, and delegated authority into
-              an explainable decision. OpsDevCode then routes that decision through the appropriate
-              delivery lifecycle.
-            </p>
             <p>
-              Policy is a shared decision plane, not a fifth product and not a central authority
-              that replaces domain ownership. Decision and enforcement remain separate. Current
-              gates stay with the products that already evaluate them.
-            </p>
-            <ol className="model-axis">
-              <li>
-                <span>Intent</span> Teams or agents express what they want to change.
-              </li>
-              <li>
-                <span>Context</span> Products contribute authoritative facts they already own.
-              </li>
-              <li>
-                <span>Decision</span> Policy returns allowed, denied, conditional, or unknown.
-              </li>
-              <li>
-                <span>Ownership</span> The correct product orchestrates or executes.
-              </li>
-              <li>
-                <span>Evidence</span> The input digest, decision, and outcome are recorded.
-              </li>
-              <li>
-                <span>Observe</span> Resulting state feeds the next decision.
-              </li>
-            </ol>
-            <p>
+              A policy gate is a plane on the cut — ink, not a fifth product accent. Gates stay with
+              the domains that already evaluate them.{' '}
               <Link href="/architecture">How the decision plane stays distributed →</Link>
             </p>
-            <SystemMap variant="policy" />
+            <SystemMap variant="family" />
           </div>
         </section>
 
@@ -253,8 +214,8 @@ export default function HomePage() {
               <span className="section-title-text">Four authorities. One design language.</span>
             </h2>
             <p className="lede">
-              Independent products. Connected engineering context. No product is an OPA wrapper, a
-              portal, or the company.
+              Independent products. Connected engineering context. No product is a portal, a control
+              plane, or the company.
             </p>
             <ol className="domain-ledger">
               {products.map((product) => {

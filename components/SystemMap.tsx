@@ -26,7 +26,12 @@ function HiddenCaption({ children }: { children: string }) {
 
 function HeroCut() {
   return (
-    <svg className="sysmap-section" viewBox="0 0 640 360" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 640 360" aria-hidden="true">
+      <title>Partial section cut</title>
+      <desc>
+        Software state and governed intent meet an ink policy gate. The gate is a plane, not a
+        product domain.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
         <path d="M48 36 H592 V300" />
       </g>
@@ -84,6 +89,11 @@ function HeroCut() {
 function FamilyDesktop() {
   return (
     <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 460" aria-hidden="true">
+      <title>Engineering system</title>
+      <desc>
+        Four independent domains. Neutral rules are context. Product-colored planes are authority.
+        Dispatch coordinates and does not own the other domains.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
         <path d="M36 36 H684 V424 H36 Z" />
       </g>
@@ -228,7 +238,12 @@ function PolicyCut() {
 
 function ContextCut() {
   return (
-    <svg className="sysmap-section" viewBox="0 0 720 360" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 360" aria-hidden="true">
+      <title>Cross-domain context</title>
+      <desc>
+        What changed, what did it affect, and what did it cost. Connections are context, not a
+        required pipeline.
+      </desc>
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
         <path d="M36 28 H684 V332 H36 Z" />
       </g>
@@ -274,8 +289,31 @@ function ContextCut() {
   )
 }
 
+function ContextMobile() {
+  return (
+    <ol className="sysmap-stack sysmap-field--mobile">
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">What changed?</p>
+        <p>Repave owns the software-state reading.</p>
+      </li>
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">What did it affect?</p>
+        <p>Overpass owns infrastructure relationships.</p>
+      </li>
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">What did it cost?</p>
+        <p>Toll owns the economic record.</p>
+      </li>
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">Who asks?</p>
+        <p>Dispatch can coordinate the question. Authority stays in the domain.</p>
+      </li>
+    </ol>
+  )
+}
+
 const captions: Record<SystemMapVariant, string> = {
-  hero: 'A partial section cut through the OpsDevCode engineering system. Software state and governed intent meet an ink policy gate. The frame is incomplete because this is not the whole drawing.',
+  hero: 'A partial section cut through the OpsDevCode engineering system. Software state and governed intent meet an ink policy gate. The gate is a plane, not a product domain. The frame is incomplete because this is not the whole drawing.',
   family:
     'OpsDevCode is the parent view of four independent domains. Repave owns software state, Overpass owns infrastructure state, Toll owns economic state, and Dispatch owns governed intent. Neutral rules are context. Product-colored planes are authority. This is not a runtime hierarchy and Dispatch does not own the other domains.',
   policy:
@@ -318,7 +356,12 @@ export default function SystemMap({
         </>
       )}
       {kind === 'policy' && <PolicyCut />}
-      {kind === 'context' && <ContextCut />}
+      {kind === 'context' && (
+        <>
+          <ContextCut />
+          <ContextMobile />
+        </>
+      )}
       {family && (
         <p className="sysmap-aside">
           Design informed by <span>Convergence</span>

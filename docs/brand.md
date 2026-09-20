@@ -113,8 +113,9 @@ authority), **context rule** (ink/rule, thinner), **policy gate** (ink
 structural rule, never a fifth accent), **state point / mark** (authority
 anchor).
 
-Policy is a first-class company mechanism, not a fifth product. Do not draw
-OPA as the company category. Do not place Relay in the public family.
+Policy is a first-class company mechanism — a plane and a gate, not a fifth
+product. Do not publish Policy Runtime or OPA as public identity. Do not place
+Relay in the public family.
 
 ## What this does not govern
 

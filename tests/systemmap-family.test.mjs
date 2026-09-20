@@ -8,6 +8,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const map = readFileSync(join(root, 'components/SystemMap.tsx'), 'utf8')
 const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
 const tokens = readFileSync(join(root, 'src/styles/design-tokens.css'), 'utf8')
+const header = readFileSync(join(root, 'components/Header.tsx'), 'utf8')
+const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
 
 describe('parent SystemMap and homepage family', () => {
   it('keeps policy as a mechanism, not a fifth product accent', () => {
@@ -16,8 +18,12 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(map, /not a product domain/)
     assert.match(home, /not a fifth product/)
     assert.doesNotMatch(home, /Open Policy Agent/)
+    assert.doesNotMatch(home, /\bOPA\b/)
+    assert.doesNotMatch(home, /Policy Runtime/)
     assert.doesNotMatch(home, /\bRelay\b/)
-    assert.doesNotMatch(home, /fifth product accent/)
+    assert.match(map, /function PolicyCut/)
+    assert.match(header, /\/architecture/)
+    assert.doesNotMatch(footer, /Relay/)
   })
 
   it('states product independence and no runtime hierarchy', () => {
@@ -33,6 +39,7 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(map, /ProductMark/)
     assert.match(home, /PRODUCT_URLS/)
     assert.match(home, /Explore the products/)
+    assert.match(home, /Explore the system/)
     assert.doesNotMatch(home, /Start Free/)
     assert.doesNotMatch(home, /Deploy Now/)
   })

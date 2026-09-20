@@ -27,9 +27,16 @@
 
   --color-border: #c9c2b3;
   --color-border-strong: #8f8778;
+  --odc-paper: var(--color-bg);
+  --odc-ink: var(--color-text);
+  --odc-rule: var(--color-border);
   --rule-reference: 1px;
   --rule-structural: 1.5px;
   --rule-emphasis: 2px;
+  --system-rule-reference: var(--rule-reference);
+  --system-rule-structural: var(--rule-structural);
+  --system-rule-emphasis: var(--rule-emphasis);
+  --system-radius: 2px;
 
   --color-repave: #c4841a;
   --color-overpass: #1a7a72;

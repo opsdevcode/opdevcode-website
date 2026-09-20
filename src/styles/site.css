@@ -31,6 +31,7 @@ html {
 html,
 body {
   height: 100%;
+  overflow-x: clip;
 }
 img,
 svg,
@@ -207,7 +208,7 @@ nav a:focus-visible {
   outline-offset: 4px;
   border-radius: var(--radius-sm);
 }
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .nav-toggle {
     display: inline-flex;
     align-items: center;
