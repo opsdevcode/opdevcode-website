@@ -21,8 +21,20 @@ describe('homepage inset from frames and rules', () => {
   it('gives section copy and cards room from hairlines and borders', () => {
     assert.match(css, /\.wrap\.home > section\.section \{\s*padding-top: var\(--space-80\);/)
     assert.match(css, /\.product-card--portfolio \{\s*[\s\S]*?padding: var\(--space-32\);/)
-    assert.match(css, /\.why-list li,\s*\.start-list li \{\s*[\s\S]*?padding: var\(--space-24\) 0;/)
+    assert.match(
+      css,
+      /\.why-list li,\s*\.start-list li \{\s*[\s\S]*?padding: var\(--space-24\) var\(--space-16\);/
+    )
     assert.match(css, /\.start-featured \{\s*[\s\S]*?padding: var\(--space-32\) 0;/)
     assert.match(css, /\.product-card--portfolio \.cta-row \{\s*margin-top: var\(--space-24\);/)
+  })
+
+  it('keeps why-four titles off the ornament rule and restores word spacing', () => {
+    assert.match(css, /\.wrap\.home h2\.section-title \{\s*display: block;/)
+    assert.match(css, /\.wrap\.home h2\.section-title::before \{\s*content: none;/)
+    assert.match(
+      css,
+      /\.home-support,\s*\.home-measure,\s*\.wrap\.home \.lede \{\s*[\s\S]*?word-spacing: 0\.04em;/
+    )
   })
 })
