@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.14.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.13.0...opdevcode-website-v1.14.0) (2026-09-20)
+
+
+### Features
+
+* policy-native company architecture story ([#93](https://github.com/opsdevcode/opdevcode-website/issues/93)) ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
+* **web:** establish OpsDevCode company visual system ([#94](https://github.com/opsdevcode/opdevcode-website/issues/94)) ([b3c2fba](https://github.com/opsdevcode/opdevcode-website/commit/b3c2fbac2c9443c12b9444ab3fa0700d55dbc191))
+* **web:** position policy as a shared decision plane ([e4c0368](https://github.com/opsdevcode/opdevcode-website/commit/e4c03687bbe608a3561e49961735f22d40b2ddab))
+
 ## [1.13.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.12.0...opdevcode-website-v1.13.0) (2026-09-20)
 
 
