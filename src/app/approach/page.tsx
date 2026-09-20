@@ -20,8 +20,8 @@ export default function ApproachPage() {
         <h1 className="page-title">Intent, governed work, evidence</h1>
         <p className="lede">
           Specialization is necessary. Making people or agents tour the org chart to complete one
-          change is not.           Policy-native delivery makes repeatable rules into explainable decisions without creating
-          a fifth product.
+          change is not. Policy-native delivery makes repeatable rules into explainable decisions
+          without creating a fifth product.
         </p>
         <ol className="approach-seq">
           <li>

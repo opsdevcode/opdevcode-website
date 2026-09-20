@@ -133,7 +133,7 @@ describe('product portfolio', () => {
   it('uses a parent-brand homepage, not a fifth product sales page', () => {
     const home = readFileSync(join(root, 'src/app/page.tsx'), 'utf8')
     assert.match(home, /Building software is easier than keeping it healthy/)
-    assert.match(home, /SITE_TAGLINE/)
+    assert.match(home, /Specialized domains/)
     assert.match(home, /Specialization isn&apos;t the problem/)
     assert.match(home, /One engineering system. Specialized domains/)
     assert.match(home, /Independent products. Connected engineering context/)

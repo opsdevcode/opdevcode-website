@@ -24,6 +24,7 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(map, /function PolicyCut/)
     assert.match(header, /\/architecture/)
     assert.doesNotMatch(footer, /Relay/)
+    assert.match(footer, /SITE_TAGLINE/)
   })
 
   it('states product independence and no runtime hierarchy', () => {
@@ -42,6 +43,17 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(home, /Explore the system/)
     assert.doesNotMatch(home, /Start Free/)
     assert.doesNotMatch(home, /Deploy Now/)
+  })
+
+  it('spends the 76rem measure on SystemMap and the thesis statement', () => {
+    assert.match(tokens, /--max-width: 76rem/)
+    assert.match(home, /hero-statement/)
+    assert.match(home, /Specialized domains/)
+    assert.match(home, /Connected context/)
+    assert.match(home, /Governed change/)
+    assert.match(map, /function HeroMobile/)
+    assert.match(map, /sysmap-stack-item--gate/)
+    assert.match(home, /href="\/architecture"/)
   })
 
   it('recomposes the family map on small viewports', () => {

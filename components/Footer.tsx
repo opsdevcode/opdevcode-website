@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import { BrandMark, ProductMark } from '@/components/BrandMark'
 import { products } from '@/lib/products'
-import { CONVERGENCE_URL, GITHUB_ORG_URL, PRODUCT_URLS, productSiteHref } from '@/lib/site'
+import {
+  CONVERGENCE_URL,
+  GITHUB_ORG_URL,
+  PRODUCT_URLS,
+  SITE_TAGLINE,
+  productSiteHref,
+} from '@/lib/site'
 import ProductSiteLink from '@/components/ProductSiteLink'
 
 export default function Footer() {
@@ -14,7 +20,7 @@ export default function Footer() {
           <div>
             <strong>OpsDevCode</strong>
             <p>© {year} · opsdevco.de</p>
-            <p>Infrastructure for modern engineering organizations.</p>
+            <p>{SITE_TAGLINE}</p>
           </div>
         </div>
         <div>
@@ -33,6 +39,7 @@ export default function Footer() {
         <div>
           <p className="footer-label">Company</p>
           <Link href="/approach">Approach</Link>
+          <Link href="/architecture">Architecture</Link>
           <Link href="/services">Services</Link>
           <Link href="/about">Company</Link>
           <Link href="/privacy">Privacy</Link>

@@ -15,7 +15,6 @@ import {
   REPAVE_URL,
   SITE_DESCRIPTION,
   SITE_SHARE_TITLE,
-  SITE_TAGLINE,
   SITE_URL,
 } from '@/lib/site'
 
@@ -127,7 +126,6 @@ export default function HomePage() {
                 Building software is easier than keeping it healthy as everything around it changes
                 <span className="highlight">.</span>
               </h1>
-              <p className="hero-fit">{SITE_TAGLINE}</p>
               <p className="hero-statement">
                 <span>Specialized domains.</span>
                 <span>Connected context.</span>
