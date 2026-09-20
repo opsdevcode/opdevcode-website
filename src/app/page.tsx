@@ -174,9 +174,7 @@ export default function HomePage() {
           aria-labelledby="portfolio-heading"
         >
           <h2 id="portfolio-heading" className="section-title">
-            Four products.
-            <br />
-            Four engineering domains.
+            Four products. Four engineering domains.
           </h2>
           <p className="lede home-measure">
             Each product owns a distinct part of the engineering system and can stand on its own.
@@ -200,9 +198,7 @@ export default function HomePage() {
 
         <section className="section home-why" aria-labelledby="why-heading">
           <h2 id="why-heading" className="section-title">
-            Different engineering problems
-            <br />
-            deserve different owners.
+            Different engineering problems deserve different owners.
           </h2>
           <p className="lede home-measure">
             Repository lifecycle, infrastructure state, engineering economics, and governed action
@@ -221,9 +217,8 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="home-measure">
-            Use one product or use several.
-            <br />
-            They are independent products — not four required steps in a bundle.
+            Use one product or use several. They are independent products — not four required steps
+            in a bundle.
           </p>
           <p className="home-follow">
             <Link href="/architecture">See how the system is designed →</Link>
@@ -232,13 +227,11 @@ export default function HomePage() {
 
         <section className="section home-start" aria-labelledby="start-heading">
           <h2 id="start-heading" className="section-title">
-            Start with the problem
-            <br />
-            you need to solve.
+            Start with the problem you need to solve.
           </h2>
-          <p className="lede home-measure">You don&apos;t need to adopt an OpsDevCode stack.</p>
-          <p className="home-measure">
-            Start with the product that owns the engineering problem in front of you.
+          <p className="lede home-measure">
+            You don&apos;t need to adopt an OpsDevCode stack. Start with the product that owns the
+            engineering problem in front of you.
           </p>
           {repave ? (
             <article className="start-featured">
@@ -274,9 +267,7 @@ export default function HomePage() {
 
         <section className="section home-company" aria-labelledby="company-heading">
           <h2 id="company-heading" className="section-title">
-            Built as a product company
-            <br />
-            for engineering systems.
+            Built as a product company for engineering systems.
           </h2>
           <p className="lede home-measure">
             OpsDevCode is a founder-led software company building focused products for the parts of

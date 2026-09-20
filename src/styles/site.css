@@ -1709,9 +1709,6 @@ footer {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
-.footer-label--sub {
-  margin-top: var(--space-20);
-}
 .home-hero .cta {
   display: flex;
   flex-wrap: wrap;

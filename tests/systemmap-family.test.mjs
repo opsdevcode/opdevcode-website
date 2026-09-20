@@ -30,7 +30,7 @@ describe('parent SystemMap and homepage family', () => {
 
   it('states product independence once on the company home', () => {
     assert.match(home, /They are independent products/)
-    assert.match(home, /not four required steps in a bundle/)
+    assert.match(home, /not four required steps[\s\S]*in a bundle/)
     assert.doesNotMatch(home, /not a central runtime/)
     assert.match(map, /'not',\s*'a',\s*'runtime',\s*'topology'/)
     assert.match(map, /'Dispatch',\s*'coordinates\.',\s*'Domains',\s*'remain',\s*'owners\.'/)
