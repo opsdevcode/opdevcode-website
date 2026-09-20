@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PRODUCT_MARK_SRC } from '@/lib/site'
 
 export function BrandMark({ className }: { className?: string }) {
@@ -40,6 +41,6 @@ export function ProductMark({
   if (!src) return null
   const title = productTitles[slug as keyof typeof productTitles]
   return (
-    <img src={src} alt={decorative ? '' : title} className={className} width={32} height={32} />
+    <Image src={src} alt={decorative ? '' : title} className={className} width={32} height={32} />
   )
 }
