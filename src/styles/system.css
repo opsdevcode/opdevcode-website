@@ -932,3 +932,26 @@
 .sysmap--compact {
   padding: 12px;
 }
+
+/* Parent homepage — win over product-card frames loaded in this file */
+.wrap.home {
+  background-image: none;
+}
+.wrap.home .product-card--portfolio {
+  border: none;
+  border-top: 2px solid var(--color-border);
+  box-shadow: none;
+}
+.wrap.home .product-card--portfolio.product-card--repave {
+  border-top-color: var(--color-repave);
+  background: var(--color-bg);
+}
+.wrap.home .product-card--portfolio.product-card--overpass {
+  border-top-color: var(--color-overpass);
+}
+.wrap.home .product-card--portfolio.product-card--toll {
+  border-top-color: var(--color-toll);
+}
+.wrap.home .product-card--portfolio.product-card--dispatch {
+  border-top-color: var(--color-dispatch);
+}

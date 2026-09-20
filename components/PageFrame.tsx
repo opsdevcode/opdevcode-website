@@ -9,7 +9,7 @@ export default function PageFrame({
   home?: boolean
 }) {
   return (
-    <>
+    <div className={home ? 'site-shell site-shell--parent' : 'site-shell'}>
       <Header />
       <main id="main">
         <div className={home ? 'wrap home' : 'wrap'}>
@@ -17,6 +17,6 @@ export default function PageFrame({
           <Footer />
         </div>
       </main>
-    </>
+    </div>
   )
 }
