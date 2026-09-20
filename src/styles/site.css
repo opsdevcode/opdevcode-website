@@ -1649,7 +1649,7 @@ footer {
 }
 .wrap.home h2.section-title {
   display: block;
-  max-width: min(100%, 22rem);
+  max-width: min(100%, 28rem);
   margin-bottom: var(--space-32);
   padding: 0;
   font-weight: 400;
@@ -1666,12 +1666,15 @@ footer {
 }
 .home-hero {
   position: relative;
-  display: grid;
-  gap: var(--space-48);
-  align-items: start;
-  padding: var(--space-128) 0 var(--space-96);
+  display: block;
+  padding: var(--space-96) 0 var(--space-80);
   max-width: none;
   overflow: hidden;
+}
+.home-hero-body {
+  display: grid;
+  gap: var(--space-40);
+  align-items: start;
 }
 .home-hero-copy {
   position: relative;
@@ -1691,32 +1694,33 @@ footer {
   opacity: 0.16;
 }
 @media (min-width: 900px) {
-  .home-hero {
+  .home-hero-body {
     grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
     column-gap: var(--space-48);
     align-items: stretch;
   }
   .home-hero-identity {
-    position: relative;
-    min-height: 22rem;
+    min-height: 14rem;
   }
   .home-hero-aperture {
     position: absolute;
     top: 50%;
     right: 0;
-    width: min(28rem, 38vw);
-    height: min(28rem, 38vw);
+    width: min(22rem, 32vw);
+    height: min(22rem, 32vw);
     transform: translateY(-50%);
     opacity: 0.075;
   }
 }
 .wrap.home .home-hero h1 {
+  position: relative;
+  z-index: 1;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.85rem, 7.2vw, 5.15rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
-  max-width: 12ch;
+  font-size: clamp(2.5rem, 4.8vw, 3.85rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 22em;
   margin: 0 0 var(--space-40);
 }
 .home-support,
@@ -1950,8 +1954,8 @@ footer {
     gap: var(--space-40);
   }
   .wrap.home .home-hero h1 {
-    font-size: clamp(2.35rem, 12vw, 3.1rem);
-    max-width: 11ch;
+    font-size: clamp(2.25rem, 10vw, 2.75rem);
+    max-width: none;
     margin-bottom: var(--space-32);
   }
   .home-hero-aperture {
