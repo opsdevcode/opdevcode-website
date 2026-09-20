@@ -2,6 +2,13 @@
 
 ## [1.16.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.15.0...opdevcode-website-v1.16.0) (2026-09-20)
 
+
+### Features
+
+* establish company parent homepage ([#100](https://github.com/opsdevcode/opdevcode-website/issues/100)) ([4ad6f61](https://github.com/opsdevcode/opdevcode-website/commit/4ad6f616e6a2b63b82bc6b4e9301f53ec3562a2d))
+
+## [1.16.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.15.0...opdevcode-website-v1.16.0) (2026-09-20)
+
 ### Features
 
 - establish company parent homepage
