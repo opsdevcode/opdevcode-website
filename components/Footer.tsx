@@ -5,7 +5,6 @@ import {
   CALENDLY_URL,
   CONVERGENCE_URL,
   GITHUB_ORG_URL,
-  PRODUCT_URLS,
   SITE_TAGLINE,
   productSiteHref,
 } from '@/lib/site'
@@ -39,25 +38,23 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer-label">Company</p>
+          <Link href="/about">About</Link>
           <Link href="/approach">Approach</Link>
           <Link href="/architecture">Architecture</Link>
           <Link href="/services">Services</Link>
-          <Link href="/about">Company</Link>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
             Talk
           </a>
           <Link href="/privacy">Privacy</Link>
         </div>
         <div>
-          <p className="footer-label">Resources</p>
-          <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
+          <p className="footer-label">Research</p>
           <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
             Convergence
           </a>
-          <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
-            repave.opsdevco.de
+          <p className="footer-label footer-label--sub">External</p>
+          <a href={GITHUB_ORG_URL} target="_blank" rel="noopener noreferrer">
+            GitHub
           </a>
         </div>
       </div>
