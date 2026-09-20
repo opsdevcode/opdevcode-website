@@ -5,6 +5,7 @@ import MaturityMeta from '@/components/MaturityMeta'
 import { products } from '@/lib/products'
 import { pageMeta } from '@/lib/seo'
 import ProductSiteLink from '@/components/ProductSiteLink'
+import { ProductMark } from '@/components/BrandMark'
 
 export const metadata: Metadata = pageMeta({
   title: 'Products',
@@ -34,7 +35,10 @@ export default function ProductsPage() {
                 </th>
                 {products.map((p) => (
                   <th key={p.slug} scope="col">
-                    <Link href={p.href}>{p.name}</Link>
+                    <Link href={p.href} className="compare-product">
+                      <ProductMark slug={p.slug} className="compare-product-mark" />
+                      {p.name}
+                    </Link>
                   </th>
                 ))}
               </tr>
@@ -75,7 +79,10 @@ export default function ProductsPage() {
           {products.map((p) => (
             <article key={p.slug} className="compare-band">
               <h2>
-                <Link href={p.href}>{p.name}</Link>
+                <Link href={p.href} className="compare-product">
+                  <ProductMark slug={p.slug} className="compare-product-mark" />
+                  {p.name}
+                </Link>
               </h2>
               <dl>
                 <div>
