@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.1...opdevcode-website-v1.12.0) (2026-09-20)
+
+
+### Features
+
+* **site:** align public company story with product reality ([#87](https://github.com/opsdevcode/opdevcode-website/issues/87)) ([d6eedf4](https://github.com/opsdevcode/opdevcode-website/commit/d6eedf4b2c6814598ea49d808565ab085e05f12c))
+* **web:** establish product family foundation ([#90](https://github.com/opsdevcode/opdevcode-website/issues/90)) ([9e608f0](https://github.com/opsdevcode/opdevcode-website/commit/9e608f01b5768191fa788dc1e8ea05ca3fc5830c))
+
 ## [1.11.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.0...opdevcode-website-v1.11.1) (2026-09-07)
 
 
