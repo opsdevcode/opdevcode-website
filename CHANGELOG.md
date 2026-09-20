@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.12.0...opdevcode-website-v1.13.0) (2026-09-20)
+
+
+### Features
+
+* **web:** render official product marks ([#91](https://github.com/opsdevcode/opdevcode-website/issues/91)) ([790a032](https://github.com/opsdevcode/opdevcode-website/commit/790a0328bd252079b0064db5da75bcccf54a9561))
+
 ## [1.12.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.11.1...opdevcode-website-v1.12.0) (2026-09-20)
 
 
