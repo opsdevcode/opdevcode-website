@@ -44,10 +44,24 @@
   margin: 0;
 }
 
+.header-wrap--repave nav {
+  gap: var(--space-8) var(--space-16);
+}
+
+.header-wrap--repave nav > a {
+  margin: 0;
+}
+
 .header-wrap--repave .header-access {
   padding: 8px 14px;
   min-height: 40px;
   font-size: var(--text-sm);
+  color: var(--color-bg);
+}
+
+.header-wrap--repave .header-access:hover {
+  color: var(--color-bg);
+  background: var(--color-primary-hover);
 }
 
 .header-wrap--repave .repave-family-nav {
@@ -73,6 +87,10 @@
 
 .wrap--repave-sales {
   padding-top: var(--space-32);
+}
+
+.repave-sales [id] {
+  scroll-margin-top: 88px;
 }
 
 .repave-sales .repave-eyebrow {
@@ -107,10 +125,10 @@
 }
 
 .repave-sales .repave-hero-copy h1 {
-  max-width: 16ch;
+  max-width: none;
   margin: 0 0 var(--space-24);
   font-size: clamp(2.25rem, 4.6vw, 4.5rem);
-  line-height: 1.05;
+  line-height: 1.08;
   letter-spacing: -0.03em;
 }
 
@@ -269,10 +287,13 @@
     column-gap: var(--space-32);
     align-items: start;
   }
+
+  .repave-sales .repave-hero-copy h1 {
+    font-size: clamp(2.35rem, 2.1vw + 1.4rem, 3.6rem);
+  }
 }
 
 @media (min-width: 1000px) {
-
   .repave-sales .repave-proof-compact {
     display: none;
   }
@@ -298,8 +319,7 @@
   }
 
   .repave-sales .repave-hero-copy h1 {
-    max-width: none;
-    font-size: clamp(2rem, 9vw, 2.75rem);
+    font-size: clamp(2rem, 8.4vw, 2.75rem);
   }
 }
 
