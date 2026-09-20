@@ -21,6 +21,13 @@ cuts, numbered problem/model cadence, framed figures). Shared kinship is
 paper/ink, IBM Plex, official marks, and hairline rules — not a cloned
 product-page layout on `opsdevco.de`.
 
+**Parent-only sheet (homepage exception).** Interior pages and product hosts stay
+on family paper `#F3EFE6`. The company homepage uses elevated sheet `#F7F4ED`
+as the binder, and keeps `#F3EFE6` only on portfolio / start wells so the four
+products still read as drawings on cream. Ink `#1A1F1C` and rules `#C9C2B3`
+are unchanged. The oversized aperture mark is background identity: it must not
+sit on, cross, or clip type.
+
 ## Existing identity (what we keep / drop)
 
 | Asset                                        | Verdict                                                                                                                                                                                                                                                                                   |
@@ -67,6 +74,10 @@ mandatory chrome on every pixel.
 ## Color
 
 Paper `#F3EFE6`, ink `#1A1F1C`, rules `#C9C2B3`. Product accents (on paper):
+
+Company home only may use elevated `#F7F4ED` as the page field (see above).
+Do not treat that sheet as a fifth product accent or as a family token for
+product hosts.
 
 - Repave `#C4841A`
 - Overpass `#1A7A72`

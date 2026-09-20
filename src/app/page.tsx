@@ -3,6 +3,7 @@ import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import Reveal from '@/components/Reveal'
 import ProductCard from '@/components/ProductCard'
+import { BrandMark } from '@/components/BrandMark'
 import { products, type ProductSlug } from '@/lib/products'
 import {
   CALENDLY_URL,
@@ -140,31 +141,36 @@ export default function HomePage() {
       />
       <PageFrame home>
         <section className="home-hero" aria-labelledby="home-thesis">
-          <h1 id="home-thesis">
-            Engineering systems should know
-            <br />
-            more than how to run.
-          </h1>
-          <p className="home-support">
-            They should know what should be true, what is true now, what changed, what it affects,
-            and whether the result is still aligned with intent.
-          </p>
-          <p className="home-support">
-            OpsDevCode builds products that make that engineering state visible, governable, and
-            useful.
-          </p>
-          <p className="home-quiet">
-            Software state. Infrastructure state. Engineering economics.
-            <br />
-            Governed action.
-          </p>
-          <div className="cta">
-            <a className="btn primary" href="#products">
-              See the products →
-            </a>
-            <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-              Talk to OpsDevCode →
-            </a>
+          <div className="home-hero-copy">
+            <h1 id="home-thesis">
+              Engineering systems should know
+              <br />
+              more than how to run.
+            </h1>
+            <p className="home-support">
+              They should know what should be true, what is true now, what changed, what it affects,
+              and whether the result is still aligned with intent.
+            </p>
+            <p className="home-support">
+              OpsDevCode builds products that make that engineering state visible, governable, and
+              useful.
+            </p>
+            <p className="home-quiet">
+              Software state. Infrastructure state. Engineering economics.
+              <br />
+              Governed action.
+            </p>
+            <div className="cta">
+              <a className="btn primary" href="#products">
+                See the products →
+              </a>
+              <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                Talk to OpsDevCode →
+              </a>
+            </div>
+          </div>
+          <div className="home-hero-identity" aria-hidden="true">
+            <BrandMark className="home-hero-aperture" />
           </div>
         </section>
 
