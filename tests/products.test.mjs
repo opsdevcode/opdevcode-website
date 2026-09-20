@@ -140,7 +140,7 @@ describe('product portfolio', () => {
     assert.match(home, /Explore the system/)
     assert.match(home, /href="\/architecture"/)
     assert.match(home, /Explore the products/)
-    assert.match(home, /<div className="hero-grid">/)
+    assert.match(home, /<div className="hero-grid hero-stage">/)
     assert.match(home, /variant="hero"/)
     assert.match(home, /variant="family"/)
     assert.match(home, /problem-planes/)
