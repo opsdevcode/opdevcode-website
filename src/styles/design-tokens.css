@@ -110,7 +110,7 @@
   --radius-xl: 2px;
   --radius-full: 9999px;
 
-  --max-width: 1240px;
+  --max-width: 76rem;
   --max-width-narrow: 720px;
   --wrap-padding: clamp(20px, 4vw, 48px);
   --header-height: 56px;

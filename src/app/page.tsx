@@ -120,7 +120,7 @@ export default function HomePage() {
       <PageFrame home>
         <section className="hero rail">
           <p className="rail-label">Thesis</p>
-          <div className="hero-grid">
+          <div className="hero-grid hero-stage">
             <div className="hero-copy">
               <p className="hero-kicker">OpsDevCode · parent system</p>
               <h1>
@@ -128,11 +128,15 @@ export default function HomePage() {
                 <span className="highlight">.</span>
               </h1>
               <p className="hero-fit">{SITE_TAGLINE}</p>
+              <p className="hero-statement">
+                <span>Specialized domains.</span>
+                <span>Connected context.</span>
+                <span>Governed change.</span>
+              </p>
               <p className="sub">
-                OpsDevCode is the parent view of an engineering system: specialized domains,
-                connected context, and governed change. Four independent products read delivery,
-                infrastructure, economics, and intent. This site is the system — not a fifth
-                product.
+                OpsDevCode is the parent view of an engineering system. Four independent products
+                read delivery, infrastructure, economics, and intent. This site is the system — not
+                a fifth product.
               </p>
               <div className="cta">
                 <a className="btn primary" href="#system">
@@ -143,7 +147,7 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <SystemMap compact variant="hero" />
+            <SystemMap variant="hero" />
           </div>
         </section>
 
@@ -267,7 +271,8 @@ export default function HomePage() {
             </h2>
             <p className="lede">
               A company-level question, not a production workflow you should expect to run across
-              all four products today. Context can cross domains. Authority does not.
+              all four products today. Context can cross domains. Authority does not. The policy
+              gate is a plane on that cut — ink, not a badge on a product card.
             </p>
             <SystemMap variant="context" />
             <ol className="model-axis">

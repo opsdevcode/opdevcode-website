@@ -14,7 +14,7 @@ const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
 describe('parent SystemMap and homepage family', () => {
   it('keeps policy as a mechanism, not a fifth product accent', () => {
     assert.match(tokens, /--rule-structural: 1.5px/)
-    assert.match(map, /policy gate · ink/)
+    assert.match(map, /'policy',\s*'gate',\s*'·',\s*'ink'/)
     assert.match(map, /not a product domain/)
     assert.match(home, /not a fifth product/)
     assert.doesNotMatch(home, /Open Policy Agent/)
@@ -30,8 +30,8 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(home, /Independent products. Connected engineering context/)
     assert.match(home, /not a central runtime/)
     assert.match(home, /Customers are not required to use/)
-    assert.match(map, /not a runtime topology/)
-    assert.match(map, /Dispatch coordinates. Domains remain owners/)
+    assert.match(map, /'not',\s*'a',\s*'runtime',\s*'topology'/)
+    assert.match(map, /'Dispatch',\s*'coordinates\.',\s*'Domains',\s*'remain',\s*'owners\.'/)
     assert.match(map, /not an OpsDevCode product/)
   })
 
@@ -47,7 +47,7 @@ describe('parent SystemMap and homepage family', () => {
   it('recomposes the family map on small viewports', () => {
     const css = readFileSync(join(root, 'src/styles/system.css'), 'utf8')
     assert.match(css, /sysmap-field--mobile/)
-    assert.match(css, /@media \(max-width: 767px\)/)
+    assert.match(css, /@media \(max-width: 899px\)/)
     assert.match(map, /sysmap-stack/)
   })
 })
