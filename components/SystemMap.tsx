@@ -30,7 +30,6 @@ function SvgWords({
   x,
   y,
   anchor = 'middle',
-  gap = 8,
   size = 12,
 }: {
   words: string[]
@@ -38,16 +37,11 @@ function SvgWords({
   x: number
   y: number
   anchor?: 'start' | 'middle' | 'end'
-  gap?: number
   size?: number
 }) {
   return (
     <text className={className} x={x} y={y} textAnchor={anchor} fontSize={size}>
-      {words.map((word, index) => (
-        <tspan key={`${word}-${index}`} dx={index === 0 ? undefined : gap}>
-          {word}
-        </tspan>
-      ))}
+      {words.join(' ')}
     </text>
   )
 }
@@ -275,7 +269,7 @@ function HeroMobile() {
 
 function PolicyCut() {
   return (
-    <svg className="sysmap-section" viewBox="0 0 720 420" aria-hidden="true">
+    <svg className="sysmap-section sysmap-field--desktop" viewBox="0 0 720 420" aria-hidden="true">
       <g fill="none" stroke="currentColor" strokeWidth="1" opacity="0.35">
         <path d="M36 36 H684 V384 H36 Z" />
       </g>
@@ -335,6 +329,29 @@ function PolicyCut() {
         words={['evaluation', 'is', 'explicit.', 'gates', 'stay', 'with', 'domains.']}
       />
     </svg>
+  )
+}
+
+function PolicyMobile() {
+  return (
+    <ol className="sysmap-stack sysmap-field--mobile">
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">Intent</p>
+        <p>A requested outcome from a person, automation, or agent.</p>
+      </li>
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">Context</p>
+        <p>Domain state, identity, and the requested change.</p>
+      </li>
+      <li className="sysmap-stack-item sysmap-stack-item--gate">
+        <p className="sysmap-kicker">Policy evaluate · ink</p>
+        <p>A decision boundary. Not a product domain and not a fifth accent.</p>
+      </li>
+      <li className="sysmap-stack-item">
+        <p className="sysmap-kicker">Allowed or refused</p>
+        <p>Allowed work continues into a domain change. Refused work stops.</p>
+      </li>
+    </ol>
   )
 }
 
@@ -483,7 +500,12 @@ export default function SystemMap({
           </ul>
         </>
       )}
-      {kind === 'policy' && <PolicyCut />}
+      {kind === 'policy' && (
+        <>
+          <PolicyCut />
+          <PolicyMobile />
+        </>
+      )}
       {kind === 'context' && (
         <>
           <ContextCut />

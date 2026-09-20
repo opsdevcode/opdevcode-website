@@ -61,5 +61,8 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(css, /sysmap-field--mobile/)
     assert.match(css, /@media \(max-width: 899px\)/)
     assert.match(map, /sysmap-stack/)
+    assert.match(map, /function PolicyMobile/)
+    const site = readFileSync(join(root, 'src/styles/site.css'), 'utf8')
+    assert.match(site, /\.hero-statement \{[\s\S]*?flex-direction: column/)
   })
 })
