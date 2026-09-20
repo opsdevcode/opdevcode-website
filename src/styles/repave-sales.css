@@ -1,0 +1,310 @@
+/* Repave sales first screen — scoped so company pages keep family chrome */
+
+.header-wrap--repave header {
+  min-height: 72px;
+  align-items: center;
+}
+
+.header-wrap--repave .brand--repave {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-wrap--repave .brand-lockup,
+.header-wrap--repave .brand-wordmark-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-wrap--repave .brand-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.header-wrap--repave .brand-mark--repave {
+  width: 32px;
+  height: 32px;
+}
+
+.header-wrap--repave .brand-byline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.header-wrap--repave .brand-byline a {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.header-wrap--repave .header-access {
+  padding: 8px 14px;
+  min-height: 40px;
+  font-size: var(--text-sm);
+}
+
+.header-wrap--repave .repave-family-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header-wrap--repave .repave-family-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: var(--space-8);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .header-wrap--repave .repave-family-nav a {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    font-weight: 400;
+  }
+}
+
+.wrap--repave-sales {
+  padding-top: var(--space-32);
+}
+
+.repave-sales .repave-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 var(--space-20);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.repave-sales .repave-eyebrow-mark {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background: var(--color-repave);
+  border-radius: var(--system-radius);
+}
+
+.repave-sales .repave-hero {
+  padding-bottom: var(--space-32);
+}
+
+.repave-sales .repave-hero-grid {
+  display: grid;
+  gap: var(--space-32);
+  align-items: start;
+}
+
+.repave-sales .repave-hero-copy h1 {
+  max-width: 16ch;
+  margin: 0 0 var(--space-24);
+  font-size: clamp(2.25rem, 4.6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.repave-sales .repave-hero-body {
+  max-width: 34rem;
+  margin: 0 0 var(--space-24);
+  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.repave-sales .repave-hero-cta {
+  margin: 0 0 var(--space-24);
+}
+
+.repave-sales .repave-support {
+  margin: 0;
+  padding-top: var(--space-16);
+  max-width: 34rem;
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.repave-sales .repave-figure {
+  margin: 0;
+}
+
+.repave-sales .repave-figure-svg {
+  width: 100%;
+  height: auto;
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.repave-sales .repave-fig-frame {
+  color: var(--color-border);
+}
+
+.repave-sales .repave-fig-title,
+.repave-sales .repave-fig-state,
+.repave-sales .repave-fig-diff-label,
+.repave-sales .repave-fig-rail-label {
+  fill: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.repave-sales .repave-fig-brand,
+.repave-sales .repave-fig-diff-label,
+.repave-sales .repave-fig-rail-label--accent,
+.repave-sales .repave-fig-diff-note {
+  fill: var(--color-repave);
+}
+
+.repave-sales .repave-fig-note,
+.repave-sales .repave-fig-cut,
+.repave-sales .repave-fig-gate,
+.repave-sales .repave-fig-gate-side,
+.repave-sales .repave-fig-return-note {
+  fill: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.repave-sales .repave-fig-diff {
+  color: var(--color-repave);
+}
+
+.repave-sales .repave-fig-path,
+.repave-sales .repave-fig-rail {
+  color: var(--color-border-strong);
+}
+
+.repave-sales .repave-fig-return {
+  color: var(--color-repave);
+  stroke-dasharray: 4 3;
+}
+
+.repave-sales .repave-figure-svg--mobile {
+  display: none;
+}
+
+.repave-sales .repave-proof {
+  margin-top: var(--space-40);
+  padding: var(--space-24) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.repave-sales .repave-proof-compact,
+.repave-sales .repave-proof-expanded {
+  display: grid;
+  gap: var(--space-24);
+}
+
+.repave-sales .repave-proof-expanded {
+  display: none;
+}
+
+.repave-sales .repave-proof-label {
+  margin: 0 0 var(--space-8);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.repave-sales .repave-proof p {
+  margin: 0;
+  max-width: 28rem;
+  color: var(--color-text-secondary);
+}
+
+.repave-sales .repave-next {
+  padding: var(--space-64) 0 var(--space-48);
+}
+
+.repave-sales .repave-next h2 {
+  max-width: 18ch;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 400;
+}
+
+.repave-sales .repave-next-copy {
+  max-width: 40rem;
+}
+
+.repave-sales .repave-next-copy p {
+  color: var(--color-text-secondary);
+}
+
+.repave-sales .repave-later {
+  padding: 0 0 var(--space-48);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-40);
+}
+
+.repave-sales .repave-later h2 {
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .repave-sales .repave-proof-compact {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .repave-sales .repave-hero-grid {
+    grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+    column-gap: var(--space-32);
+    align-items: start;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .repave-sales .repave-proof-compact {
+    display: none;
+  }
+
+  .repave-sales .repave-proof-expanded {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .repave-sales .repave-hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .repave-sales .repave-figure-svg--desktop {
+    display: none;
+  }
+
+  .repave-sales .repave-figure-svg--mobile {
+    display: block;
+  }
+
+  .repave-sales .repave-hero-copy h1 {
+    max-width: none;
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .repave-sales .repave-fig-return {
+    stroke-dasharray: none;
+  }
+}
