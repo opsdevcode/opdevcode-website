@@ -23,6 +23,54 @@ export default function ApproachPage() {
           change is not. Policy-native delivery makes repeatable rules into explainable decisions
           without creating a fifth product.
         </p>
+        <h2 className="section-title">How the work is designed</h2>
+        <ol className="principle-rows">
+          <li>
+            <span>01 /</span>
+            <div>
+              <h2>Domain authority stays with the domain</h2>
+              <p>Coordination does not transfer ownership.</p>
+            </div>
+          </li>
+          <li>
+            <span>02 /</span>
+            <div>
+              <h2>Integrate commodity. Own differentiation.</h2>
+              <p>
+                OpsDevCode integrates systems such as source control, cloud platforms,
+                infrastructure engines, and observability rather than rebuilding them merely for
+                ownership.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>03 /</span>
+            <div>
+              <h2>Intent is not authority</h2>
+              <p>Understanding an outcome does not automatically authorize its execution.</p>
+            </div>
+          </li>
+          <li>
+            <span>04 /</span>
+            <div>
+              <h2>State before automation</h2>
+              <p>
+                Reliable action depends on understanding what should be true and what is actually
+                true.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>05 /</span>
+            <div>
+              <h2>Evidence over assumption</h2>
+              <p>
+                Changes should produce enough evidence to determine what happened and whether the
+                intended outcome occurred.
+              </p>
+            </div>
+          </li>
+        </ol>
         <ol className="approach-seq">
           <li>
             <span>01</span>

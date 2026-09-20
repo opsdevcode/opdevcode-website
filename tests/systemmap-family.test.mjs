@@ -13,10 +13,11 @@ const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
 
 describe('parent SystemMap and homepage family', () => {
   it('keeps policy as a mechanism, not a fifth product accent', () => {
+    const architecture = readFileSync(join(root, 'src/app/architecture/page.tsx'), 'utf8')
     assert.match(tokens, /--rule-structural: 1.5px/)
     assert.match(map, /'policy',\s*'gate',\s*'·',\s*'ink'/)
     assert.match(map, /not a product domain/)
-    assert.match(home, /not a fifth product/)
+    assert.match(architecture, /not a fifth product/)
     assert.doesNotMatch(home, /Open Policy Agent/)
     assert.doesNotMatch(home, /\bOPA\b/)
     assert.doesNotMatch(home, /Policy Runtime/)
@@ -27,10 +28,9 @@ describe('parent SystemMap and homepage family', () => {
     assert.match(footer, /SITE_TAGLINE/)
   })
 
-  it('states product independence and no runtime hierarchy', () => {
-    assert.match(home, /Independent products. Connected engineering context/)
-    assert.match(home, /not a central runtime/)
-    assert.match(home, /Customers are not required to use/)
+  it('states product independence once on the company home', () => {
+    assert.match(home, /Customers are not required to use all four/)
+    assert.doesNotMatch(home, /not a central runtime/)
     assert.match(map, /'not',\s*'a',\s*'runtime',\s*'topology'/)
     assert.match(map, /'Dispatch',\s*'coordinates\.',\s*'Domains',\s*'remain',\s*'owners\.'/)
     assert.match(map, /not an OpsDevCode product/)
@@ -39,18 +39,17 @@ describe('parent SystemMap and homepage family', () => {
   it('uses canonical marks and product hosts as entry points', () => {
     assert.match(map, /ProductMark/)
     assert.match(home, /PRODUCT_URLS/)
-    assert.match(home, /Explore the products/)
-    assert.match(home, /Explore the system/)
+    assert.match(home, /See the products/)
+    assert.match(home, /Talk to OpsDevCode/)
+    assert.doesNotMatch(home, /Explore the system/)
     assert.doesNotMatch(home, /Start Free/)
     assert.doesNotMatch(home, /Deploy Now/)
   })
 
-  it('spends the 76rem measure on SystemMap and the thesis statement', () => {
+  it('keeps the 76rem measure and moves SystemMap off the homepage', () => {
     assert.match(tokens, /--max-width: 76rem/)
-    assert.match(home, /hero-statement/)
-    assert.match(home, /Specialized domains/)
-    assert.match(home, /Connected context/)
-    assert.match(home, /Governed change/)
+    assert.doesNotMatch(home, /SystemMap/)
+    assert.doesNotMatch(home, /hero-statement/)
     assert.match(map, /function HeroMobile/)
     assert.match(map, /sysmap-stack-item--gate/)
     assert.match(home, /href="\/architecture"/)

@@ -4,16 +4,14 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { BrandMark } from '@/components/BrandMark'
-import { CONVERGENCE_URL, GITHUB_ORG_URL } from '@/lib/site'
+import { CALENDLY_URL } from '@/lib/site'
 
 const navItems = [
   { href: '/products', label: 'Products', match: '/products' },
   { href: '/approach', label: 'Approach', match: '/approach' },
   { href: '/architecture', label: 'Architecture', match: '/architecture' },
-  { href: CONVERGENCE_URL, label: 'Convergence', external: true },
-  { href: '/services', label: 'Services', match: '/services' },
   { href: '/about', label: 'Company', match: '/about' },
-  { href: GITHUB_ORG_URL, label: 'GitHub', external: true },
+  { href: CALENDLY_URL, label: 'Talk', external: true },
 ]
 
 function isActive(pathname: string, match?: string) {

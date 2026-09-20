@@ -1631,3 +1631,131 @@ footer {
   margin-bottom: var(--space-16);
   line-height: 1.55;
 }
+
+/* Company parent homepage — editorial thesis + portfolio */
+.wrap.home {
+  background-image: none;
+  padding-bottom: var(--space-64);
+}
+.wrap.home > section.section:nth-of-type(even) {
+  background-color: transparent;
+}
+.wrap.home > section.section {
+  padding-top: var(--space-64);
+  padding-bottom: var(--space-64);
+}
+.wrap.home .home-hero + .section,
+.wrap.home .section + .section {
+  border-top: 1px solid var(--color-border);
+}
+.home-hero {
+  padding: var(--space-80) 0 var(--space-64);
+  max-width: 40rem;
+}
+.wrap.home .home-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 6vw, 4.15rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 14ch;
+  margin: 0 0 var(--space-24);
+}
+.home-support,
+.home-measure {
+  max-width: 48ch;
+  line-height: 1.6;
+}
+.home-support {
+  margin: 0 0 var(--space-32);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  color: var(--color-text-secondary);
+}
+.home-hero .cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+.product-grid--portfolio {
+  display: grid;
+  gap: var(--grid-gap);
+  margin-top: var(--space-32);
+}
+@media (min-width: 768px) {
+  .product-grid--portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1100px) {
+  .product-grid--portfolio {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.product-card--portfolio {
+  border: 1px solid var(--color-border);
+  border-top-width: 2px;
+  padding: var(--space-20);
+  background: var(--color-bg);
+  box-shadow: none;
+}
+.product-card--portfolio.product-card--repave,
+.product-card--featured.product-card--repave {
+  background: var(--color-bg);
+}
+.product-card--portfolio .product-card-mark {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.product-card--portfolio .product-card-maturity {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.product-card--portfolio .product-card-top {
+  align-items: center;
+}
+.product-card--portfolio h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  margin: 0 0 var(--space-8);
+}
+.why-list,
+.start-list {
+  list-style: none;
+  margin: var(--space-24) 0;
+  padding: 0;
+  max-width: 48rem;
+}
+.why-list li,
+.start-list li {
+  display: grid;
+  gap: 4px;
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-border);
+}
+.why-list li {
+  grid-template-columns: 7rem 1fr;
+  align-items: baseline;
+  gap: var(--space-16);
+}
+.start-list li p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+.home-company-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12) var(--space-24);
+  margin: var(--space-20) 0 0;
+}
+@media (max-width: 640px) {
+  .wrap.home .home-hero h1 {
+    font-size: clamp(2.1rem, 11vw, 2.75rem);
+    max-width: none;
+  }
+  .why-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

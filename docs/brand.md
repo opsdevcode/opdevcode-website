@@ -15,6 +15,12 @@ mascots and not a mandatory pipeline.
 
 That idea must remain identifiable with the logos removed.
 
+**Company home vs product sites.** The company homepage is an editorial parent:
+thesis plus portfolio. Product identity hosts keep domain grammar (section
+cuts, numbered problem/model cadence, framed figures). Shared kinship is
+paper/ink, IBM Plex, official marks, and hairline rules — not a cloned
+product-page layout on `opsdevco.de`.
+
 ## Existing identity (what we keep / drop)
 
 | Asset                                        | Verdict                                                                                                                                                                                                                                                                                   |
@@ -23,7 +29,7 @@ That idea must remain identifiable with the logos removed.
 | PNG “O / terminal” marks                     | Deleted from `public/assets/`. Not in git.                                                                                                                                                                                                                                                |
 | Stripe-like Inter + `#635bff` + navy         | Drop. Generic developer-tool kit.                                                                                                                                                                                                                                                         |
 | Product accents amber / teal / blue / violet | Keep as _hue families_; retune for one paper/ink system.                                                                                                                                                                                                                                  |
-| Rail layout on the company site              | Keep. It already reads as a drawing annotation.                                                                                                                                                                                                                                           |
+| Rail layout on the company site              | Interior only. `.rail` / `.rail-label` is technical and documentation grammar for Approach, Architecture, and product briefings — not the corporate homepage.                                                                                                                             |
 | Repave v3 kit (`repave/docs/brand`, ADR 009) | **Product equity to evolve, not ignore.** Keep amber-as-scarce-brand (not status). Drop isometric “platform-layer” mark and tagline _The intelligent platform layer_ as **family** authority — ADR 020 + this grammar win. Inter-on-navy is Repave-local history, not the company system. |
 | Overpass `web_identity` teal + cream         | Keep teal as the Overpass hue family; restyle geometry to section DNA.                                                                                                                                                                                                                    |
 | Toll / Dispatch public identity pages        | Live on `toll.opsdevco.de` and `dispatch.opsdevco.de`. Copy family tokens; do not import this site’s CSS.                                                                                                                                                                                 |
@@ -103,9 +109,10 @@ Honor `prefers-reduced-motion`. Never decorate.
 
 ## SystemMap
 
-SystemMap is the company visual language: architectural section drawing, not a
-flowchart and not a product logo. The company site owns the implementation.
-Product sites copy the grammar locally later — no shared package.
+SystemMap is the company visual language for **Architecture** (and related
+interior pages): architectural section drawing, not a flowchart and not a
+product logo. It is not the homepage composition. The company site owns the
+implementation. Product sites copy the grammar locally later — no shared package.
 
 Primitives in use: **section** (mono label + rule), **cut** (reveals another
 domain without transferring authority), **plane** (product accent = domain

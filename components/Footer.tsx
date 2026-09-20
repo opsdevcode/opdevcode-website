@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { BrandMark, ProductMark } from '@/components/BrandMark'
 import { products } from '@/lib/products'
 import {
+  CALENDLY_URL,
   CONVERGENCE_URL,
   GITHUB_ORG_URL,
   PRODUCT_URLS,
@@ -42,6 +43,9 @@ export default function Footer() {
           <Link href="/architecture">Architecture</Link>
           <Link href="/services">Services</Link>
           <Link href="/about">Company</Link>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+            Talk
+          </a>
           <Link href="/privacy">Privacy</Link>
         </div>
         <div>
