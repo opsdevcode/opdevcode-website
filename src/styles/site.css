@@ -118,8 +118,8 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px) saturate(1.4);
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px) saturate(1.15);
   border-bottom: 1px solid var(--color-border);
 }
 header {
@@ -1299,7 +1299,7 @@ code.inline {
 }
 
 /* ============================================================
-   ELEGANCE PASS — ornament, micro-FX (Inter stack)
+   ELEGANCE PASS — ornament, micro-FX (Plex / paper)
    Layered on top of the base stylesheet so it overrides safely.
    ============================================================ */
 
@@ -1359,7 +1359,7 @@ code.inline {
   box-shadow: none;
 }
 
-/* --- Glass header + subtle gradient hover for tiles --- */
+/* --- Paper sticky header (not white glass) + tile hover ring --- */
 .header-wrap {
   background: var(--surface-glass);
   border-bottom: 1px solid var(--color-border);

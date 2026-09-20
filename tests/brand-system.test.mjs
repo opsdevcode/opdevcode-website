@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -17,6 +17,43 @@ describe('governed-section brand system', () => {
     assert.match(tokens, /--color-dispatch: #5b4a8a/)
     assert.doesNotMatch(tokens, /#635bff/)
     assert.doesNotMatch(tokens, /Stripe-inspired/)
+  })
+
+  it('exports a copyable tokens snippet that matches CSS SoT hexes', () => {
+    const snippet = JSON.parse(readFileSync(join(root, 'docs/tokens.json'), 'utf8'))
+    const tokens = readFileSync(join(root, 'src/styles/design-tokens.css'), 'utf8')
+    assert.equal(snippet.paper.toLowerCase(), '#f3efe6')
+    assert.equal(snippet.ink.toLowerCase(), '#1a1f1c')
+    assert.equal(snippet.rules.toLowerCase(), '#c9c2b3')
+    assert.equal(snippet.accentsOnPaper.repave.toLowerCase(), '#c4841a')
+    assert.equal(snippet.accentsOnPaper.overpass.toLowerCase(), '#1a7a72')
+    assert.equal(snippet.accentsOnPaper.toll.toLowerCase(), '#2b5f9e')
+    assert.equal(snippet.accentsOnPaper.dispatch.toLowerCase(), '#5b4a8a')
+    assert.equal(snippet.hosts.repave, 'https://repave.opsdevco.de')
+    assert.equal(snippet.hosts.overpass, 'https://overpass.opsdevco.de')
+    assert.equal(snippet.hosts.toll, 'https://toll.opsdevco.de')
+    assert.equal(snippet.hosts.dispatch, 'https://dispatch.opsdevco.de')
+    assert.match(tokens, /docs\/tokens\.json/)
+    assert.doesNotMatch(tokens, /opsdevcode\/\.github/)
+  })
+
+  it('uses paper sticky header, not white glass', () => {
+    const css = readFileSync(join(root, 'src/styles/site.css'), 'utf8')
+    assert.match(css, /\.header-wrap \{[\s\S]*?background: var\(--surface-glass\)/)
+    assert.doesNotMatch(css, /rgba\(255,\s*255,\s*255/)
+    assert.match(css, /--surface-glass/)
+  })
+
+  it('keeps referenced SEO and mark assets on disk', () => {
+    for (const name of [
+      'og-opsdevcode.svg',
+      'favicon-opsdevcode.svg',
+      'github-avatar-opsdevcode.png',
+      'mark-opsdevcode.svg',
+      'lockup-opsdevcode.svg',
+    ]) {
+      assert.equal(existsSync(join(root, 'public/brand', name)), true, name)
+    }
   })
 
   it('ships family SVG marks', () => {
