@@ -1649,7 +1649,7 @@ footer {
 }
 .wrap.home h2.section-title {
   display: block;
-  max-width: min(100%, 22rem);
+  max-width: min(100%, 28rem);
   margin-bottom: var(--space-32);
   padding: 0;
   font-weight: 400;
@@ -1669,7 +1669,7 @@ footer {
   display: grid;
   gap: var(--space-48);
   align-items: start;
-  padding: var(--space-128) 0 var(--space-96);
+  padding: var(--space-96) 0 var(--space-80);
   max-width: none;
   overflow: hidden;
 }
@@ -1713,10 +1713,10 @@ footer {
 .wrap.home .home-hero h1 {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.85rem, 7.2vw, 5.15rem);
-  line-height: 1.04;
+  font-size: clamp(2.75rem, 6.2vw, 4.5rem);
+  line-height: 1.06;
   letter-spacing: -0.04em;
-  max-width: 12ch;
+  max-width: 16em;
   margin: 0 0 var(--space-40);
 }
 .home-support,
@@ -1950,8 +1950,8 @@ footer {
     gap: var(--space-40);
   }
   .wrap.home .home-hero h1 {
-    font-size: clamp(2.35rem, 12vw, 3.1rem);
-    max-width: 11ch;
+    font-size: clamp(2.35rem, 11vw, 2.85rem);
+    max-width: none;
     margin-bottom: var(--space-32);
   }
   .home-hero-aperture {
