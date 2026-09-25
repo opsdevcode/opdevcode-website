@@ -4,20 +4,21 @@
 
 Company and product ecosystem site for [OpsDevCode](https://opsdevco.de). Built with [Next.js](https://nextjs.org) (App Router, static export) and deployed on Netlify. This is not the Repave product site; that lives at [repave.opsdevco.de](https://repave.opsdevco.de).
 
-| | |
-| --- | --- |
-| Maturity | Public company site. Product pages are portfolio context, not a substitute for `{product}.opsdevco.de`. |
-| Authoritative scope | `opsdevco.de` marketing/company surface. Product runtimes own their hosts. |
-| Architecture | this README · [docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md) |
-| Local test | `npm run check` |
-| Company process | [OpsDevCode CONTRIBUTING](https://github.com/opsdevcode/.github/blob/main/CONTRIBUTING.md) |
+|                     |                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
+| Maturity            | Public company site. Product pages are portfolio context, not a substitute for `{product}.opsdevco.de`. |
+| Authoritative scope | `opsdevco.de` marketing/company surface. Product runtimes own their hosts.                              |
+| Architecture        | this README · [docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md)                                        |
+| Local test          | `npm run check`                                                                                         |
+| Accessibility       | `A11Y_BASE_REF=origin/main npm run test:a11y` ([a11y/README.md](a11y/README.md))                        |
+| Company process     | [OpsDevCode CONTRIBUTING](https://github.com/opsdevcode/.github/blob/main/CONTRIBUTING.md)              |
 
 ## Ownership
 
-| Concern | Owner |
-| --- | --- |
-| Company site | This repo (Netlify) |
-| Product hosts | Product repos + infra |
+| Concern           | Owner                                      |
+| ----------------- | ------------------------------------------ |
+| Company site      | This repo (Netlify)                        |
+| Product hosts     | Product repos + infra                      |
 | Production deploy | Netlify on `main` (not `repave-aws-infra`) |
 
 ## Tech stack
@@ -67,14 +68,15 @@ Redirects: `/tools` → `/products`, `/agentic` → `/products/dispatch`.
 
 ## Scripts
 
-| Command               | Description                                            |
-| --------------------- | ------------------------------------------------------ |
-| `npm run dev`         | Next.js dev server                                     |
-| `npm run build`       | Static production export                               |
-| `npm start`           | Serve the Next production server (not used by Netlify) |
-| `npm run check`       | Lint, format, typecheck, tests                         |
-| `npm test`            | Node test runner against `lib/` contracts              |
-| `npm run og:generate` | Generate OG image (requires Playwright)                |
+| Command               | Description                                               |
+| --------------------- | --------------------------------------------------------- |
+| `npm run dev`         | Next.js dev server                                        |
+| `npm run build`       | Static production export                                  |
+| `npm start`           | Serve the Next production server (not used by Netlify)    |
+| `npm run check`       | Lint, format, typecheck, tests                            |
+| `npm test`            | Node test runner against `lib/` contracts + a11y detector |
+| `npm run test:a11y`   | axe WCAG 2.2 A/AA suite (requires build + Chromium)       |
+| `npm run og:generate` | Generate OG image (requires Playwright)                   |
 
 ## Deployment
 

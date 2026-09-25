@@ -395,17 +395,12 @@
   text-transform: uppercase;
   color: var(--color-text-muted);
 }
-.sysmap-anchor--repave {
-  color: var(--color-repave);
-}
-.sysmap-anchor--overpass {
-  color: var(--color-overpass);
-}
-.sysmap-anchor--toll {
-  color: var(--color-toll);
-}
+.sysmap-anchor--repave,
+.sysmap-anchor--overpass,
+.sysmap-anchor--toll,
 .sysmap-anchor--dispatch {
-  color: var(--color-dispatch);
+  /* Product accent stays on the mark; body text uses ink for WCAG AA contrast. */
+  color: var(--color-text);
 }
 .sysmap-anchor:focus-visible {
   outline: 2px solid var(--color-text);

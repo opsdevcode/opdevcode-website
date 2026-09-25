@@ -5,6 +5,8 @@ on:
   push:
     branches: [main]
 
+# Always run on every PR/push. Do not add paths-ignore / paths filters —
+# required checks must not stay pending when only docs or scripts change.
 permissions:
   contents: read
 
@@ -32,3 +34,90 @@ jobs:
 
       - name: Test
         run: npm test
+        env:
+          A11Y_SKIP_BROWSER: '1'
+
+  a11y:
+    name: a11y
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Resolve base ref
+        id: base
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "ref=origin/${{ github.base_ref }}" >> "$GITHUB_OUTPUT"
+          else
+            BEFORE="${{ github.event.before }}"
+            if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+              echo "ref=HEAD~1" >> "$GITHUB_OUTPUT"
+            else
+              echo "ref=$BEFORE" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Install
+        run: npm install --no-audit --no-fund
+
+      - name: Detect UI impact
+        id: detect
+        run: |
+          set -euo pipefail
+          mkdir -p a11y-results
+          node a11y/detect-ui-impact.mjs --base "${{ steps.base.outputs.ref }}" | tee a11y-results/detection.json
+          decision="$(node -e "const d=require('./a11y-results/detection.json'); process.stdout.write(d.decision)")"
+          echo "decision=$decision" >> "$GITHUB_OUTPUT"
+          if [ "$decision" = "skip" ]; then
+            msg="$(node -e "const d=require('./a11y-results/detection.json'); process.stdout.write(d.notApplicableMessage || d.reason)")"
+            echo "$msg"
+            node -e "
+              const fs = require('fs');
+              const d = require('./a11y-results/detection.json');
+              const summary = {
+                decision: 'skip',
+                message: d.notApplicableMessage || d.reason,
+                testsRun: false,
+                mergeBlockingVerified: false,
+                commit: process.env.GITHUB_SHA,
+                note: 'Job completed with an explicit not-applicable result; browsers were not launched.',
+              };
+              fs.writeFileSync('a11y-results/summary.json', JSON.stringify(summary, null, 2));
+            "
+          elif [ "$decision" = "fail_detection" ]; then
+            echo "UI impact detection failed (unknown paths with fail_detection policy)"
+            exit 3
+          fi
+
+      - name: Install Playwright Chromium
+        if: steps.detect.outputs.decision == 'run'
+        run: npx playwright install chromium --with-deps
+
+      - name: Production build
+        if: steps.detect.outputs.decision == 'run'
+        run: npm run build
+
+      - name: Run axe accessibility suite
+        if: steps.detect.outputs.decision == 'run'
+        env:
+          A11Y_BASE_REF: ${{ steps.base.outputs.ref }}
+          A11Y_ARTIFACT_DIR: a11y-results
+        run: npm run test:a11y
+
+      - name: Upload a11y artifacts
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # actions/upload-artifact@v4
+        with:
+          name: a11y-results-${{ github.sha }}
+          path: a11y-results/
+          if-no-files-found: warn
+          retention-days: 14
