@@ -26,24 +26,24 @@
     "domain:netlify": "scripts/add-netlify-domain.sh"
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.3.4",
-    "next": "^15.5.12",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "@eslint/eslintrc": "^3.3.7",
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
-    "@eslint/js": "^9.39.3",
-    "@types/node": "^22.10.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "axe-core": "^4.10.3",
-    "eslint": "^9.39.3",
-    "eslint-config-next": "^15.5.12",
+    "eslint": "^10.11.0",
+    "eslint-config-next": "^16.3.5",
     "eslint-config-prettier": "^10.1.8",
-    "netlify-cli": "^17.0.0",
-    "playwright": "^1.58.2",
-    "prettier": "^3.8.1",
-    "typescript": "^5.9.3"
+    "netlify-cli": "^27.8.0",
+    "playwright": "^1.63.0",
+    "prettier": "^3.9.8",
+    "typescript": "^7.0.2"
   }
 }
