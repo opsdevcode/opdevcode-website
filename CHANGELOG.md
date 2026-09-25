@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.18.0...opdevcode-website-v1.19.0) (2026-09-25)
+
+
+### Features
+
+* **a11y:** add axe playwright accessibility gate ([#107](https://github.com/opsdevcode/opdevcode-website/issues/107)) ([5c722bc](https://github.com/opsdevcode/opdevcode-website/commit/5c722bc5c65a325b6b97941114eb826f0848e1e2))
+
 ## [1.18.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.17.1...opdevcode-website-v1.18.0) (2026-09-20)
 
 
