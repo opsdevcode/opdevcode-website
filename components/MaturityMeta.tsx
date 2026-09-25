@@ -8,7 +8,7 @@ export default function MaturityMeta({
   extra?: string
 }) {
   return (
-    <p className="meta-row" aria-label={`${label}. Product index ${index}.`}>
+    <p className="meta-row">
       <span className="product-index" aria-hidden="true">
         {index}
       </span>

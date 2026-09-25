@@ -5,4 +5,5 @@ dist/
 .astro/
 .next/
 out/
+a11y-results/
 tsconfig.tsbuildinfo

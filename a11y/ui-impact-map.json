@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "surface": "marketing",
+  "description": "Version-controlled mapping of UI-affecting paths to marketing route/state accessibility tests for opsdevco.de.",
+  "unknownPolicy": "conservative_run",
+  "notApplicableMessage": "Not applicable — no UI-affecting changes",
+  "viewports": [
+    { "id": "desktop", "width": 1366, "height": 768 },
+    { "id": "mobile", "width": 390, "height": 844 }
+  ],
+  "axe": {
+    "tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22a", "wcag22aa"],
+    "standard": "WCAG 2.2 Level A and AA",
+    "failOn": ["violations"],
+    "retainForManualReview": ["incomplete"],
+    "note": "axe tags rules by the WCAG version that introduced them; include 2.0/2.1/2.2 A+AA tags for full 2.2 A/AA coverage."
+  },
+  "rules": [
+    {
+      "id": "marketing-ui",
+      "impact": "marketing",
+      "globs": [
+        "src/**",
+        "components/**",
+        "public/**",
+        "lib/**",
+        "next.config.ts",
+        "next.config.js",
+        "netlify.toml",
+        "tsconfig.json",
+        "eslint.config.mjs",
+        "package.json",
+        "package-lock.json"
+      ],
+      "routes": [
+        { "path": "/", "states": ["default", "menu-open"] },
+        { "path": "/products", "states": ["default"] },
+        { "path": "/products/repave", "states": ["default"] },
+        { "path": "/approach", "states": ["default"] },
+        { "path": "/architecture", "states": ["default"] },
+        { "path": "/about", "states": ["default"] },
+        { "path": "/services", "states": ["default"] },
+        { "path": "/privacy", "states": ["default"] }
+      ]
+    },
+    {
+      "id": "a11y-harness",
+      "impact": "marketing",
+      "globs": ["a11y/**", "tests/a11y-*.test.mjs", "tests/ui-impact-detect.test.mjs"],
+      "routes": [
+        { "path": "/", "states": ["default", "menu-open"] },
+        { "path": "/products", "states": ["default"] },
+        { "path": "/about", "states": ["default"] }
+      ]
+    },
+    {
+      "id": "ci-workflows",
+      "impact": "marketing",
+      "globs": [".github/workflows/**"],
+      "routes": [
+        { "path": "/", "states": ["default", "menu-open"] },
+        { "path": "/products", "states": ["default"] }
+      ]
+    },
+    {
+      "id": "non-ui-docs",
+      "impact": "none",
+      "globs": [
+        "docs/**",
+        "README.md",
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "LICENSE",
+        "LICENSE.md",
+        ".cursor/**",
+        ".vscode/**",
+        ".nvmrc",
+        ".tool-versions",
+        ".prettierignore",
+        ".prettierrc",
+        ".commitlintrc.cjs",
+        ".env.example",
+        ".gitignore",
+        ".release-please-manifest.json",
+        "release-please-config.json",
+        ".github/CODEOWNERS",
+        ".github/PULL_REQUEST_TEMPLATE.md",
+        ".github/dependabot.yml",
+        ".github/scripts/**"
+      ]
+    },
+    {
+      "id": "non-ui-scripts",
+      "impact": "none",
+      "globs": ["scripts/**"]
+    }
+  ]
+}

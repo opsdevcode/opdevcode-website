@@ -22,9 +22,16 @@ This guide covers **this repo**: Netlify previews, `Version Check`, and Conventi
 
 All changes to `main` must go through a PR.
 
-Required checks on pull requests:
+Required checks on pull requests (branch protection — do not change from this PR):
 
-- `Version Check`
+- `Version Check` (`version` job) — **merge-blocking** today
+
+Also runs on every PR (always reports; no workflow path filters):
+
+- `Quality` (`quality` job) — lint, typecheck, unit tests
+- `Quality` (`a11y` job) — axe WCAG 2.2 A/AA when UI-affecting paths change; otherwise prints `Not applicable — no UI-affecting changes` and completes successfully
+
+`testsRun` vs `mergeBlockingVerified`: see [a11y/README.md](a11y/README.md). The `a11y` check is **tests-run** in CI on this workflow. Making it **merge-blocking** requires adding the `a11y` check name to branch protection (separate from this PR; this PR does not change branch protections).
 
 `Direct Push Guard` runs on pushes to `main`. It **passes** when the commit
 belongs to a merged pull request (including GitHub UI merge/squash), and

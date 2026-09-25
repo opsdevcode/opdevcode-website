@@ -1234,6 +1234,11 @@ code.inline {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
 }
+.note a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 .fine {
   font-weight: 400;
   color: var(--color-text-muted);
