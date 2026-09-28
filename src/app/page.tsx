@@ -6,6 +6,14 @@ import ProductCard from '@/components/ProductCard'
 import { BrandMark } from '@/components/BrandMark'
 import { products, type ProductSlug } from '@/lib/products'
 import {
+  ACCESS_PLANS,
+  COMPANY_NAME,
+  GOVERN_LINE,
+  OUTCOME_LINE,
+  PLATFORM_NAME,
+  VERIFY_LINE,
+} from '@/lib/platform'
+import {
   CALENDLY_URL,
   COMPANY_BANNER_SRC,
   COMPANY_LOGO_SRC,
@@ -82,23 +90,11 @@ const structuredData = {
   ],
 }
 
-const portfolioCopy: Record<ProductSlug, { title: string; body: string }> = {
-  repave: {
-    title: 'Governed software state.',
-    body: 'Know how repositories are meant to operate, understand how they operate now, and manage supported change across their lifecycle.',
-  },
-  overpass: {
-    title: 'Infrastructure state and relationships.',
-    body: 'Understand infrastructure as durable state — including the resources, versions, and relationships that determine what a change can affect.',
-  },
-  toll: {
-    title: 'Engineering economics.',
-    body: 'Connect cloud economics to engineering context so teams can understand what their systems cost and the evidence behind that cost.',
-  },
-  dispatch: {
-    title: 'Governed intent and action.',
-    body: 'Give engineers a simpler way to ask for outcomes and take action while authority remains with the systems that own the underlying domains.',
-  },
+const portfolioCopy: Record<ProductSlug, { title: string }> = {
+  repave: { title: 'Governed software state.' },
+  overpass: { title: 'Infrastructure state and relationships.' },
+  toll: { title: 'Engineering economics.' },
+  dispatch: { title: 'Governed intent and action.' },
 }
 
 const whyFour: { name: string; job: string }[] = [
@@ -116,17 +112,17 @@ const startOther: {
   {
     slug: 'overpass',
     name: 'Overpass',
-    blurb: 'For infrastructure state and relationships.',
+    blurb: 'When stored infrastructure state is the problem in front of you.',
   },
   {
     slug: 'toll',
     name: 'Toll',
-    blurb: 'For engineering economics and cost attribution.',
+    blurb: 'When cost needs engineering ownership, not a billing warehouse.',
   },
   {
     slug: 'dispatch',
     name: 'Dispatch',
-    blurb: 'For governed intent and action across engineering systems.',
+    blurb: 'When people need a governed way to ask without moving authority.',
   },
 ]
 
@@ -142,24 +138,20 @@ export default function HomePage() {
       <PageFrame home>
         <section className="home-hero" aria-labelledby="home-thesis">
           <h1 id="home-thesis">
-            Engineering systems should know
+            {OUTCOME_LINE}
             <br />
-            more than how to run.
+            {GOVERN_LINE}
+            <br />
+            {VERIFY_LINE}
           </h1>
           <div className="home-hero-body">
             <div className="home-hero-copy">
               <p className="home-support">
-                They should know what should be true, what is true now, what changed, what it
-                affects, and whether the result is still aligned with intent.
+                {COMPANY_NAME} is the company. {PLATFORM_NAME} is the modular offering. Adopt
+                Repave, Overpass, Toll, or Dispatch on their own.
               </p>
-              <p className="home-support">
-                OpsDevCode builds products that make that engineering state visible, governable, and
-                useful.
-              </p>
-              <p className="home-quiet">
-                Software state. Infrastructure state. Engineering economics.
-                <br />
-                Governed action.
+              <p className="home-quiet" id="home-product-names">
+                Repave · Overpass · Toll · Dispatch
               </p>
               <div className="cta">
                 <a className="btn primary" href="#products">
@@ -182,11 +174,11 @@ export default function HomePage() {
           aria-labelledby="portfolio-heading"
         >
           <h2 id="portfolio-heading" className="section-title">
-            Four products. Four engineering domains.
+            Four products. Independently adoptable.
           </h2>
           <p className="lede home-measure">
-            Each product owns a distinct part of the engineering system and can stand on its own.
-            Together, they share a common approach to understanding state, change, and evidence.
+            Each product owns a distinct engineering domain. Together they are {PLATFORM_NAME} — not
+            four required steps in a bundle, and not the company name.
           </p>
           <div className="product-grid product-grid--portfolio">
             {products.map((product) => (
@@ -195,7 +187,6 @@ export default function HomePage() {
                 product={product}
                 variant="portfolio"
                 jobTitle={portfolioCopy[product.slug].title}
-                job={portfolioCopy[product.slug].body}
               />
             ))}
           </div>
@@ -213,7 +204,7 @@ export default function HomePage() {
             are related problems. They are not the same problem.
           </p>
           <p className="home-measure">
-            OpsDevCode keeps those responsibilities separate so each product can own its domain
+            {COMPANY_NAME} keeps those responsibilities separate so each product can own its domain
             without becoming the source of truth for everything else.
           </p>
           <ul className="why-list">
@@ -238,8 +229,8 @@ export default function HomePage() {
             Start with the problem you need to solve.
           </h2>
           <p className="lede home-measure">
-            You don&apos;t need to adopt an OpsDevCode stack. Start with the product that owns the
-            engineering problem in front of you.
+            You don&apos;t need to adopt a stack. Start with the product that owns the engineering
+            problem in front of you.
           </p>
           {repave ? (
             <article className="start-featured">
@@ -248,9 +239,7 @@ export default function HomePage() {
               <p>
                 For teams dealing with repository lifecycle, standards, drift, and governed change.
               </p>
-              <p>
-                Repave is the most complete place to begin evaluating the OpsDevCode approach today.
-              </p>
+              <p>Repave is the most complete place to begin evaluating the approach today.</p>
               <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
                 Explore Repave →
               </a>
@@ -278,13 +267,24 @@ export default function HomePage() {
             Built as a product company for engineering systems.
           </h2>
           <p className="lede home-measure">
-            OpsDevCode is a founder-led software company building focused products for the parts of
-            engineering operations that become difficult as systems and organizations grow.
+            {COMPANY_NAME} is a founder-led software company. {PLATFORM_NAME} is how the products
+            are offered — Team and Growth are invited-organization plans, not a public catalog.
           </p>
-          <p className="home-measure">The products are the company.</p>
+          <ul className="access-list">
+            {ACCESS_PLANS.map((plan) => (
+              <li key={plan.name}>
+                <strong>{plan.name}</strong>
+                <span>{plan.summary}</span>
+              </li>
+            ))}
+          </ul>
           <p className="home-measure">
-            Services exist to help teams adopt and apply them — not to turn OpsDevCode into a
-            consulting catalog.
+            Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
+            How providers execute remains private.
+          </p>
+          <p className="home-measure">
+            Services exist to help teams adopt and apply the products — not to turn {COMPANY_NAME}{' '}
+            into a consulting catalog.
           </p>
           <p className="home-measure">
             Convergence is independent research exploring how specialized engineering capabilities

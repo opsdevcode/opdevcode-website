@@ -2,12 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import SystemMap from '@/components/SystemMap'
+import { PLATFORM_NAME } from '@/lib/platform'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
   title: 'Architecture',
   description:
-    'Why OpsDevCode shares explainable decisions while authority stays with Repave, Overpass, Toll, and Dispatch.',
+    'OpsDevCode Platform is modular. Authority stays with Repave, Overpass, Toll, and Dispatch. SpecMint is the governed lifecycle runtime.',
   path: '/architecture',
 })
 
@@ -16,19 +17,28 @@ export default function ArchitecturePage() {
     <PageFrame>
       <section className="section">
         <p className="rail-label">Architecture</p>
-        <h1 className="page-title">Decisions are shared. Authority is not.</h1>
+        <h1 className="page-title">A modular platform. Authority stays with the products.</h1>
         <p className="lede">
-          Policy-native delivery means every consequential action can be governed by policy, but
-          not every part of the platform is implemented as policy. The decision plane connects
-          intent to product capabilities. It is not a fifth product.
+          {PLATFORM_NAME} composes independently adoptable products. Decisions can share a shape.
+          Stores, gates, and remediations do not move into one service. This is not a fifth product.
         </p>
         <SystemMap variant="policy" />
+        <h2>What the company is, and is not</h2>
+        <p>
+          OpsDevCode is the company. {PLATFORM_NAME} is the offering. Mint names intent. SpecMint
+          runs the governed lifecycle. How a provider executes remains private — this page does not
+          publish syntax, execution steps, or a provider matrix.
+        </p>
+        <p>
+          Relay is supporting conversational runtime consumed over a contract. It is not a public
+          product and does not join the family marks.
+        </p>
         <h2>Why the decision is shared</h2>
         <p>
-          A repository change, an infrastructure reading, a cost constraint, and a delegated
-          request are different authorities. They still need one explainable shape: what was
-          asked, which facts were present, what the policy engine returned, and who acted. Sharing
-          the decision contract does not move stores, gates, or remediations into one service.
+          A repository change, an infrastructure reading, a cost constraint, and a delegated request
+          are different authorities. They still need one explainable shape: what was asked, which
+          facts were present, what the policy engine returned, and who acted. Sharing the decision
+          contract does not move stores, gates, or remediations into one service.
         </p>
         <h2>What contributes to a decision</h2>
         <ul>
@@ -49,25 +59,23 @@ export default function ArchitecturePage() {
             boundary.
           </li>
         </ul>
-        <p>
-          Missing facts stay unknown. Unknown is not allow, deny, compliant, or noncompliant.
-        </p>
+        <p>Missing facts stay unknown. Unknown is not allow, deny, compliant, or noncompliant.</p>
         <h2>Policy does not replace product workflows</h2>
         <p>
-          The policy engine returns a structured decision. Repave still owns repository
-          lifecycle. Overpass still owns custody. Toll still owns economic evidence. Dispatch
-          still owns governed interaction. Obligations and required evidence are inputs to those
-          workflows, not a substitute for them.
+          The policy engine returns a structured decision. Repave still owns repository lifecycle.
+          Overpass still owns custody. Toll still owns economic evidence. Dispatch still owns
+          governed interaction. Obligations and required evidence are inputs to those workflows, not
+          a substitute for them.
         </p>
         <h2>Exceptions are governed, not hidden</h2>
         <p>
           An explicit, time-bounded exception can produce a conditional decision with review
-          obligations. It is recorded on the decision. It is not a silent bypass and not a
-          second unpublished path around the owning product.
+          obligations. It is recorded on the decision. It is not a silent bypass and not a second
+          unpublished path around the owning product.
         </p>
         <p>
-          In technical settings the first policy engine is Open Policy Agent. In product language
-          it is a policy decision. That implementation can change without renaming the products.
+          In technical settings the first policy engine is Open Policy Agent. In product language it
+          is a policy decision. That implementation can change without renaming the products.
         </p>
         <p className="cta-row">
           <Link className="btn primary" href="/products">

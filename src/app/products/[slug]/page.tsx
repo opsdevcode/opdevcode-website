@@ -44,6 +44,24 @@ export default async function ProductPage({ params }: Props) {
             />
             <h1 className="page-title">{product.name}</h1>
             <p className="product-job">{product.job}</p>
+            <dl className="buyer-strip">
+              <div>
+                <dt>Problem</dt>
+                <dd>{product.compareProblem}</dd>
+              </div>
+              <div>
+                <dt>Input</dt>
+                <dd>{product.compareInput}</dd>
+              </div>
+              <div>
+                <dt>Outcome</dt>
+                <dd>{product.compareOutcome}</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd>{product.compareAvailability}</dd>
+              </div>
+            </dl>
           </div>
           <ProductSignature slug={product.slug} />
           <p className="cta-row">

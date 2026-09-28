@@ -6,7 +6,7 @@ import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL } from '@/lib/site'
 export const metadata: Metadata = pageMeta({
   title: 'Company',
   description:
-    'OpsDevCode is a founder-led company building engineering infrastructure for governed delivery, infrastructure state, economics, and intelligent action.',
+    'OpsDevCode is the company behind OpsDevCode Platform: independently adoptable products for governed delivery, infrastructure state, economics, and intent.',
   path: '/about',
 })
 
@@ -17,8 +17,8 @@ export default function AboutPage() {
         <p className="rail-label">Company</p>
         <h1 className="page-title">OpsDevCode</h1>
         <p className="lede">
-          OpsDevCode builds governed engineering systems for organizations where software delivery
-          already spans people, platforms, automation, and agents.
+          OpsDevCode is the company. OpsDevCode Platform is the modular offering. The products —
+          Repave, Overpass, Toll, and Dispatch — can be adopted independently.
         </p>
         <div className="product-page-grid">
           <div>
@@ -69,9 +69,29 @@ export default function AboutPage() {
             </dd>
           </div>
           <div className="faq-item">
+            <dt>Is OpsDevCode the same as OpsDevCode Platform?</dt>
+            <dd>
+              No. OpsDevCode is the company. OpsDevCode Platform is the modular product offering.
+            </dd>
+          </div>
+          <div className="faq-item">
             <dt>Is Repave the company platform?</dt>
             <dd>
-              No. Repave is the governed software delivery product. OpsDevCode is the umbrella.
+              No. Repave is the governed software delivery product. It is independently adoptable.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>What are Mint and SpecMint?</dt>
+            <dd>
+              Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
+              Provider execution is private. This site does not publish syntax or a provider matrix.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>Is Relay a product?</dt>
+            <dd>
+              No. Relay is supporting conversational runtime. It is not in the public product
+              family.
             </dd>
           </div>
           <div className="faq-item">

@@ -48,7 +48,7 @@ export const PRODUCT_MARK_SRC = {
 } as const
 
 export const SITE_DESCRIPTION =
-  'OpsDevCode builds products that make engineering state visible, governable, and useful: software state, infrastructure state, engineering economics, and governed action.'
+  'OpsDevCode is the company. OpsDevCode Platform is the modular offering: independently adoptable products for software state, infrastructure state, engineering economics, and governed intent.'
 
 export function waitlistUrl(product: keyof typeof PRODUCT_URLS): string {
   if (product === 'repave') {
