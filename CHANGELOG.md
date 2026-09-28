@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.20.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.19.0...opdevcode-website-v1.20.0) (2026-09-28)
+
+
+### Features
+
+* link the public Mint language extract ([#111](https://github.com/opsdevcode/opdevcode-website/issues/111)) ([5461e19](https://github.com/opsdevcode/opdevcode-website/commit/5461e193eb626778d7870c9cf261097061358257))
+* **site:** publish company vs platform narrative ([#110](https://github.com/opsdevcode/opdevcode-website/issues/110)) ([3eef6e1](https://github.com/opsdevcode/opdevcode-website/commit/3eef6e15c965b5a130849c3196ef786176b74162))
+
 ## [1.19.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.18.0...opdevcode-website-v1.19.0) (2026-09-25)
 
 
