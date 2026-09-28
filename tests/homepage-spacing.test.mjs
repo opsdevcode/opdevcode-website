@@ -14,6 +14,7 @@ const brand = readFileSync(join(root, 'docs/brand.md'), 'utf8')
 describe('homepage inset from frames and rules', () => {
   it('keeps the five-section parent homepage without SystemMap', () => {
     assert.match(home, /id="home-thesis"/)
+    assert.match(home, /id="home-product-names"/)
     assert.match(home, /id="products"/)
     assert.match(home, /id="why-heading"/)
     assert.match(home, /id="start-heading"/)
@@ -50,6 +51,8 @@ describe('homepage inset from frames and rules', () => {
     assert.doesNotMatch(css, /max-width: 11ch/)
     assert.match(css, /\.home-hero-copy \{\s*[\s\S]*?z-index: 1;/)
     assert.match(css, /\.home-hero-identity \{\s*[\s\S]*?pointer-events: none;/)
+    assert.match(css, /width: 9\.5rem;/)
+    assert.match(css, /@media \(max-width: 899px\) \{\s*\.home-hero-identity \{\s*display: none;/)
   })
 })
 

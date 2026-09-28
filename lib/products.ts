@@ -24,9 +24,14 @@ export type Product = {
   maturityIndex: string
   maturityNote: string
   compareRole: string
+  compareProblem: string
+  compareInput: string
+  compareOutcome: string
+  compareAvailability: string
   href: string
   publicUrl: string
   ctaLabel: string
+  nextStepLabel: string
   ctaHref: string
   secondaryHref?: string
   secondaryLabel?: string
@@ -68,11 +73,16 @@ export const products: Product[] = [
     maturityLabel: 'Early access',
     maturityIndex: '01',
     compareRole: 'Govern delivery',
+    compareProblem: 'Repositories drift from the approved path.',
+    compareInput: 'An approved baseline, a repository, and a requested lifecycle change.',
+    compareOutcome: 'A gated generate, adopt, update, upgrade, observe, or remediate record.',
+    compareAvailability: 'Early access. Hosted generate is waitlist and invite.',
     maturityNote:
       'Implemented: generate, adopt, configure, upgrade, observe, and remediate. Hosted generate is waitlist and invite, not general self-serve. There is no card form on the waitlist.',
     href: '/products/repave',
     publicUrl: productSiteHref('repave'),
     ctaLabel: 'Try Repave with your repository',
+    nextStepLabel: 'Request early access',
     ctaHref: REPAVE_EVALUATE_URL,
     secondaryHref: REPAVE_PROOF_URL,
     secondaryLabel: 'See the governed lifecycle',
@@ -106,11 +116,17 @@ export const products: Product[] = [
     maturityLabel: 'In development',
     maturityIndex: '02',
     compareRole: 'Understand state',
+    compareProblem: 'Infrastructure change without durable, readable state.',
+    compareInput: 'Accepted Terraform or OpenTofu state the product already holds.',
+    compareOutcome:
+      'Inventory, proven relationships, impact, drift, and a gated state transaction.',
+    compareAvailability: 'In development. Hosted custody is enabled per early-access partner.',
     maturityNote:
       'Implementation-backed and in development. Inventory, relationships, impact, drift, and commit exist against stored state. Do not treat Overpass as live-cloud authority or as generally available.',
     href: '/products/overpass',
     publicUrl: productSiteHref('overpass'),
     ctaLabel: 'Explore Overpass',
+    nextStepLabel: 'Explore Overpass',
     ctaHref: PRODUCT_URLS.overpass,
     secondaryHref: CALENDLY_URL,
     secondaryLabel: 'Talk to OpsDevCode',
@@ -145,11 +161,16 @@ export const products: Product[] = [
     maturityLabel: 'In development',
     maturityIndex: '03',
     compareRole: 'Attribute economics',
+    compareProblem: 'Cost without engineering ownership.',
+    compareInput: 'FOCUS evidence and identified utilization samples.',
+    compareOutcome: 'Spend and utilization tied to engineering context — evidence, not an invoice.',
+    compareAvailability: 'In development. Spend and waste execution still run in Repave.',
     maturityNote:
       'In development. FOCUS ingest/persistence and utilization are implemented in Toll. Spend attribution and waste recommendation still execute in Repave. Not generally available. No savings percentages.',
     href: '/products/toll',
     publicUrl: productSiteHref('toll'),
     ctaLabel: 'Explore Toll',
+    nextStepLabel: 'Explore Toll',
     ctaHref: PRODUCT_URLS.toll,
     secondaryHref: CALENDLY_URL,
     secondaryLabel: 'Talk to OpsDevCode',
@@ -184,11 +205,17 @@ export const products: Product[] = [
     maturityLabel: 'Emerging',
     maturityIndex: '04',
     compareRole: 'Ask and act',
+    compareProblem: 'Intent that cannot be proposed or refused with evidence.',
+    compareInput: 'A request toward a domain product that already owns the work.',
+    compareOutcome: 'A proposal, a confirmation boundary, or a refusal — not a new store.',
+    compareAvailability:
+      'Emerging. Public identity exists; the hosted assistant still runs in Repave.',
     maturityNote:
       'Emerging. Public identity exists. The hosted assistant still runs in Repave. Dispatch does not approve its own work and is not a generally available agent product.',
     href: '/products/dispatch',
     publicUrl: productSiteHref('dispatch'),
     ctaLabel: 'Explore Dispatch',
+    nextStepLabel: 'Explore Dispatch',
     ctaHref: PRODUCT_URLS.dispatch,
     secondaryHref: CALENDLY_URL,
     secondaryLabel: 'Talk to OpsDevCode',

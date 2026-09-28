@@ -1672,7 +1672,7 @@ footer {
 .home-hero {
   position: relative;
   display: block;
-  padding: var(--space-96) 0 var(--space-80);
+  padding: var(--space-64) 0 var(--space-48);
   max-width: none;
   overflow: hidden;
 }
@@ -1698,6 +1698,11 @@ footer {
   color: var(--color-text);
   opacity: 0.16;
 }
+@media (max-width: 899px) {
+  .home-hero-identity {
+    display: none;
+  }
+}
 @media (min-width: 900px) {
   .home-hero-body {
     grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
@@ -1711,10 +1716,10 @@ footer {
     position: absolute;
     top: 50%;
     right: 0;
-    width: min(22rem, 32vw);
-    height: min(22rem, 32vw);
+    width: 9.5rem;
+    height: 9.5rem;
     transform: translateY(-50%);
-    opacity: 0.075;
+    opacity: 0.22;
   }
 }
 .wrap.home .home-hero h1 {
@@ -1722,11 +1727,11 @@ footer {
   z-index: 1;
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(2.5rem, 4.8vw, 3.85rem);
+  font-size: clamp(2.15rem, 3.8vw, 3.05rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
   max-width: 22em;
-  margin: 0 0 var(--space-40);
+  margin: 0 0 var(--space-24);
 }
 .home-support,
 .home-measure,
@@ -1744,14 +1749,33 @@ footer {
   color: var(--color-text-secondary);
 }
 .home-quiet {
-  margin: 0 0 var(--space-48);
-  max-width: 28ch;
+  margin: 0 0 var(--space-32);
+  max-width: 40rem;
   font-family: var(--font-display);
   font-size: clamp(1.05rem, 1.6vw, 1.2rem);
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.02em;
   color: var(--color-text);
+}
+.access-list {
+  list-style: none;
+  margin: var(--space-24) 0;
+  padding: 0;
+  max-width: 40rem;
+}
+.access-list li {
+  display: grid;
+  gap: 4px;
+  padding: var(--space-16) 0;
+  border-top: 1px solid var(--color-border);
+}
+.access-list li:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+.access-block {
+  margin-top: var(--space-48);
+  max-width: 40rem;
 }
 .home-follow {
   margin: var(--space-40) 0 0;
@@ -1955,13 +1979,13 @@ footer {
     padding-bottom: var(--space-64);
   }
   .home-hero {
-    padding: var(--space-64) 0 var(--space-48);
-    gap: var(--space-40);
+    padding: var(--space-40) 0 var(--space-32);
+    gap: var(--space-24);
   }
   .wrap.home .home-hero h1 {
-    font-size: clamp(2.25rem, 10vw, 2.75rem);
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
     max-width: none;
-    margin-bottom: var(--space-32);
+    margin-bottom: var(--space-20);
   }
   .home-hero-aperture {
     width: 4.5rem;

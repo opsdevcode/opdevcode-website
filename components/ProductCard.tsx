@@ -27,7 +27,7 @@ export default function ProductCard({
         </div>
         <h3>{product.name}</h3>
         <p className="product-card-job">{jobTitle ?? product.domain}</p>
-        <p className="product-card-summary">{job ?? product.summary}</p>
+        {job ? <p className="product-card-summary">{job}</p> : null}
         <p className="cta-row">
           <ProductSiteLink href={product.publicUrl}>Explore {product.name} →</ProductSiteLink>
         </p>

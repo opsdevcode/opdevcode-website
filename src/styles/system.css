@@ -612,7 +612,7 @@
 }
 .compare th,
 .compare td {
-  padding: 12px 14px;
+  padding: 10px 12px;
   text-align: left;
   border-bottom: 1px solid var(--color-border);
   vertical-align: top;
@@ -679,6 +679,25 @@
     margin: 0;
     font-size: var(--text-sm);
   }
+}
+
+.buyer-strip {
+  margin: var(--space-24) 0 0;
+  display: grid;
+  gap: var(--space-12);
+}
+.buyer-strip div {
+  display: grid;
+  gap: 4px;
+}
+.buyer-strip dt {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.buyer-strip dd {
+  margin: 0;
 }
 
 /* Approach sequence */

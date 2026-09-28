@@ -21,6 +21,7 @@ export default function Footer() {
           <div>
             <strong>OpsDevCode</strong>
             <p>© {year} · opsdevco.de</p>
+            <p>Company. OpsDevCode Platform is the modular offering.</p>
             <p>{SITE_TAGLINE}</p>
           </div>
         </div>

@@ -3,12 +3,13 @@ import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import SystemMap from '@/components/SystemMap'
 import ConvergePair from '@/components/ConvergePair'
+import { GOVERN_LINE, OUTCOME_LINE, PLATFORM_NAME, VERIFY_LINE } from '@/lib/platform'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
   title: 'Approach',
   description:
-    'How humans, automation, and agents express intent through governed products — with evidence, not org-chart routing.',
+    'Define the outcome, govern the change, and verify the result. Mint expresses intent. SpecMint runs the governed lifecycle.',
   path: '/approach',
 })
 
@@ -17,11 +18,12 @@ export default function ApproachPage() {
     <PageFrame>
       <section className="section">
         <p className="rail-label">Approach</p>
-        <h1 className="page-title">Intent, governed work, evidence</h1>
+        <h1 className="page-title">
+          {OUTCOME_LINE} {GOVERN_LINE} {VERIFY_LINE}
+        </h1>
         <p className="lede">
-          Specialization is necessary. Making people or agents tour the org chart to complete one
-          change is not. Policy-native delivery makes repeatable rules into explainable decisions
-          without creating a fifth product.
+          {PLATFORM_NAME} is how those three steps stay distinct. Humans, automation, and agents can
+          express intent. Domain products still own gates, stores, and evidence.
         </p>
         <h2 className="section-title">How the work is designed</h2>
         <ol className="principle-rows">
@@ -74,31 +76,32 @@ export default function ApproachPage() {
         <ol className="approach-seq">
           <li>
             <span>01</span>
-            <h2>Who asks</h2>
-            <p>A human, an automation, or an agent. Same engineering intent; different surfaces.</p>
+            <h2>Define the outcome</h2>
+            <p>
+              Mint is the intent language and toolchain. It is how a requested change is named. It
+              is not a published syntax, and it is not a customer result.
+            </p>
           </li>
           <li>
             <span>02</span>
-            <h2>What they ask for</h2>
+            <h2>Govern the change</h2>
             <p>
-              Intent toward a domain product: delivery, infrastructure state, or economics. Dispatch
-              can carry the conversation; it does not own the store.
+              SpecMint is the governed lifecycle runtime. Provider execution stays private. Products
+              still own their gates.
             </p>
           </li>
           <li>
             <span>03</span>
-            <h2>Where judgment lives</h2>
-            <p>
-              Repave, Overpass, and Toll keep gates, evidence, and stores. Dispatch can coordinate
-              policy evaluation; it does not become the policy authority. Where a policy engine is
-              used, Open Policy Agent may appear as implementation detail — not as the company
-              category.
-            </p>
+            <h2>Verify the result</h2>
+            <p>A governed change or a refusal — plus a record of what ran and why.</p>
           </li>
           <li>
             <span>04</span>
-            <h2>What comes out</h2>
-            <p>A governed change or a refusal — plus a record of what ran and why.</p>
+            <h2>Who asks</h2>
+            <p>
+              A human, an automation, or an agent. Dispatch can carry the conversation. Relay is
+              supporting conversational runtime, not a product in the family.
+            </p>
           </li>
         </ol>
         <SystemMap variant="policy" />
