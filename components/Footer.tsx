@@ -5,6 +5,7 @@ import {
   CALENDLY_URL,
   CONVERGENCE_URL,
   GITHUB_ORG_URL,
+  MINT_LANGUAGE_URL,
   PRODUCT_URLS,
   SITE_TAGLINE,
   productSiteHref,
@@ -56,6 +57,9 @@ export default function Footer() {
           </a>
           <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">
             Convergence
+          </a>
+          <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
+            Mint language
           </a>
           <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
             repave.opsdevco.de
