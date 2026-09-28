@@ -1234,7 +1234,8 @@ code.inline {
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);
 }
-.note a {
+.note a,
+.faq-item a {
   color: var(--color-text);
   text-decoration: underline;
   text-underline-offset: 0.15em;
