@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import PageFrame from '@/components/PageFrame'
 import { pageMeta } from '@/lib/seo'
-import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL } from '@/lib/site'
+import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL, MINT_LANGUAGE_URL } from '@/lib/site'
 
 export const metadata: Metadata = pageMeta({
   title: 'Company',
@@ -106,6 +106,16 @@ export default function AboutPage() {
             <dd>
               An independent, vendor-neutral body of knowledge. OpsDevCode chooses to align with it.
               OpsDevCode does not own it, and it is not in the runtime path.
+            </dd>
+          </div>
+          <div className="faq-item">
+            <dt>Is Mint a fifth OpsDevCode product?</dt>
+            <dd>
+              No. Mint is the public language. The four products stay Repave, Overpass, Toll, and
+              Dispatch.{' '}
+              <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
+                github.com/opsdevcode/specmint-language
+              </a>
             </dd>
           </div>
         </dl>

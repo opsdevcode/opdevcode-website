@@ -30,6 +30,7 @@ export const REPAVE_WAITLIST_URL = `${REPAVE_URL}/waitlist`
 export const REPAVE_EVALUATE_URL = `${REPAVE_WAITLIST_URL}?intent=evaluate`
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
+export const MINT_LANGUAGE_URL = 'https://github.com/opsdevcode/specmint-language'
 
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
