@@ -196,6 +196,8 @@ describe('product portfolio', () => {
     assert.match(architecture, /not a fifth product/)
     assert.match(architecture, /SpecMint/)
     assert.match(architecture, /Relay/)
+    assert.match(architecture, /object-storage/)
+    assert.match(architecture, /Repave is optional/)
     assert.match(architecture, /Open Policy Agent/)
     assert.match(header, /\/architecture/)
     assert.match(sitemap, /\/architecture/)
