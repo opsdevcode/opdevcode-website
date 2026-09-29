@@ -280,7 +280,7 @@ export default function HomePage() {
           </ul>
           <p className="home-measure">
             Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
-            How providers execute remains private.
+            SpecMint core is public; the hosted service stays private.
           </p>
           <p className="home-measure">
             Services exist to help teams adopt and apply the products — not to turn {COMPANY_NAME}{' '}
