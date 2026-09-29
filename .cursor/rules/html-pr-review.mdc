@@ -35,7 +35,13 @@ Use this checklist when reviewing pull requests that modify HTML files.
 
 ## Links and Navigation
 
-- **Anchor targets**: `href="#id"` targets exist and match section `id` attributes.
+- **Real destinations**: Every nav item, product card, and CTA must go to a real page, product host, or action (Calendly, mailto, GitHub). No empty, `#`, placeholder, or fake-available actions.
+- **Same-page jumps**: Do not use in-page hashes as stand-ins for Products, Platform, Architecture, Pricing, or Contact. Those labels go to existing routes (`/products`, `/architecture`, `/services` for pricing, `/about` or Calendly/mailto for talk). Anchors are allowed only when the control is clearly labeled as in-page navigation (skip link, “See how Repave works ↓”, `/repave` section nav).
+- **Reuse pages**: Prefer existing routes. Do not add thin pages only to eliminate an anchor.
+- **Links vs buttons**: Links navigate. Buttons perform an in-page action. Styled CTAs that change location stay `<a>` / `<Link>`.
+- **New tabs**: Keep native new-tab behavior (`target="_blank"` + `rel="noopener noreferrer"`) for external hosts. Do not script around it.
+- **Journeys**: Check desktop, mobile menu, keyboard (skip link, focus, Escape to close menu), direct load, Back, and product selection.
+- **Anchor targets**: When an in-page `href="#id"` is used, the target exists and matches a section `id`.
 - **Mailto links**: `mailto:` links have sensible `subject` and optional `body` prefill.
 - **Broken links**: No dead links or placeholder `#` hrefs.
 

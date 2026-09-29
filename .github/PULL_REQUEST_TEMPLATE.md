@@ -7,6 +7,7 @@
 
 - [ ] Checked the Netlify deploy preview (link in PR checks or Netlify comment)
 - [ ] Preview looks correct on desktop and mobile (if UI changes)
+- [ ] Nav, cards, and CTAs go to real destinations (no `#` / empty / placeholder stand-ins for products, architecture, pricing, or contact)
 
 ## after merge
 

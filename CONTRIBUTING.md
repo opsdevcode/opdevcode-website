@@ -75,7 +75,17 @@ The site is hosted on [Netlify](https://www.netlify.com). To connect or redeploy
 5. Deploy.
 6. (Optional) Add custom domain `opsdevco.de` in **Site settings** → **Domain management**. DNS is Route53/Pulumi, not GoDaddy record edits. See [docs/CLI-SETUP.md](docs/CLI-SETUP.md) and [docs/PRODUCT-DOMAINS.md](docs/PRODUCT-DOMAINS.md).
 
-Every push to the deploy branch triggers a new deploy. **PRs get preview deploys by default** — each PR gets a unique URL (`deploy-preview-<PR#>--<site>.netlify.app`). Always verify the preview before merging.
+Every push to the deploy branch (`main`) triggers a production deploy. **Feature-branch pushes do not publish production.** **PRs get preview deploys by default** — each PR gets a unique URL (`deploy-preview-<PR#>--<site>.netlify.app`). Always verify the preview before merging.
+
+## Navigation and CTA acceptance
+
+Standing review rule (also in `.cursor/rules/html-pr-review.mdc`):
+
+- Nav, cards, and CTAs must have real destinations. No `#`, empty, placeholder, or fake-available actions.
+- Hash links are in-page navigation only when the label says so (skip to content, on-page section list). Do not use `#products`, `#architecture`, `#pricing`, or `#contact` as the destination for those topics — use `/products`, `/architecture`, `/services`, `/about`, Calendly, or mailto.
+- Reuse existing pages. Do not create thin pages just to retire an anchor.
+- Links navigate; buttons act. Keep native new-tab behavior on external URLs.
+- Accept a change only after desktop, mobile menu, keyboard (focus, skip link, Escape), direct URL load, Back, and product-selection journeys work.
 
 For CLI-based deploy and domain setup, see [docs/CLI-SETUP.md](docs/CLI-SETUP.md).
 

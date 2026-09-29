@@ -154,9 +154,9 @@ export default function HomePage() {
                 Repave · Overpass · Toll · Dispatch
               </p>
               <div className="cta">
-                <a className="btn primary" href="#products">
+                <Link className="btn primary" href="/products">
                   See the products →
-                </a>
+                </Link>
                 <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                   Talk to OpsDevCode →
                 </a>
