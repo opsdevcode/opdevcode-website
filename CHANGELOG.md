@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.20.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.20.0...opdevcode-website-v1.20.1) (2026-09-29)
+
+
+### Bug Fixes
+
+* say SpecMint core is public with Mint ([#113](https://github.com/opsdevcode/opdevcode-website/issues/113)) ([6f24c78](https://github.com/opsdevcode/opdevcode-website/commit/6f24c7885829ffdd714ad4f72af23e004149eb82))
+* send product ctas to real destinations ([#116](https://github.com/opsdevcode/opdevcode-website/issues/116)) ([389f839](https://github.com/opsdevcode/opdevcode-website/commit/389f8391f853ab56ae447d973ac1361c0a85af94))
+
 ## [1.20.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.19.0...opdevcode-website-v1.20.0) (2026-09-28)
 
 
