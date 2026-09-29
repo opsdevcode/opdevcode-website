@@ -26,8 +26,8 @@ export default function ArchitecturePage() {
         <h2>What the company is, and is not</h2>
         <p>
           OpsDevCode is the company. {PLATFORM_NAME} is the offering. Mint names intent. SpecMint
-          runs the governed lifecycle. How a provider executes remains private — this page does not
-          publish syntax, execution steps, or a provider matrix.
+          runs the governed lifecycle. SpecMint core is public; the hosted service stays private.
+          Products remain Repave, Overpass, Toll, and Dispatch. Relay is delivery, not a fifth SKU.
         </p>
         <p>
           Relay is supporting conversational runtime consumed over a contract. It is not a public

@@ -86,8 +86,8 @@ export default function ApproachPage() {
             <span>02</span>
             <h2>Govern the change</h2>
             <p>
-              SpecMint is the governed lifecycle runtime. Provider execution stays private. Products
-              still own their gates.
+              SpecMint is the governed lifecycle runtime. SpecMint core is public; hosted execution
+              stays private. Products still own their gates.
             </p>
           </li>
           <li>

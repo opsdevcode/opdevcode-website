@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import PageFrame from '@/components/PageFrame'
 import { pageMeta } from '@/lib/seo'
-import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL, MINT_LANGUAGE_URL } from '@/lib/site'
+import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL, MINT_LANGUAGE_URL, SPECMINT_PLATFORM_URL } from '@/lib/site'
 
 export const metadata: Metadata = pageMeta({
   title: 'Company',
@@ -84,7 +84,9 @@ export default function AboutPage() {
             <dt>What are Mint and SpecMint?</dt>
             <dd>
               Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
-              Provider execution is private. This site does not publish syntax or a provider matrix.
+              Mint and SpecMint share that intent path. SpecMint core is public; the hosted service
+              stays private. Products remain Repave, Overpass, Toll, and Dispatch. Relay is
+              delivery, not a fifth SKU.
             </dd>
           </div>
           <div className="faq-item">
@@ -111,10 +113,14 @@ export default function AboutPage() {
           <div className="faq-item">
             <dt>Is Mint a fifth OpsDevCode product?</dt>
             <dd>
-              No. Mint is the public language. The four products stay Repave, Overpass, Toll, and
-              Dispatch.{' '}
+              No. Mint is the public language. SpecMint core is public. The four products stay
+              Repave, Overpass, Toll, and Dispatch.{' '}
               <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
                 github.com/opsdevcode/specmint-language
+              </a>
+              {' · '}
+              <a href={SPECMINT_PLATFORM_URL} target="_blank" rel="noopener noreferrer">
+                github.com/opsdevcode/specmint-platform
               </a>
             </dd>
           </div>
