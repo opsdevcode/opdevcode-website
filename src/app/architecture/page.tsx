@@ -60,6 +60,16 @@ export default function ArchitecturePage() {
           </li>
         </ul>
         <p>Missing facts stay unknown. Unknown is not allow, deny, compliant, or noncompliant.</p>
+        <h2>One public demonstration path</h2>
+        <p>
+          Mint names intent in Mint, Markdown, JSON, or YAML. SpecMint compiles that intent
+          and federates product capability manifests. Capability
+          <code>infrastructure.object-storage</code> routes to Overpass.
+          Overpass returns a plan and result. Dispatch notifies. Relay carries the
+          notification. Toll may be discovered and does not invent spend. Evidence cites
+          tenant and environment identifiers only. Repave is optional. No provider is
+          mutated. This is a lab demonstration, not a production-connected customer result.
+        </p>
         <h2>Policy does not replace product workflows</h2>
         <p>
           The policy engine returns a structured decision. Repave still owns repository lifecycle.
