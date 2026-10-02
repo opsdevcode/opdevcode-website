@@ -13,6 +13,9 @@
   publish = "out"
   command = "npm test && npm run build"
 
+# Analytics is production-only. Do not set NEXT_PUBLIC_UMAMI_WEBSITE_ID on
+# deploy-preview or branch-deploy. Set it in the Netlify production context.
+
 # Social preview: short URLs → static asset (avoid long /assets/ paths in shares)
 [[redirects]]
   from = "/preview-v5.png"
@@ -102,7 +105,7 @@
   for = "/*"
   [headers.values]
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; base-uri 'self'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.opsdevco.de; connect-src 'self' https://analytics.opsdevco.de; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; base-uri 'self'"
 
 # No cache for HTML - force fresh content
 [[headers]]

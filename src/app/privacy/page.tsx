@@ -30,8 +30,11 @@ export default function PrivacyPage() {
           <div>
             <h2>This website</h2>
             <p>
-              No analytics, no tracking pixels, no cookies. Hosted on Netlify; they may log requests
-              per their policy. OpsDevCode does not use that data.
+              First-party, cookieless pageviews and five named events on the canonical public hosts
+              (opsdevco.de and the four product hosts) go to a self-hosted Umami collector at
+              analytics.opsdevco.de. Localhost, Netlify previews, and other hostnames are not
+              measured. There is no identify call, replay, or heatmap. Hosted on Netlify; they may
+              log requests per their policy.
             </p>
           </div>
         </div>

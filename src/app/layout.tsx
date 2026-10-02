@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import './globals.css'
+import Umami from '@/components/Umami'
 import {
   COMPANY_LOGO_SRC,
   SITE_DESCRIPTION,
@@ -67,7 +68,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${plexSans.variable} ${plexSerif.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <Umami />
+        {children}
+      </body>
     </html>
   )
 }
