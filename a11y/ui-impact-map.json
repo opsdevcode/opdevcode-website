@@ -35,6 +35,7 @@
       "routes": [
         { "path": "/", "states": ["default", "menu-open"] },
         { "path": "/products", "states": ["default"] },
+        { "path": "/products/mint", "states": ["default"] },
         { "path": "/products/repave", "states": ["default"] },
         { "path": "/approach", "states": ["default"] },
         { "path": "/architecture", "states": ["default"] },

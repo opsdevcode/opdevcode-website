@@ -78,8 +78,9 @@ export default function ApproachPage() {
             <span>01</span>
             <h2>Define the outcome</h2>
             <p>
-              Mint is the intent language and toolchain. It is how a requested change is named. It
-              is not a published syntax, and it is not a customer result.
+              Mint is the public intent language and toolchain. It is how a requested change is
+              named and compiled. It is not the customer result — domain products still own gates
+              and evidence.
             </p>
           </li>
           <li>

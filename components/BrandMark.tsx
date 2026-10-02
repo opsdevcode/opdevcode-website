@@ -22,6 +22,7 @@ export function BrandMark({ className }: { className?: string }) {
 }
 
 const productTitles = {
+  mint: 'Mint',
   repave: 'Repave',
   overpass: 'Overpass',
   toll: 'Toll',

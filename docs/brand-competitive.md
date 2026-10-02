@@ -22,7 +22,7 @@ dark-navy product.
 - **Section-cut geometry** (open joints, planes) instead of orbs or grids
 - **Paper/ink** drawing surface instead of navy-neon SaaS
 - **Plex Serif + Sans + Mono** as one instrument family
-- **Four product hues as plane labels** on one paper, not four unrelated palettes
+- **Product hues as plane labels** on one paper, not unrelated palettes
 - **Empty company aperture** so the firm is not a fifth product mascot
 - **Diagrams as identity**, not watermarked afterthoughts
 - Light-first; restraint over “more AI”

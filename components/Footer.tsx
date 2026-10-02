@@ -8,7 +8,6 @@ import {
   MINT_LANGUAGE_URL,
   PRODUCT_URLS,
   SITE_TAGLINE,
-  productSiteHref,
 } from '@/lib/site'
 import ProductSiteLink from '@/components/ProductSiteLink'
 
@@ -29,11 +28,7 @@ export default function Footer() {
         <div>
           <p className="footer-label">Products</p>
           {products.map((product) => (
-            <ProductSiteLink
-              key={product.slug}
-              href={productSiteHref(product.slug)}
-              className="footer-product"
-            >
+            <ProductSiteLink key={product.slug} href={product.publicUrl} className="footer-product">
               <ProductMark slug={product.slug} className="footer-product-mark" />
               {product.name}
             </ProductSiteLink>

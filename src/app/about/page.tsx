@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
 import PageFrame from '@/components/PageFrame'
 import { pageMeta } from '@/lib/seo'
-import { CALENDLY_URL, CONTACT_EMAIL, GITHUB_ORG_URL, MINT_LANGUAGE_URL, SPECMINT_PLATFORM_URL } from '@/lib/site'
+import {
+  CALENDLY_URL,
+  CONTACT_EMAIL,
+  GITHUB_ORG_URL,
+  MINT_LANGUAGE_URL,
+  SPECMINT_PLATFORM_URL,
+} from '@/lib/site'
 
 export const metadata: Metadata = pageMeta({
   title: 'Company',
   description:
-    'OpsDevCode is the company behind OpsDevCode Platform: independently adoptable products for governed delivery, infrastructure state, economics, and intent.',
+    'OpsDevCode is the company behind OpsDevCode Platform: Mint is the public entry language, with independently adoptable products for governed delivery, infrastructure state, economics, and intent.',
   path: '/about',
 })
 
@@ -17,8 +23,9 @@ export default function AboutPage() {
         <p className="rail-label">Company</p>
         <h1 className="page-title">OpsDevCode</h1>
         <p className="lede">
-          OpsDevCode is the company. OpsDevCode Platform is the modular offering. The products —
-          Repave, Overpass, Toll, and Dispatch — can be adopted independently.
+          OpsDevCode is the company. OpsDevCode Platform is the modular offering. Mint is the public
+          entry product. The domain products — Repave, Overpass, Toll, and Dispatch — can be adopted
+          independently.
         </p>
         <div className="product-page-grid">
           <div>
@@ -83,10 +90,10 @@ export default function AboutPage() {
           <div className="faq-item">
             <dt>What are Mint and SpecMint?</dt>
             <dd>
-              Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
-              Mint and SpecMint share that intent path. SpecMint core is public; the hosted service
-              stays private. Products remain Repave, Overpass, Toll, and Dispatch. Relay is
-              delivery, not a fifth SKU.
+              Mint is the public entry product: the language, CLI, SDK, editor, and protocol.
+              SpecMint is the governed lifecycle runtime behind Mint, not a customer SKU. SpecMint
+              core is public; the hosted service stays private. Domain products remain Repave,
+              Overpass, Toll, and Dispatch. Relay is delivery, not a product.
             </dd>
           </div>
           <div className="faq-item">
@@ -113,8 +120,8 @@ export default function AboutPage() {
           <div className="faq-item">
             <dt>Is Mint a fifth OpsDevCode product?</dt>
             <dd>
-              No. Mint is the public language. SpecMint core is public. The four products stay
-              Repave, Overpass, Toll, and Dispatch.{' '}
+              Yes. Mint is the public entry product. It does not own the Repave, Overpass, Toll, or
+              Dispatch domains. SpecMint is the runtime behind Mint, not a customer SKU.{' '}
               <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
                 github.com/opsdevcode/specmint-language
               </a>

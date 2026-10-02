@@ -52,19 +52,19 @@ npm run check
 
 ## Site architecture
 
-| Route                                       | Role                                                          |
-| ------------------------------------------- | ------------------------------------------------------------- |
-| `/`                                         | Company thesis, problem, ecosystem, products                  |
-| `/products`                                 | Portfolio                                                     |
-| `/products/{repave,overpass,toll,dispatch}` | Compact product identity; canonical hosts are `*.opsdevco.de` |
-| `/approach`                                 | How the parts fit; Convergence boundary                       |
-| `/services`                                 | Secondary advisory / implementation                           |
-| `/about`                                    | Company and founder                                           |
-| `/privacy`                                  | Privacy                                                       |
+| Route                                            | Role                                                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `/`                                              | Company thesis, problem, ecosystem, products                                                |
+| `/products`                                      | Portfolio                                                                                   |
+| `/products/{mint,repave,overpass,toll,dispatch}` | Compact product identity; Mint lives on the company site. Domain hosts are `*.opsdevco.de`. |
+| `/approach`                                      | How the parts fit; Convergence boundary                                                     |
+| `/services`                                      | Secondary advisory / implementation                                                         |
+| `/about`                                         | Company and founder                                                                         |
+| `/privacy`                                       | Privacy                                                                                     |
 
 Redirects: `/tools` → `/products`, `/agentic` → `/products/dispatch`.
 
-**Content ownership:** product definitions follow OpsDevCode ADRs and sibling identity repos (Repave, Overpass, Toll, Dispatch). Convergence remains independent.
+**Content ownership:** product definitions follow OpsDevCode ADRs and sibling identity repos (Mint language, Repave, Overpass, Toll, Dispatch). Convergence remains independent. SpecMint is the lifecycle runtime, not a customer SKU.
 
 ## Scripts
 

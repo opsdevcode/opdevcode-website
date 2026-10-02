@@ -82,6 +82,13 @@ const structuredData = {
     },
     {
       '@type': 'SoftwareApplication',
+      name: 'Mint',
+      applicationCategory: 'DeveloperApplication',
+      url: `${SITE_URL}/products/mint`,
+      description: 'Governed automation language.',
+    },
+    {
+      '@type': 'SoftwareApplication',
       name: 'Repave',
       applicationCategory: 'DeveloperApplication',
       url: REPAVE_URL,
@@ -91,13 +98,15 @@ const structuredData = {
 }
 
 const portfolioCopy: Record<ProductSlug, { title: string }> = {
+  mint: { title: 'Governed automation language.' },
   repave: { title: 'Governed software state.' },
   overpass: { title: 'Infrastructure state and relationships.' },
   toll: { title: 'Engineering economics.' },
   dispatch: { title: 'Governed intent and action.' },
 }
 
-const whyFour: { name: string; job: string }[] = [
+const whyProducts: { name: string; job: string }[] = [
+  { name: 'Mint', job: 'Governed automation language.' },
   { name: 'Repave', job: 'Software and repository state.' },
   { name: 'Overpass', job: 'Infrastructure state and relationships.' },
   { name: 'Toll', job: 'Engineering economics.' },
@@ -105,7 +114,7 @@ const whyFour: { name: string; job: string }[] = [
 ]
 
 const startOther: {
-  slug: Exclude<ProductSlug, 'repave'>
+  slug: Exclude<ProductSlug, 'mint' | 'repave'>
   name: string
   blurb: string
 }[] = [
@@ -147,11 +156,11 @@ export default function HomePage() {
           <div className="home-hero-body">
             <div className="home-hero-copy">
               <p className="home-support">
-                {COMPANY_NAME} is the company. {PLATFORM_NAME} is the modular offering. Adopt
-                Repave, Overpass, Toll, or Dispatch on their own.
+                {COMPANY_NAME} is the company. {PLATFORM_NAME} is the modular offering. Start with
+                Mint. Adopt Repave, Overpass, Toll, or Dispatch on their own.
               </p>
               <p className="home-quiet" id="home-product-names">
-                Repave · Overpass · Toll · Dispatch
+                Mint · Repave · Overpass · Toll · Dispatch
               </p>
               <div className="cta">
                 <Link className="btn primary" href="/products">
@@ -174,11 +183,12 @@ export default function HomePage() {
           aria-labelledby="portfolio-heading"
         >
           <h2 id="portfolio-heading" className="section-title">
-            Four products. Independently adoptable.
+            Mint, then four domain products. Independently adoptable.
           </h2>
           <p className="lede home-measure">
-            Each product owns a distinct engineering domain. Together they are {PLATFORM_NAME} — not
-            four required steps in a bundle, and not the company name.
+            Mint is the public entry language. Each domain product owns a distinct engineering
+            problem. Together they are {PLATFORM_NAME} — not four required steps in a bundle, and
+            not the company name.
           </p>
           <div className="product-grid product-grid--portfolio">
             {products.map((product) => (
@@ -201,14 +211,15 @@ export default function HomePage() {
           </h2>
           <p className="lede home-measure">
             Repository lifecycle, infrastructure state, engineering economics, and governed action
-            are related problems. They are not the same problem.
+            are related problems. They are not the same problem. Mint names the intent those
+            products can govern.
           </p>
           <p className="home-measure">
             {COMPANY_NAME} keeps those responsibilities separate so each product can own its domain
             without becoming the source of truth for everything else.
           </p>
           <ul className="why-list">
-            {whyFour.map((item) => (
+            {whyProducts.map((item) => (
               <li key={item.name}>
                 <strong>{item.name}</strong>
                 <span>{item.job}</span>
@@ -229,9 +240,18 @@ export default function HomePage() {
             Start with the problem you need to solve.
           </h2>
           <p className="lede home-measure">
-            You don&apos;t need to adopt a stack. Start with the product that owns the engineering
-            problem in front of you.
+            You don&apos;t need to adopt a stack. Start with Mint if you want the language, or with
+            the domain product that owns the engineering problem in front of you.
           </p>
+          <article className="start-featured start-featured--mint">
+            <p className="start-featured-meta">Public preview</p>
+            <h3>Mint</h3>
+            <p>
+              The public entry. Install the language locally, compile intent, and produce an offline
+              governed plan.
+            </p>
+            <Link href="/products/mint">Get started with Mint →</Link>
+          </article>
           {repave ? (
             <article className="start-featured">
               <p className="start-featured-meta">{repave.maturityLabel}</p>
@@ -279,8 +299,9 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="home-measure">
-            Mint is the intent language and toolchain. SpecMint is the governed lifecycle runtime.
-            SpecMint core is public; the hosted service stays private.
+            Mint is the public entry product: the language, CLI, SDK, editor, and protocol. SpecMint
+            is the governed lifecycle runtime behind Mint — not a customer SKU. SpecMint core is
+            public; the hosted service stays private and is not generally available.
           </p>
           <p className="home-measure">
             Services exist to help teams adopt and apply the products — not to turn {COMPANY_NAME}{' '}
