@@ -30,8 +30,12 @@ export default function PrivacyPage() {
           <div>
             <h2>This website</h2>
             <p>
-              No analytics, no tracking pixels, no cookies. Hosted on Netlify; they may log requests
-              per their policy. OpsDevCode does not use that data.
+              Production pages on opsdevco.de may send first-party pageviews and a small set of
+              marketing events to self-hosted Umami at analytics.opsdevco.de. That is GTM public
+              analytics, not product evidence, and it is not used for compliance or lifecycle proof.
+              We do not use session replay, analytics cookies, or visitor identify. Local, preview,
+              and test hosts are not tracked. Hosted on Netlify; they may log requests per their
+              policy.
             </p>
           </div>
         </div>
