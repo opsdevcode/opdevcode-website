@@ -207,7 +207,7 @@ describe('product portfolio', () => {
     assert.match(architecture, /SpecMint/)
     assert.match(architecture, /Relay/)
     assert.match(architecture, /object-storage/)
-    assert.match(architecture, /Repave is optional/)
+    assert.match(architecture, /Repave is\s+optional/)
     assert.match(architecture, /Open Policy Agent/)
     assert.match(header, /\/architecture/)
     assert.match(sitemap, /\/architecture/)
@@ -247,7 +247,7 @@ describe('product portfolio', () => {
     assert.match(about, /Yes\. Mint is the public entry product/)
     assert.match(architecture, /Mint is the public entry/)
     assert.match(productsSrc, /maturityIndex: '00'/)
-    assert.match(productsSrc, /not production-ready/)
+    assert.match(productsSrc, /Not production-ready/)
   })
 
   it('does not overclaim Overpass live-cloud, Toll savings, or Dispatch autonomy', () => {
