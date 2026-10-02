@@ -8,7 +8,7 @@ import { pageMeta } from '@/lib/seo'
 export const metadata: Metadata = pageMeta({
   title: 'Architecture',
   description:
-    'OpsDevCode Platform is modular. Authority stays with Repave, Overpass, Toll, and Dispatch. SpecMint is the governed lifecycle runtime.',
+    'OpsDevCode Platform is modular. Mint is the public entry language. Authority stays with Repave, Overpass, Toll, and Dispatch. SpecMint is the governed lifecycle runtime.',
   path: '/architecture',
 })
 
@@ -25,9 +25,11 @@ export default function ArchitecturePage() {
         <SystemMap variant="policy" />
         <h2>What the company is, and is not</h2>
         <p>
-          OpsDevCode is the company. {PLATFORM_NAME} is the offering. Mint names intent. SpecMint
-          runs the governed lifecycle. SpecMint core is public; the hosted service stays private.
-          Products remain Repave, Overpass, Toll, and Dispatch. Relay is delivery, not a fifth SKU.
+          OpsDevCode is the company. {PLATFORM_NAME} is the offering. Mint is the public entry
+          product — the language, CLI, SDK, editor, and protocol. SpecMint runs the governed
+          lifecycle and is not a customer SKU. SpecMint core is public; the hosted service stays
+          private. Domain products remain Repave, Overpass, Toll, and Dispatch. Relay is delivery,
+          not a product.
         </p>
         <p>
           Relay is supporting conversational runtime consumed over a contract. It is not a public
@@ -62,13 +64,13 @@ export default function ArchitecturePage() {
         <p>Missing facts stay unknown. Unknown is not allow, deny, compliant, or noncompliant.</p>
         <h2>One public demonstration path</h2>
         <p>
-          Mint names intent in Mint, Markdown, JSON, or YAML. SpecMint compiles that intent
-          and federates product capability manifests. Capability
-          <code>infrastructure.object-storage</code> routes to Overpass.
-          Overpass returns a plan and result. Dispatch notifies. Relay carries the
-          notification. Toll may be discovered and does not invent spend. Evidence cites
-          tenant and environment identifiers only. Repave is optional. No provider is
-          mutated. This is a lab demonstration, not a production-connected customer result.
+          Mint names intent in Mint, Markdown, JSON, or YAML. SpecMint compiles that intent and
+          federates product capability manifests. Capability
+          <code>infrastructure.object-storage</code> routes to Overpass. Overpass returns a plan and
+          result. Dispatch notifies. Relay carries the notification. Toll may be discovered and does
+          not invent spend. Evidence cites tenant and environment identifiers only. Repave is
+          optional. No provider is mutated. This is a lab demonstration, not a production-connected
+          customer result.
         </p>
         <h2>Policy does not replace product workflows</h2>
         <p>

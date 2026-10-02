@@ -9,9 +9,11 @@ does not own marketing copy or infrastructure.
 **The governed section.**
 
 OpsDevCode is drawn as an engineering _section cut_ through a living system:
-open joints, planes, and witness marks. The four products are different
+open joints, planes, and witness marks. The four domain products are different
 **readings of the same cut** (delivery, state, economics, interaction)—not four
-mascots and not a mandatory pipeline.
+mascots and not a mandatory pipeline. Mint is the public entry language, drawn
+in the same 32-unit stroke grammar with a distinct ink-green accent. It does
+not own those domain readings.
 
 That idea must remain identifiable with the logos removed.
 
@@ -23,7 +25,7 @@ product-page layout on `opsdevco.de`.
 
 **Parent-only sheet (homepage exception).** Interior pages and product hosts stay
 on family paper `#F3EFE6`. The company homepage uses elevated sheet `#F7F4ED`
-as the binder, and keeps `#F3EFE6` only on portfolio / start wells so the four
+as the binder, and keeps `#F3EFE6` only on portfolio / start wells so the
 products still read as drawings on cream. Ink `#1A1F1C` and rules `#C9C2B3`
 are unchanged. The oversized aperture mark is background identity: it must not
 sit on, cross, or clip type.
@@ -51,13 +53,14 @@ favicon, the header lockup, and share cards.
 Shared DNA: 32-unit grid, 1.5 stroke, square caps, miter joins, no fill, open
 joints. Color is the only product-specific pigment; geometry carries meaning.
 
-| Mark       | Concept                                        |
-| ---------- | ---------------------------------------------- |
-| OpsDevCode | Four open corners. Empty center. The system.   |
-| Repave     | Offset passes of a path (lifecycle / restore). |
-| Overpass   | Two planes and spanning members (topology).    |
-| Toll       | Measured gap (attribution / exchange).         |
-| Dispatch   | Intent through a gate into action.             |
+| Mark       | Concept                                                  |
+| ---------- | -------------------------------------------------------- |
+| OpsDevCode | Four open corners. Empty center. The system.             |
+| Mint       | Named source compiled across a cut into a governed plan. |
+| Repave     | Offset passes of a path (lifecycle / restore).           |
+| Overpass   | Two planes and spanning members (topology).              |
+| Toll       | Measured gap (attribution / exchange).                   |
+| Dispatch   | Intent through a gate into action.                       |
 
 Files: `svg/mark-*.svg`, `*-mono.svg`, `lockup-*.svg`, `favicon-opsdevcode.svg`,
 `github-avatar-opsdevcode.png`.
@@ -65,8 +68,9 @@ Files: `svg/mark-*.svg`, `*-mono.svg`, `lockup-*.svg`, `favicon-opsdevcode.svg`,
 **Clearspace:** ≥ 6 units around the mark. **Minimum:** 16 CSS px for the mark.
 
 **Misuse:** do not fill the marks; do not round the corners; do not recode all
-four products the same hue; do not put the company mark in a gradient orb;
-do not use highway / paving / booth / truck illustrations.
+products the same hue; do not put the company mark in a gradient orb;
+do not use highway / paving / booth / truck illustrations. Do not draw Mint as
+a mint leaf or a pastel SaaS gradient.
 
 Endorsement form: **`{Product} — by OpsDevCode`**. Relationship rule, not
 mandatory chrome on every pixel.
@@ -79,6 +83,7 @@ Company home only may use elevated `#F7F4ED` as the page field (see above).
 Do not treat that sheet as a fifth product accent or as a family token for
 product hosts.
 
+- Mint `#3F6F5B`
 - Repave `#C4841A`
 - Overpass `#1A7A72`
 - Toll `#2B5F9E`

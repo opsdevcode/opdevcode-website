@@ -24,20 +24,25 @@ on Netlify; those names are Route53 aliases to the cluster NLB.
 `opsdevco.de` zone holds Netlify, mail, and product aliases plus NS for
 `repave`.
 
+Mint’s public identity is the company page `https://opsdevco.de/products/mint`.
+Do **not** link `mint.opsdevco.de` until that host answers GET. A dedicated
+Mint hostname is an owner DNS action, not a company-site rewrite.
+
 `repave.dev` is a permanent **308** to `https://repave.opsdevco.de` (path and
 query preserved) via ingress-nginx; the portal `CanonicalHostMiddleware` is
 backup for the same hosts.
 
 ## Current registry
 
-| Host                   | Role     | Serving                            |
-| ---------------------- | -------- | ---------------------------------- |
-| `opsdevco.de`          | Company  | Netlify                            |
-| `www.opsdevco.de`      | Company  | CNAME → apex (Netlify 301 to apex) |
-| `repave.opsdevco.de`   | Repave   | EKS / child Route53 zone           |
-| `overpass.opsdevco.de` | Overpass | EKS (parent Route53 alias → NLB)   |
-| `toll.opsdevco.de`     | Toll     | EKS (parent Route53 alias → NLB)   |
-| `dispatch.opsdevco.de` | Dispatch | EKS (parent Route53 alias → NLB)   |
+| Host                        | Role                   | Serving                                           |
+| --------------------------- | ---------------------- | ------------------------------------------------- |
+| `opsdevco.de`               | Company                | Netlify                                           |
+| `www.opsdevco.de`           | Company                | CNAME → apex (Netlify 301 to apex)                |
+| `opsdevco.de/products/mint` | Mint (public identity) | Netlify company route; no live `mint.opsdevco.de` |
+| `repave.opsdevco.de`        | Repave                 | EKS / child Route53 zone                          |
+| `overpass.opsdevco.de`      | Overpass               | EKS (parent Route53 alias → NLB)                  |
+| `toll.opsdevco.de`          | Toll                   | EKS (parent Route53 alias → NLB)                  |
+| `dispatch.opsdevco.de`      | Dispatch               | EKS (parent Route53 alias → NLB)                  |
 
 The application registry is `PRODUCT_URLS` in `lib/site.ts`. Intended hosts
 remain `<product>.opsdevco.de`. **Visitor links on this site only go to hosts

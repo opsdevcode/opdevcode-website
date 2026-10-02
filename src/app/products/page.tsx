@@ -12,7 +12,7 @@ import { CALENDLY_URL } from '@/lib/site'
 export const metadata: Metadata = pageMeta({
   title: 'Products',
   description:
-    'Repave, Overpass, Toll, and Dispatch are independently adoptable products in the OpsDevCode Platform.',
+    'Mint is the public entry language. Repave, Overpass, Toll, and Dispatch are independently adoptable domain products in the OpsDevCode Platform.',
   path: '/products',
 })
 
@@ -30,9 +30,9 @@ export default function ProductsPage() {
         <p className="rail-label">Portfolio</p>
         <h1 className="page-title">Independently adoptable products</h1>
         <p className="lede">
-          {PLATFORM_NAME} is modular. Delivery, infrastructure state, and economics stay distinct.
-          Dispatch is how people ask across them — it does not replace them, and it is not yet a
-          standalone four-product interaction surface.
+          {PLATFORM_NAME} is modular. Mint is the public entry language. Delivery, infrastructure
+          state, and economics stay distinct. Dispatch is how people ask across them — it does not
+          replace them, and it is not yet a standalone four-product interaction surface.
         </p>
         <div className="compare-wrap">
           <table className="compare">

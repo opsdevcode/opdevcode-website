@@ -1,4 +1,4 @@
-/** Public-safe company vs platform language. No Mint syntax, providers, or customer results. */
+/** Public-safe company vs platform language. No live providers or customer results. */
 
 export const OUTCOME_LINE = 'Define the outcome.'
 export const GOVERN_LINE = 'Govern the change.'

@@ -10,10 +10,11 @@ const siteSrc = readFileSync(join(root, 'lib/site.ts'), 'utf8')
 const netlify = readFileSync(join(root, 'netlify.toml'), 'utf8')
 
 describe('product portfolio', () => {
-  it('exposes four named products with distinct domains', () => {
-    for (const slug of ['repave', 'overpass', 'toll', 'dispatch']) {
+  it('exposes named products with distinct domains', () => {
+    for (const slug of ['mint', 'repave', 'overpass', 'toll', 'dispatch']) {
       assert.match(productsSrc, new RegExp(`slug: '${slug}'`))
     }
+    assert.match(productsSrc, /Governed automation language/)
     assert.match(productsSrc, /Governed software delivery/)
     assert.match(productsSrc, /Infrastructure state and understanding/)
     assert.match(productsSrc, /Engineering economics/)
@@ -23,6 +24,7 @@ describe('product portfolio', () => {
   it('does not treat Repave as the umbrella or Dispatch as a data domain', () => {
     assert.match(productsSrc, /not the OpsDevCode umbrella/)
     assert.match(productsSrc, /not a fourth data domain/)
+    assert.match(productsSrc, /maturity: 'public-preview'/)
     assert.match(productsSrc, /maturity: 'early-access'/)
     assert.match(productsSrc, /maturity: 'in-development'/)
     assert.match(productsSrc, /maturity: 'emerging'/)
@@ -32,11 +34,12 @@ describe('product portfolio', () => {
 
   it('gives every product the same editorial density as Repave', () => {
     const ownsBlocks = [...productsSrc.matchAll(/owns: \[([\s\S]*?)\],/g)]
-    assert.equal(ownsBlocks.length, 4)
+    assert.equal(ownsBlocks.length, 5)
     for (const block of ownsBlocks) {
       const items = [...block[1].matchAll(/'/g)].length / 2
       assert.ok(items >= 6, `owns list too thin: ${block[1]}`)
     }
+    assert.match(productsSrc, /Name\. Compile\. Realize\. Plan\./)
     assert.match(productsSrc, /Custody\. Relationships\. Drift\. Impact\. Transactions\./)
     assert.match(productsSrc, /Spend\. Ownership\. Utilization\. Evidence\./)
     assert.match(productsSrc, /Intent\. Proposal\. Gate\. Action\./)
@@ -54,6 +57,7 @@ describe('product portfolio', () => {
     assert.doesNotMatch(siteSrc, /overpass: false/)
     assert.doesNotMatch(siteSrc, /toll: false/)
     assert.doesNotMatch(siteSrc, /dispatch: false/)
+    assert.match(productsSrc, /publicUrl: '\/products\/mint'/)
     assert.match(productsSrc, /publicUrl: productSiteHref\('repave'\)/)
     assert.match(productsSrc, /publicUrl: productSiteHref\('overpass'\)/)
     assert.match(productsSrc, /publicUrl: productSiteHref\('toll'\)/)
@@ -65,6 +69,9 @@ describe('product portfolio', () => {
     assert.match(productsSrc, /See the governed lifecycle/)
     assert.match(siteSrc, /REPAVE_PROOF_URL = `\$\{REPAVE_URL\}\/proof`/)
     assert.match(siteSrc, /REPAVE_EVALUATE_URL = `\$\{REPAVE_WAITLIST_URL\}\?intent=evaluate`/)
+    assert.doesNotMatch(siteSrc, /mint: 'https:\/\/mint\.opsdevco\.de'/)
+    assert.doesNotMatch(productsSrc, /mint\.opsdevco/)
+    assert.match(productsSrc, /ctaHref: MINT_QUICKSTART_URL/)
     assert.match(productsSrc, /ctaHref: REPAVE_EVALUATE_URL/)
     assert.match(productsSrc, /ctaHref: PRODUCT_URLS\.overpass/)
     assert.match(productsSrc, /ctaHref: PRODUCT_URLS\.toll/)
@@ -144,13 +151,16 @@ describe('product portfolio', () => {
     assert.match(platform, /Verify the result/)
     assert.match(home, /See the products/)
     assert.match(home, /Talk to OpsDevCode/)
-    assert.match(home, /Four products/)
+    assert.match(home, /Mint, then four domain products/)
     assert.match(home, /Independently adoptable/)
     assert.match(home, /Different engineering problems/)
     assert.match(home, /Start with the problem/)
     assert.match(home, /Built as a product company/)
     assert.match(home, /PLATFORM_NAME/)
     assert.match(home, /home-product-names/)
+    assert.match(home, /name: 'Mint'/)
+    assert.match(home, /\$\{SITE_URL\}\/products\/mint/)
+    assert.match(home, /Mint/)
     assert.match(home, /Repave/)
     assert.match(home, /Overpass/)
     assert.match(home, /Toll/)
@@ -203,6 +213,41 @@ describe('product portfolio', () => {
     assert.match(sitemap, /\/architecture/)
     assert.doesNotMatch(architecture, /fully automated compliance/)
     assert.doesNotMatch(architecture, /production-proven policy control plane/)
+  })
+
+  it('publishes Mint as the public entry product on a dedicated page', () => {
+    const mintPage = readFileSync(join(root, 'src/app/products/mint/page.tsx'), 'utf8')
+    const about = readFileSync(join(root, 'src/app/about/page.tsx'), 'utf8')
+    const approach = readFileSync(join(root, 'src/app/approach/page.tsx'), 'utf8')
+    const architecture = readFileSync(join(root, 'src/app/architecture/page.tsx'), 'utf8')
+    assert.equal(existsSync(join(root, 'src/app/products/mint/page.tsx')), true)
+    assert.equal(existsSync(join(root, 'public/brand/mark-mint.svg')), true)
+    assert.match(mintPage, /pipx install specmint/)
+    assert.match(mintPage, /uv tool install specmint/)
+    assert.match(mintPage, /Get started/)
+    assert.match(mintPage, /View source/)
+    assert.match(mintPage, /Build an integration/)
+    assert.match(mintPage, /What Mint does/)
+    assert.match(mintPage, /Mint versus SpecMint/)
+    assert.match(mintPage, /How it fits/)
+    assert.match(mintPage, /Working quickstart/)
+    assert.match(mintPage, /Integration ecosystem/)
+    assert.match(mintPage, /examples\/projects\/local-marker/)
+    assert.match(mintPage, /local\.sandbox/)
+    assert.match(mintPage, /Safety/)
+    assert.match(mintPage, /MINT_QUICKSTART_URL/)
+    assert.match(mintPage, /MINT_LANGUAGE_URL/)
+    assert.match(mintPage, /MINT_INTEGRATION_PROTOCOL_URL/)
+    assert.match(mintPage, /MINT_INTEGRATION_AUTHORING_URL/)
+    assert.match(mintPage, /SPECMINT_PLATFORM_URL/)
+    assert.match(mintPage, /MINT_ISSUES_URL/)
+    assert.match(mintPage, /not production-ready/)
+    assert.doesNotMatch(mintPage, /href=["']#/)
+    assert.doesNotMatch(approach, /not a published syntax/)
+    assert.match(about, /Yes\. Mint is the public entry product/)
+    assert.match(architecture, /Mint is the public entry/)
+    assert.match(productsSrc, /maturityIndex: '00'/)
+    assert.match(productsSrc, /not production-ready/)
   })
 
   it('does not overclaim Overpass live-cloud, Toll savings, or Dispatch autonomy', () => {

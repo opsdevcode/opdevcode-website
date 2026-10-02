@@ -1560,6 +1560,37 @@ code.inline {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
 }
+.product-page--mint .product-page-head {
+  border-bottom-color: color-mix(in srgb, var(--color-mint) 45%, var(--color-border));
+}
+.mint-install {
+  margin: var(--space-16) 0 0;
+  padding: var(--space-16) var(--space-20);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+}
+.mint-install code {
+  font-family: inherit;
+  font-size: inherit;
+}
+.product-page--mint .product-page-grid ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+.product-page--mint .product-page-grid li + li {
+  margin-top: 6px;
+}
+.product-page--mint .product-page-grid code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
 
 footer {
   display: block;
@@ -1795,6 +1826,9 @@ footer {
   border-top: 2px solid var(--color-repave);
   background: var(--color-bg);
 }
+.start-featured--mint {
+  border-top-color: var(--color-mint);
+}
 .start-featured h3 {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
@@ -1837,7 +1871,7 @@ footer {
 }
 @media (min-width: 1100px) {
   .product-grid--portfolio {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: var(--space-32);
   }
 }

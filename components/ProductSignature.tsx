@@ -1,6 +1,7 @@
 import { ProductMark } from '@/components/BrandMark'
 
 const captions: Record<string, string> = {
+  mint: 'Named source compiled across a cut into a governed plan.',
   repave: 'Lifecycle as offset passes: generate, observe, restore.',
   overpass: 'Two planes and spanning members: inventory and dependency.',
   toll: 'A measured gap: attribution between spend and ownership.',

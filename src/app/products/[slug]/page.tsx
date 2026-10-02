@@ -12,7 +12,7 @@ export const dynamic = 'force-static'
 type Props = { params: Promise<{ slug: string }> }
 
 export function generateStaticParams() {
-  return productSlugs.map((slug) => ({ slug }))
+  return productSlugs.filter((slug) => slug !== 'mint').map((slug) => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

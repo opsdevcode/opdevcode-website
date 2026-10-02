@@ -32,6 +32,10 @@ export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 export const MINT_LANGUAGE_URL = 'https://github.com/opsdevcode/specmint-language'
 export const SPECMINT_PLATFORM_URL = 'https://github.com/opsdevcode/specmint-platform'
+export const MINT_QUICKSTART_URL = `${MINT_LANGUAGE_URL}/blob/main/docs/quickstart.md`
+export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_LANGUAGE_URL}/blob/main/specification/mint/v0/integration-authoring.md`
+export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_LANGUAGE_URL}/blob/main/specification/mint/v0/integration-protocol.md`
+export const MINT_ISSUES_URL = `${MINT_LANGUAGE_URL}/issues`
 
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
@@ -43,6 +47,7 @@ export const COMPANY_BANNER_SRC = '/brand/og-opsdevcode.svg'
 
 /** Official product marks — files in public/brand/, not a second drawing. */
 export const PRODUCT_MARK_SRC = {
+  mint: '/brand/mark-mint.svg',
   repave: '/brand/mark-repave.svg',
   overpass: '/brand/mark-overpass.svg',
   toll: '/brand/mark-toll.svg',
@@ -50,7 +55,7 @@ export const PRODUCT_MARK_SRC = {
 } as const
 
 export const SITE_DESCRIPTION =
-  'OpsDevCode is the company. OpsDevCode Platform is the modular offering: independently adoptable products for software state, infrastructure state, engineering economics, and governed intent.'
+  'OpsDevCode is the company. OpsDevCode Platform is the modular offering: Mint is the public entry language, with independently adoptable products for software state, infrastructure state, engineering economics, and governed intent.'
 
 export function waitlistUrl(product: keyof typeof PRODUCT_URLS): string {
   if (product === 'repave') {

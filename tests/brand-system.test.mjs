@@ -7,10 +7,11 @@ import { fileURLToPath } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
 describe('governed-section brand system', () => {
-  it('defines paper, ink, and four product accents', () => {
+  it('defines paper, ink, and product accents', () => {
     const tokens = readFileSync(join(root, 'src/styles/design-tokens.css'), 'utf8')
     assert.match(tokens, /--color-bg: #f3efe6/)
     assert.match(tokens, /--color-text: #1a1f1c/)
+    assert.match(tokens, /--color-mint: #3f6f5b/)
     assert.match(tokens, /--color-repave: #c4841a/)
     assert.match(tokens, /--color-overpass: #1a7a72/)
     assert.match(tokens, /--color-toll: #2b5f9e/)
@@ -25,6 +26,7 @@ describe('governed-section brand system', () => {
     assert.equal(snippet.paper.toLowerCase(), '#f3efe6')
     assert.equal(snippet.ink.toLowerCase(), '#1a1f1c')
     assert.equal(snippet.rules.toLowerCase(), '#c9c2b3')
+    assert.equal(snippet.accentsOnPaper.mint.toLowerCase(), '#3f6f5b')
     assert.equal(snippet.accentsOnPaper.repave.toLowerCase(), '#c4841a')
     assert.equal(snippet.accentsOnPaper.overpass.toLowerCase(), '#1a7a72')
     assert.equal(snippet.accentsOnPaper.toll.toLowerCase(), '#2b5f9e')
@@ -59,6 +61,7 @@ describe('governed-section brand system', () => {
   it('ships family SVG marks', () => {
     for (const name of [
       'mark-opsdevcode.svg',
+      'mark-mint.svg',
       'mark-repave.svg',
       'mark-overpass.svg',
       'mark-toll.svg',
@@ -72,6 +75,7 @@ describe('governed-section brand system', () => {
       assert.match(svg, /stroke-linecap="square"/)
     }
     const accents = {
+      'mark-mint.svg': '#3F6F5B',
       'mark-repave.svg': '#C4841A',
       'mark-overpass.svg': '#1A7A72',
       'mark-toll.svg': '#2B5F9E',
@@ -87,6 +91,7 @@ describe('governed-section brand system', () => {
     const site = readFileSync(join(root, 'lib/site.ts'), 'utf8')
     const footer = readFileSync(join(root, 'components/Footer.tsx'), 'utf8')
     const productsPage = readFileSync(join(root, 'src/app/products/page.tsx'), 'utf8')
+    assert.match(site, /mint: '\/brand\/mark-mint\.svg'/)
     assert.match(site, /repave: '\/brand\/mark-repave\.svg'/)
     assert.match(site, /overpass: '\/brand\/mark-overpass\.svg'/)
     assert.match(site, /toll: '\/brand\/mark-toll\.svg'/)

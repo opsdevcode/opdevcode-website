@@ -1,14 +1,16 @@
 import {
   CALENDLY_URL,
+  MINT_LANGUAGE_URL,
+  MINT_QUICKSTART_URL,
   PRODUCT_URLS,
   REPAVE_EVALUATE_URL,
   REPAVE_PROOF_URL,
   productSiteHref,
 } from '@/lib/site'
 
-export type ProductSlug = 'repave' | 'overpass' | 'toll' | 'dispatch'
+export type ProductSlug = 'mint' | 'repave' | 'overpass' | 'toll' | 'dispatch'
 
-export type ProductMaturity = 'early-access' | 'in-development' | 'emerging'
+export type ProductMaturity = 'public-preview' | 'early-access' | 'in-development' | 'emerging'
 
 export type Product = {
   slug: ProductSlug
@@ -38,12 +40,59 @@ export type Product = {
 }
 
 export const maturityCopy: Record<ProductMaturity, string> = {
+  'public-preview': 'Public preview',
   'early-access': 'Early access',
   'in-development': 'In development',
   emerging: 'Emerging',
 }
 
 export const products: Product[] = [
+  {
+    slug: 'mint',
+    name: 'Mint',
+    domain: 'Governed automation language',
+    job: 'Name. Compile. Realize. Plan.',
+    summary:
+      'Express governed automation intent, compile it deterministically, and produce a plan domain products can own.',
+    body: [
+      'Mint is the public platform-entry product: the language, CLI, SDK, editor, and protocol. It names intent and compiles it offline. It does not take lifecycle control from SpecMint or domain authority from Repave, Overpass, Toll, or Dispatch.',
+      'This is public preview / alpha. Install locally. There is no mint apply and no default live provider execution. Hosted SpecMint is not generally available and is not a customer SKU.',
+      'Integrations realize capabilities for a target. Executors stay privileged and separate. A hosted registry is future work.',
+    ],
+    owns: [
+      'Intent authoring in Mint, with JSON, YAML, and structured Markdown as inputs',
+      'Deterministic offline compilation to MintIR',
+      'Capability, target, and integration realization binding',
+      'Governed plan production without apply',
+      'Language CLI, SDK, editor, and Integration Protocol v0',
+      'Conformance for language and integration contracts',
+    ],
+    doesNot: [
+      'Repository lifecycle (Repave)',
+      'Infrastructure state custody (Overpass)',
+      'Engineering economics (Toll)',
+      'Cross-domain intelligent experience (Dispatch)',
+      'Hosted SpecMint as a customer SKU',
+      'Live provider apply or mint apply',
+    ],
+    maturity: 'public-preview',
+    maturityLabel: 'Public preview',
+    maturityIndex: '00',
+    compareRole: 'Name intent',
+    compareProblem: 'Automation intent without a governed language.',
+    compareInput: 'A Mint project, catalogs, and declared realizations.',
+    compareOutcome: 'Canonical MintIR and an offline governed plan — not an apply.',
+    compareAvailability: 'Public preview / alpha. Local install. Not production-ready.',
+    maturityNote:
+      'Public preview / alpha. The language CLI is installable. There is no mint apply and no default live provider execution. Compilation is deterministic and fail-closed. Not production-ready. Hosted SpecMint stays private.',
+    href: '/products/mint',
+    publicUrl: '/products/mint',
+    ctaLabel: 'Get started',
+    nextStepLabel: 'Get started',
+    ctaHref: MINT_QUICKSTART_URL,
+    secondaryHref: MINT_LANGUAGE_URL,
+    secondaryLabel: 'View source',
+  },
   {
     slug: 'repave',
     name: 'Repave',

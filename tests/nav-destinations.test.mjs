@@ -34,6 +34,7 @@ describe('navigation destinations', () => {
     const surfaces = [
       'src/app/page.tsx',
       'src/app/products/page.tsx',
+      'src/app/products/mint/page.tsx',
       'src/app/architecture/page.tsx',
       'src/app/approach/page.tsx',
       'src/app/about/page.tsx',
