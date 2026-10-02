@@ -1560,6 +1560,11 @@ code.inline {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
 }
+.product-page-grid a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 .product-page--mint .product-page-head {
   border-bottom-color: color-mix(in srgb, var(--color-mint) 45%, var(--color-border));
 }
