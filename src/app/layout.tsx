@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import './globals.css'
+import GtmClicks from '@/components/GtmClicks'
+import UmamiTracker from '@/components/UmamiTracker'
 import {
   COMPANY_LOGO_SRC,
   SITE_DESCRIPTION,
@@ -67,7 +69,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={`${plexSans.variable} ${plexSerif.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <UmamiTracker />
+        <GtmClicks />
+        {children}
+      </body>
     </html>
   )
 }
