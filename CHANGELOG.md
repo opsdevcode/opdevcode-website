@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.21.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.20.1...opdevcode-website-v1.21.0) (2026-10-02)
+
+
+### Features
+
+* instrument the company site for first-party umami ([#121](https://github.com/opsdevcode/opdevcode-website/issues/121)) ([7af2788](https://github.com/opsdevcode/opdevcode-website/commit/7af2788231789f4df6a79748db44be991295eccf))
+* launch Mint as a public OpsDevCode product ([#118](https://github.com/opsdevcode/opdevcode-website/issues/118)) ([84c3411](https://github.com/opsdevcode/opdevcode-website/commit/84c3411fb704e7d531d33df3b25fa2ed60c7e6ff))
+
 ## [1.20.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.20.0...opdevcode-website-v1.20.1) (2026-09-29)
 
 
