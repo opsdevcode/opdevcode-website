@@ -32,9 +32,10 @@ export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 export const MINT_LANGUAGE_URL = 'https://github.com/opsdevcode/specmint-language'
 export const SPECMINT_PLATFORM_URL = 'https://github.com/opsdevcode/specmint-platform'
-export const MINT_QUICKSTART_URL = `${MINT_LANGUAGE_URL}/blob/main/docs/quickstart.md`
-export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_LANGUAGE_URL}/blob/main/specification/mint/v0/integration-authoring.md`
-export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_LANGUAGE_URL}/blob/main/specification/mint/v0/integration-protocol.md`
+export const MINT_DOCS_URL = 'https://opsdevcode.github.io/specmint-language/'
+export const MINT_QUICKSTART_URL = `${MINT_DOCS_URL}docs/quickstart.html`
+export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-authoring.html`
+export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-protocol.html`
 export const MINT_ISSUES_URL = `${MINT_LANGUAGE_URL}/issues`
 
 export const SITE_TITLE = 'OpsDevCode'
