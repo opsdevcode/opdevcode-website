@@ -91,6 +91,11 @@ export default function MintProductPage() {
             </Link>
           </p>
         </header>
+        <blockquote className="product-quote">
+          Mint is the public entry product: the language, CLI, SDK, editor, and protocol. SpecMint
+          is the governed lifecycle runtime behind Mint — not a customer SKU. SpecMint core is
+          public; the hosted service stays private and is not generally available.
+        </blockquote>
         <div className="product-page-grid">
           <div>
             <h2>What Mint does</h2>
@@ -126,15 +131,17 @@ export default function MintProductPage() {
 mint version`}</code>
             </pre>
             <p>
-              From the language repository, run <code>check</code>, <code>fmt --check</code>,{' '}
-              <code>lock --check</code>, <code>compile</code>, <code>inspect</code>, and{' '}
-              <code>plan</code> against <code>examples/projects/local-marker</code>, then
-              integrations conformance for <code>local.sandbox</code>. Use the{' '}
+              From the language repository, run the ten-minute loop: <code>init</code>,{' '}
+              <code>doctor</code>, <code>check</code>, <code>fmt --check</code>, <code>lock</code>,{' '}
+              <code>compile</code>, <code>inspect</code>, <code>plan</code>, and{' '}
+              <code>mint integrations test</code> for <code>local.sandbox</code> against{' '}
+              <code>examples/projects/local-marker</code>. SpecMint continues after that plan:
+              approval, fake/local execution, verification, and evidence. Use the{' '}
               <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
                 language quickstart
               </a>{' '}
               for the full copy-pasteable sequence rather than treating this page as captured
-              terminal output.
+              terminal output. There is no Marketplace listing and no <code>mint apply</code>.
             </p>
           </div>
           <div>

@@ -1568,6 +1568,15 @@ code.inline {
 .product-page--mint .product-page-head {
   border-bottom-color: color-mix(in srgb, var(--color-mint) 45%, var(--color-border));
 }
+.product-page--mint .product-quote {
+  max-width: 42rem;
+  margin: 0 0 var(--space-24);
+  padding: 0 0 0 var(--space-20);
+  border-left: 3px solid color-mix(in srgb, var(--color-mint) 55%, var(--color-border));
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--color-text);
+}
 .mint-install {
   margin: var(--space-16) 0 0;
   padding: var(--space-16) var(--space-20);

@@ -242,6 +242,20 @@ describe('product portfolio', () => {
     assert.match(mintPage, /SPECMINT_PLATFORM_URL/)
     assert.match(mintPage, /MINT_ISSUES_URL/)
     assert.match(mintPage, /not production-ready/)
+    assert.match(mintPage, /<blockquote className="product-quote">/)
+    assert.match(
+      mintPage,
+      /Mint is the public entry product: the language, CLI, SDK, editor, and protocol/
+    )
+    assert.match(mintPage, /governed lifecycle runtime behind Mint/)
+    assert.match(mintPage, /not a customer SKU/)
+    assert.match(mintPage, /ten-minute loop/)
+    assert.match(mintPage, /mint integrations test/)
+    assert.match(mintPage, /approval, fake\/local execution, verification, and evidence/)
+    assert.match(mintPage, /no Marketplace listing/)
+    assert.match(mintPage, /No default live provider execution/)
+    assert.doesNotMatch(mintPage, /\b1\.0\b/)
+    assert.doesNotMatch(mintPage, /Open VSX/)
     assert.match(siteSrc, /MINT_DOCS_URL = 'https:\/\/opsdevcode\.github\.io\/specmint-language\/'/)
     assert.match(siteSrc, /MINT_QUICKSTART_URL = `\$\{MINT_DOCS_URL\}docs\/quickstart\.html`/)
     assert.doesNotMatch(siteSrc, /blob\/main\/docs\/quickstart/)
