@@ -153,6 +153,20 @@ mint version`}</code>
               operation. Planning support never grants execution authority.
             </p>
             <p>
+              Discover integrations from local <code>mint.catalog-records/v0</code> data:{' '}
+              <code>search</code>, <code>inspect</code>, <code>add</code>, <code>remove</code>, and{' '}
+              <code>verify</code>. <code>add</code> binds digest pins in <code>mint.lock</code>. It
+              does not pip-install or execute an integration, and it does not open a network path. A
+              hosted registry is future work.
+            </p>
+            <p>
+              The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
+              <code>repo.github</code> integration consumes a supplied repository snapshot — no
+              GitHub SDK, HTTP client, or token. New authors start from replacement markers and run{' '}
+              <code>mint integrations test</code>. Catalog records for standalone public artifacts
+              are published only after those artifacts exist.
+            </p>
+            <p>
               Read{' '}
               <a href={MINT_INTEGRATION_PROTOCOL_URL} target="_blank" rel="noopener noreferrer">
                 Integration Protocol v0
@@ -161,7 +175,16 @@ mint version`}</code>
               <a href={MINT_INTEGRATION_AUTHORING_URL} target="_blank" rel="noopener noreferrer">
                 authoring plus conformance
               </a>
-              . A hosted registry is future work.
+              .
+            </p>
+          </div>
+          <div>
+            <h2>Community</h2>
+            <p>
+              Integrations are community-authored in public. Contributions are a manifest, a stdio
+              protocol server, fixtures, and fail-closed <code>execute</code>. They are not a live
+              provider mutation, a Marketplace listing, or a <code>latest</code> tag. File issues on
+              the language repository. Release Please owns prerelease tags.
             </p>
           </div>
           <div>
