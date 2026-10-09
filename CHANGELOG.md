@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.21.0...opdevcode-website-v1.22.0) (2026-10-09)
+
+
+### Features
+
+* add simulated public interactive labs ([#128](https://github.com/opsdevcode/opdevcode-website/issues/128)) ([68ee42d](https://github.com/opsdevcode/opdevcode-website/commit/68ee42da5931334a166528bf0eb573c801cd5137))
+
 ## [1.21.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.20.1...opdevcode-website-v1.21.0) (2026-10-08)
 
 
