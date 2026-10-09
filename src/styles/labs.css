@@ -59,7 +59,7 @@
 }
 
 .lab-authority-line {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .lab-choices {
@@ -101,7 +101,13 @@
 }
 
 .lab-choice-grid input {
-  margin-top: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-width: 24px;
+  min-height: 24px;
+  margin: 2px 0 0;
+  flex-shrink: 0;
+  accent-color: var(--color-text);
 }
 
 .lab-choice-grid em {
