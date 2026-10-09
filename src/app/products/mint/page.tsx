@@ -184,8 +184,8 @@ mint version`}</code>
               <code>verify</code>, <code>status</code>, and <code>update</code>. <code>add</code>{' '}
               and <code>update</code> bind digest pins in <code>mint.lock</code>. <code>add</code>{' '}
               does not pip-install or execute an integration, and it does not open a network path.{' '}
-              <code>update</code> is the same. <code>status</code> reports the one-shot process
-              supervisor as idle — no daemon. A hosted registry is future work.
+              <code>update</code> is the same. <code>status</code> reports the{' '}
+              {'one-shot process supervisor'} as idle — no daemon. A hosted registry is future work.
             </p>
             <p>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
