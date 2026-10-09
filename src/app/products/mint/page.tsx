@@ -7,11 +7,14 @@ import MaturityMeta from '@/components/MaturityMeta'
 import { pageMeta } from '@/lib/seo'
 import { getProduct } from '@/lib/products'
 import {
+  MINT_ACTION_URL,
   MINT_INTEGRATION_AUTHORING_URL,
   MINT_INTEGRATION_PROTOCOL_URL,
   MINT_ISSUES_URL,
   MINT_LANGUAGE_URL,
   MINT_QUICKSTART_URL,
+  MINT_RELEASE_URL,
+  MINT_STARTER_URL,
   SPECMINT_PLATFORM_URL,
 } from '@/lib/site'
 
@@ -86,6 +89,9 @@ export default function MintProductPage() {
             >
               Build an integration
             </a>
+            <Link className="btn" href="/labs/mint">
+              Mint lab
+            </Link>
             <Link className="btn" href="/products">
               All products
             </Link>
@@ -123,6 +129,26 @@ export default function MintProductPage() {
             </p>
           </div>
           <div>
+            <h2>Fifteen-minute adoption</h2>
+            <p>
+              Pin the public GitHub Release{' '}
+              <a href={MINT_RELEASE_URL} target="_blank" rel="noopener noreferrer">
+                v0.7.0-alpha.2
+              </a>
+              . Add{' '}
+              <a href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                opsdevcode/mint-action
+              </a>{' '}
+              on <code>pull_request</code> with <code>contents: read</code>, or start from{' '}
+              <a href={MINT_STARTER_URL} target="_blank" rel="noopener noreferrer">
+                opsdevcode/mint-starter
+              </a>
+              . The action installs that release wheel after <code>SHA256SUMS</code>. Walk captured
+              compiler output on the <Link href="/labs/mint">Mint lab</Link>. There is no{' '}
+              <code>latest</code> tag and no <code>mint apply</code>.
+            </p>
+          </div>
+          <div>
             <h2>Working quickstart</h2>
             <p>Install the language CLI, then confirm the executable:</p>
             <pre className="mint-install">
@@ -155,11 +181,11 @@ mint version`}</code>
             <p>
               Discover integrations from local <code>mint.catalog-records/v0</code> data:{' '}
               <code>search</code>, <code>inspect</code>, <code>add</code>, <code>remove</code>,{' '}
-              <code>verify</code>, <code>status</code>, and <code>update</code>. <code>add</code> and{' '}
-              <code>update</code> bind digest pins in <code>mint.lock</code>. <code>add</code> does not pip-install
-              or execute an integration, and it does not open a network path.{' '}
-              <code>update</code> is the same. <code>status</code> reports the one-shot process supervisor
-              as idle — no daemon. A hosted registry is future work.
+              <code>verify</code>, <code>status</code>, and <code>update</code>. <code>add</code>{' '}
+              and <code>update</code> bind digest pins in <code>mint.lock</code>. <code>add</code>{' '}
+              does not pip-install or execute an integration, and it does not open a network path.{' '}
+              <code>update</code> is the same. <code>status</code> reports the{' '}
+              {'one-shot process supervisor'} as idle — no daemon. A hosted registry is future work.
             </p>
             <p>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
@@ -248,6 +274,15 @@ mint version`}</code>
             rel="noopener noreferrer"
           >
             Build an integration
+          </a>
+          <Link className="btn" href="/labs/mint">
+            Mint lab
+          </Link>
+          <a className="btn" href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
+            mint-action
+          </a>
+          <a className="btn" href={MINT_STARTER_URL} target="_blank" rel="noopener noreferrer">
+            mint-starter
           </a>
           <a className="btn" href={MINT_ISSUES_URL} target="_blank" rel="noopener noreferrer">
             File an issue

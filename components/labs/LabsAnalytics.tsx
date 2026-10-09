@@ -2,13 +2,13 @@
 
 import { useEffect } from 'react'
 import { track } from '@/lib/analytics'
-import type { LabSlug } from '@/lib/labs'
+import type { LabSurface } from '@/lib/labs'
 
-export function trackLabStart() {
+export function trackLabStart(product: 'company' | 'mint' = 'company') {
   track({
     name: 'evaluation_start',
     properties: {
-      product: 'company',
+      product,
       source_surface: 'labs',
       cta: 'evaluate',
     },
@@ -26,10 +26,10 @@ export function trackLabProof() {
   })
 }
 
-export default function LabsAnalytics({ lab }: { lab?: LabSlug }) {
+export default function LabsAnalytics({ lab }: { lab?: LabSurface }) {
   useEffect(() => {
     if (lab) {
-      trackLabStart()
+      trackLabStart(lab === 'mint' ? 'mint' : 'company')
     }
   }, [lab])
   return null

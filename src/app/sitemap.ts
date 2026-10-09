@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/labs/create',
     '/labs/observe',
     '/labs/reclaim',
+    '/labs/mint',
     '/products',
     '/repave',
     '/services',

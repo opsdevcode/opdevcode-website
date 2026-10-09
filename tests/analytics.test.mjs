@@ -104,6 +104,7 @@ describe('public-estate analytics contract', () => {
     assert.equal(sourceSurfaceFromPath('/'), 'company_home')
     assert.equal(sourceSurfaceFromPath('/products/repave'), 'products')
     assert.equal(sourceSurfaceFromPath('/labs/observe'), 'labs')
+    assert.equal(sourceSurfaceFromPath('/labs/mint'), 'labs')
     const explore = inferPublicEvent('https://repave.opsdevco.de/', '/')
     assert.deepEqual(explore, {
       name: 'product_explore',

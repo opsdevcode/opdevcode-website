@@ -43,6 +43,7 @@
         { "path": "/labs/create", "states": ["default"] },
         { "path": "/labs/observe", "states": ["default"] },
         { "path": "/labs/reclaim", "states": ["default"] },
+        { "path": "/labs/mint", "states": ["default"] },
         { "path": "/about", "states": ["default"] },
         { "path": "/services", "states": ["default"] },
         { "path": "/privacy", "states": ["default"] }

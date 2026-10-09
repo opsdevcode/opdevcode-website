@@ -2,6 +2,7 @@
 
 export const LAB_SLUGS = ['create', 'observe', 'reclaim'] as const
 export type LabSlug = (typeof LAB_SLUGS)[number]
+export type LabSurface = LabSlug | 'mint'
 
 export const CLOUD_PROVIDERS = ['aws', 'azure', 'gcp'] as const
 export type CloudProvider = (typeof CLOUD_PROVIDERS)[number]

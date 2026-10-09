@@ -37,6 +37,9 @@ export const MINT_QUICKSTART_URL = `${MINT_DOCS_URL}docs/quickstart.html`
 export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-authoring.html`
 export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-protocol.html`
 export const MINT_ISSUES_URL = `${MINT_LANGUAGE_URL}/issues`
+export const MINT_ACTION_URL = 'https://github.com/opsdevcode/mint-action'
+export const MINT_STARTER_URL = 'https://github.com/opsdevcode/mint-starter'
+export const MINT_RELEASE_URL = `${MINT_LANGUAGE_URL}/releases/tag/v0.7.0-alpha.2`
 
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
