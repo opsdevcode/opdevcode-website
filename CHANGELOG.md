@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.23.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.22.1...opdevcode-website-v1.23.0) (2026-10-09)
+
+
+### Features
+
+* **labs:** add mint lab, adoption copy, and analytics ([#133](https://github.com/opsdevcode/opdevcode-website/issues/133)) ([e37f7b4](https://github.com/opsdevcode/opdevcode-website/commit/e37f7b42209ac61e58b80453ffa12d6bd279a690))
+
 ## [1.22.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.22.0...opdevcode-website-v1.22.1) (2026-10-09)
 
 
