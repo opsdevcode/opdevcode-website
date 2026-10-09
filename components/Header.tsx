@@ -8,6 +8,7 @@ import { CALENDLY_URL } from '@/lib/site'
 
 const navItems = [
   { href: '/products', label: 'Products', match: '/products' },
+  { href: '/labs', label: 'Labs', match: '/labs' },
   { href: '/approach', label: 'Approach', match: '/approach' },
   { href: '/architecture', label: 'Architecture', match: '/architecture' },
   { href: '/about', label: 'Company', match: '/about' },

@@ -22,6 +22,7 @@ describe('navigation destinations', () => {
   it('keeps primary nav on real company routes and Talk on Calendly', () => {
     const header = read('components/Header.tsx')
     assert.match(header, /href: '\/products'/)
+    assert.match(header, /href: '\/labs'/)
     assert.match(header, /href: '\/approach'/)
     assert.match(header, /href: '\/architecture'/)
     assert.match(header, /href: '\/about'/)
@@ -36,6 +37,7 @@ describe('navigation destinations', () => {
       'src/app/products/page.tsx',
       'src/app/products/mint/page.tsx',
       'src/app/architecture/page.tsx',
+      'src/app/labs/page.tsx',
       'src/app/approach/page.tsx',
       'src/app/about/page.tsx',
       'src/app/services/page.tsx',

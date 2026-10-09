@@ -70,7 +70,7 @@ export default function ArchitecturePage() {
           result. Dispatch notifies. Relay carries the notification. Toll may be discovered and does
           not invent spend. Evidence cites tenant and environment identifiers only. Repave is
           optional. No provider is mutated. This is a lab demonstration, not a production-connected
-          customer result.
+          customer result. Walk the same contract on <Link href="/labs">/labs</Link>.
         </p>
         <h2>Policy does not replace product workflows</h2>
         <p>

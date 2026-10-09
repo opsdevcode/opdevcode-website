@@ -166,6 +166,9 @@ export default function HomePage() {
                 <Link className="btn primary" href="/products">
                   See the products →
                 </Link>
+                <Link className="btn" href="/labs">
+                  Try the labs →
+                </Link>
                 <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
                   Talk to OpsDevCode →
                 </a>

@@ -39,6 +39,10 @@
         { "path": "/products/repave", "states": ["default"] },
         { "path": "/approach", "states": ["default"] },
         { "path": "/architecture", "states": ["default"] },
+        { "path": "/labs", "states": ["default"] },
+        { "path": "/labs/create", "states": ["default"] },
+        { "path": "/labs/observe", "states": ["default"] },
+        { "path": "/labs/reclaim", "states": ["default"] },
         { "path": "/about", "states": ["default"] },
         { "path": "/services", "states": ["default"] },
         { "path": "/privacy", "states": ["default"] }
