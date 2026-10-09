@@ -29,7 +29,9 @@ Pageviews are native Umami pageviews. Custom events:
 
 - `product_explore` — click toward a product host
 - `evaluation_cta` — waitlist, evaluate, Calendly, or contact
-- `proof_view`, `evaluation_start`, `evaluation_submit` fire on Repave, not here
+- `proof_view` — Repave `/proof`, and company `/labs` evidence panels (`proof_type: other`)
+- `evaluation_start` — Repave waitlist start, and starting a guided lab
+- `evaluation_submit` fires on Repave waitlist confirm only, not here
 
 Allowed properties: `product`, `source_surface`, `cta`, `proof_type`,
 `destination_product`. Contract: `lib/analytics.contract.mjs`.

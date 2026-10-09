@@ -103,6 +103,7 @@ describe('public-estate analytics contract', () => {
   it('infers controlled events without copying query or link text', () => {
     assert.equal(sourceSurfaceFromPath('/'), 'company_home')
     assert.equal(sourceSurfaceFromPath('/products/repave'), 'products')
+    assert.equal(sourceSurfaceFromPath('/labs/observe'), 'labs')
     const explore = inferPublicEvent('https://repave.opsdevco.de/', '/')
     assert.deepEqual(explore, {
       name: 'product_explore',

@@ -26,6 +26,7 @@ export type GtmProperties = {
     | 'waitlist'
     | 'sibling_product'
     | 'other_public'
+    | 'labs'
   cta?: 'explore' | 'proof' | 'evaluate' | 'contact' | 'waitlist'
   proof_type?: 'lifecycle' | 'other'
   destination_product?: 'repave' | 'overpass' | 'toll' | 'dispatch'

@@ -189,6 +189,7 @@ describe('product portfolio', () => {
     assert.doesNotMatch(home, /Open Policy Agent/)
     assert.doesNotMatch(home, /\bRelay\b/)
     assert.match(header, /label: 'Products'/)
+    assert.match(header, /label: 'Labs'/)
     assert.match(header, /label: 'Approach'/)
     assert.match(header, /label: 'Architecture'/)
     assert.match(header, /label: 'Company'/)

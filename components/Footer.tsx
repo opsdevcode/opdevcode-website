@@ -36,6 +36,7 @@ export default function Footer() {
         </div>
         <div>
           <p className="footer-label">Company</p>
+          <Link href="/labs">Labs</Link>
           <Link href="/approach">Approach</Link>
           <Link href="/architecture">Architecture</Link>
           <Link href="/services">Services</Link>
