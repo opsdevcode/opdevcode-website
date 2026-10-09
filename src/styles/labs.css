@@ -81,15 +81,16 @@
 
 .lab-choice-grid {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 16px;
+  grid-template-columns: 1fr;
 }
 
 .lab-choice-grid label {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  padding: 12px 14px;
+  gap: 16px;
+  align-items: center;
+  min-height: 48px;
+  padding: 14px 16px;
   border: 1px solid var(--color-border);
   background: var(--color-bg);
   cursor: pointer;
