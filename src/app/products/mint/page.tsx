@@ -163,8 +163,10 @@ mint version`}</code>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
               <code>repo.github</code> integration consumes a supplied repository snapshot — no
               GitHub SDK, HTTP client, or token. New authors start from replacement markers and run{' '}
-              <code>mint integrations test</code>. Catalog records for standalone public artifacts
-              are published only after those artifacts exist.
+              <code>mint integrations test</code>. Standalone packages{' '}
+              <code>mint-integration-local</code> and <code>mint-integration-github</code> are
+              GitHub Releases, not PyPI. Catalog records bind the recorded wheel and tagged manifest
+              digests. There is no <code>latest</code> tag.
             </p>
             <p>
               Read{' '}
