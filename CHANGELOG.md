@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.22.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.22.0...opdevcode-website-v1.22.1) (2026-10-09)
+
+
+### Bug Fixes
+
+* **labs:** restore heading order on observe ([#131](https://github.com/opsdevcode/opdevcode-website/issues/131)) ([538e743](https://github.com/opsdevcode/opdevcode-website/commit/538e743468ddb0af5a23f3204b05e6296be9fff5))
+
 ## [1.22.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.21.0...opdevcode-website-v1.22.0) (2026-10-09)
 
 
