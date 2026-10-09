@@ -154,10 +154,12 @@ mint version`}</code>
             </p>
             <p>
               Discover integrations from local <code>mint.catalog-records/v0</code> data:{' '}
-              <code>search</code>, <code>inspect</code>, <code>add</code>, <code>remove</code>, and{' '}
-              <code>verify</code>. <code>add</code> binds digest pins in <code>mint.lock</code>. It
-              does not pip-install or execute an integration, and it does not open a network path. A
-              hosted registry is future work.
+              <code>search</code>, <code>inspect</code>, <code>add</code>, <code>remove</code>,{' '}
+              <code>verify</code>, <code>status</code>, and <code>update</code>. <code>add</code> and{' '}
+              <code>update</code> bind digest pins in <code>mint.lock</code>. <code>add</code> does not pip-install
+              or execute an integration, and it does not open a network path.{' '}
+              <code>update</code> is the same. <code>status</code> reports the one-shot process supervisor
+              as idle — no daemon. A hosted registry is future work.
             </p>
             <p>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
@@ -166,7 +168,10 @@ mint version`}</code>
               <code>mint integrations test</code>. Standalone packages{' '}
               <code>mint-integration-local</code> and <code>mint-integration-github</code> are
               GitHub Releases, not PyPI. Catalog records bind the recorded wheel and tagged manifest
-              digests. There is no <code>latest</code> tag.
+              digests. There is no Kubernetes snapshot integration and no <code>latest</code> tag.
+              Mint does not import Repave, Overpass, Toll, Dispatch, or Relay. SpecMint is the
+              governed lifecycle behind Mint; its fake/local demo records those GitHub Release pins
+              without live mutation.
             </p>
             <p>
               Read{' '}
