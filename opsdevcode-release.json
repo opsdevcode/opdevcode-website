@@ -1,0 +1,40 @@
+{
+  "schema": "opsdevcode.release/v0",
+  "repository": "opsdevcode/opdevcode-website",
+  "profile": "web",
+  "canonical": "github-release",
+  "engine": "release-please",
+  "tagPolicy": {
+    "manualTags": false,
+    "retag": false
+  },
+  "prerelease": {
+    "githubMakeLatest": false
+  },
+  "downstream": {
+    "pypi": {
+      "role": "none"
+    },
+    "ghcr": {
+      "role": "none",
+      "latest": false,
+      "visibilityChange": false
+    },
+    "marketplace": {
+      "role": "none"
+    },
+    "openvsx": {
+      "role": "none"
+    },
+    "pages": {
+      "role": "mirror"
+    }
+  },
+  "artifacts": [
+    "notes"
+  ],
+  "provenance": {
+    "synthesize": false
+  },
+  "notes": "Release Please prefixed tags. Netlify deploys from main; not a registry."
+}
