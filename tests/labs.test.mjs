@@ -22,6 +22,8 @@ describe('public interactive labs', () => {
     assert.match(mintLab, /not a TypeScript compiler/)
     assert.match(workbench, /CAPTURED_LABEL/)
     assert.match(workbench, /does not compile Mint in the/)
+    assert.match(workbench, /tabIndex=\{0\}/)
+    assert.match(workbench, /Captured mint check JSON/)
     assert.match(hub, /href=\{MINT_LAB\.href\}/)
     assert.match(workbench, /mint apply/)
   })

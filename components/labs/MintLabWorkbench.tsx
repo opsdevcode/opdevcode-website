@@ -26,11 +26,11 @@ export default function MintLabWorkbench() {
         <span>{MINT_LAB.authority}</span> {MINT_LAB.authorityVerb}
       </p>
       <h2>Captured check</h2>
-      <pre className="mint-install">
+      <pre className="mint-install" tabIndex={0} aria-label="Captured mint check JSON">
         <code>{JSON.stringify(MINT_LAB_CAPTURE.check, null, 2)}</code>
       </pre>
       <h2>Captured compile / plan kinds</h2>
-      <pre className="mint-install">
+      <pre className="mint-install" tabIndex={0} aria-label="Captured mint compile and plan JSON">
         <code>
           {JSON.stringify(
             {
