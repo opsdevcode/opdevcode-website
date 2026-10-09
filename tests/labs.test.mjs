@@ -81,6 +81,18 @@ describe('public interactive labs', () => {
     assert.doesNotMatch(read('src/app/labs/page.tsx'), /analytics\.opsdevco\.de\/script/)
   })
 
+  it('keeps /labs/observe heading levels consecutive after the page title', () => {
+    const workbench = read('components/labs/LabWorkbench.tsx')
+    const css = read('src/styles/labs.css')
+    assert.match(workbench, /<h1 className="page-title">\{lab\.title\}<\/h1>/)
+    assert.match(workbench, /<h2>Approved \(Repave\)<\/h2>/)
+    assert.match(workbench, /<h2>Observed \(Overpass\)<\/h2>/)
+    assert.doesNotMatch(workbench, /<h3>Approved \(Repave\)<\/h3>/)
+    assert.doesNotMatch(workbench, /<h3>Observed \(Overpass\)<\/h3>/)
+    assert.match(css, /\.lab-compare h2 \{/)
+    assert.doesNotMatch(css, /\.lab-compare h3 \{/)
+  })
+
   it('wires nav, sitemap, and architecture to /labs', () => {
     const header = read('components/Header.tsx')
     const footer = read('components/Footer.tsx')
