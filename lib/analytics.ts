@@ -17,7 +17,7 @@ export type GtmEventName =
   'product_explore' | 'proof_view' | 'evaluation_cta' | 'evaluation_start' | 'evaluation_submit'
 
 export type GtmProperties = {
-  product?: 'company' | 'repave' | 'overpass' | 'toll' | 'dispatch'
+  product?: 'company' | 'mint' | 'repave' | 'overpass' | 'toll' | 'dispatch'
   source_surface?:
     | 'company_home'
     | 'products'

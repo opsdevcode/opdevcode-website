@@ -12,6 +12,20 @@ function read(rel) {
 }
 
 describe('public interactive labs', () => {
+  it('publishes a Mint lab with captured compiler output', () => {
+    assert.equal(existsSync(join(root, 'src/app/labs/mint/page.tsx')), true)
+    const mintLab = read('lib/mint-lab.ts')
+    const workbench = read('components/labs/MintLabWorkbench.tsx')
+    const hub = read('src/app/labs/page.tsx')
+    assert.match(mintLab, /specmint 0\.7\.0a2/)
+    assert.match(mintLab, /v0\.7\.0-alpha\.2/)
+    assert.match(mintLab, /not a TypeScript compiler/)
+    assert.match(workbench, /CAPTURED_LABEL/)
+    assert.match(workbench, /does not compile Mint in the/)
+    assert.match(hub, /href=\{MINT_LAB\.href\}/)
+    assert.match(workbench, /mint apply/)
+  })
+
   it('publishes /labs and three guided routes', () => {
     assert.equal(existsSync(join(root, 'src/app/labs/page.tsx')), true)
     assert.equal(existsSync(join(root, 'src/app/labs/[slug]/page.tsx')), true)
@@ -68,6 +82,13 @@ describe('public interactive labs', () => {
       cta: 'evaluate',
     })
     assert.equal(start?.name, 'evaluation_start')
+    const mintStart = buildEvent('evaluation_start', {
+      product: 'mint',
+      source_surface: 'labs',
+      cta: 'evaluate',
+    })
+    assert.equal(mintStart?.name, 'evaluation_start')
+    assert.equal(mintStart?.properties.product, 'mint')
     const proof = buildEvent('proof_view', {
       product: 'company',
       source_surface: 'labs',
@@ -103,6 +124,7 @@ describe('public interactive labs', () => {
     assert.match(footer, /href="\/labs"/)
     assert.match(sitemap, /\/labs/)
     assert.match(sitemap, /\/labs\/create/)
+    assert.match(sitemap, /\/labs\/mint/)
     assert.match(architecture, /href="\/labs"/)
     assert.match(home, /href="\/labs"/)
   })

@@ -30,7 +30,8 @@ Pageviews are native Umami pageviews. Custom events:
 - `product_explore` — click toward a product host
 - `evaluation_cta` — waitlist, evaluate, Calendly, or contact
 - `proof_view` — Repave `/proof`, and company `/labs` evidence panels (`proof_type: other`)
-- `evaluation_start` — Repave waitlist start, and starting a guided lab
+- `evaluation_start` — Repave waitlist start, starting a guided lab, and
+  `/labs/mint` (`product: mint`)
 - `evaluation_submit` fires on Repave waitlist confirm only, not here
 
 Allowed properties: `product`, `source_surface`, `cta`, `proof_type`,

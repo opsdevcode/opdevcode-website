@@ -4,6 +4,7 @@ import PageFrame from '@/components/PageFrame'
 import LabsAnalytics from '@/components/labs/LabsAnalytics'
 import LabsCtas from '@/components/labs/LabsCtas'
 import { LABS, SIMULATED_LABEL } from '@/lib/labs'
+import { MINT_LAB } from '@/lib/mint-lab'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
@@ -29,6 +30,17 @@ export default function LabsPage() {
           {SIMULATED_LABEL}. No production tenant, no secrets, no cloud mutation.
         </p>
         <ol className="lab-index">
+          <li>
+            <Link href={MINT_LAB.href} className="lab-index-card">
+              <span className="lab-index-num">Mint lab</span>
+              <strong>{MINT_LAB.title}</strong>
+              <span className="lab-authority">
+                <span>{MINT_LAB.authority}</span> {MINT_LAB.authorityVerb}
+              </span>
+              <p>{MINT_LAB.summary}</p>
+              <span className="lab-index-go">Open /labs/mint</span>
+            </Link>
+          </li>
           {LABS.map((lab) => (
             <li key={lab.slug}>
               <Link href={lab.href} className="lab-index-card">
