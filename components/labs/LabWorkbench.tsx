@@ -241,7 +241,7 @@ function ObserveLab() {
 
       <div className="lab-compare">
         <section>
-          <h3>Approved (Repave)</h3>
+          <h2>Approved (Repave)</h2>
           <p>Desired / recorded. Not live inventory.</p>
           <ul>
             <li>
@@ -252,7 +252,7 @@ function ObserveLab() {
           </ul>
         </section>
         <section>
-          <h3>Observed (Overpass)</h3>
+          <h2>Observed (Overpass)</h2>
           <p>Posted citation only. IaC is not the cloud.</p>
           <ul>
             <li>freshness: {outcome.freshness}</li>

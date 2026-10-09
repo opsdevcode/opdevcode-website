@@ -137,7 +137,7 @@
   border: 1px solid var(--color-border);
 }
 
-.lab-compare h3 {
+.lab-compare h2 {
   margin: 0 0 8px;
   font-size: var(--text-lg);
 }
