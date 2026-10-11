@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.24.0...opdevcode-website-v1.25.0) (2026-10-11)
+
+
+### Features
+
+* **mint:** point sales journey at mint.opsdevco.de ([#140](https://github.com/opsdevcode/opdevcode-website/issues/140)) ([6d1db85](https://github.com/opsdevcode/opdevcode-website/commit/6d1db85a2a31d15c77f299e0baa054107c446871))
+
 ## [1.24.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.23.0...opdevcode-website-v1.24.0) (2026-10-11)
 
 
