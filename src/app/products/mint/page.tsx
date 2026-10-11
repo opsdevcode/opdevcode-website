@@ -12,14 +12,16 @@ import { MINT_GITHUB_TAG, MINT_LAB_GITHUB_TAG, MINT_REGISTRY_TAG } from '@/lib/m
 import {
   CALENDLY_URL,
   MINT_ACTION_URL,
+  MINT_COMMUNITY_URL,
   MINT_INTEGRATION_AUTHORING_URL,
   MINT_INTEGRATION_PROTOCOL_URL,
   MINT_ISSUES_URL,
   MINT_LANGUAGE_URL,
   MINT_QUICKSTART_URL,
+  MINT_REFERENCE_URL,
   MINT_REGISTRY_RELEASE_URL,
   MINT_REGISTRY_URL,
-  MINT_RELEASE_URL,
+  MINT_SITE_URL,
   MINT_STARTER_URL,
   SPECMINT_PLATFORM_URL,
 } from '@/lib/site'
@@ -83,6 +85,9 @@ mint version`}</code>
           </p>
           <p className="cta-follow">
             <Link href="/labs/mint">Mint lab</Link>
+            <a href={MINT_SITE_URL} target="_blank" rel="noopener noreferrer">
+              Language site
+            </a>
             <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
               View source
             </a>
@@ -119,23 +124,23 @@ mint version`}</code>
             <p>
               A local CLI that names intent, compiles it deterministically, binds realizations, and
               produces a governed plan. There is no <code>mint apply</code> and no default live
-              provider execution. This company page is the product briefing. The working command
-              sequence and protocol live on the{' '}
-              <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
-                language quickstart
+              provider execution. This company page is the product briefing and sales journey. The
+              language, community, and reference live on{' '}
+              <a href={MINT_SITE_URL} target="_blank" rel="noopener noreferrer">
+                mint.opsdevco.de
               </a>
-              . Audience pages on this site are the sales journey. There is no{' '}
-              <code>mint.opsdevco.de</code> host.
+              . The Mint lab is captured output, not a second compiler.
             </p>
           </div>
           <div>
             <h2>Concrete example</h2>
             <p>
-              The local-marker project declares a sandbox marker file. Mint compiles that unit and
-              plans through <code>local.sandbox.ensure_marker</code>. Planning does not write the
-              marker. It does not call AWS, Azure, GCP, Kubernetes, or GitHub. Walk captured
-              compiler output from {MINT_LAB_GITHUB_TAG} on the{' '}
-              <Link href="/labs/mint">Mint lab</Link>. That fixture is not the advertised install.
+              The local-marker project (<code>examples/projects/local-marker</code>) declares a
+              sandbox marker file. Mint compiles that unit and plans through{' '}
+              <code>local.sandbox.ensure_marker</code>. Planning does not write the marker. It does
+              not call AWS, Azure, GCP, Kubernetes, or GitHub. Walk captured compiler output from{' '}
+              {MINT_LAB_GITHUB_TAG} on the <Link href="/labs/mint">Mint lab</Link>. That fixture is
+              not the advertised install.
             </p>
           </div>
           <div>
@@ -153,36 +158,21 @@ mint version`}</code>
           <div>
             <h2>How to start</h2>
             <p>
-              Install the language CLI from PyPI (current published language is{' '}
-              <a href={MINT_RELEASE_URL} target="_blank" rel="noopener noreferrer">
-                {MINT_GITHUB_TAG}
-              </a>
-              ). Confirm with <code>mint version</code>. Do not pin a superseded release on this
-              install path. Then follow the{' '}
+              Company adoption stays on <Link href={MINT_GET_STARTED_HREF}>Get started</Link>. The
+              ten-minute loop, CLI contract, and protocol live on the{' '}
               <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
-                ten-minute loop
+                language quickstart
               </a>{' '}
-              in the language docs: <code>init</code>, <code>doctor</code>, <code>check</code>,{' '}
-              <code>fmt --check</code>, <code>lock</code>, <code>compile</code>,{' '}
-              <code>inspect</code>, <code>plan</code>, and <code>mint integrations test</code> for{' '}
-              <code>local.sandbox</code> against <code>examples/projects/local-marker</code>. There
-              is no Marketplace listing.
-            </p>
-            <p>
-              For a repository, pin{' '}
-              <a href={MINT_RELEASE_URL} target="_blank" rel="noopener noreferrer">
-                {MINT_GITHUB_TAG}
-              </a>{' '}
-              with{' '}
+              at mint.opsdevco.de — not this briefing. Current published language is{' '}
+              {MINT_GITHUB_TAG}. Pin{' '}
               <a href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
                 opsdevcode/mint-action
               </a>{' '}
-              on <code>pull_request</code> (<code>contents: read</code>), or start from{' '}
+              or start from{' '}
               <a href={MINT_STARTER_URL} target="_blank" rel="noopener noreferrer">
                 opsdevcode/mint-starter
               </a>
-              . The action installs that release wheel after <code>SHA256SUMS</code>. There is no{' '}
-              <code>latest</code> tag.
+              . There is no Marketplace listing and no <code>latest</code> tag.
             </p>
           </div>
           <div>
@@ -235,7 +225,11 @@ mint version`}</code>
             </p>
             <p>
               Integration Protocol v0, authoring plus conformance, and{' '}
-              <code>mint integrations test</code> stay in documentation — not this briefing.
+              <code>mint integrations test</code> stay on the language{' '}
+              <a href={MINT_REFERENCE_URL} target="_blank" rel="noopener noreferrer">
+                reference
+              </a>
+              , not this briefing.
             </p>
             <p>
               <a href={MINT_INTEGRATION_PROTOCOL_URL} target="_blank" rel="noopener noreferrer">
@@ -250,10 +244,12 @@ mint version`}</code>
           <div>
             <h2>Community</h2>
             <p>
-              Integrations are community-authored in public. Contributions are a manifest, a stdio
-              protocol server, fixtures, and fail-closed <code>execute</code>. They are not a live
-              provider mutation, a Marketplace listing, or a <code>latest</code> tag. File issues on
-              the language repository. Release Please owns prerelease tags.
+              Language community and contribution paths live on{' '}
+              <a href={MINT_COMMUNITY_URL} target="_blank" rel="noopener noreferrer">
+                mint.opsdevco.de/community
+              </a>
+              . File issues on the language repository. Release Please owns prerelease tags. This
+              company site does not republish that handbook.
             </p>
           </div>
           <div>

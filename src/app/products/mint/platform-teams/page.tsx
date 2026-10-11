@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import MintJourneyNav from '@/components/MintJourneyNav'
-import { CALENDLY_URL } from '@/lib/site'
+import { CALENDLY_URL, MINT_SITE_URL } from '@/lib/site'
 import { MINT_GET_STARTED_HREF, MINT_PLATFORM_TEAMS_HREF } from '@/lib/mint-journey'
 import { pageMeta } from '@/lib/seo'
 
@@ -32,6 +32,9 @@ export default function MintPlatformTeamsPage() {
           </Link>
         </p>
         <p className="cta-follow">
+          <a href={MINT_SITE_URL} target="_blank" rel="noopener noreferrer">
+            Language site
+          </a>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
             Talk to OpsDevCode
           </a>

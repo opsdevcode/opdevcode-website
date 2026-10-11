@@ -24,11 +24,12 @@ on Netlify; those names are Route53 aliases to the cluster NLB.
 `opsdevco.de` zone holds Netlify, mail, and product aliases plus NS for
 `repave`.
 
-Mint’s public identity is the company page `https://opsdevco.de/products/mint`.
-Language docs currently answer GET at
-`https://opsdevcode.github.io/specmint-language/`. Do **not** link
-`mint.opsdevco.de` until that host answers GET. A dedicated Mint hostname is
-an owner DNS action, not a company-site rewrite.
+Mint’s commercial funnel is the company page `https://opsdevco.de/products/mint`
+(plus audience and get-started routes under that prefix). Language, community,
+and reference canonical URLs are `https://mint.opsdevco.de`. Do **not** put
+Mint in `PRODUCT_URLS` / `PRODUCT_HOST_LIVE` — that host is not a customer SKU
+like Repave. Do **not** 200-rewrite `mint.opsdevco.de` onto this Netlify site.
+DNS and serving for that hostname are a sibling workstream, not this repo.
 
 `repave.dev` is a permanent **308** to `https://repave.opsdevco.de` (path and
 query preserved) via ingress-nginx; the portal `CanonicalHostMiddleware` is
@@ -36,16 +37,16 @@ backup for the same hosts.
 
 ## Current registry
 
-| Host                                      | Role                   | Serving                                           |
-| ----------------------------------------- | ---------------------- | ------------------------------------------------- |
-| `opsdevco.de`                             | Company                | Netlify                                           |
-| `www.opsdevco.de`                         | Company                | CNAME → apex (Netlify 301 to apex)                |
-| `opsdevco.de/products/mint`               | Mint (public identity) | Netlify company route; no live `mint.opsdevco.de` |
-| `opsdevcode.github.io/specmint-language/` | Mint language docs     | GitHub Pages; answers GET                         |
-| `repave.opsdevco.de`                      | Repave                 | EKS / child Route53 zone                          |
-| `overpass.opsdevco.de`                    | Overpass               | EKS (parent Route53 alias → NLB)                  |
-| `toll.opsdevco.de`                        | Toll                   | EKS (parent Route53 alias → NLB)                  |
-| `dispatch.opsdevco.de`                    | Dispatch               | EKS (parent Route53 alias → NLB)                  |
+| Host                        | Role                  | Serving                              |
+| --------------------------- | --------------------- | ------------------------------------ |
+| `opsdevco.de`               | Company               | Netlify                              |
+| `www.opsdevco.de`           | Company               | CNAME → apex (Netlify 301 to apex)   |
+| `opsdevco.de/products/mint` | Mint sales / adoption | Netlify company funnel               |
+| `mint.opsdevco.de`          | Mint language site    | Canonical docs, community, reference |
+| `repave.opsdevco.de`        | Repave                | EKS / child Route53 zone             |
+| `overpass.opsdevco.de`      | Overpass              | EKS (parent Route53 alias → NLB)     |
+| `toll.opsdevco.de`          | Toll                  | EKS (parent Route53 alias → NLB)     |
+| `dispatch.opsdevco.de`      | Dispatch              | EKS (parent Route53 alias → NLB)     |
 
 The application registry is `PRODUCT_URLS` in `lib/site.ts`. Intended hosts
 remain `<product>.opsdevco.de`. **Visitor links on this site only go to hosts

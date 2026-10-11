@@ -8,6 +8,7 @@ import { pageMeta } from '@/lib/seo'
 import {
   MINT_INTEGRATION_AUTHORING_URL,
   MINT_INTEGRATION_PROTOCOL_URL,
+  MINT_REFERENCE_URL,
   MINT_REGISTRY_RELEASE_URL,
 } from '@/lib/site'
 
@@ -28,7 +29,11 @@ export default function MintIntegrationAuthorsPage() {
         <h1 className="page-title">Realize a capability. Do not take apply.</h1>
         <p className="lede">
           An integration is how Mint realizes a promise for a service. Execute stays fail-closed
-          unless a privileged runtime is allowed. This page is not the protocol spec.
+          unless a privileged runtime is allowed. Protocol and authoring live on{' '}
+          <a href={MINT_REFERENCE_URL} target="_blank" rel="noopener noreferrer">
+            mint.opsdevco.de/reference
+          </a>
+          — this page is the company adoption path, not the spec.
         </p>
         <MintJourneyNav />
         <p className="cta-row">

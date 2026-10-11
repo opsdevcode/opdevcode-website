@@ -51,6 +51,7 @@ describe('mint sales and adoption journey', () => {
     assert.match(release, /MINT_LAB_PYPI_VERSION = '0\.8\.0a2'/)
     assert.match(authors, /No live AWS, Azure, GCP/)
     assert.match(authors, /does not recreate/)
-    assert.doesNotMatch(start, /mint\.opsdevco/)
+    assert.match(start, /MINT_SITE_URL/)
+    assert.match(start, /mint\.opsdevco\.de quickstart/)
   })
 })

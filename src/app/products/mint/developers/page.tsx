@@ -4,7 +4,7 @@ import PageFrame from '@/components/PageFrame'
 import MintJourneyNav from '@/components/MintJourneyNav'
 import { MINT_DEVELOPERS_HREF, MINT_GET_STARTED_HREF } from '@/lib/mint-journey'
 import { pageMeta } from '@/lib/seo'
-import { MINT_LANGUAGE_URL, MINT_QUICKSTART_URL } from '@/lib/site'
+import { MINT_LANGUAGE_URL, MINT_QUICKSTART_URL, MINT_SITE_URL } from '@/lib/site'
 
 export const dynamic = 'force-static'
 
@@ -33,6 +33,9 @@ export default function MintDevelopersPage() {
         </p>
         <p className="cta-follow">
           <Link href="/labs/mint">Mint lab</Link>
+          <a href={MINT_SITE_URL} target="_blank" rel="noopener noreferrer">
+            Language site
+          </a>
           <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
             Language quickstart
           </a>
