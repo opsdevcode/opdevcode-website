@@ -22,9 +22,10 @@ export default function LabsPage() {
         <p className="rail-label">Labs</p>
         <h1 className="page-title">Guided product labs. Simulated. Deterministic.</h1>
         <p className="lede">
-          Walk Environment V1 the way the products actually split authority: Repave mints and
-          records intent, Overpass cites what was observed, Toll persists economic evidence. Nothing
-          here applies to AWS, Azure, or GCP.
+          See the products without a tenant. The Mint lab shows captured compiler output. Labs 1–3
+          walk Environment V1 the way authority actually splits: Repave records intent, Overpass
+          cites what was observed, Toll persists economic evidence. Nothing here provisions cloud
+          infrastructure or applies to AWS, Azure, or GCP.
         </p>
         <p className="lab-sim-banner" role="status">
           {SIMULATED_LABEL}. No production tenant, no secrets, no cloud mutation.

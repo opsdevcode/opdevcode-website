@@ -65,23 +65,29 @@ export default function MintLabWorkbench() {
       </details>
       <h2>Adopt in a repository</h2>
       <p>
-        Use the first-party action or the starter template. Both pin the same GitHub Release wheel.
-        There is no <code>latest</code> tag and no <code>mint apply</code>.
+        Use the first-party action or the starter template. Both pin a published GitHub Release
+        wheel — not this captured {MINT_LAB_CAPTURE.languageTag} fixture. There is no{' '}
+        <code>latest</code> tag and no <code>mint apply</code>.
       </p>
       <p className="cta-row">
-        <Link className="btn primary" href="/products/mint">
-          Mint product
-        </Link>
-        <a className="btn" href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
+        <a
+          className="btn primary"
+          href={MINT_QUICKSTART_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get started
+        </a>
+      </p>
+      <p className="cta-follow">
+        <Link href="/products/mint">Mint product</Link>
+        <a href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
           mint-action
         </a>
-        <a className="btn" href={MINT_STARTER_URL} target="_blank" rel="noopener noreferrer">
+        <a href={MINT_STARTER_URL} target="_blank" rel="noopener noreferrer">
           mint-starter
         </a>
-        <a className="btn" href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
-          Language quickstart
-        </a>
-        <a className="btn" href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
+        <a href={MINT_LANGUAGE_URL} target="_blank" rel="noopener noreferrer">
           Language source
         </a>
       </p>

@@ -1,7 +1,9 @@
+import { MINT_LAB_GITHUB_TAG, MINT_LAB_PYPI_VERSION } from '@/lib/mint-release'
+
 /** Captured Mint CLI output. Not a second compiler. */
 
 export const MINT_LAB_HREF = '/labs/mint'
-export const CAPTURED_LABEL = 'Captured from mint CLI 0.8.0a2 / v0.8.0-alpha.2'
+export const CAPTURED_LABEL = `Captured from mint CLI ${MINT_LAB_PYPI_VERSION} / ${MINT_LAB_GITHUB_TAG}`
 
 export const MINT_LAB = {
   slug: 'mint',
@@ -15,11 +17,11 @@ export const MINT_LAB = {
 } as const
 
 export const MINT_LAB_CAPTURE = {
-  compiler: 'specmint 0.8.0a2',
-  languageTag: 'v0.8.0-alpha.2',
+  compiler: `specmint ${MINT_LAB_PYPI_VERSION}`,
+  languageTag: MINT_LAB_GITHUB_TAG,
   project: 'examples/projects/local-marker',
   capturedBy: 'mint CLI (not a TypeScript compiler)',
-  versionLine: 'mint language v0 (specmint 0.8.0a2)',
+  versionLine: `mint language v0 (specmint ${MINT_LAB_PYPI_VERSION})`,
   check: {
     digest: 'sha256:20a191b98c0cc869b129d65b0ae7b0203549ea9b8cabc5327cb4f98563e5f575',
     ok: true,

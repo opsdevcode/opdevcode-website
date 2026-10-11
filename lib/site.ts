@@ -1,3 +1,5 @@
+import { MINT_ACTION_TAG, MINT_GITHUB_TAG, MINT_REGISTRY_TAG } from '@/lib/mint-release'
+
 export const SITE_URL = 'https://opsdevco.de'
 export const CALENDLY_URL = 'https://calendly.com/eric-opsdevco/30min'
 export const CONTACT_EMAIL = 'eric@opsdevco.de'
@@ -30,10 +32,10 @@ export const REPAVE_WAITLIST_URL = `${REPAVE_URL}/waitlist`
 export const REPAVE_EVALUATE_URL = `${REPAVE_WAITLIST_URL}?intent=evaluate`
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
+
 export const MINT_LANGUAGE_URL = 'https://github.com/opsdevcode/specmint-language'
 export const MINT_REGISTRY_URL = 'https://github.com/opsdevcode/mint-registry'
-export const MINT_REGISTRY_RELEASE_URL =
-  'https://github.com/opsdevcode/mint-registry/releases/tag/v0.2.0-alpha.0'
+export const MINT_REGISTRY_RELEASE_URL = `${MINT_REGISTRY_URL}/releases/tag/${MINT_REGISTRY_TAG}`
 export const SPECMINT_PLATFORM_URL = 'https://github.com/opsdevcode/specmint-platform'
 export const MINT_DOCS_URL = 'https://opsdevcode.github.io/specmint-language/'
 export const MINT_QUICKSTART_URL = `${MINT_DOCS_URL}docs/quickstart.html`
@@ -41,8 +43,9 @@ export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_DOCS_URL}specification/min
 export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-protocol.html`
 export const MINT_ISSUES_URL = `${MINT_LANGUAGE_URL}/issues`
 export const MINT_ACTION_URL = 'https://github.com/opsdevcode/mint-action'
+export const MINT_ACTION_RELEASE_URL = `${MINT_ACTION_URL}/releases/tag/${MINT_ACTION_TAG}`
 export const MINT_STARTER_URL = 'https://github.com/opsdevcode/mint-starter'
-export const MINT_RELEASE_URL = `${MINT_LANGUAGE_URL}/releases/tag/v0.9.0-alpha.2`
+export const MINT_RELEASE_URL = `${MINT_LANGUAGE_URL}/releases/tag/${MINT_GITHUB_TAG}`
 
 export const SITE_TITLE = 'OpsDevCode'
 export const SITE_TAGLINE = 'Infrastructure for modern engineering organizations.'
@@ -62,7 +65,7 @@ export const PRODUCT_MARK_SRC = {
 } as const
 
 export const SITE_DESCRIPTION =
-  'OpsDevCode is the company. OpsDevCode Platform is the modular offering: Mint is the public entry language, with independently adoptable products for software state, infrastructure state, engineering economics, and governed intent.'
+  'OpsDevCode is the company. OpsDevCode Platform is the modular offering: define an outcome, govern the change, and verify the result — starting with Mint or the domain product that owns the problem in front of you.'
 
 export function waitlistUrl(product: keyof typeof PRODUCT_URLS): string {
   if (product === 'repave') {
