@@ -1,4 +1,4 @@
-import { MINT_GITHUB_TAG, MINT_REGISTRY_TAG } from '@/lib/mint-release'
+import { MINT_ACTION_TAG, MINT_GITHUB_TAG, MINT_REGISTRY_TAG } from '@/lib/mint-release'
 
 export const SITE_URL = 'https://opsdevco.de'
 export const CALENDLY_URL = 'https://calendly.com/eric-opsdevco/30min'
@@ -43,6 +43,7 @@ export const MINT_INTEGRATION_AUTHORING_URL = `${MINT_DOCS_URL}specification/min
 export const MINT_INTEGRATION_PROTOCOL_URL = `${MINT_DOCS_URL}specification/mint/v0/integration-protocol.html`
 export const MINT_ISSUES_URL = `${MINT_LANGUAGE_URL}/issues`
 export const MINT_ACTION_URL = 'https://github.com/opsdevcode/mint-action'
+export const MINT_ACTION_RELEASE_URL = `${MINT_ACTION_URL}/releases/tag/${MINT_ACTION_TAG}`
 export const MINT_STARTER_URL = 'https://github.com/opsdevcode/mint-starter'
 export const MINT_RELEASE_URL = `${MINT_LANGUAGE_URL}/releases/tag/${MINT_GITHUB_TAG}`
 

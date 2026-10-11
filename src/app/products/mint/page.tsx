@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation'
 import PageFrame from '@/components/PageFrame'
 import ProductSignature from '@/components/ProductSignature'
 import MaturityMeta from '@/components/MaturityMeta'
+import MintJourneyNav from '@/components/MintJourneyNav'
 import { pageMeta } from '@/lib/seo'
 import { getProduct } from '@/lib/products'
+import { MINT_AUDIENCES, MINT_GET_STARTED_HREF } from '@/lib/mint-journey'
 import { MINT_GITHUB_TAG, MINT_LAB_GITHUB_TAG, MINT_REGISTRY_TAG } from '@/lib/mint-release'
 import {
   CALENDLY_URL,
@@ -75,14 +77,9 @@ mint version`}</code>
           </div>
           <ProductSignature slug={product.slug} />
           <p className="cta-row">
-            <a
-              className="btn primary"
-              href={MINT_QUICKSTART_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link className="btn primary" href={MINT_GET_STARTED_HREF}>
               Get started
-            </a>
+            </Link>
           </p>
           <p className="cta-follow">
             <Link href="/labs/mint">Mint lab</Link>
@@ -91,11 +88,23 @@ mint version`}</code>
             </a>
           </p>
         </header>
+        <MintJourneyNav />
         <blockquote className="product-quote">
           Mint is the public entry product: the language, CLI, SDK, editor, and protocol. SpecMint
           is the governed lifecycle runtime behind Mint — not a customer SKU. SpecMint core is
           public; the hosted service stays private and is not generally available.
         </blockquote>
+        <h2>Choose a path</h2>
+        <ul className="mint-path-list">
+          {MINT_AUDIENCES.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href}>
+                <strong>{item.title}</strong>
+                <span>{item.blurb}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="product-page-grid">
           <div>
             <h2>What problem this solves</h2>
@@ -115,7 +124,8 @@ mint version`}</code>
               <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
                 language quickstart
               </a>
-              — there is no separate Mint marketing host.
+              . Audience pages on this site are the sales journey. There is no{' '}
+              <code>mint.opsdevco.de</code> host.
             </p>
           </div>
           <div>
@@ -264,14 +274,9 @@ mint version`}</code>
           </div>
         </div>
         <p className="cta-row">
-          <a
-            className="btn primary"
-            href={MINT_QUICKSTART_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link className="btn primary" href={MINT_GET_STARTED_HREF}>
             Install Mint
-          </a>
+          </Link>
         </p>
         <p className="cta-follow">
           <a href={SPECMINT_PLATFORM_URL} target="_blank" rel="noopener noreferrer">

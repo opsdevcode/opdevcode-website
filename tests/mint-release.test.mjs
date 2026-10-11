@@ -17,6 +17,8 @@ describe('mint release references', () => {
     assert.match(release, /MINT_LAB_GITHUB_TAG = 'v0\.8\.0-alpha\.2'/)
     assert.match(release, /MINT_LAB_PYPI_VERSION = '0\.8\.0a2'/)
     assert.match(release, /MINT_REGISTRY_TAG = 'v0\.2\.0-alpha\.0'/)
+    assert.match(release, /MINT_ACTION_TAG = 'v0\.2\.0-alpha\.0'/)
+    assert.match(site, /MINT_ACTION_RELEASE_URL/)
     assert.match(
       site,
       /MINT_RELEASE_URL = `\$\{MINT_LANGUAGE_URL\}\/releases\/tag\/\$\{MINT_GITHUB_TAG\}`/
