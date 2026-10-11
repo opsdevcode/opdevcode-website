@@ -13,6 +13,7 @@ import {
   MINT_ISSUES_URL,
   MINT_LANGUAGE_URL,
   MINT_QUICKSTART_URL,
+  MINT_REGISTRY_URL,
   MINT_RELEASE_URL,
   MINT_STARTER_URL,
   SPECMINT_PLATFORM_URL,
@@ -185,7 +186,13 @@ mint version`}</code>
               and <code>update</code> bind digest pins in <code>mint.lock</code>. <code>add</code>{' '}
               does not pip-install or execute an integration, and it does not open a network path.{' '}
               <code>update</code> is the same. <code>status</code> reports the{' '}
-              {'one-shot process supervisor'} as idle — no daemon. A hosted registry is future work.
+              {'one-shot process supervisor'} as idle — no daemon. Official directory
+              records live in the static{' '}
+              <a href={MINT_REGISTRY_URL} target="_blank" rel="noopener noreferrer">
+                mint-registry
+              </a>{' '}
+              Git repo. Cache them with <code>mint integrations update --registry</code>.
+              There is no hosted registry service.
             </p>
             <p>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}

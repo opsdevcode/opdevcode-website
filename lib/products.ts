@@ -57,7 +57,7 @@ export const products: Product[] = [
     body: [
       'Mint is the public platform-entry product: the language, CLI, SDK, editor, and protocol. It names intent and compiles it offline. It does not take lifecycle control from SpecMint or domain authority from Repave, Overpass, Toll, or Dispatch.',
       'This is public preview / alpha. Install locally. There is no mint apply and no default live provider execution. Hosted SpecMint is not generally available and is not a customer SKU.',
-      'Integrations realize capabilities for a target. Executors stay privileged and separate. A hosted registry is future work.',
+      'Integrations realize capabilities for a target. Executors stay privileged and separate. Official records live in the static mint-registry Git repo, not a hosted service.',
     ],
     owns: [
       'Intent authoring in Mint, with JSON, YAML, and structured Markdown as inputs',

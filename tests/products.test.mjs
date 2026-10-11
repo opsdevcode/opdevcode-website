@@ -236,6 +236,7 @@ describe('product portfolio', () => {
     assert.match(mintPage, /v0\.7\.0-alpha\.2/)
     assert.match(mintPage, /MINT_ACTION_URL/)
     assert.match(mintPage, /MINT_STARTER_URL/)
+    assert.match(mintPage, /MINT_REGISTRY_URL/)
     assert.match(mintPage, /href="\/labs\/mint"/)
     assert.match(mintPage, /Integration ecosystem/)
     assert.match(mintPage, /Community/)

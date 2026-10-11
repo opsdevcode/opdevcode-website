@@ -31,6 +31,7 @@ export const REPAVE_EVALUATE_URL = `${REPAVE_WAITLIST_URL}?intent=evaluate`
 export const CONVERGENCE_URL = 'https://github.com/opsdevcode/convergence'
 export const GITHUB_ORG_URL = 'https://github.com/opsdevcode'
 export const MINT_LANGUAGE_URL = 'https://github.com/opsdevcode/specmint-language'
+export const MINT_REGISTRY_URL = 'https://github.com/opsdevcode/mint-registry'
 export const SPECMINT_PLATFORM_URL = 'https://github.com/opsdevcode/specmint-platform'
 export const MINT_DOCS_URL = 'https://opsdevcode.github.io/specmint-language/'
 export const MINT_QUICKSTART_URL = `${MINT_DOCS_URL}docs/quickstart.html`
