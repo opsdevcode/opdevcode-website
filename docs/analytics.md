@@ -21,7 +21,10 @@ The tracker loads only when all of these are true:
 - `window.location.hostname` is `opsdevco.de` or `www.opsdevco.de`
 
 Set the website ID only on the Netlify **production** context after the one-time
-Umami admin step in `repave-aws-infra` `docs/analytics.md`.
+Umami admin step in `repave-aws-infra` `docs/analytics.md`. The tracker gate
+must read `process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID` as a direct member access
+so the Next.js client bundle inlines the UUID. A production rebuild is required
+after changing that build-time variable.
 
 ## Events
 

@@ -46,6 +46,19 @@ describe('public-estate analytics contract', () => {
     )
   })
 
+  it('reads the website id from process.env when the passed object omits it', () => {
+    const id = '11111111-1111-4111-8111-111111111111'
+    const prev = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+    process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID = id
+    try {
+      assert.equal(analyticsBuildEnabled({}), true)
+      assert.equal(trackerEnabled('opsdevco.de', {}), true)
+    } finally {
+      if (prev === undefined) delete process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+      else process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID = prev
+    }
+  })
+
   it('rejects forbidden and free-form event properties', () => {
     assert.equal(buildEvent('page_view', { product: 'repave' }), null)
     assert.equal(
