@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.25.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.25.0...opdevcode-website-v1.25.1) (2026-10-11)
+
+
+### Bug Fixes
+
+* **analytics:** inline umami website id in the client gate ([#144](https://github.com/opsdevcode/opdevcode-website/issues/144)) ([bff1c07](https://github.com/opsdevcode/opdevcode-website/commit/bff1c07f4202223dfe0e7094ceea0f7b1bb3aeb2))
+
 ## [1.25.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.24.0...opdevcode-website-v1.25.0) (2026-10-11)
 
 
