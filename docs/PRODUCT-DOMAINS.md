@@ -42,7 +42,7 @@ backup for the same hosts.
 | `opsdevco.de`               | Company               | Netlify                              |
 | `www.opsdevco.de`           | Company               | CNAME → apex (Netlify 301 to apex)   |
 | `opsdevco.de/products/mint` | Mint sales / adoption | Netlify company funnel               |
-| `mint.opsdevco.de`          | Mint language site    | Canonical docs, community, reference |
+| `mint.opsdevco.de`          | Mint language site    | EKS ingress (specmint-language static image); Pages fallback |
 | `repave.opsdevco.de`        | Repave                | EKS / child Route53 zone             |
 | `overpass.opsdevco.de`      | Overpass              | EKS (parent Route53 alias → NLB)     |
 | `toll.opsdevco.de`          | Toll                  | EKS (parent Route53 alias → NLB)     |
