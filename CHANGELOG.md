@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.24.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.23.0...opdevcode-website-v1.24.0) (2026-10-11)
+
+
+### Features
+
+* **mint:** add public sales and adoption journey ([#137](https://github.com/opsdevcode/opdevcode-website/issues/137)) ([87079c5](https://github.com/opsdevcode/opdevcode-website/commit/87079c5ba187f2d05eca75ad00d9634030cc567a))
+
 ## [1.23.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.22.1...opdevcode-website-v1.23.0) (2026-10-09)
 
 
