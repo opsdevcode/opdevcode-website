@@ -13,6 +13,7 @@ import {
   MINT_ISSUES_URL,
   MINT_LANGUAGE_URL,
   MINT_QUICKSTART_URL,
+  MINT_REGISTRY_RELEASE_URL,
   MINT_REGISTRY_URL,
   MINT_RELEASE_URL,
   MINT_STARTER_URL,
@@ -134,7 +135,7 @@ export default function MintProductPage() {
             <p>
               Pin the public GitHub Release{' '}
               <a href={MINT_RELEASE_URL} target="_blank" rel="noopener noreferrer">
-                v0.7.0-alpha.2
+                v0.9.0-alpha.2
               </a>
               . Add{' '}
               <a href={MINT_ACTION_URL} target="_blank" rel="noopener noreferrer">
@@ -187,12 +188,17 @@ mint version`}</code>
               does not pip-install or execute an integration, and it does not open a network path.{' '}
               <code>update</code> is the same. <code>status</code> reports the{' '}
               {'one-shot process supervisor'} as idle — no daemon. Official directory
-              records live in the static{' '}
+              records live in the immutable{' '}
+              <a href={MINT_REGISTRY_RELEASE_URL} target="_blank" rel="noopener noreferrer">
+                mint-registry v0.2.0-alpha.0
+              </a>{' '}
+              snapshot, not{' '}
               <a href={MINT_REGISTRY_URL} target="_blank" rel="noopener noreferrer">
                 mint-registry
               </a>{' '}
-              Git repo. Cache them with <code>mint integrations update --registry</code>.
-              There is no hosted registry service.
+              <code>main</code>. Cache a checkout of that tag with{' '}
+              <code>mint integrations update --registry</code>. There is no hosted
+              registry service and no <code>/releases/latest</code> pin.
             </p>
             <p>
               The local sandbox reference is <code>local.sandbox.ensure_marker</code>. A plan-only{' '}
