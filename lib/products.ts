@@ -1,7 +1,7 @@
+import { MINT_GET_STARTED_HREF } from '@/lib/mint-journey'
 import {
   CALENDLY_URL,
-  MINT_LANGUAGE_URL,
-  MINT_QUICKSTART_URL,
+  MINT_SITE_URL,
   PRODUCT_URLS,
   REPAVE_EVALUATE_URL,
   REPAVE_PROOF_URL,
@@ -56,7 +56,7 @@ export const products: Product[] = [
       'Express governed automation intent, compile it deterministically, and produce a plan domain products can own.',
     body: [
       'Mint is the public platform-entry product: the language, CLI, SDK, editor, and protocol. It names intent and compiles it offline. It does not take lifecycle control from SpecMint or domain authority from Repave, Overpass, Toll, or Dispatch.',
-      'This is public preview / alpha. Install locally. There is no mint apply and no default live provider execution. Hosted SpecMint is not generally available and is not a customer SKU.',
+      'This is public preview / alpha. Install locally. There is no mint apply and no default live provider execution. Hosted SpecMint is not generally available and is not a customer SKU. Language docs, community, and reference live on mint.opsdevco.de. This company site is sales and adoption only.',
       'Integrations realize capabilities for a target. Executors stay privileged and separate. Official records live in the static mint-registry Git repo, not a hosted service.',
     ],
     owns: [
@@ -89,9 +89,9 @@ export const products: Product[] = [
     publicUrl: '/products/mint',
     ctaLabel: 'Get started',
     nextStepLabel: 'Get started',
-    ctaHref: MINT_QUICKSTART_URL,
-    secondaryHref: MINT_LANGUAGE_URL,
-    secondaryLabel: 'View source',
+    ctaHref: MINT_GET_STARTED_HREF,
+    secondaryHref: MINT_SITE_URL,
+    secondaryLabel: 'Language site',
   },
   {
     slug: 'repave',

@@ -28,6 +28,7 @@ describe('mint release references', () => {
     assert.doesNotMatch(mintPage, /v0\.7\.0-alpha\.2/)
     assert.match(mintPage, /MINT_LAB_GITHUB_TAG/)
     assert.match(mintPage, /already-cached catalog/)
-    assert.doesNotMatch(site, /mint\.opsdevco/)
+    assert.match(site, /MINT_SITE_URL = 'https:\/\/mint\.opsdevco\.de'/)
+    assert.doesNotMatch(site, /mint: 'https:\/\/mint\.opsdevco\.de'/)
   })
 })

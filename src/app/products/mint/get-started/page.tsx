@@ -14,6 +14,7 @@ import {
   MINT_ACTION_RELEASE_URL,
   MINT_QUICKSTART_URL,
   MINT_RELEASE_URL,
+  MINT_SITE_URL,
   MINT_STARTER_URL,
 } from '@/lib/site'
 
@@ -50,6 +51,9 @@ export default function MintGetStartedPage() {
         <p className="cta-follow">
           <Link href="/labs/mint">Mint lab</Link>
           <Link href={MINT_HUB_HREF}>Mint briefing</Link>
+          <a href={MINT_SITE_URL} target="_blank" rel="noopener noreferrer">
+            Language site
+          </a>
         </p>
         <h2>Install the language CLI</h2>
         <p>
@@ -66,9 +70,12 @@ mint version`}</code>
         </pre>
         <h2>Confirm without applying</h2>
         <p>
-          The ten-minute loop is on the quickstart: <code>init</code>, <code>doctor</code>,{' '}
-          <code>check</code>, <code>compile</code>, <code>plan</code>. Planning does not write
-          infrastructure. <code>mint apply</code> is unknown.
+          The ten-minute loop is on the{' '}
+          <a href={MINT_QUICKSTART_URL} target="_blank" rel="noopener noreferrer">
+            mint.opsdevco.de quickstart
+          </a>
+          , not this company page. Planning does not write infrastructure. <code>mint apply</code>{' '}
+          is unknown.
         </p>
         <h2>Pin on pull request</h2>
         <p>
