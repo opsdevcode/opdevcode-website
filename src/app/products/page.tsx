@@ -3,7 +3,7 @@ import Link from 'next/link'
 import PageFrame from '@/components/PageFrame'
 import MaturityMeta from '@/components/MaturityMeta'
 import { products } from '@/lib/products'
-import { ACCESS_PLANS, PLATFORM_NAME } from '@/lib/platform'
+import { ACCESS_PLANS } from '@/lib/platform'
 import { pageMeta } from '@/lib/seo'
 import ProductSiteLink from '@/components/ProductSiteLink'
 import { ProductMark } from '@/components/BrandMark'
@@ -30,9 +30,20 @@ export default function ProductsPage() {
         <p className="rail-label">Portfolio</p>
         <h1 className="page-title">Independently adoptable products</h1>
         <p className="lede">
-          {PLATFORM_NAME} is modular. Mint is the public entry language. Delivery, infrastructure
-          state, and economics stay distinct. Dispatch is how people ask across them — it does not
-          replace them, and it is not yet a standalone four-product interaction surface.
+          Pick the job in front of you. Mint is a public developer entry, not a required first
+          product. Delivery, infrastructure state, and economics stay distinct. Dispatch is how
+          people ask across them — it does not replace them, and it is not yet a standalone
+          four-product interaction surface.
+        </p>
+        <p className="cta-row">
+          <Link className="btn primary" href="/labs">
+            Try a simulated lab
+          </Link>
+        </p>
+        <p className="cta-follow">
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+            Talk to request access
+          </a>
         </p>
         <div className="compare-wrap">
           <table className="compare">

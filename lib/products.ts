@@ -79,7 +79,7 @@ export const products: Product[] = [
     maturityLabel: 'Public preview',
     maturityIndex: '00',
     compareRole: 'Name intent',
-    compareProblem: 'Automation intent without a governed language.',
+    compareProblem: 'Automation intent lives in tickets and scripts, with no governed language.',
     compareInput: 'A Mint project, catalogs, and declared realizations.',
     compareOutcome: 'Canonical MintIR and an offline governed plan — not an apply.',
     compareAvailability: 'Public preview / alpha. Local install. Not production-ready.',

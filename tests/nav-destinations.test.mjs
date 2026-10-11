@@ -11,10 +11,11 @@ function read(rel) {
 }
 
 describe('navigation destinations', () => {
-  it('sends the home product CTA to /products, not a same-page hash', () => {
+  it('sends the home product CTA to /labs, not a same-page hash', () => {
     const home = read('src/app/page.tsx')
-    assert.match(home, /<Link className="btn primary" href="\/products">/)
-    assert.match(home, /See the products →/)
+    assert.match(home, /<Link className="btn primary" href="\/labs">/)
+    assert.match(home, /Try a simulated lab/)
+    assert.match(home, /href="\/products"/)
     assert.doesNotMatch(home, /href="#products"/)
     assert.match(home, /id="products"/)
   })

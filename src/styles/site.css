@@ -1863,6 +1863,13 @@ footer {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
+.cta-follow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12) var(--space-24);
+  margin: var(--space-16) 0 0;
+  font-size: var(--text-sm);
+}
 .home-hero .cta {
   display: flex;
   flex-wrap: wrap;

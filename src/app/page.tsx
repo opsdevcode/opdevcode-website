@@ -5,14 +5,7 @@ import Reveal from '@/components/Reveal'
 import ProductCard from '@/components/ProductCard'
 import { BrandMark } from '@/components/BrandMark'
 import { products, type ProductSlug } from '@/lib/products'
-import {
-  ACCESS_PLANS,
-  COMPANY_NAME,
-  GOVERN_LINE,
-  OUTCOME_LINE,
-  PLATFORM_NAME,
-  VERIFY_LINE,
-} from '@/lib/platform'
+import { COMPANY_NAME, GOVERN_LINE, OUTCOME_LINE, PLATFORM_NAME, VERIFY_LINE } from '@/lib/platform'
 import {
   CALENDLY_URL,
   COMPANY_BANNER_SRC,
@@ -156,23 +149,28 @@ export default function HomePage() {
           <div className="home-hero-body">
             <div className="home-hero-copy">
               <p className="home-support">
-                {COMPANY_NAME} is the company. {PLATFORM_NAME} is the modular offering. Start with
-                Mint. Adopt Repave, Overpass, Toll, or Dispatch on their own.
+                Engineering change still travels as tickets, tribal knowledge, and ungoverned
+                scripts. Name the outcome, put the change behind a gate, and keep evidence of what
+                actually happened.
+              </p>
+              <p className="home-support">
+                Example: compile a local sandbox-marker plan offline. You get a repeatable plan. You
+                do not apply to AWS, Azure, or GCP.
               </p>
               <p className="home-quiet" id="home-product-names">
                 Mint · Repave · Overpass · Toll · Dispatch
               </p>
               <div className="cta">
-                <Link className="btn primary" href="/products">
-                  See the products →
+                <Link className="btn primary" href="/labs">
+                  Try a simulated lab →
                 </Link>
-                <Link className="btn" href="/labs">
-                  Try the labs →
-                </Link>
-                <a className="btn" href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
-                  Talk to OpsDevCode →
-                </a>
               </div>
+              <p className="cta-follow">
+                <Link href="/products">Compare products</Link>
+                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+                  Talk to OpsDevCode
+                </a>
+              </p>
             </div>
             <div className="home-hero-identity" aria-hidden="true">
               <BrandMark className="home-hero-aperture" />
@@ -186,12 +184,12 @@ export default function HomePage() {
           aria-labelledby="portfolio-heading"
         >
           <h2 id="portfolio-heading" className="section-title">
-            Mint, then four domain products. Independently adoptable.
+            Five products. Independently adoptable.
           </h2>
           <p className="lede home-measure">
-            Mint is the public entry language. Each domain product owns a distinct engineering
-            problem. Together they are {PLATFORM_NAME} — not four required steps in a bundle, and
-            not the company name.
+            Mint is a public developer entry: write intent, compile it, and get a plan. Repave,
+            Overpass, Toll, and Dispatch each own a different engineering job. None of them is a
+            required first step. Together they are {PLATFORM_NAME} — not the company name.
           </p>
           <div className="product-grid product-grid--portfolio">
             {products.map((product) => (
@@ -214,12 +212,8 @@ export default function HomePage() {
           </h2>
           <p className="lede home-measure">
             Repository lifecycle, infrastructure state, engineering economics, and governed action
-            are related problems. They are not the same problem. Mint names the intent those
-            products can govern.
-          </p>
-          <p className="home-measure">
-            {COMPANY_NAME} keeps those responsibilities separate so each product can own its domain
-            without becoming the source of truth for everything else.
+            are related problems. They are not the same problem. Mint can name intent those products
+            later govern. You can also start on a domain product with no Mint install.
           </p>
           <ul className="why-list">
             {whyProducts.map((item) => (
@@ -243,26 +237,26 @@ export default function HomePage() {
             Start with the problem you need to solve.
           </h2>
           <p className="lede home-measure">
-            You don&apos;t need to adopt a stack. Start with Mint if you want the language, or with
-            the domain product that owns the engineering problem in front of you.
+            Evaluate what is in front of you. Mint is optional. Repave is optional. Neither is a
+            mandatory on-ramp for every customer.
           </p>
           <article className="start-featured start-featured--mint">
-            <p className="start-featured-meta">Public preview</p>
+            <p className="start-featured-meta">Public preview · developer entry</p>
             <h3>Mint</h3>
             <p>
-              The public entry. Install the language locally, compile intent, and produce an offline
-              governed plan.
+              Install locally, compile intent, and produce an offline plan. No hosted Mint SKU. No{' '}
+              <code>mint apply</code>.
             </p>
-            <Link href="/products/mint">Get started with Mint →</Link>
+            <Link href="/products/mint">Start with Mint →</Link>
           </article>
           {repave ? (
             <article className="start-featured">
-              <p className="start-featured-meta">{repave.maturityLabel}</p>
+              <p className="start-featured-meta">{repave.maturityLabel} · hosted evaluation</p>
               <h3>Repave</h3>
               <p>
                 For teams dealing with repository lifecycle, standards, drift, and governed change.
+                Most complete hosted evaluation today — not required to try Mint or the labs.
               </p>
-              <p>Repave is the most complete place to begin evaluating the approach today.</p>
               <a href={PRODUCT_URLS.repave} target="_blank" rel="noopener noreferrer">
                 Explore Repave →
               </a>
@@ -290,34 +284,18 @@ export default function HomePage() {
             Built as a product company for engineering systems.
           </h2>
           <p className="lede home-measure">
-            {COMPANY_NAME} is a founder-led software company. {PLATFORM_NAME} is how the products
-            are offered — Team and Growth are invited-organization plans, not a public catalog.
-          </p>
-          <ul className="access-list">
-            {ACCESS_PLANS.map((plan) => (
-              <li key={plan.name}>
-                <strong>{plan.name}</strong>
-                <span>{plan.summary}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="home-measure">
-            Mint is the public entry product: the language, CLI, SDK, editor, and protocol. SpecMint
-            is the governed lifecycle runtime behind Mint — not a customer SKU. SpecMint core is
-            public; the hosted service stays private and is not generally available.
+            {COMPANY_NAME} is a founder-led software company. {PLATFORM_NAME} is
+            invited-organization access (Team and Growth), not a public catalog. Company, platform,
+            and product boundaries live on Architecture and Company.
           </p>
           <p className="home-measure">
-            Services exist to help teams adopt and apply the products — not to turn {COMPANY_NAME}{' '}
-            into a consulting catalog.
+            Services help teams adopt the products. They are not a consulting catalog. Convergence
+            is independent research. It informs how we think. It is not an OpsDevCode product or
+            runtime dependency.
           </p>
-          <p className="home-measure">
-            Convergence is independent research exploring how specialized engineering capabilities
-            can work together without collapsing their ownership.
-          </p>
-          <p className="home-measure">It informs how we think.</p>
-          <p className="home-measure">It is not an OpsDevCode product or runtime dependency.</p>
           <p className="home-company-links">
             <Link href="/about">About OpsDevCode →</Link>
+            <Link href="/architecture">Architecture →</Link>
             <Link href="/approach">Our approach →</Link>
             <Link href="/services">Services →</Link>
             <a href={CONVERGENCE_URL} target="_blank" rel="noopener noreferrer">

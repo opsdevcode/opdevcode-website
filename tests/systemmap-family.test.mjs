@@ -40,7 +40,7 @@ describe('parent SystemMap and homepage family', () => {
   it('uses canonical marks and product hosts as entry points', () => {
     assert.match(map, /ProductMark/)
     assert.match(home, /PRODUCT_URLS/)
-    assert.match(home, /See the products/)
+    assert.match(home, /Compare products/)
     assert.match(home, /Talk to OpsDevCode/)
     assert.doesNotMatch(home, /Explore the system/)
     assert.doesNotMatch(home, /Start Free/)
