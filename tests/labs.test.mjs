@@ -69,6 +69,38 @@ describe('public interactive labs', () => {
     assert.doesNotMatch(workbench, /href=["']#["']/)
   })
 
+  it('publishes recorded Repave evaluation evidence without simulating success', () => {
+    assert.equal(existsSync(join(root, 'src/app/labs/repave-evaluation/page.tsx')), true)
+    const page = read('src/app/labs/repave-evaluation/page.tsx')
+    const hub = read('src/app/labs/page.tsx')
+    const data = read('lib/repave-evaluation.ts')
+    const analytics = read('components/labs/LabsAnalytics.tsx')
+    assert.match(hub, /REPAVE_EVAL_HREF/)
+    assert.match(data, /gtm-009a-v1/)
+    assert.match(data, /gates_passed: false/)
+    assert.match(data, /FAIL docs-drift/)
+    assert.match(data, /SKIP terraform-fmt/)
+    assert.match(page, /eval-gate--fail/)
+    assert.match(page, /eval-gate--skip/)
+    assert.match(page, /REPAVE_PROOF_URL/)
+    assert.match(page, /REPAVE_EVALUATE_URL/)
+    assert.match(page, /recordedProof/)
+    assert.match(page, /gtm-009a-linkedin.svg/)
+    assert.match(page, /from 'next\/image'/)
+    assert.equal(existsSync(join(root, 'public/media/gtm-009a-linkedin.svg')), true)
+    assert.match(analytics, /proofType === 'lifecycle'/)
+    assert.match(analytics, /lifecycle/)
+    assert.doesNotMatch(page, /gates passed/)
+    assert.doesNotMatch(data, /status: drifted/)
+    const lifecycleProof = buildEvent('proof_view', {
+      product: 'company',
+      source_surface: 'labs',
+      proof_type: 'lifecycle',
+    })
+    assert.equal(lifecycleProof?.name, 'proof_view')
+    assert.equal(lifecycleProof?.properties.proof_type, 'lifecycle')
+  })
+
   it('keeps standing CTAs on real routes', () => {
     const ctas = read('components/labs/LabsCtas.tsx')
     assert.match(ctas, /href="\/products"/)
@@ -132,6 +164,7 @@ describe('public interactive labs', () => {
     assert.match(sitemap, /\/labs/)
     assert.match(sitemap, /\/labs\/create/)
     assert.match(sitemap, /\/labs\/mint/)
+    assert.match(sitemap, /\/labs\/repave-evaluation/)
     assert.match(architecture, /href="\/labs"/)
     assert.match(home, /href="\/labs"/)
   })
