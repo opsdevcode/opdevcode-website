@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.26.0](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.25.1...opdevcode-website-v1.26.0) (2026-10-20)
+
+
+### Features
+
+* add recorded repave evaluation lab ([#150](https://github.com/opsdevcode/opdevcode-website/issues/150)) ([5494ee7](https://github.com/opsdevcode/opdevcode-website/commit/5494ee7455ca8d2d25837a50f0812789232e4c55))
+
 ## [1.25.1](https://github.com/opsdevcode/opdevcode-website/compare/opdevcode-website-v1.25.0...opdevcode-website-v1.25.1) (2026-10-11)
 
 
