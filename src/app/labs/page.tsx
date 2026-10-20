@@ -5,6 +5,7 @@ import LabsAnalytics from '@/components/labs/LabsAnalytics'
 import LabsCtas from '@/components/labs/LabsCtas'
 import { LABS, SIMULATED_LABEL } from '@/lib/labs'
 import { MINT_LAB } from '@/lib/mint-lab'
+import { REPAVE_EVAL_HREF, REPAVE_EVAL_SCENARIO } from '@/lib/repave-evaluation'
 import { pageMeta } from '@/lib/seo'
 
 export const metadata: Metadata = pageMeta({
@@ -55,6 +56,27 @@ export default function LabsPage() {
               </Link>
             </li>
           ))}
+        </ol>
+        <h2>Recorded product evidence</h2>
+        <p>
+          Separate from the simulated labs above. OpsDevCode is the company. Repave is the
+          repository lifecycle product.
+        </p>
+        <ol className="lab-index">
+          <li>
+            <Link href={REPAVE_EVAL_HREF} className="lab-index-card">
+              <span className="lab-index-num">Recorded · {REPAVE_EVAL_SCENARIO}</span>
+              <strong>Brownfield Terraform observe-and-plan</strong>
+              <span className="lab-authority">
+                <span>Repave</span> recorded CLI evaluation, not a simulated lab
+              </span>
+              <p>
+                Observation completed. The repository was still ungoverned. A plan was generated.
+                Gates did not pass. Git did not change.
+              </p>
+              <span className="lab-index-go">Open recorded evaluation</span>
+            </Link>
+          </li>
         </ol>
         <h2>What these labs are not</h2>
         <ul>

@@ -15,22 +15,32 @@ export function trackLabStart(product: 'company' | 'mint' = 'company') {
   })
 }
 
-export function trackLabProof() {
+export function trackLabProof(proofType?: unknown) {
+  const type = proofType === 'lifecycle' ? 'lifecycle' : 'other'
   track({
     name: 'proof_view',
     properties: {
       product: 'company',
       source_surface: 'labs',
-      proof_type: 'other',
+      proof_type: type,
     },
   })
 }
 
-export default function LabsAnalytics({ lab }: { lab?: LabSurface }) {
+export default function LabsAnalytics({
+  lab,
+  recordedProof,
+}: {
+  lab?: LabSurface
+  recordedProof?: boolean
+}) {
   useEffect(() => {
     if (lab) {
       trackLabStart(lab === 'mint' ? 'mint' : 'company')
     }
-  }, [lab])
+    if (recordedProof) {
+      trackLabProof('lifecycle')
+    }
+  }, [lab, recordedProof])
   return null
 }

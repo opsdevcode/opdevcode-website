@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">Repave gtm-009a-v1 recorded evaluation</title>
+  <desc id="desc">Observation completed, ungoverned unknown. Plan generated, gates 1 pass 1 fail 8 skip. No git mutation, no apply.</desc>
+  <rect width="1080" height="1350" fill="#f6f3ee"/>
+  <rect x="48" y="48" width="984" height="1254" fill="#fff" stroke="#1c1c1c" stroke-width="3"/>
+  <text x="80" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" fill="#5c5c5c">GTM-009A · REPAVE · gtm-009a-v1</text>
+  <text x="80" y="190" font-family="Georgia, Times, serif" font-size="42" fill="#1c1c1c">A finished command</text>
+  <text x="80" y="242" font-family="Georgia, Times, serif" font-size="42" fill="#1c1c1c">is not the outcome.</text>
+
+  <rect x="80" y="300" width="920" height="250" fill="#f6f3ee" stroke="#1c1c1c" stroke-width="2"/>
+  <text x="104" y="350" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" fill="#5c5c5c">OBSERVATION</text>
+  <text x="104" y="400" font-family="Georgia, Times, serif" font-size="32" fill="#1c1c1c">completed successfully</text>
+  <text x="104" y="450" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" fill="#1c1c1c">governed: no</text>
+  <text x="104" y="500" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="28" fill="#1c1c1c">status: unknown  ` drift</text>
+
+  <rect x="80" y="576" width="920" height="360" fill="#f6f3ee" stroke="#1c1c1c" stroke-width="2"/>
+  <text x="104" y="626" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" fill="#5c5c5c">PLANNING</text>
+  <text x="104" y="676" font-family="Georgia, Times, serif" font-size="32" fill="#1c1c1c">plan generated · gates did not pass</text>
+  <rect x="104" y="710" width="160" height="56" fill="#e7f6ec" stroke="#1f6b3a" stroke-width="2"/>
+  <text x="124" y="746" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#1f6b3a">PASS 1</text>
+  <rect x="284" y="710" width="160" height="56" fill="#fde8e8" stroke="#9b1c1c" stroke-width="2"/>
+  <text x="304" y="746" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#9b1c1c">FAIL 1</text>
+  <rect x="464" y="710" width="180" height="56" fill="#eceae4" stroke="#5c5c5c" stroke-width="2"/>
+  <text x="484" y="746" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#5c5c5c">SKIP 8</text>
+  <text x="104" y="820" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#1c1c1c">FAIL docs-drift: README missing Usage</text>
+  <text x="104" y="866" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#5c5c5c">SKIP ` PASS · detection required --blueprint</text>
+  <text x="104" y="910" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" fill="#5c5c5c">WAIVED 0 · TIMEOUT 0</text>
+
+  <rect x="80" y="962" width="920" height="250" fill="#fff" stroke="#1c1c1c" stroke-width="2"/>
+  <text x="104" y="1012" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" fill="#5c5c5c">EVIDENCE</text>
+  <text x="104" y="1064" font-family="Georgia, Times, serif" font-size="32" fill="#1c1c1c">no repository changes</text>
+  <text x="104" y="1116" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="26" fill="#1c1c1c">no apply · no push · no pull request</text>
+  <text x="104" y="1168" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" fill="#5c5c5c">engine 3.158.2 · 7b993851d94f · plan-only</text>
+</svg>
