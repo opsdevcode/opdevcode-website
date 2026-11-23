@@ -11,6 +11,7 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run format:check && npm run typecheck && npm test",
+    "postinstall": "patch-package",
     "test": "A11Y_SKIP_BROWSER=1 node --test tests/*.test.mjs",
     "test:a11y": "node a11y/run.mjs",
     "test:a11y:force": "A11Y_FORCE_RUN=1 node a11y/run.mjs --force",
@@ -28,6 +29,7 @@
   "dependencies": {
     "@eslint/eslintrc": "^3.3.7",
     "next": "^15.5.27",
+    "patch-package": "^8.0.1",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },
