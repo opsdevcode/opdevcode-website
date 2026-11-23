@@ -13,10 +13,17 @@ import {
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 
-describe('public-estate analytics contract', () => {
+describe('public-estate analytics contract', { concurrency: false }, () => {
   it('enables the tracker only for production builds with a website id', () => {
     const id = '11111111-1111-4111-8111-111111111111'
-    assert.equal(analyticsBuildEnabled({}), false)
+    const prev = process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+    delete process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+    try {
+      assert.equal(analyticsBuildEnabled({}), false)
+    } finally {
+      if (prev === undefined) delete process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID
+      else process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID = prev
+    }
     assert.equal(analyticsBuildEnabled({ NEXT_PUBLIC_UMAMI_WEBSITE_ID: id }), true)
     assert.equal(
       analyticsBuildEnabled({
